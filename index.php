@@ -54,7 +54,7 @@ set_language();
 <link href="./fontawesome/css/all.css" rel="stylesheet">
 <!--load all styles -->
 <script src="./js/chart/Chart.min.js"></script>
-<script src="./js/div_recivers.js"></script>
+<script src="./js/div_receivers.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
 
 
@@ -179,7 +179,7 @@ function Load_ctcss_mapping()
 
 
 
-var refelktor_address="<?php echo $serveraddress ?>";
+var reflector_address="<?php echo $serveraddress ?>";
 //<![CDATA[
 	
 	$.datepicker.regional['phplang'] = {

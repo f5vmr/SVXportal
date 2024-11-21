@@ -9,7 +9,7 @@ function load_reflector()
     $('#selects').append('<option value=""> -- <?php echo _('All')?> -- </option>');
 
     
-    $.getJSON( refelktor_address, function( data ) {
+    $.getJSON( reflector_address, function( data ) {
     	for(var k in data.nodes)
         {
     		
@@ -56,7 +56,7 @@ function toHex(str) {
 function div_call_svxreflector(data) {
 	
 //	$.getJSON(
-//					refelktor_address,
+//					reflector_address,
 //					function(data) {
 	
 	

@@ -50,12 +50,12 @@ set_language();
 <link href="./fontawesome/css/all.css" rel="stylesheet">
 <!--load all styles -->
 <script src="./js/chart/Chart.min.js"></script>
-<script src="./js/div_recivers.js"></script>
+<script src="./js/div_receivers.js"></script>
 <?php include "div_receiver2.php";?>
 
 
 <script type="text/javascript">
-var refelktor_address="<?php echo $serveraddress ?>";
+var reflector_address="<?php echo $serveraddress ?>";
 //<![CDATA[
 $(document).ready(function(){
 call_svxreflector();

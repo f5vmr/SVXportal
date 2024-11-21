@@ -6,7 +6,7 @@ function load_reflector()
 {
     call_svxreflector();
     $('#selects').html('<option value=""> -- <?php echo _('All')?> -- </option>');
-    $.getJSON( refelktor_address, function( data ) {
+    $.getJSON( reflector_address, function( data ) {
     	for(var k in data.nodes){
     		
     	    if(data.nodes[k].hidden == true)
@@ -35,7 +35,7 @@ function call_svxreflector() {
 	
 	$
 			.getJSON(
-					refelktor_address,
+					reflector_address,
 					function(data) {
 						//console.log(data);
 						if (filter_station != "") {

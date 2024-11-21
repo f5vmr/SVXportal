@@ -18,7 +18,7 @@
 
 <script src="./lib/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-<script src="./js/div_recivers.js"></script>
+<script src="./js/div_receivers.js"></script>
 
 <script>
     
