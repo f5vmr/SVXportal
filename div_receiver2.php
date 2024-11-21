@@ -147,7 +147,7 @@ function div_call_svxrefelktor(data) {
 									var rx_sql = data.nodes[k].qth[qth].rx[qth1].sql_open;
 									var sql = data.nodes[k].qth[qth].name;
 									var value = data.nodes[k].qth[qth].rx[qth1].siglev;
-									var Freqvensy = data.nodes[k].qth[qth].rx[qth1].freq;
+									var Frequency = data.nodes[k].qth[qth].rx[qth1].freq;
 									var name_id =k+qth+qth1;
 									name_id = name_id.trim()
 									if (value == undefined)
@@ -183,7 +183,7 @@ function div_call_svxrefelktor(data) {
 												+ '_' + qth_name+qth1
 												+ '"></canvas></p> </td><td>'
 												+ parseInt(value)
-												+ '%</td><td>' + String(Freqvensy)
+												+ '%</td><td>' + String(Frequency)
 												+ ' <?php echo _("MHz")?></td><td></td>';
 										$('#row' + remove_notgouiltychar(name_id)).html(qth_html_add);
 										$('#row' + remove_notgouiltychar(name_id)).addClass(
@@ -206,7 +206,7 @@ function div_call_svxrefelktor(data) {
 												+ '"></canvas></p> </td><td>'
 												+ parseInt(value)
 												+ '%</td><td>'
-												+ String(Freqvensy)
+												+ String(Frequency)
 												+ ' MHz</td><td></td></tr>';
 
 										$('#status-' + remove_notgouiltychar(k)).append(qth_html_add);

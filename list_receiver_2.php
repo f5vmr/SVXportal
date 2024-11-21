@@ -399,11 +399,11 @@ for(var k in data.nodes){
            	var rx_sql =data.nodes[k].qth[qth].rx[qth1].sql_open;
            	var sql = data.nodes[k].qth[qth].name;
            	var value =data.nodes[k].qth[qth].rx[qth1].siglev;
-           	var Freqvensy =String(data.nodes[k].qth[qth].rx[qth1].freq);
+           	var Frequency =String(data.nodes[k].qth[qth].rx[qth1].freq);
 
-           	Freqvensy = parseFloat(Freqvensy);
-           	Freqvensy = Freqvensy.toFixed(4); 
-           	Freqvensy = String(Freqvensy);
+           	Frequency = parseFloat(Frequency);
+           	Frequency = Frequency.toFixed(4); 
+           	Frequency = String(Frequency);
            
       
            	var name_id =data.nodes[k].qth[qth].name+qth1;
@@ -422,7 +422,7 @@ for(var k in data.nodes){
      	  if(document.getElementById('row'+remove_notgouiltychar(name_id)))
      	  {
 
-              qth_html_add ='<td> * '+qth_name+'</td><td></td><td></td><td colspan="1" id="td'+k+'_'+qth_name+'"><canvas id="bar_'+printk+'_'+qth_name+'"></canvas></p> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Freqvensy+'</td><td></td>';
+              qth_html_add ='<td> * '+qth_name+'</td><td></td><td></td><td colspan="1" id="td'+k+'_'+qth_name+'"><canvas id="bar_'+printk+'_'+qth_name+'"></canvas></p> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td>';
               $('#row'+remove_notgouiltychar(name_id)).html(qth_html_add);
               $('#row'+remove_notgouiltychar(name_id)).addClass("class_row");
               
@@ -431,7 +431,7 @@ for(var k in data.nodes){
      	  }
      	  else
      	  {
-              qth_html_add ='<tbody id="group-of-'+printk+'" class="collapse"><tr class="table-striped  '+class_row+' table-borderless" id="row'+name_id+'"  ><td> * '+qth_name+'</td><td></td><td></td><td colspan="" id="td'+printk+'_'+qth_name+'"><canvas id="bar_'+printk+'_'+qth_name+'"></canvas> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Freqvensy+'</td><td></td></tr></tbody>';
+              qth_html_add ='<tbody id="group-of-'+printk+'" class="collapse"><tr class="table-striped  '+class_row+' table-borderless" id="row'+name_id+'"  ><td> * '+qth_name+'</td><td></td><td></td><td colspan="" id="td'+printk+'_'+qth_name+'"><canvas id="bar_'+printk+'_'+qth_name+'"></canvas> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td></tr></tbody>';
               $('#Reflektortable').append(qth_html_add);
               $('#row'+remove_notgouiltychar(name_id)+'').removeClass("class_row");
               
@@ -455,7 +455,7 @@ for(var k in data.nodes){
     		 
     		context.fillStyle ="#1932F7";
     		update_bar('bar_'+k,value,k);
-    		$("#freq_row"+k).html(Freqvensy);
+    		$("#freq_row"+k).html(Frequency);
 
     		if(mqtt_station_array[k])
     		{

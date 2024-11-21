@@ -56,7 +56,7 @@ msgstr "Anv�ndare"
 msgid "Reflektor users"
 msgstr "Reflektor-anv�ndare"
 
-#: admin.php:258 admin/Settings.php:76 edit_station.php:464
+#: admin.php:258 admin/settings.php:76 edit_station.php:464
 msgid "Settings"
 msgstr "Inst�llningar"
 
@@ -175,13 +175,13 @@ msgstr "Stationens l�senord"
 msgid "Action"
 msgstr "�tg�rder"
 
-#: admin/reflector_users.php:411 admin/Settings.php:25
+#: admin/reflector_users.php:411 admin/settings.php:25
 #: admin/get_reflector.php:35 admin/get_station.php:34 admin/get_users.php:31
 #: admin/stations.php:135 admin/users.php:288 database_text.php:17
 msgid "Yes"
 msgstr "Ja"
 
-#: admin/reflector_users.php:413 admin/Settings.php:19
+#: admin/reflector_users.php:413 admin/settings.php:19
 #: admin/get_reflector.php:37 admin/get_station.php:36 admin/get_users.php:33
 #: admin/stations.php:137 admin/users.php:290 database_text.php:16
 msgid "No"
@@ -225,11 +225,11 @@ msgstr "St�ng"
 msgid "Update"
 msgstr "Updatera"
 
-#: admin/Settings.php:67
+#: admin/settings.php:67
 msgid "Settings is saved!"
 msgstr "Inst�llningarna �r sparade"
 
-#: admin/Settings.php:113 edit_station.php:492 edit_station.php:595
+#: admin/settings.php:113 edit_station.php:492 edit_station.php:595
 #: edit_station.php:883
 msgid "Save"
 msgstr "Spara"

@@ -52,7 +52,7 @@ msgstr "Benutzer"
 msgid "Reflektor users"
 msgstr "Reflektor Benutzer"
 
-#: admin.php:258 admin/Settings.php:76 edit_station.php:433
+#: admin.php:258 admin/settings.php:76 edit_station.php:433
 msgid "Settings"
 msgstr "die Einstellungen"
 
@@ -166,13 +166,13 @@ msgstr "Stationspasswort"
 msgid "Action"
 msgstr "Aktion"
 
-#: admin/reflector_users.php:411 admin/Settings.php:25
+#: admin/reflector_users.php:411 admin/settings.php:25
 #: admin/get_reflector.php:35 admin/get_station.php:34 admin/get_users.php:23
 #: admin/stations.php:130 admin/users.php:270 database_text.php:17
 msgid "Yes"
 msgstr "Ja"
 
-#: admin/reflector_users.php:413 admin/Settings.php:19
+#: admin/reflector_users.php:413 admin/settings.php:19
 #: admin/get_reflector.php:37 admin/get_station.php:36 admin/get_users.php:25
 #: admin/stations.php:132 admin/users.php:272 database_text.php:16
 msgid "No"
@@ -216,11 +216,11 @@ msgstr "Schließen"
 msgid "Update"
 msgstr "Aktualisieren"
 
-#: admin/Settings.php:67
+#: admin/settings.php:67
 msgid "Settings is saved!"
 msgstr "Einstellungen werden gespeichert!"
 
-#: admin/Settings.php:113 edit_station.php:461 edit_station.php:564
+#: admin/settings.php:113 edit_station.php:461 edit_station.php:564
 #: edit_station.php:839
 msgid "Save"
 msgstr "Sparen"

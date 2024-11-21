@@ -930,23 +930,23 @@ for(var k in data.nodes){
            	var rx_sql =data.nodes[k].qth[qth].rx[qth1].sql_open;
            	var sql = data.nodes[k].qth[qth].name;
            	var value =data.nodes[k].qth[qth].rx[qth1].siglev;
-           	var Freqvensy =String(data.nodes[k].qth[qth].rx[qth1].freq);
+           	var Frequency =String(data.nodes[k].qth[qth].rx[qth1].freq);
 
-           	Freqvensy = parseFloat(Freqvensy);
-           	Freqvensy = Freqvensy.toFixed(4); 
+           	Frequency = parseFloat(Frequency);
+           	Frequency = Frequency.toFixed(4); 
 
         	  var QTHlocation= qth_node_name+"";
 
 
            	
-           	Freqvensy = String(Freqvensy);
-           	if(Freqvensy == "NaN")
+           	Frequency = String(Frequency);
+           	if(Frequency == "NaN")
            	{
-           		Freqvensy="";
+           		Frequency="";
            	}
            	if(data.nodes[k].qth[qth].rx[qth1].virtual_rx)
            	{
-           		Freqvensy= data.nodes[k].qth[qth].rx[qth1].virtual_rx;
+           		Frequency= data.nodes[k].qth[qth].rx[qth1].virtual_rx;
            		QTHlocation="";
            	}
            	
@@ -983,13 +983,13 @@ for(var k in data.nodes){
 
 
 
-          if(Freqvensy.includes("Echo"))
+          if(Frequency.includes("Echo"))
           {
         	  sub_icon ='<img src="images/EchoLinkIcon.gif" width="20px">';
 
           }
           
-          if(Freqvensy.includes("DMR"))
+          if(Frequency.includes("DMR"))
           {
         	  sub_icon ='<img src="images/dmr.png" width="20px">';
           }          
@@ -1004,7 +1004,7 @@ for(var k in data.nodes){
 
 
   
-              qth_html_add ='<td>'+sub_icon+'</td><td>'+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="1" id="td'+k+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas></p> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Freqvensy+'</td><td></td>';
+              qth_html_add ='<td>'+sub_icon+'</td><td>'+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="1" id="td'+k+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas></p> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td>';
               $('#row'+remove_notgouiltychar(name_id)).html(qth_html_add);
               $('#row'+remove_notgouiltychar(name_id)).addClass("class_row");
               $('#row'+remove_notgouiltychar(name_id)).addClass("normal_pounter");
@@ -1027,7 +1027,7 @@ for(var k in data.nodes){
 
          	
         
-              qth_html_add ='<tr class="table-striped  '+class_row+'  table-borderless normal_pounter" id="row'+name_id+'"  ><td>'+sub_icon+'</td><td>  '+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="" id="td'+printk+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Freqvensy+'</td><td></td></tr>';
+              qth_html_add ='<tr class="table-striped  '+class_row+'  table-borderless normal_pounter" id="row'+name_id+'"  ><td>'+sub_icon+'</td><td>  '+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="" id="td'+printk+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td></tr>';
 
               $('#group-of-'+printk).append(qth_html_add);
    
@@ -1077,7 +1077,7 @@ for(var k in data.nodes){
 			{
     			update_bar('bar_'+k,value,k);
 			}
-    		$("#freq_row"+k).html(Freqvensy);
+    		$("#freq_row"+k).html(Frequency);
 
     		if(mqtt_station_array[k]  && mqtt_station_array[k]["RSSI"] != "-200")
     		{

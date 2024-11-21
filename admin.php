@@ -274,7 +274,7 @@ function fnExcelexport(table)
   </div>
   <div class="tab-pane fade" id="Settings" role="tabpanel" aria-labelledby="Settings-tab">
   
-  <?php include "admin/Settings.php";?>
+  <?php include "admin/settings.php";?>
   
   </div>
   <div class="tab-pane fade" id="Talkgroup" role="tabpanel" aria-labelledby="Talkgroup-tab">

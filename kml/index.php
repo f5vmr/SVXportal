@@ -697,8 +697,8 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 									aria-haspopup="true" aria-expanded="false"> Coverage </a>
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item" onclick="show_covige()" href="#">Show</a>
-										<a class="dropdown-item" onclick="remove_covige()" href="#">Remove</a>
+										<a class="dropdown-item" onclick="show_coverage()" href="#">Show</a>
+										<a class="dropdown-item" onclick="remove_coverage()" href="#">Remove</a>
 
 									</div></li>
 								<li class="nav-item dropdown"><a
@@ -1554,7 +1554,7 @@ function setmap_noTransform(lon,lat,z)
 
 
 var Lock_show =0;
-function show_covige()
+function show_coverage()
 {
 	if(Lock_show == 0)
 	{
@@ -1581,7 +1581,7 @@ function show_covige()
 		
 	}
 }
-function remove_covige()
+function remove_coverage()
 {
 	window.map.removeLayer(ov["riu.png"]);
 	window.map.removeLayer(ov["gw.png"]);
@@ -1714,7 +1714,7 @@ function update_tx_station_loop()
                    	var rx_active =data.nodes[k].qth[qth].rx[qth1].active;
                    	var rx_sql =data.nodes[k].qth[qth].rx[qth1].sql_open;
                    	value =data.nodes[k].qth[qth].rx[qth1].siglev;
-                   	var Freqvensy =data.nodes[k].qth[qth].rx[qth1].freq;
+                   	var Frequency =data.nodes[k].qth[qth].rx[qth1].freq;
 
                    	if(value == null)
                    	{

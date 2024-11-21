@@ -1303,13 +1303,13 @@ function show_station_cover(ident,stationid)
 	 
 	//peter
 	
-	remove_covige();
+	remove_coverage();
 	
-	coverigeGroup = new ol.layer.Group({
+	coverageGroup = new ol.layer.Group({
             layers: [],
-            name: 'coverige'
+            name: 'coverage'
         });
-	map.addLayer(this.coverigeGroup);
+	map.addLayer(this.coverageGroup);
 
 
 	        
@@ -2565,9 +2565,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 									aria-haspopup="true" aria-expanded="false"><i class="fas fa-broadcast-tower"></i> <?php echo _("Coverage")?> </a>
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item" onclick="show_covige()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Show")?></a>
+										<a class="dropdown-item" onclick="show_coverage()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Show")?></a>
 										<a class="dropdown-item" onclick="open_select_map()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Select")?></a>
-										<a class="dropdown-item" onclick="remove_covige()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Remove")?></a>
+										<a class="dropdown-item" onclick="remove_coverage()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Remove")?></a>
 
 									</div></li>
 								<li class="nav-item dropdown"><a
@@ -2738,7 +2738,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 									</div>
 									<button type="button" class="btn btn-secondary"
 										data-dismiss="modal"><?php echo _('Close')?></button>
-									<button type="button" class="btn btn-secondary" id="Show_covige_button"
+									<button type="button" class="btn btn-secondary" id="Show_coverage_button"
 										><?php echo _('Show covreage')?></button>
 
 								
@@ -2850,7 +2850,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 			 else
 		     	var identity =station_identifire[idn.slice(4)];
 			// Get the <a> element with id="myAnchor"
-			 var x = document.getElementById("Show_covige_button");  
+			 var x = document.getElementById("Show_coverage_button");  
 			 x.setAttribute("onclick", "show_station_cover('"+identity+"','"+idn+"')");
 
 			 <?Php
@@ -3389,7 +3389,7 @@ function addimage(src,lamin,lomin,lamax,lomax)
     });
     ov[src].setZIndex(parseInt(0, 10) || 0);  
      
-    this.coverigeGroup.getLayers().array_.push(ov[src])
+    this.coverageGroup.getLayers().array_.push(ov[src])
     //map.addLayer(ov[src]);
     return ov[src];
 }
@@ -5007,7 +5007,7 @@ function setmap_noTransform(lon,lat,z)
 
 
 var Lock_show =0;
-var coverigeGroup;
+var coverageGroup;
 
 
 function open_select_map()
@@ -5020,7 +5020,7 @@ function open_select_map()
 			var data =  event.data.toString();
 			console.log(data.split(","));
 			
-			show_covige_stations(data.split(","))
+			show_coverage_stations(data.split(","))
 			 popupWindow.close();
 		  });
 	}
@@ -5077,16 +5077,16 @@ function idn_loocup_select(site,array)
 }
 
 
-function show_covige()
+function show_coverage()
 {
-	remove_covige();
+	remove_coverage();
 	if(Lock_show == 0)
 	{
 		Lock_show =1;
 
-		coverigeGroup = new ol.layer.Group({
+		coverageGroup = new ol.layer.Group({
             layers: [],
-            name: 'coverige'
+            name: 'coverage'
         });
 
 		<?php
@@ -5107,29 +5107,29 @@ function show_covige()
 				?>
 
 		
-				map.addLayer(this.coverigeGroup);
+				map.addLayer(this.coverageGroup);
 		
 	}
 }
-function remove_covige()
+function remove_coverage()
 {
-	this.map.removeLayer(this.coverigeGroup);
+	this.map.removeLayer(this.coverageGroup);
 	Lock_show  =0;
 }
 
-function show_covige_stations(arrays)
+function show_coverage_stations(arrays)
 {
 
 	
-	remove_covige();
+	remove_coverage();
 	if(Lock_show == 0)
 	{
 		Lock_show =1;
 		
 
-		coverigeGroup = new ol.layer.Group({
+		coverageGroup = new ol.layer.Group({
             layers: [],
-            name: 'coverige'
+            name: 'coverage'
         });
 
 		console.log(arrays);
@@ -5152,7 +5152,7 @@ function show_covige_stations(arrays)
 				?>
 
 		
-				map.addLayer(this.coverigeGroup);
+				map.addLayer(this.coverageGroup);
 		
 	}
 }
@@ -5334,7 +5334,7 @@ function update_tx_station_loop(data)
                    	var rx_active =data.nodes[k].qth[qth].rx[qth1].active;
                    	var rx_sql =data.nodes[k].qth[qth].rx[qth1].sql_open;
                    	value =data.nodes[k].qth[qth].rx[qth1].siglev;
-                   	var Freqvensy =data.nodes[k].qth[qth].rx[qth1].freq;
+                   	var Frequency =data.nodes[k].qth[qth].rx[qth1].freq;
 
                    	if(value == null)
                    	{

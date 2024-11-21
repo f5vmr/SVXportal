@@ -1024,7 +1024,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         <label for="ant_comment"><?php echo _('Antenna Type')?></label>
          <div class="row">
        		 <div class="col-sm-8">
-              <select name="antt"   class="form-control" >
+              <select name="antenna"   class="form-control" >
               		<option value="omni" selected=""><?php echo _('Omni')?></option>
         			<option value="ellipse"><?php echo _('Ellipse')?></option>
         			<option value="cardio"><?php echo _('Cardio')?></option>
