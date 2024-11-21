@@ -983,9 +983,9 @@ function load_today_audio(date)
 
 
 
-function Show_all_Recivers()
+function Show_all_Receivers()
 {
-	$( "#Recivers" ).html( "" );
+	$( "#Receivers" ).html( "" );
 
 
     //do what you need here
@@ -2397,7 +2397,7 @@ if ($usefile !== null) {
 
 				</div>
 
-				<div class="tab-pane" id="Recivers">
+				<div class="tab-pane" id="Receivers">
 				
 				</div>
 
@@ -2851,9 +2851,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 			 var idn = feature.id_;
 			 console.log(idn);
 			 if(idn.startsWith('aa'))
-				 var identity =station_identifire[idn.slice(2)];
+				 var identity =station_identifier[idn.slice(2)];
 			 else
-		     	var identity =station_identifire[idn.slice(4)];
+		     	var identity =station_identifier[idn.slice(4)];
 			// Get the <a> element with id="myAnchor"
 			 var x = document.getElementById("Show_Coverage_button");  
 			 x.setAttribute("onclick", "show_station_cover('"+identity+"','"+idn+"')");
@@ -3297,7 +3297,7 @@ function add_repeater_node(lat, lon,label,idn)
 	Draw_bar(idn, lat,lon);
 
 }
-function add_repeater_transmiter(lat, lon,label,idn,tg)
+function add_repeater_transmitter(lat, lon,label,idn,tg)
 {
 //	console.log(tg_colours[tg]['color']);
 	canvas_icon("stn_"+idn,lat, lon,label,tg_colours[tg]['color']);
@@ -3507,7 +3507,7 @@ function prosess_json_reflecktor()
         					group_idn =group_idn.replace(/ /g,"_");
 							if(Barsource.getFeatureById(group_idn) == null)
 							{
-								station_identifire[group_idn] =k;
+								station_identifier[group_idn] =k;
 
 								if(!valudate_if_exist(lon,lat))
 	            				{
@@ -3534,7 +3534,7 @@ function prosess_json_reflecktor()
             					map_pos_i++;
             					
      							idn =idn.replace(/ /g,"_");
-     							station_identifire[idn] =k;
+     							station_identifier[idn] =k;
      							console.log(idn);
      							add_repeater_node(lat, lon,name,idn);
             				}
@@ -5170,22 +5170,22 @@ function show_Coverage_stations(arrays)
 
 
 
-function load_Recivers_html()
+function load_Receivers_html()
 {
 	$.get( "receiver.php", function( data ) {
-  		$( "#Recivers" ).html( data );
+  		$( "#Receivers" ).html( data );
  
 	});
 }
-function apeend_Recivers_html(id)
+function apeend_Receivers_html(id)
 {
 	$.get( "receiver.php?id="+id, function( data ) {
-  		$( "#Recivers" ).append( data );
+  		$( "#Receivers" ).append( data );
  
 	});
 }
 // Idientify station by idn 
-var station_identifire = new Array();
+var station_identifier = new Array();
 function add_tx_station()
 {
 	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
@@ -5225,7 +5225,7 @@ function add_tx_station()
         				var talkgroup =data.nodes[k].tg;
         				var idn=k+data.nodes[k].qth[qth].tx[qth1].name;
         				idn =idn.replace(/ /g,"_");
-        				station_identifire[idn] =k;
+        				station_identifier[idn] =k;
         			
         				//console.log(name);
         				
@@ -5238,7 +5238,7 @@ function add_tx_station()
             					map_lon_lat[map_pos_i]['lat'] = lat;
             					map_lon_lat[map_pos_i]['lon'] = lon;
             					map_pos_i++;
-        						add_repeater_transmiter(lat,lon,name,idn,talkgroup)
+        						add_repeater_transmitter(lat,lon,name,idn,talkgroup)
             				}
             				
         				// tempoary fix if useing mor than 1 transmitter on same qth
@@ -5248,7 +5248,7 @@ function add_tx_station()
 		        }
 
 			}
-			console.log(station_identifire);	
+			console.log(station_identifier);	
 		}
 
 		//add_repeater_node()

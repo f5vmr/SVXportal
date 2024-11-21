@@ -348,9 +348,9 @@ $.getJSON('recording.php?date='+date, function (data) {
 myPlaylist.play();
 
 }
-function Show_all_Recivers()
+function Show_all_Receivers()
 {
-	$( "#Recivers" ).html( "" );
+	$( "#Receivers" ).html( "" );
 
 
     //do what you need here
@@ -838,7 +838,7 @@ if ($usefile !== null) {
 
 				</div>
 
-				<div class="tab-pane" id="Recivers">
+				<div class="tab-pane" id="Receivers">
 					<a href="#menu-toggle" class="btn btn-outline-success my-2 my-sm-0"
 						id="menu-toggle"><?php echo _("Toggle menu")?></a>
 				</div>
@@ -1156,7 +1156,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 		    var coordinates = feature.getGeometry().getCoordinates();
 		 	
 			 var idn = feature.id_;
-		     var identity =station_identifire[idn.slice(4)];
+		     var identity =station_identifier[idn.slice(4)];
 		     show_station_information(identity);
 
 
@@ -1560,7 +1560,7 @@ function add_repeater_node(lat, lon,label,idn)
 	Draw_bar(idn, lat,lon);
 
 }
-function add_repeater_transmiter(lat, lon,label,idn,tg)
+function add_repeater_transmitter(lat, lon,label,idn,tg)
 {
 //	console.log(tg_colours[tg]['color']);
 	canvas_icon("stn_"+idn,lat, lon,label,tg_colours[tg]['color']);
@@ -2321,22 +2321,22 @@ function remove_Coverage()
 }
 
 
-function load_Recivers_html()
+function load_Receivers_html()
 {
 	$.get( "receiver.php", function( data ) {
-  		$( "#Recivers" ).html( data );
+  		$( "#Receivers" ).html( data );
  
 	});
 }
-function apeend_Recivers_html(id)
+function apeend_Receivers_html(id)
 {
 	$.get( "receiver.php?id="+id, function( data ) {
-  		$( "#Recivers" ).append( data );
+  		$( "#Receivers" ).append( data );
  
 	});
 }
 // Idientify station by idn 
-var station_identifire = new Array();
+var station_identifier = new Array();
 function add_tx_station()
 {
 	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
@@ -2367,11 +2367,11 @@ function add_tx_station()
     				var talkgroup =data.nodes[k].tg;
     				var idn=k+data.nodes[k].qth[qth].tx[qth1].name;
     				idn =idn.replace(" ","_");
-    				station_identifire[idn] =k;
+    				station_identifier[idn] =k;
     				//console.log(name);
     				
     
-    				add_repeater_transmiter(lat,lon,name,idn,talkgroup)
+    				add_repeater_transmitter(lat,lon,name,idn,talkgroup)
     		
     				// tempoary fix if useing mor than 1 transmitter on same qth
     				setmap(lat, lon,8);

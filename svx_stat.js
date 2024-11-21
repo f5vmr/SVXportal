@@ -82,7 +82,7 @@ $.getJSON("repeater-info-SK2RIU.json", function( info ) {
 function stat_change(json)
 {
 
- load_Recivers_html();
+ load_Receivers_html();
 
 
 
@@ -175,7 +175,7 @@ $.getJSON(""+json+"", function( info ) {
 function multi_stat_change(json,id)
 {
 
- apeend_Recivers_html(id);
+ apeend_Receivers_html(id);
 
 
 
