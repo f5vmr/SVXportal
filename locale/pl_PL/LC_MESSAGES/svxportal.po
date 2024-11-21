@@ -29,8 +29,8 @@ msgstr "\""
 msgid "admin interface"
 msgstr "interfejs administracyjny"
 
-#: admin.php:228 edit_station.php:396 list_reciver.php:1497
-#: list_reciver_2.php:672 list_reciver_old.php:462 radiomobile_front.php:83
+#: admin.php:228 edit_station.php:396 list_receiver.php:1497
+#: list_receiver_2.php:672 list_receiver_old.php:462 radiomobile_front.php:83
 #: request_reflector_login.php:398 selftest.php:75 station_dash.php:352
 #: tap.php:210 user_settings.php:217
 msgid "Back"
@@ -347,16 +347,16 @@ msgstr ""
 #: admin/stations.php:162 ctcss_map_table.php:262 index.php:1959 index.php:2389
 #: index1.php:253 index1.php:1374 index1.php:1778 index_old.php:209
 #: index_old.php:806 index_old.php:1098 indexa.php:210 indexa.php:807
-#: indexa.php:1099 list_reciver.php:84 list_reciver_2.php:58
-#: list_reciver_old.php:55 request_reflector_login.php:460
+#: indexa.php:1099 list_receiver.php:84 list_receiver_2.php:58
+#: list_receiver_old.php:55 request_reflector_login.php:460
 #: request_reflector_login.php:633 request_reflector_login.php:1148
 msgid "Callsign"
 msgstr "Znak"
 
 #: admin/stations.php:163 ctcss_map_table.php:264 div_receiver2.php:136
 #: index.php:2597 index.php:2623 index1.php:1987 index_old.php:1303
-#: indexa.php:1304 list_reciver.php:84 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: indexa.php:1304 list_receiver.php:84 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Location"
 msgstr "Lokalizacja"
 
@@ -412,8 +412,8 @@ msgstr "Stwórz grupę rozmowną."
 
 #: admin/talkgroup.php:114 admin/talkgroup.php:161 index.php:1959
 #: index.php:2387 index1.php:253 index1.php:1776 index_old.php:209
-#: index_old.php:1096 indexa.php:210 indexa.php:1097 list_reciver.php:84
-#: list_reciver_2.php:58 list_reciver_old.php:55
+#: index_old.php:1096 indexa.php:210 indexa.php:1097 list_receiver.php:84
+#: list_receiver_2.php:58 list_receiver_old.php:55
 #: request_reflector_login.php:714
 msgid "TG#"
 msgstr "TG#"
@@ -472,8 +472,8 @@ msgid "CTSS map table"
 msgstr "Tabela CTSS"
 
 #: ctcss_map_table.php:263 div_receiver2.php:136 index.php:2625 index1.php:2014
-#: index_old.php:1330 indexa.php:1331 list_reciver.php:84 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: index_old.php:1330 indexa.php:1331 list_receiver.php:84 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Frequency"
 msgstr "Częstotliwość"
 
@@ -565,7 +565,7 @@ msgstr "Nic"
 
 # grammar for can be different based on context
 #: div_receiver2.php:9 index.php:2319 index1.php:1712 index_old.php:1024
-#: indexa.php:1025 list_reciver_2.php:669 list_reciver_old.php:459
+#: indexa.php:1025 list_receiver_2.php:669 list_receiver_old.php:459
 msgid "All"
 msgstr "Wszystkie"
 
@@ -573,14 +573,14 @@ msgstr "Wszystkie"
 msgid "Signal values at"
 msgstr "Wartości sygnałów "
 
-#: div_receiver2.php:136 list_reciver.php:84 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: div_receiver2.php:136 list_receiver.php:84 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Receiver"
 msgstr "Odbiornik"
 
 #: div_receiver2.php:136 index.php:2200 index1.php:1608 index_old.php:912
-#: indexa.php:913 list_reciver.php:84 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: indexa.php:913 list_receiver.php:84 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Signal"
 msgstr "Sygnał"
 
@@ -985,7 +985,7 @@ msgstr "Opis systemu"
 #: index1.php:1258 index1.php:1738 index1.php:1749 index1.php:1988
 #: index1.php:4010 index_old.php:671 index_old.php:1045 index_old.php:1055
 #: index_old.php:1304 indexa.php:672 indexa.php:1046 indexa.php:1056
-#: indexa.php:1305 list_reciver.php:536
+#: indexa.php:1305 list_receiver.php:536
 msgid "Talkgroups"
 msgstr "Grupy rozmowne"
 
@@ -1036,7 +1036,7 @@ msgstr "Rozpoczął rozmowę"
 
 #: index.php:1959 index.php:5255 index1.php:253 index1.php:4199
 #: index_old.php:209 index_old.php:3203 indexa.php:210 indexa.php:3204
-#: list_reciver.php:84 list_reciver_2.php:58 list_reciver_old.php:55
+#: list_receiver.php:84 list_receiver_2.php:58 list_receiver_old.php:55
 msgid "Talk time"
 msgstr "Czas rozmowy"
 
@@ -1081,7 +1081,7 @@ msgstr "pełny ekran"
 msgid "Select channel"
 msgstr "Wybierz kanał"
 
-#: index.php:2153 index1.php:1564 list_reciver.php:1483
+#: index.php:2153 index1.php:1564 list_receiver.php:1483
 msgid "Default"
 msgstr "Domyślny"
 
@@ -1387,19 +1387,19 @@ msgstr "Czas całkowity"
 msgid "Statistics for Network"
 msgstr "Statystyki dla Sieci"
 
-#: list_reciver.php:16 list_reciver_2.php:16 list_reciver_old.php:15
+#: list_receiver.php:16 list_receiver_2.php:16 list_receiver_old.php:15
 msgid "Receiver Monitor"
 msgstr "Monitor Odbiornika"
 
-#: list_reciver.php:1484 list_reciver_2.php:668 list_reciver_old.php:458
+#: list_receiver.php:1484 list_receiver_2.php:668 list_receiver_old.php:458
 msgid "Talkgroup filter"
 msgstr "Filtr Gruprozmownych"
 
-#: list_reciver.php:1485
+#: list_receiver.php:1485
 msgid "All active"
 msgstr "Wszystkie aktywne"
 
-#: list_reciver.php:1492
+#: list_receiver.php:1492
 msgid "Search for Node"
 msgstr "Wyszukaj węzeł"
 

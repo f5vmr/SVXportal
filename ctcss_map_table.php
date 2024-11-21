@@ -250,7 +250,7 @@ if($noheader != 1){?>
   
   
   
-  <form action="Get_Node_CSV.php" method="POST" onsubmit="return validate_export()"  target="_blank">
+  <form action="get_node_csv.php" method="POST" onsubmit="return validate_export()"  target="_blank">
   <div id="print_export_log" >
 
  <div style="overflow-x:auto;overflow-y: hidden;" >

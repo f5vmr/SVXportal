@@ -1462,7 +1462,7 @@ function update_bar_rssi(id,value,siglev,k)
         
     
    <a class="navbar-brand" href="index.php">
-    <img src="loggo.png" alt="Logo" style="width:40px;">
+    <img src="logo.png" alt="Logo" style="width:40px;">
 
   </a>
    <a class="navbar-brand wite_font" href="index.php">

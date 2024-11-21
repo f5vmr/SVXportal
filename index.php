@@ -2,7 +2,7 @@
 header('Access-Control-Allow-Origin: <?php echo $serveradress ?>');
 include "config.php";
 include 'function.php';
-include "Mqtt_driver.php";
+include "mqtt_driver.php";
 define_settings();
 set_language();
 
@@ -1655,7 +1655,7 @@ ul.dropdown-lr {
     
     
    <a class="navbar-brand" href="#">
-    <img src="loggo.png" alt="Logo" style="width:40px;">
+    <img src="logo.png" alt="Logo" style="width:40px;">
 
   </a>
    <a class="navbar-brand wite_font" href="#">
@@ -1897,7 +1897,7 @@ ul.dropdown-lr {
 					<i class="fas fa-terminal"></i> <?php echo _("System description")?></a></li>
 					<li class="nav-item"><a class="nav-link" href="#Dictionary"  onclick="hide_menu_click()"
 						data-toggle="tab"><i class="fas fa-book"></i> <?php echo _("Talkgroups")?></a></li>
-					<li class="nav-item"><a class="nav-link" href="list_reciver.php"><i
+					<li class="nav-item"><a class="nav-link" href="list_receiver.php"><i
 							class="fas fa-broadcast-tower"></i> <?php echo _("List receiver")?></a></li>
 
 					<li class="nav-item"><a class="nav-link" href="#Statistics" onclick="get_statistics();hide_menu_click();"  
@@ -5167,14 +5167,14 @@ function show_covige_stations(arrays)
 
 function load_Recivers_html()
 {
-	$.get( "Recivers.php", function( data ) {
+	$.get( "receiver.php", function( data ) {
   		$( "#Recivers" ).html( data );
  
 	});
 }
 function apeend_Recivers_html(id)
 {
-	$.get( "Recivers.php?id="+id, function( data ) {
+	$.get( "receiver.php?id="+id, function( data ) {
   		$( "#Recivers" ).append( data );
  
 	});

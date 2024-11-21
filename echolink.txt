@@ -28,7 +28,7 @@ If you want to use a specific talk group, it can be selected with DTMF commands.
 <div class="level2">
 
 <p>
-To activate voice group 23450 with DTMF, press:
+To activate talk group 23450 with DTMF, press:
 </p>
 <pre class="code">9123450#</pre>
 
@@ -48,7 +48,7 @@ If no traffic occurs on the selected talk group, the system switches to idle mod
 <div class="level1">
 <div class="table sectionedit5"><table class="inline">
   <tbody><tr class="row0">
-  <th class="col0 centeralign" colspan="3"> Node information </th><th class="col3 centeralign" colspan="10"> Mapping subtone to voice group number or DTMF (Kalix) </th><th class= "col13 leftalign"> Monitors </th>
+  <th class="col0 centeralign" colspan="3"> Node information </th><th class="col3 centeralign" colspan="10"> Mapping subtone to talk group number or DTMF (Kalix) </th><th class= "col13 leftalign"> Monitors </th>
   </tr>
   <tr class="row1">
   <th class="col0 leftalign"> Callsign </th><th class="col1 leftalign"> Frequency </th><th class="col2 rightalign"> City </th><th class="col3 leftalign" > No TG </th><th class="col4 rightalign"> TG240 </th><th class="col5 leftalign"> TG2400 </th><th class="col6 leftalign"> TG2401 </th>< th class="col7 leftalign"> TG2402 </th><th class="col8 leftalign"> TG2403 </th><th class="col9 leftalign"> TG2404 </th><th class="col10 leftalign"> TG2405 </th><th class="col11 leftalign"> TG2406 </th><th class="col12 leftalign"> TG2407 </th><th class="col13 leftalign"> Speech group </th>
@@ -76,7 +76,7 @@ If no traffic occurs on the selected talk group, the system switches to idle mod
 <div class="level1">
 
 <p>
-During a QSO on a talkgroup, it is possible to move all active nodes to another talkgroup. As an active node, the nodes that have had local activity since the voice group was activated, i.e. that the noise barrier has opened at least once, are counted. The QSY function is controlled by DTMF commands.
+During a QSO on a talkgroup, it is possible to move all active nodes to another talkgroup. As an active node, the nodes that have had local activity since the talk group was activated, i.e. that the noise barrier has opened at least once, are counted. The QSY function is controlled by DTMF commands.
 </p>
 <ul>
 <li class="level1"><div class="li"> <strong>92#</strong> � QSY to a temporary talkgroup automatically selected by the reflector server</div>
@@ -113,7 +113,7 @@ Note the difference between QSY and local TG selection. The QSY command 922405# 
   </tr>
   </thead>
   <tbody><tr class="row1">
-  <td class="col0 leftalign"> 91nnn# </td><td class="col1 leftalign"> 912405# </td><td class="col2 leftalign"> Activate voice group 2405 </td>
+  <td class="col0 leftalign"> 91nnn# </td><td class="col1 leftalign"> 912405# </td><td class="col2 leftalign"> Activate talk group 2405 </td>
   </tr>
   <tr class="row2">
   <td class="col0 leftalign"> 91# </td><td class="col1 leftalign"> </td><td class="col2 leftalign"> Jump back to previously selected speech group </td>
@@ -128,7 +128,7 @@ Note the difference between QSY and local TG selection. The QSY command 922405# 
   <td class="col0 leftalign"> 93# </td><td class="col1 leftalign"> </td><td class="col2 leftalign"> Follow with QSY if only listening </td>
   </tr>
   <tr class="row6">
-  <td class="col0 leftalign"> 94nnnn# </td><td class="col1"> 9424021# </td><td class="col2 leftalign"> Add monitoring of voice group temporarily </ td>
+  <td class="col0 leftalign"> 94nnnn# </td><td class="col1"> 9424021# </td><td class="col2 leftalign"> Add monitoring of talk group temporarily </ td>
   </tr>
   <tr class="row7">
   <td class="col0 leftalign"> 9*# </td><td class="col1 leftalign"> </td><td class="col2 leftalign"> Information/Status </td>

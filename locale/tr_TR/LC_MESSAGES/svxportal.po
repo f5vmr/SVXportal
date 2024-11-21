@@ -27,8 +27,8 @@ msgstr "'"
 msgid "admin interface"
 msgstr "Yönetici arabirimi"
 
-#: admin.php:228 edit_station.php:394 list_reciver.php:1100
-#: list_reciver_2.php:672 list_reciver_old.php:462
+#: admin.php:228 edit_station.php:394 list_receiver.php:1100
+#: list_receiver_2.php:672 list_receiver_old.php:462
 #: request_reflector_login.php:346 station_dash.php:352
 msgid "Back"
 msgstr "Geri"
@@ -332,15 +332,15 @@ msgstr "Giriş"
 #: admin/stations.php:91 ctcss_map_table.php:250 index.php:1629 index.php:2037
 #: index1.php:253 index1.php:1374 index1.php:1778 index_old.php:209
 #: index_old.php:806 index_old.php:1098 indexa.php:210 indexa.php:807
-#: indexa.php:1099 list_reciver.php:57 list_reciver_2.php:58
-#: list_reciver_old.php:55 request_reflector_login.php:387
+#: indexa.php:1099 list_receiver.php:57 list_receiver_2.php:58
+#: list_receiver_old.php:55 request_reflector_login.php:387
 #: request_reflector_login.php:534 request_reflector_login.php:1008
 msgid "Callsign"
 msgstr "Çağrı İşareti"
 
 #: admin/stations.php:92 ctcss_map_table.php:252 index.php:2246 index1.php:1987
-#: index_old.php:1303 indexa.php:1304 list_reciver.php:57 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: index_old.php:1303 indexa.php:1304 list_receiver.php:57 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Location"
 msgstr "Konum"
 
@@ -373,8 +373,8 @@ msgstr "Konuşma grubu oluştur"
 
 #: admin/talkgroup.php:114 admin/talkgroup.php:163 index.php:1629
 #: index.php:2035 index1.php:253 index1.php:1776 index_old.php:209
-#: index_old.php:1096 indexa.php:210 indexa.php:1097 list_reciver.php:57
-#: list_reciver_2.php:58 list_reciver_old.php:55
+#: index_old.php:1096 indexa.php:210 indexa.php:1097 list_receiver.php:57
+#: list_receiver_2.php:58 list_receiver_old.php:55
 #: request_reflector_login.php:606
 msgid "TG#"
 msgstr "KG#"
@@ -430,8 +430,8 @@ msgid "CTSS map table"
 msgstr "CTCS eşleşme tablosu"
 
 #: ctcss_map_table.php:251 div_receiver2.php:94 index.php:2273 index1.php:2014
-#: index_old.php:1330 indexa.php:1331 list_reciver.php:57 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: index_old.php:1330 indexa.php:1331 list_receiver.php:57 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Frequency"
 msgstr "Frekans"
 
@@ -500,8 +500,8 @@ msgid "Hide the Monitor bar"
 msgstr "Monitör menüsünü gizle"
 
 #: div_receiver2.php:8 index.php:1971 index1.php:1712 index_old.php:1024
-#: indexa.php:1025 list_reciver.php:1097 list_reciver_2.php:669
-#: list_reciver_old.php:459
+#: indexa.php:1025 list_receiver.php:1097 list_receiver_2.php:669
+#: list_receiver_old.php:459
 msgid "All"
 msgstr "Tümü"
 
@@ -509,14 +509,14 @@ msgstr "Tümü"
 msgid "Signal values at"
 msgstr "Sinyal değeri"
 
-#: div_receiver2.php:94 list_reciver.php:57 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: div_receiver2.php:94 list_receiver.php:57 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Receiver"
 msgstr "Alıcı"
 
 #: div_receiver2.php:94 index.php:1867 index1.php:1608 index_old.php:912
-#: indexa.php:913 list_reciver.php:57 list_reciver_2.php:58
-#: list_reciver_old.php:55
+#: indexa.php:913 list_receiver.php:57 list_receiver_2.php:58
+#: list_receiver_old.php:55
 msgid "Signal"
 msgstr "Sinyal"
 
@@ -993,7 +993,7 @@ msgstr "Konuşma başlama"
 
 #: index.php:1629 index.php:4463 index1.php:253 index1.php:4199
 #: index_old.php:209 index_old.php:3203 indexa.php:210 indexa.php:3204
-#: list_reciver.php:57 list_reciver_2.php:58 list_reciver_old.php:55
+#: list_receiver.php:57 list_receiver_2.php:58 list_receiver_old.php:55
 msgid "Talk time"
 msgstr "Konuşma zamanı"
 
@@ -1328,11 +1328,11 @@ msgstr "Toplam süre"
 msgid "Statistics for Network"
 msgstr "Network için istatistikler"
 
-#: list_reciver.php:15 list_reciver_2.php:16 list_reciver_old.php:15
+#: list_receiver.php:15 list_receiver_2.php:16 list_receiver_old.php:15
 msgid "Receiver Monitor"
 msgstr "Alıcı izleme"
 
-#: list_reciver.php:1096 list_reciver_2.php:668 list_reciver_old.php:458
+#: list_receiver.php:1096 list_receiver_2.php:668 list_receiver_old.php:458
 msgid "Talkgroup filter"
 msgstr "Konuşma Grubu filtrele"
 

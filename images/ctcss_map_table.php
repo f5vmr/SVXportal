@@ -184,7 +184,7 @@ if($noheader != 1){?>
 
 </script>
   <h2><?php echo _("CTSS map table")?></h2>     
-  <form action="Get_Node_CSV.php" method="POST" onsubmit="return validate_export()"  target="_blank">
+  <form action="get_node_csv.php" method="POST" onsubmit="return validate_export()"  target="_blank">
   <table class="table table-hover">
     <thead>
       <tr>

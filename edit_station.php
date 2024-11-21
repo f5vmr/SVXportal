@@ -1,7 +1,7 @@
 <?php
 include "config.php";
 include 'function.php';
-include "Mqtt_driver.php";
+include "mqtt_driver.php";
 define_settings();
 set_language();
 
@@ -406,7 +406,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
        
         <div>
    <a class="navbar-brand" href="#">
-    <img src="loggo.png" alt="Logo" style="width:40px;">
+    <img src="logo.png" alt="Logo" style="width:40px;">
 
   </a>
 

@@ -213,7 +213,7 @@ function fnExcelexport(table)
  <nav class="navbar   navbar-dark sidebar_collor">
  <div>
    <a class="navbar-brand" href="#">
-    <img src="loggo.png" alt="Logo" style="width:40px;">
+    <img src="logo.png" alt="Logo" style="width:40px;">
 
   </a>
 

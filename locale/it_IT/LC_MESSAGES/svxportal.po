@@ -23,16 +23,16 @@ msgstr ""
 msgid "CTSS map table"
 msgstr "Tabella CTSS  "
 
-#: ctcss_map_table.php:199 index.php:189 index.php:667 list_reciver.php:55
+#: ctcss_map_table.php:199 index.php:189 index.php:667 list_receiver.php:55
 msgid "Callsign"
 msgstr "Nominativo"
 
 #: ctcss_map_table.php:200 div_receiver2.php:94 index.php:1134
-#: list_reciver.php:55
+#: list_receiver.php:55
 msgid "Frequency"
 msgstr "Frequenza"
 
-#: ctcss_map_table.php:201 index.php:1107 list_reciver.php:55
+#: ctcss_map_table.php:201 index.php:1107 list_receiver.php:55
 msgid "Location"
 msgstr "Localizzazione"
 
@@ -56,7 +56,7 @@ msgstr "Usa l'ultimo carattere in chiamata"
 msgid "Export"
 msgstr "Еsporta"
 
-#: div_receiver2.php:8 index.php:880 list_reciver.php:455
+#: div_receiver2.php:8 index.php:880 list_receiver.php:455
 msgid "All"
 msgstr "Tutti"
 
@@ -64,11 +64,11 @@ msgstr "Tutti"
 msgid "Signal values at"
 msgstr "Livello segnale del "
 
-#: div_receiver2.php:94 list_reciver.php:55
+#: div_receiver2.php:94 list_receiver.php:55
 msgid "Receiver"
 msgstr "Ricevitori"
 
-#: div_receiver2.php:94 index.php:773 list_reciver.php:55
+#: div_receiver2.php:94 index.php:773 list_receiver.php:55
 msgid "Signal"
 msgstr "Segnale"
 
@@ -76,7 +76,7 @@ msgstr "Segnale"
 msgid "Mhz"
 msgstr "Mhz"
 
-#: index.php:189 index.php:668 index.php:901 list_reciver.php:55
+#: index.php:189 index.php:668 index.php:901 list_receiver.php:55
 msgid "TG"
 msgstr "TG"
 
@@ -88,7 +88,7 @@ msgstr "In trasmissione"
 msgid "Monitored TGs"
 msgstr "Monitor TG"
 
-#: index.php:189 list_reciver.php:55
+#: index.php:189 list_receiver.php:55
 msgid "Talk time"
 msgstr "Talk time"
 
@@ -348,15 +348,15 @@ msgstr "Utilizzo ultime 24 ore"
 msgid "Most used receiver"
 msgstr "Ricevitore più usato"
 
-#: list_reciver.php:15
+#: list_receiver.php:15
 msgid "Receiver Monitor"
 msgstr "Monitor Ricevitori"
 
-#: list_reciver.php:454
+#: list_receiver.php:454
 msgid "Talkgroup filter"
 msgstr "Filtro talkgroup"
 
-#: list_reciver.php:458
+#: list_receiver.php:458
 msgid "Back"
 msgstr "Indietro"
 

@@ -524,7 +524,7 @@ function login_form()
 					<li class="sidebar-brand nav-item"><a href="#">
 							<h1 class="wite_font">Svx Portal</h1>
 					</a></li>
-					<li class="nav-item"><img class="imagepading" src="loggo.png"
+					<li class="nav-item"><img class="imagepading" src="logo.png"
 						alt="logga" /></li>
 				</ul>
 				<ul class="nav flex-column nav-pills" role="tablist">
@@ -536,7 +536,7 @@ function login_form()
 						data-toggle="tab"><i class="fas fa-terminal"></i> <?php echo _("System description")?></a></li>
 					<li class="nav-item"><a class="nav-link" href="#Dictionary"
 						data-toggle="tab"><i class="fas fa-book"></i> <?php echo _("Talkgroups")?></a></li>
-					<li class="nav-item"><a class="nav-link" href="list_reciver.php"><i
+					<li class="nav-item"><a class="nav-link" href="list_receiver.php"><i
 							class="fas fa-broadcast-tower"></i> <?php echo _("List reciver")?></a></li>
 
 					<li class="nav-item"><a class="nav-link" href="#Statistics" onclick="get_statistics()"
@@ -2318,14 +2318,14 @@ function remove_covige()
 
 function load_Recivers_html()
 {
-	$.get( "Recivers.php", function( data ) {
+	$.get( "receiver.php", function( data ) {
   		$( "#Recivers" ).html( data );
  
 	});
 }
 function apeend_Recivers_html(id)
 {
-	$.get( "Recivers.php?id="+id, function( data ) {
+	$.get( "receiver.php?id="+id, function( data ) {
   		$( "#Recivers" ).append( data );
  
 	});

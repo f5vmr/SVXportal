@@ -379,7 +379,7 @@ function send_command_to_node()
        
         <div>
    <a class="navbar-brand" href="#">
-    <img src="loggo.png" alt="Logo" style="width:40px;">
+    <img src="logo.png" alt="Logo" style="width:40px;">
 
   </a>
 
@@ -668,7 +668,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
   <div class="tab-pane fade show " id="node" role="tabpanel" aria-labelledby="node-tab">
   
       
-    <form onsubmit="return validate_json_form()" id="valdate_form_json" method="post" action="generate_Node_json.php" target="_blank">
+    <form onsubmit="return validate_json_form()" id="valdate_form_json" method="post" action="generate_node_json.php" target="_blank">
     
        <h2><?php echo  _('Repater information')?></h2>
       
