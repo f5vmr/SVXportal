@@ -47,7 +47,7 @@ http://yoururl/update.php
 ##New cronjob in verson 2.6
 #add to /etc/crontab
 16 0 * * *       user    php /var/www/preprocess/calculate_date.php
-20 0 * * *       user    php /var/www/preprocess/calculate_mounth.php
+20 0 * * *       user    php /var/www/preprocess/calculate_month.php
 #optional
 #16 0 * * *       user    /var/www/preprocess/run_calulation.sh
 

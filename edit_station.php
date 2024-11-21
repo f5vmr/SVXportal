@@ -257,7 +257,7 @@ $( document ).ready(function() {
 $idnr = $_GET["station_idnr"];
 $idnr = $link->real_escape_string($idnr);
 
-$result = mysqli_query($link, "SELECT Callsign FROM `RefletorStations` where ID='".$idnr."'");
+$result = mysqli_query($link, "SELECT Callsign FROM `ReflectorStations` where ID='".$idnr."'");
 
 $user_id= $_SESSION['loginid'];
 
@@ -268,7 +268,7 @@ function create_station($station_id) {
     global $link;
     
     
-    $res = mysqli_query($link, "SELECT Callsign, ID FROM `RefletorStations` WHERE ID='".$station_id."'");
+    $res = mysqli_query($link, "SELECT Callsign, ID FROM `ReflectorStations` WHERE ID='".$station_id."'");
     
     $temp = mysqli_fetch_array($res, MYSQLI_ASSOC);
     

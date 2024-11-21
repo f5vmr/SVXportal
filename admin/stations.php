@@ -100,7 +100,7 @@ function reaload_user_stations()
       <?php 
       
       
-      $result = mysqli_query($link, "SELECT * FROM `RefletorStations` where Callsign != '' ");
+      $result = mysqli_query($link, "SELECT * FROM `ReflectorStations` where Callsign != '' ");
       
       
       $count_up =0;

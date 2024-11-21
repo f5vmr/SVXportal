@@ -469,7 +469,7 @@ Get_version_from_json();
 
 <?php
 $user_id= $_SESSION['loginid'];
-$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.station_id 
+$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN ReflectorStations ON ReflectorStations.ID = User_Permission.station_id 
 LEFT JOIN Information_page on Information_page.station_id = User_Permission.station_id 
 WHERE User_Permission.User_id ='$user_id' ");
 

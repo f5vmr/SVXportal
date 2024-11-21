@@ -2,10 +2,10 @@
 ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Talkgroup`);
 ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Callsign`); 
 ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Type`); 
-ALTER TABLE `RefletorStations` ADD INDEX(`Callsign`); 
+ALTER TABLE `ReflectorStations` ADD INDEX(`Callsign`); 
 ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Nodename`); 
 ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Time`); 
-ALTER TABLE `RefletorStations` ADD INDEX(`Callsign`); 
+ALTER TABLE `ReflectorStations` ADD INDEX(`Callsign`); 
 ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Id`); 
 
 
@@ -46,9 +46,9 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, '
 
 ALTER TABLE `users` ADD `Firstname` VARCHAR(100) NOT NULL AFTER `Is_admin`, ADD `lastname` VARCHAR(100) NOT NULL AFTER `Firstname`; 
 
-ALTER TABLE `RefletorStations` ADD `Last_Seen` DATETIME NULL DEFAULT NULL AFTER `Colour`; 
+ALTER TABLE `ReflectorStations` ADD `Last_Seen` DATETIME NULL DEFAULT NULL AFTER `Colour`; 
 
-ALTER TABLE `RefletorStations` ADD `Station_Down` INT NOT NULL AFTER `Last_Seen`; 
+ALTER TABLE `ReflectorStations` ADD `Station_Down` INT NOT NULL AFTER `Last_Seen`; 
 
 INSERT INTO `users` (`Username`, `Password`, `level`, `Is_admin`, `Firstname`, `lastname`) VALUES ('svxportal', MD5('svxportal'), '3', '1', 'svxportal', 'install');
 
@@ -58,4 +58,4 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, '
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'SYSTEM_MAIL', 'info@a.se', 'E-mail address for the system', '2');
 
-ALTER TABLE `RefletorStations` ADD `Station_Down_timmer_count` INT NOT NULL AFTER `Station_Down`;
+ALTER TABLE `ReflectorStations` ADD `Station_Down_timmer_count` INT NOT NULL AFTER `Station_Down`;

@@ -18,7 +18,7 @@ if(  $_SESSION['loginid'] >0 )
         $commnd= $link->real_escape_string($_POST['command']);
         $date= $link->real_escape_string($_POST['date']);
 
-        $sql ="SELECT `Callsign` FROM RefletorStations where ID='$stid'";
+        $sql ="SELECT `Callsign` FROM ReflectorStations where ID='$stid'";
         $result = $link->query($sql);
         $station_name ="";
 

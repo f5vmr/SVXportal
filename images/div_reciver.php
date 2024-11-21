@@ -4,7 +4,7 @@
 
 function load_reflector()
 {
-    call_svxrefelktor();
+    call_svxreflector();
     $('#selects').html('<option value=""> -- <?php echo _('All')?> -- </option>');
     $.getJSON( refelktor_address, function( data ) {
     	for(var k in data.nodes){
@@ -31,7 +31,7 @@ function load_reflector()
     });	
 }
 
-function call_svxrefelktor() {
+function call_svxreflector() {
 	
 	$
 			.getJSON(
@@ -195,7 +195,7 @@ function call_svxrefelktor() {
 
 						}
 
-						interval = setTimeout(call_svxrefelktor, 500);
+						interval = setTimeout(call_svxreflector, 500);
 					});
 
 }

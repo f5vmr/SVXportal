@@ -93,7 +93,7 @@ if(read_cache() != $json_data)
     wrie_to_cache($json_data);
     mysqli_set_charset($conn,"utf8");
     
-    $sql ="SELECT `Callsign` FROM RefletorStations";
+    $sql ="SELECT `Callsign` FROM ReflectorStations";
     $result = $conn->query($sql);
     $i=1;
     while($row = $result->fetch_assoc()) 
@@ -122,7 +122,7 @@ if(read_cache() != $json_data)
       
             
             
-            $sql_insert = 'INSERT IGNORE RefletorStations(`Callsign`,`Location`)VALUES( "'.$key.'","'.$NodeLocation.'")';
+            $sql_insert = 'INSERT IGNORE ReflectorStations(`Callsign`,`Location`)VALUES( "'.$key.'","'.$NodeLocation.'")';
             if ($conn->query($sql_insert) === TRUE) {
                 echo "New record created successfully";
             } else {

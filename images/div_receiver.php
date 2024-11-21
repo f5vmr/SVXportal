@@ -24,7 +24,7 @@
     
     $(document).ready(function(){
         
-        call_svxrefelktor();
+        call_svxreflector();
 
         $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 

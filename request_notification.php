@@ -8,7 +8,7 @@ if($_SESSION['loginid'])
 {
 $user_id= $_SESSION['loginid'];
 
-$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.station_id WHERE User_Permission.User_id ='$user_id' ");
+$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN ReflectorStations ON ReflectorStations.ID = User_Permission.station_id WHERE User_Permission.User_id ='$user_id' ");
 
 $calsign_array = array();
 

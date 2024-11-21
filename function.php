@@ -469,7 +469,7 @@ function get_url($url) {
 function detect_empty_cache_table()
 {
     global $link;
-    $nummber = $link->query("SELECT COUNT(*) as c FROM trafic_day_statistics ")->fetch_object()->c;
+    $nummber = $link->query("SELECT COUNT(*) as c FROM traffic_day_statistics ")->fetch_object()->c;
     
     if($nummber  >0 )
         return true;

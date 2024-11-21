@@ -58,7 +58,7 @@ set_language();
 var refelktor_address="<?php echo $serveraddress ?>";
 //<![CDATA[
 $(document).ready(function(){
-call_svxrefelktor();
+call_svxreflector();
 add_node_colours();
 load_reflector();
 generate_coulor();
@@ -169,7 +169,7 @@ function create_bar_rx(value,element,rx_sql)
 	
 }
 
-function call_svxrefelktor() {
+function call_svxreflector() {
 $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	//console.log(data);
 	for(var k in data.nodes){
@@ -184,7 +184,7 @@ $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	
 	
 
-$('#Reflektortable').html('<th><?php echo _("Callsign")?></th><th><?php echo _("TG")?></th><th><?php echo _("Is talker")?></th><th><?php echo _("Monitored TGs")?></th><th><?php echo _("Talk time")?></th><th><?php echo _("Active RX")?></th>');
+$('#Reflectortable').html('<th><?php echo _("Callsign")?></th><th><?php echo _("TG")?></th><th><?php echo _("Is talker")?></th><th><?php echo _("Monitored TGs")?></th><th><?php echo _("Talk time")?></th><th><?php echo _("Active RX")?></th>');
 for(var k in data.nodes){
 	var text =" ";
 	for(var nodes in data.nodes[k].monitoredTGs){
@@ -196,7 +196,7 @@ for(var k in data.nodes){
 		var image= '<img src="images/talking.gif" alt="talk" id="talking" width="25px">';	
        if(data.nodes[k].isTalker == false)
 	{
-	  $('#Reflektortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="red_colour"><?php echo _("NO")?></td><td class="text-primary">'+text+'</td><td></td><td></td></tr>');
+	  $('#Reflectortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="red_colour"><?php echo _("NO")?></td><td class="text-primary">'+text+'</td><td></td><td></td></tr>');
 	  if(current_talker == k)
 	  {
 		totalSeconds=0;
@@ -205,7 +205,7 @@ for(var k in data.nodes){
 	}
 	else
 	{
-         $('#Reflektortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="green_colour" ><?php echo _("YES")?>'+image+'</td><td class="text-primary">'+text+'</td><td><label id="minutes">00</label>:<label id="seconds">00</label></td><td></td></tr>');
+         $('#Reflectortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="green_colour" ><?php echo _("YES")?>'+image+'</td><td class="text-primary">'+text+'</td><td><label id="minutes">00</label>:<label id="seconds">00</label></td><td></td></tr>');
            ++totalSeconds;
 		var minutesLabel = document.getElementById("minutes");
        	var secondsLabel = document.getElementById("seconds");
@@ -218,7 +218,7 @@ for(var k in data.nodes){
 
 
 
-interval = setTimeout(call_svxrefelktor, 1000);   
+interval = setTimeout(call_svxreflector, 1000);   
   });
 
 }
@@ -458,7 +458,7 @@ var node_colours = new Array();
 function add_node_colours()
 {
 	<?php 
-    $result = mysqli_query($link, "SELECT * FROM `RefletorStations` ");
+    $result = mysqli_query($link, "SELECT * FROM `ReflectorStations` ");
 
     // Numeric array
 
@@ -616,7 +616,7 @@ function login_form()
 				<div class="tab-pane active" id="Reflector">
 
 
-					<table id="Reflektortable" class="table">
+					<table id="Reflectortable" class="table">
 						<th><?php echo _("Callsign")?></th>
 						<th><?php echo _("TG")?></th>
 						<th><?php echo _("Ver")?></th>
@@ -768,7 +768,7 @@ function login_form()
 	
 	
 
-$result = mysqli_query($link, "SELECT * FROM `RefletorStations` where Callsign != '' ");
+$result = mysqli_query($link, "SELECT * FROM `ReflectorStations` where Callsign != '' ");
 
 // Numeric array
 

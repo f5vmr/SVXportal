@@ -33,7 +33,7 @@ set_language();
 
 <style type="text/css">
 
-#Reflektortable tr
+#Reflectortable tr
 {
  cursor: pointer;
 }
@@ -57,14 +57,14 @@ function random_css_colour()
 $(document).ready(function(){
 	add_header();
 	generate_coulor();
-	call_svxrefelktor();
+	call_svxreflector();
 	MQTTconnect();
 	
-	$('#Reflektortable').on('shown.bs.collapse', function () {
+	$('#Reflectortable').on('shown.bs.collapse', function () {
 	    update_icons_expand();
 	});
 
-	$('#Reflektortable').on('hidden.bs.collapse', function () {
+	$('#Reflectortable').on('hidden.bs.collapse', function () {
 	   update_icons_expand();
 	});
 
@@ -81,7 +81,7 @@ var tg_colours = new Array();
 function add_header()
 {
 
-	$('#Reflektortable').html('<thead class="thead-dark"><tr><th style="width:1%"></th><th scope="col" class="col-xs-2 text-left" ><?php echo _('Callsign')?> &emsp;&emsp;&emsp;&emsp;</th><th scope="col" class="col-xs-1" ><?php echo _('Location')?></th><th scope="col" class="col-xs-1 text-left"><?php echo _('TG#')?></th><th scope="col" class="col-xs-1"></th><th scope="col" class="col-xs-2"><?php echo _('Receiver')?></th><th scope="col" class="col-xs-1"><?php echo _('Signal')?></th><th scope="col" class="col-xs-2"><?php echo _('Frequency')?></th><th class="col-xs-2"><?php echo _('Talk time')?></th></tr></thead>');
+	$('#Reflectortable').html('<thead class="thead-dark"><tr><th style="width:1%"></th><th scope="col" class="col-xs-2 text-left" ><?php echo _('Callsign')?> &emsp;&emsp;&emsp;&emsp;</th><th scope="col" class="col-xs-1" ><?php echo _('Location')?></th><th scope="col" class="col-xs-1 text-left"><?php echo _('TG#')?></th><th scope="col" class="col-xs-1"></th><th scope="col" class="col-xs-2"><?php echo _('Receiver')?></th><th scope="col" class="col-xs-1"><?php echo _('Signal')?></th><th scope="col" class="col-xs-2"><?php echo _('Frequency')?></th><th class="col-xs-2"><?php echo _('Talk time')?></th></tr></thead>');
  	
 }
 
@@ -396,7 +396,7 @@ function remove_notgouiltychar(string)
 function update_icons_expand()
 {
 
-	$( "#Reflektortable tr" ).each(function( i ) {
+	$( "#Reflectortable tr" ).each(function( i ) {
 
 	    var aria_e = $(this).attr('aria-expanded');
 	    var element_id ="";
@@ -615,18 +615,18 @@ var filter_station = "";
 var old_json_pass="";
 function update_filter(value) {
 	filter_station = value;
-//	$('#Reflektortable').html("<th>Callsign</th><th>TG</th><th>Ver</th><th>Monitored TGs</th>");
-	$('#Reflektortable').find('tbody').detach();
+//	$('#Reflectortable').html("<th>Callsign</th><th>TG</th><th>Ver</th><th>Monitored TGs</th>");
+	$('#Reflectortable').find('tbody').detach();
 	console.log(filter_station);
 	add_header();
-	call_svxrefelktor();
+	call_svxreflector();
 
 }
 
 
 dryrun=1;
 
-function call_svxrefelktor() {
+function call_svxreflector() {
 	
 $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	if(filter_station != "")
@@ -870,7 +870,7 @@ for(var k in data.nodes){
     	 {
     		 $("#minutes_"+data.nodes[k].tg).remove(); 
     		 $("#seconds_"+data.nodes[k].tg).remove(); 	 
-	  		$('#Reflektortable').append('<tbody class="table-striped" id="body-of-'+printk+'"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td id="rssi_canas_'+printk+'"> <canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
+	  		$('#Reflectortable').append('<tbody class="table-striped" id="body-of-'+printk+'"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td id="rssi_canas_'+printk+'"> <canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
 	  		create_bar('bar_'+printk);
 	  		//create_bar_rssi('bar_RSSI_'+printk)
 	    }
@@ -1031,7 +1031,7 @@ for(var k in data.nodes){
 
               $('#group-of-'+printk).append(qth_html_add);
    
-              //$('#Reflektortable').append(qth_html_add);
+              //$('#Reflectortable').append(qth_html_add);
               $('#row'+remove_notgouiltychar(name_id)+'').removeClass("class_row");
               
               counter_tbody++;
@@ -1119,7 +1119,7 @@ for(var k in data.nodes){
 
 
 
-    interval = setTimeout(call_svxrefelktor, 500);   
+    interval = setTimeout(call_svxreflector, 500);   
 }
 function create_bar(id)
 {
@@ -1375,7 +1375,7 @@ function update_bar_rssi(id,value,siglev,k)
     	  var input, filter, table, tr, td, i, txtValue;
     	  input = document.getElementById("seek");
     	  filter = input.value.toUpperCase();
-    	  table = document.getElementById("Reflektortable");
+    	  table = document.getElementById("Reflectortable");
     	  tr = table.getElementsByTagName("tr");
     
     	  // Loop through all table rows, and hide those who don't match the search query
@@ -1499,7 +1499,7 @@ function update_bar_rssi(id,value,siglev,k)
 	</div>
     		</nav>
     		
-    <table id="Reflektortable" class="table  table-hover">
+    <table id="Reflectortable" class="table  table-hover">
     
     
 	</table>

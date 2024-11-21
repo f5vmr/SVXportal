@@ -2,7 +2,7 @@ var filter_station = "";
 function update_filter(value) {
 	filter_station = value;
 	$('#holder').html("");
-	call_svxrefelktor();
+	call_svxreflector();
 
 }
 

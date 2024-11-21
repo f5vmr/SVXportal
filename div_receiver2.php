@@ -4,7 +4,7 @@
 
 function load_reflector()
 {
-    //call_svxrefelktor();
+    //call_svxreflector();
     $('#selects').html('<option value="-" > -- <?php echo _('None')?> -- </option>');
     $('#selects').append('<option value=""> -- <?php echo _('All')?> -- </option>');
 
@@ -53,7 +53,7 @@ function toHex(str) {
 
 
 
-function div_call_svxrefelktor(data) {
+function div_call_svxreflector(data) {
 	
 //	$.getJSON(
 //					refelktor_address,
@@ -252,7 +252,7 @@ function div_call_svxrefelktor(data) {
 
 						}
 
-//						interval = setTimeout(call_svxrefelktor, 500);
+//						interval = setTimeout(call_svxreflector, 500);
 	//				});
 
 }

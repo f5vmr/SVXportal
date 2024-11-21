@@ -31,7 +31,7 @@ function check_if_dead($call) {
     global $counter_down;
     global $downtime_time;
  
-    $sql ="SELECT `Station_Down` , `Station_Down_timmer_count` FROM RefletorStations where Callsign='$call'";
+    $sql ="SELECT `Station_Down` , `Station_Down_timmer_count` FROM ReflectorStations where Callsign='$call'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
   
@@ -47,7 +47,7 @@ function check_if_dead_time($call) {
     global $counter_down;
     global $downtime_time;
     
-    $sql ="SELECT `Station_Down` , `Station_Down_timmer_count` FROM RefletorStations where Callsign='$call'";
+    $sql ="SELECT `Station_Down` , `Station_Down_timmer_count` FROM ReflectorStations where Callsign='$call'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -61,12 +61,12 @@ function check_if_dead_time($call) {
         if($row['Station_Down_timmer_count'] >= $downtime_time)
         {
             $count1 = $downtime_time+1;
-            $sql1 ="UPDATE RefletorStations SET Station_Down_timmer_count = $count1  WHERE Callsign = '".$call."'";
+            $sql1 ="UPDATE ReflectorStations SET Station_Down_timmer_count = $count1  WHERE Callsign = '".$call."'";
             
         }
         else
         {
-            $sql1 ="UPDATE RefletorStations SET Station_Down_timmer_count = Station_Down_timmer_count + 1  WHERE Callsign = '".$call."'";
+            $sql1 ="UPDATE ReflectorStations SET Station_Down_timmer_count = Station_Down_timmer_count + 1  WHERE Callsign = '".$call."'";
         }
         $conn->query($sql1);
 
@@ -84,7 +84,7 @@ function check_if_sendmail($call) {
 
     global $downtime_time;
     
-    $sql ="SELECT `Station_Down` , `Station_Down_timmer_count` FROM RefletorStations where Callsign='$call'";
+    $sql ="SELECT `Station_Down` , `Station_Down_timmer_count` FROM ReflectorStations where Callsign='$call'";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -171,7 +171,7 @@ $json = json_decode($json_data);
     wrie_to_cache($json_data);
     mysqli_set_charset($conn,"utf8");
     
-    $sql ="SELECT `Callsign` FROM RefletorStations where  Monitor=1";
+    $sql ="SELECT `Callsign` FROM ReflectorStations where  Monitor=1";
     $result = $conn->query($sql);
     $i=1;
     while($row = $result->fetch_assoc())
@@ -224,12 +224,12 @@ $json = json_decode($json_data);
                     
                 }
                 
-                $sql1 ="UPDATE RefletorStations SET Station_Down_timmer_count = 0  WHERE Callsign = '".$key."'";
+                $sql1 ="UPDATE ReflectorStations SET Station_Down_timmer_count = 0  WHERE Callsign = '".$key."'";
                 $conn->query($sql1);
                 
             }
             
-            $sql_insert = "UPDATE `RefletorStations` SET Last_Seen=now(), Station_Down='0' WHERE Callsign='$key'";
+            $sql_insert = "UPDATE `ReflectorStations` SET Last_Seen=now(), Station_Down='0' WHERE Callsign='$key'";
             $conn->query($sql_insert);
            
         }
@@ -256,7 +256,7 @@ $json = json_decode($json_data);
             
 
         
-        $sql_insert = "UPDATE `RefletorStations` SET Station_Down='1' WHERE Callsign='$value'";
+        $sql_insert = "UPDATE `ReflectorStations` SET Station_Down='1' WHERE Callsign='$value'";
         $conn->query($sql_insert);
         
         

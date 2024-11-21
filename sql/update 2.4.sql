@@ -3,7 +3,7 @@ start transaction;
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'REFLECTOR_SERVER_ADDRESS', '127.0.0.1', 'Server address to svxreflector', '2'); 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'REFLECTOR_SERVER_PORT', '5300', 'SvxReflector server port ', '2'); 
-ALTER TABLE `RefletorStations` ADD `Monitor` INT NOT NULL DEFAULT '1' AFTER `Station_Down_timmer_count`; 
+ALTER TABLE `ReflectorStations` ADD `Monitor` INT NOT NULL DEFAULT '1' AFTER `Station_Down_timmer_count`; 
 
 
     

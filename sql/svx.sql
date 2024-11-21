@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Databas: `svxinstall`
+-- Database: `svxinstall`
 --
 
 -- --------------------------------------------------------
@@ -125,10 +125,10 @@ CREATE TABLE `ReflectorNodeLog` (
 -- --------------------------------------------------------
 
 --
--- Table Structure`RefletorStations`
+-- Table Structure`ReflectorStations`
 --
 
-CREATE TABLE `RefletorStations` (
+CREATE TABLE `ReflectorStations` (
   `ID` int(11) NOT NULL,
   `Callsign` varchar(40) CHARACTER SET utf8 COLLATE utf8_swedish_ci NOT NULL,
   `Location` text NOT NULL,
@@ -295,9 +295,9 @@ ALTER TABLE `ReflectorNodeLog`
   ADD KEY `Id` (`Id`);
 
 --
--- Index för table `RefletorStations`
+-- Index för table `ReflectorStations`
 --
-ALTER TABLE `RefletorStations`
+ALTER TABLE `ReflectorStations`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `Callsign` (`Callsign`),
   ADD KEY `Callsign_2` (`Callsign`);
@@ -406,10 +406,10 @@ ALTER TABLE ReflectorNodeLog AUTO_INCREMENT = 1;
 -- --------------------------------------------------------
 
 --
--- Table Structure`Refletor_station_state`
+-- Table Structure`Reflector_station_state`
 --
 
-CREATE TABLE `Refletor_station_state` (
+CREATE TABLE `Reflector_station_state` (
   `ID` int NOT NULL,
   `Callsign` varchar(50) NOT NULL,
   `Current_start` timestamp NOT NULL,
@@ -438,15 +438,15 @@ CREATE TABLE `Station_day_statistic` (
 -- --------------------------------------------------------
 
 --
--- Table Structure`trafic_day_statistics`
+-- Table Structure`traffic_day_statistics`
 --
 
-CREATE TABLE `trafic_day_statistics` (
+CREATE TABLE `traffic_day_statistics` (
   `id` int NOT NULL,
   `Node` varchar(50) CHARACTER SET utf8 COLLATE utf8mb4_unicode_ci NOT NULL,
   `TG` varchar(20) NOT NULL,
   `Year` varchar(12) NOT NULL,
-  `Mounth` varchar(12) NOT NULL,
+  `Month` varchar(12) NOT NULL,
   `Day` varchar(12) NOT NULL,
   `Timestamp` timestamp NOT NULL,
   `00_N` float NOT NULL,
@@ -529,10 +529,10 @@ CREATE TABLE `trafic_day_statistics` (
 -- --------------------------------------------------------
 
 --
--- Table Structure`trafic_mounth_statistics`
+-- Table Structure`traffic_month_statistics`
 --
 
-CREATE TABLE `trafic_mounth_statistics` (
+CREATE TABLE `traffic_month_statistics` (
   `id` int NOT NULL,
   `Node` varchar(50) NOT NULL,
   `TG` varchar(20) NOT NULL,
@@ -583,9 +583,9 @@ CREATE TABLE `trafic_mounth_statistics` (
 --
 
 --
--- Index f�r table `Refletor_station_state`
+-- Index f�r table `Reflector_station_state`
 --
-ALTER TABLE `Refletor_station_state`
+ALTER TABLE `Reflector_station_state`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `Callsign` (`Callsign`);
 
@@ -596,20 +596,20 @@ ALTER TABLE `Station_day_statistic`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index f�r table `trafic_day_statistics`
+-- Index f�r table `traffic_day_statistics`
 --
-ALTER TABLE `trafic_day_statistics`
+ALTER TABLE `traffic_day_statistics`
   ADD PRIMARY KEY (`id`),
   ADD KEY `Node` (`Node`),
   ADD KEY `TG` (`TG`),
   ADD KEY `Year` (`Year`),
-  ADD KEY `Mounth` (`Mounth`),
+  ADD KEY `Month` (`Month`),
   ADD KEY `Day` (`Day`);
 
 --
--- Index f�r table `trafic_mounth_statistics`
+-- Index f�r table `traffic_month_statistics`
 --
-ALTER TABLE `trafic_mounth_statistics`
+ALTER TABLE `traffic_month_statistics`
   ADD PRIMARY KEY (`id`),
   ADD KEY `Node` (`Node`),
   ADD KEY `TG` (`TG`),
@@ -620,9 +620,9 @@ ALTER TABLE `trafic_mounth_statistics`
 --
 
 --
--- AUTO_INCREMENT f�r table `Refletor_station_state`
+-- AUTO_INCREMENT f�r table `Reflector_station_state`
 --
-ALTER TABLE `Refletor_station_state`
+ALTER TABLE `Reflector_station_state`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT;
 
 --
@@ -632,15 +632,15 @@ ALTER TABLE `Station_day_statistic`
   MODIFY `Id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r table `trafic_day_statistics`
+-- AUTO_INCREMENT f�r table `traffic_day_statistics`
 --
-ALTER TABLE `trafic_day_statistics`
+ALTER TABLE `traffic_day_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r table `trafic_mounth_statistics`
+-- AUTO_INCREMENT f�r table `traffic_month_statistics`
 --
-ALTER TABLE `trafic_mounth_statistics`
+ALTER TABLE `traffic_month_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
@@ -650,10 +650,10 @@ COMMIT;
 UPDATE `Settings` SET `type` = '3' WHERE `Settings`.`id` = 1; 
 UPDATE `Settings` SET `value` = '2.6' WHERE `Settings`.`id` = 1; 
 
-ALTER TABLE `RefletorStations` DROP INDEX `Callsign_2`;
+ALTER TABLE `ReflectorStations` DROP INDEX `Callsign_2`;
 
-TRUNCATE `RefletorStations`;
-ALTER TABLE `RefletorStations` CHANGE `ID` `ID` INT NOT NULL AUTO_INCREMENT; 
+TRUNCATE `ReflectorStations`;
+ALTER TABLE `ReflectorStations` CHANGE `ID` `ID` INT NOT NULL AUTO_INCREMENT; 
 
-ALTER TABLE `RefletorStations` ADD `Version` VARCHAR(200) NOT NULL AFTER `Last_Seen`; 
-ALTER TABLE `RefletorStations` ADD `Sysop` VARCHAR(200) NOT NULL AFTER `Colour`; 
+ALTER TABLE `ReflectorStations` ADD `Version` VARCHAR(200) NOT NULL AFTER `Last_Seen`; 
+ALTER TABLE `ReflectorStations` ADD `Sysop` VARCHAR(200) NOT NULL AFTER `Colour`; 

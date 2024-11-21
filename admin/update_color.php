@@ -21,7 +21,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
         
         
-        $link->query("UPDATE `RefletorStations` SET `Colour` = '$color' WHERE `RefletorStations`.`ID` = $id; ");
+        $link->query("UPDATE `ReflectorStations` SET `Colour` = '$color' WHERE `ReflectorStations`.`ID` = $id; ");
         
         $link->commit();
         $link->close();

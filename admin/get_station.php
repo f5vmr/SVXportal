@@ -8,7 +8,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
     
 
     
-    $result = mysqli_query($link, "SELECT * FROM `RefletorStations` where Callsign != '' ");
+    $result = mysqli_query($link, "SELECT * FROM `ReflectorStations` where Callsign != '' ");
     
     
     

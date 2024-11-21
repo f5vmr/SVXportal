@@ -41,7 +41,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
   
 <?php 
 $user_id= $row['id'];
-$result1 = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.station_id WHERE User_Permission.User_id ='$user_id' ");
+$result1 = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN ReflectorStations ON ReflectorStations.ID = User_Permission.station_id WHERE User_Permission.User_id ='$user_id' ");
 
 
 
@@ -71,10 +71,10 @@ while ($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC))
   $idin= join(",",$idarray);
 
 if(sizeof ($idarray) == 0)
-    $result2 = mysqli_query($link, "SELECT * FROM `RefletorStations`  WHERE Callsign !='' ");
+    $result2 = mysqli_query($link, "SELECT * FROM `ReflectorStations`  WHERE Callsign !='' ");
 else
 {
-    $result2 = mysqli_query($link, "SELECT * FROM `RefletorStations`  WHERE ID NOT IN(".$idin.") AND Callsign !='' ");
+    $result2 = mysqli_query($link, "SELECT * FROM `ReflectorStations`  WHERE ID NOT IN(".$idin.") AND Callsign !='' ");
     unset($idarray);
 }
 

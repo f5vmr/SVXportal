@@ -12,7 +12,7 @@ set_language();
 function detect_empty()
 {
     global $link;
-    $nummber = $link->query("SELECT COUNT(*) as c FROM trafic_mounth_statistics ")->fetch_object()->c;
+    $nummber = $link->query("SELECT COUNT(*) as c FROM traffic_month_statistics ")->fetch_object()->c;
     
     
     return $nummber;
@@ -22,7 +22,7 @@ $add_filter ="";
 
 if(detect_empty() > 0)
 {
-    $link->query('DELETE FROM `trafic_mounth_statistics` WHERE `Year` = "'.date("Y").'"');
+    $link->query('DELETE FROM `traffic_month_statistics` WHERE `Year` = "'.date("Y").'"');
     $add_filter ="WHERE Year = '".date("Y")."'"; 
     
     // the datab
@@ -38,7 +38,7 @@ else
 
 
 
-$sql_R = "SELECT sum( Total_T )as total_time,sum( `Total_N` )as Total_nn,sum( `Total_X2` )as Total_2 , `Year`,`Mounth` , `TG`, `Node` FROM `trafic_day_statistics` $add_filter GROUP BY `Year`,`Mounth`,`Node`,`TG` ";
+$sql_R = "SELECT sum( Total_T )as total_time,sum( `Total_N` )as Total_nn,sum( `Total_X2` )as Total_2 , `Year`,`Month` , `TG`, `Node` FROM `traffic_day_statistics` $add_filter GROUP BY `Year`,`Month`,`Node`,`TG` ";
 
 
 $result = $link->query($sql_R);
@@ -49,9 +49,9 @@ $data = array();
 while($row = $result->fetch_assoc())
 {
 
-    @$data[$row['Node']][$row['Year']][$row['TG']][$row['Mounth']] ['_T']  += $row['total_time'];
-    @$data[$row['Node']][$row['Year']][$row['TG']][$row['Mounth']] ['_N']  += $row['Total_nn'];
-    @$data[$row['Node']][$row['Year']][$row['TG']][$row['Mounth']] ['_X2'] += $row['Total_2'];
+    @$data[$row['Node']][$row['Year']][$row['TG']][$row['Month']] ['_T']  += $row['total_time'];
+    @$data[$row['Node']][$row['Year']][$row['TG']][$row['Month']] ['_N']  += $row['Total_nn'];
+    @$data[$row['Node']][$row['Year']][$row['TG']][$row['Month']] ['_X2'] += $row['Total_2'];
     
     
     @$data[$row['Node']][$row['Year']][$row['TG']]['TOTAL_T']  += $row['total_time'];
@@ -70,7 +70,7 @@ foreach($data as $node => $year_data)
     {
     
         
-        foreach($tg_data as $tg => $monunts ) 
+        foreach($tg_data as $tg => $months ) 
         {
             $extra='';
             $columns='';
@@ -78,20 +78,20 @@ foreach($data as $node => $year_data)
             
             for ($a = 1; $a <= 12; $a++) 
             {
-                if(!array_key_exists($a,$monunts))
+                if(!array_key_exists($a,$months))
                 {
      
                     
-                    $monunts[$a] ["_N"] =0;
-                    $monunts[$a] ["_T"] =0;
-                    $monunts[$a] ["_X2"] =0;
+                    $months[$a] ["_N"] =0;
+                    $months[$a] ["_T"] =0;
+                    $months[$a] ["_X2"] =0;
                     
                 }
                 
             }
             
             
-            foreach($monunts as $i => $value) 
+            foreach($months as $i => $value) 
             {
 
                 
@@ -116,11 +116,11 @@ foreach($data as $node => $year_data)
                 $sql_other_col ="Node,TG,Year";
                 $standard_data = '\''.$node.'\''.",".$tg.",".$year;
                 $total_str =  ",TOT_N,TOT_X2, TOT_T";
-                $total_val =",".$monunts['TOTAL_N'].",".$monunts['TOTAL_X2'].",".$monunts['TOTAL_T'];
+                $total_val =",".$months['TOTAL_N'].",".$months['TOTAL_X2'].",".$months['TOTAL_T'];
                 // echo $sql_other_col.$columns . "<BR />";
                 // echo  $standard_data. $values . "<BR />";
                 
-                $mysql_quvery ="INSERT INTO `trafic_mounth_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
+                $mysql_quvery ="INSERT INTO `traffic_month_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
                // echo $mysql_quvery."\r\n";
                 
                 $link->query($mysql_quvery);

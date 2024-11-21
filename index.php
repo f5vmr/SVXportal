@@ -208,7 +208,7 @@ $(document).ready(function(){
 
   
   	
-    //call_svxrefelktor();
+    //call_svxreflector();
     reflector_handler();
     add_node_colours();
     load_reflector();
@@ -441,7 +441,7 @@ function reflector_handler()
 
 
       
-    	interval = setTimeout(call_svxrefelktor(data), 50);  
+    	interval = setTimeout(call_svxreflector(data), 50);  
     	if(kill_loop == 0 )
 //    	{
 //    	  kill_loop = 0;
@@ -452,7 +452,7 @@ function reflector_handler()
     
   //     }
   
-    	interval = setTimeout(div_call_svxrefelktor(data), 50);  
+    	interval = setTimeout(div_call_svxreflector(data), 50);  
 
     
     		
@@ -517,7 +517,7 @@ var current_talker= new Array();
 
 
 
-function call_svxrefelktor(data) {
+function call_svxreflector(data) {
 var node_count =0;
 var talkgroups_active = new Array();
 
@@ -546,7 +546,7 @@ for(var k in data.nodes)
 	
 	
 
-//$('#Reflektortable').html('
+//$('#Reflectortable').html('
 // create first dryrun
 var dryrun =0;
 if(old_json_pass =="")
@@ -559,7 +559,7 @@ var clear =0;
 // Reinit_table_sort
 if(Object.keys( data.nodes).length > Object.keys( old_json_pass.nodes).length)
 {
-	$("#Reflektortable > tbody").empty("");
+	$("#Reflectortable > tbody").empty("");
 	dryrun=1;
 	
 }
@@ -571,17 +571,17 @@ if(Object.keys( data.nodes).length > Object.keys( old_json_pass.nodes).length)
 for(var k in data.nodes)
 {
 
-	if($('#Reflektortable_row_'+k).length == 0)
+	if($('#Reflectortable_row_'+k).length == 0)
 	{
 	
-		$('#Reflektortable > tbody ').append('<tr id ="Reflektortable_row_'+k+'"></tr>');
+		$('#Reflectortable > tbody ').append('<tr id ="Reflectortable_row_'+k+'"></tr>');
 
 	}
 
 	
 
 }
-$('tr[id^="Reflektortable_row"]').each(function( index ) {
+$('tr[id^="Reflectortable_row"]').each(function( index ) {
 
   var elenent_id=$( this ).attr('id');
   res = elenent_id.split("_");
@@ -673,8 +673,8 @@ for(var k in data.nodes){
     		
         if(data.nodes[k].isTalker == false)
     	{
-        	$('#Reflektortable_row_'+k).removeClass( "table-info" );
-        	$('#Reflektortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td '+tg_open_str+' '+is_resstricted_colour+'>'+data.nodes[k].tg+'</td>'+'<td class="red_colour"><?php echo _("NO")?></td><td class="text-primary">'+text+'</td><td></td><td></td>');
+        	$('#Reflectortable_row_'+k).removeClass( "table-info" );
+        	$('#Reflectortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td '+tg_open_str+' '+is_resstricted_colour+'>'+data.nodes[k].tg+'</td>'+'<td class="red_colour"><?php echo _("NO")?></td><td class="text-primary">'+text+'</td><td></td><td></td>');
 
     	 	 totalSeconds[k]=0;
     
@@ -686,8 +686,8 @@ for(var k in data.nodes){
             	
     		//tr class="table-info">
     		var idns = k;
-    		$('#Reflektortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td '+tg_open_str+' '+is_resstricted_colour+'>'+data.nodes[k].tg+'</td>'+'<td class="green_colour" ><?php echo _("YES")?></td><td class="text-primary">'+text+'</td><td><label id="Start_talk_'+k+'"></label></td><td  class="d-none d-md-table-cell" ><label id="minutes_'+idns+'">00</label>:<label id="seconds_'+idns+'">00</label></td>');
-    		$('#Reflektortable_row_'+k).addClass( "table-info" );
+    		$('#Reflectortable_row_'+k).html('<td class="text-nowrap" onclick="go_to_station(\''+k+'\')" style="cursor: pointer;">'+k+'</td>'+'<td '+tg_open_str+' '+is_resstricted_colour+'>'+data.nodes[k].tg+'</td>'+'<td class="green_colour" ><?php echo _("YES")?></td><td class="text-primary">'+text+'</td><td><label id="Start_talk_'+k+'"></label></td><td  class="d-none d-md-table-cell" ><label id="minutes_'+idns+'">00</label>:<label id="seconds_'+idns+'">00</label></td>');
+    		$('#Reflectortable_row_'+k).addClass( "table-info" );
     
              totalSeconds[k]++;
     		var minutesLabel = document.getElementById("minutes_"+idns);
@@ -1104,7 +1104,7 @@ var node_colours = new Array();
 function add_node_colours()
 {
 	<?php 
-    $result = mysqli_query($link, "SELECT * FROM `RefletorStations` ");
+    $result = mysqli_query($link, "SELECT * FROM `ReflectorStations` ");
 
     // Numeric array
 
@@ -1991,14 +1991,14 @@ ul.dropdown-lr {
                     <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400 "></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header"><?php echo _('Action menu');?></div>
-                          <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="fnExcelexport('Reflektortable')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="fnExcelexport('Reflectortable')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             				 <i class="far fa-file-excel"></i>
               						<?php echo _('Export xls')?>
       					 </a>
           					 
-				        	 <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="PrintElem('Reflektortable_div','<?php echo _('Reflector clients')?>')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				        	 <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="PrintElem('Reflectortable_div','<?php echo _('Reflector clients')?>')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   				 <i class="fas fa-print"></i>
              						 <?php echo _('Print')?>
           					 </a>
@@ -2013,8 +2013,8 @@ ul.dropdown-lr {
                 <div class="card-body">
                   <div class=""><div class=""><div class=""><div class=""></div></div><div class=""><div class=""></div></div></div>
                     
-                    	<div id="Reflektortable_div"> 
-					<table id="Reflektortable" class="table table-sm">
+                    	<div id="Reflectortable_div"> 
+					<table id="Reflectortable" class="table table-sm">
 					<thead>
 					<tr class="dash_header"><th><?php echo _("Callsign")?></th><th class="text-nowrap"><?php echo _("TG#")?></th><th class="text-nowrap"><?php echo _("Is talker")?></th><th><?php echo _("Monitored TGs")?></th><th class="d-none d-md-table-cell text-nowrap" ><?php echo _("Start talk")?></th><th class="d-none d-md-table-cell text-nowrap" ><?php echo _("Talk time")?></th></tr>
 					</thead>
@@ -2316,7 +2316,7 @@ ul.dropdown-lr {
 	
 	
 
-$result = mysqli_query($link, "SELECT * FROM `RefletorStations` where Callsign != '' ");
+$result = mysqli_query($link, "SELECT * FROM `ReflectorStations` where Callsign != '' ");
 
 // Numeric array
 
@@ -2418,7 +2418,7 @@ if ($usefile !== null) {
                     <a class="dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400 "></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" style="">
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header"><?php echo _('Action menu')?></div>
                           <a class="nav-link  " href="#" id="navbarDropdownMenuLink" onclick="fnExcelexport('dictornay_taklgroup_data')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             				 <i class="far fa-file-excel"></i>
@@ -2664,9 +2664,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 
 			
-						<div class="col-sm-12 fill" style="">
+						<div class="col-sm-12 fill" >
 						
-								<div class="map" style="" id="map"></div>
+								<div class="map" id="map"></div>
 
 						</div>
 						
@@ -2774,7 +2774,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 
 					<div id="overlay"
-						style="background-color: white; border-radius: 10px; border: 1px solid black; padding:">
+						style="background-color: white; border-radius: 10px; border: 1px solid black; padding: 10px;">
 						<script>
 
 
@@ -5829,8 +5829,11 @@ function fnExcelexport(table)
        					  <input style="margin-left: 5px" type="text" id="Datepicker_graph" value="<?php echo date("Y-m-d")?>" onchange="get_statistics();get_statistics_hour();change_data_date();" class="form-control" >
         				</div>
         				<div class="col-2 col-xl-1">
-    					  <button style="margin-left: " class='next-day btn btn-outline-secondary' onclick="change_day_next()" ><i class='fa fa-angle-right' aria-hidden='true'></i></button>
-    					</div>
+    					<button style="margin-left: 10px;" class="next-day btn btn-outline-secondary" onclick="change_day_next()">
+        				<i class="fa fa-angle-right" aria-hidden="true"></i>
+    					</button>
+						</div>
+
 					</div>
 					 </div>
     			</div>
@@ -5924,7 +5927,7 @@ function fnExcelexport(table)
                                		  <option value=""><?php echo _('No Repeater filter')?></option>
                                  		 <optgroup label="<?php echo _('Repeater')?>">
   <?php 
-      			$result = mysqli_query($link, "SELECT * FROM `RefletorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
+      			$result = mysqli_query($link, "SELECT * FROM `ReflectorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
 
     			// Numeric array
 
@@ -6004,7 +6007,7 @@ function fnExcelexport(table)
                                		  <option value=""><?php echo _('No Repeater filter')?></option>
                                  		 <optgroup label="<?php echo _('Repeater')?>">
   <?php 
-      			$result = mysqli_query($link, "SELECT * FROM `RefletorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
+      			$result = mysqli_query($link, "SELECT * FROM `ReflectorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
 
     			// Numeric array
 
@@ -6134,7 +6137,7 @@ function fnExcelexport(table)
                                  <option value=""><?php echo _('No Repeater filter')?></option>
                                   <optgroup label="<?php echo _('Repeater')?>">
   <?php 
-      			$result = mysqli_query($link, "SELECT * FROM `RefletorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
+      			$result = mysqli_query($link, "SELECT * FROM `ReflectorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
 
     			// Numeric array
 

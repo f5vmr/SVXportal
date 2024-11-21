@@ -19,7 +19,7 @@ function secondsToDHMS($seconds)
 function detect_empty()
 {
     global $link;
-    $nummber = $link->query("SELECT COUNT(*) as c FROM trafic_day_statistics ")->fetch_object()->c; 
+    $nummber = $link->query("SELECT COUNT(*) as c FROM traffic_day_statistics ")->fetch_object()->c; 
     
     
     return $nummber;
@@ -36,7 +36,7 @@ function detect_first_date()
 function detect_working_date()
 {
     global $link;
-    $date = $link->query("SELECT Timestamp as c FROM `trafic_day_statistics` ORDER BY `Timestamp` DESC LIMIT 1 ")->fetch_object()->c;
+    $date = $link->query("SELECT Timestamp as c FROM `traffic_day_statistics` ORDER BY `Timestamp` DESC LIMIT 1 ")->fetch_object()->c;
     
     return date("Y-m-d",strtotime($date));
     
@@ -158,7 +158,7 @@ function calculate_day ($day)
             }
             if(is_numeric($currenttg))
             {
-                $sql_other_col ="Node,TG,Year,Mounth,Day,Timestamp";
+                $sql_other_col ="Node,TG,Year,Month,Day,Timestamp";
                 $standard_data = '\''.$key.'\''.",".$currenttg.",".date("Y",strtotime($day)).",".date("m",strtotime($day)).",".date("d",strtotime($day)).",'".date("Y-m-d H:i:s",strtotime($day))."'";
                 $total_str =  ",Total_N,Total_X2, Total_T";
                 $total_val =",".$total_N.",".$total_X2.",".$total_T;
@@ -167,7 +167,7 @@ function calculate_day ($day)
                 
                 //echo $key." ".$currenttg." ".$total_T.PHP_EOL;
                 
-                $mysql_quvery .="INSERT INTO `trafic_day_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
+                $mysql_quvery .="INSERT INTO `traffic_day_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
                 //echo $mysql_quvery;
                 
                 //echo $sql."<br />";
@@ -241,7 +241,7 @@ if($argv[1] != "")
     $month_a = date("m",strtotime($argv[1]));
     $day_a = date("d",strtotime($argv[1]));
     // delete old data
-    $link->query("DELETE FROM `trafic_day_statistics` WHERE `Year` = $year_a AND `Mounth` =$month_a  AND `Day` =$day_a;");
+    $link->query("DELETE FROM `traffic_day_statistics` WHERE `Year` = $year_a AND `Month` =$month_a  AND `Day` =$day_a;");
     
     
 }
