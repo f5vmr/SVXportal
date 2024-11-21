@@ -259,7 +259,7 @@ function fnExcelexport(table)
   </li>
   
   	<li class="nav-item">
-    <a class="nav-link" id="" href="requset_reflector_login.php"><?php echo _('My stations')?></a>
+    <a class="nav-link" id="" href="request_reflector_login.php"><?php echo _('My stations')?></a>
   </li>
   
   

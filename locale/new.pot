@@ -16,7 +16,7 @@ msgstr ""
 
 #: admin.php:228 edit_station.php:425 list_reciver.php:1438
 #: list_reciver_2.php:672 list_reciver_old.php:462 radiomobile_front.php:83
-#: requset_reflector_login.php:395 station_dash.php:352
+#: request_reflector_login.php:395 station_dash.php:352
 msgid "Back"
 msgstr ""
 
@@ -25,7 +25,7 @@ msgid "Stations"
 msgstr ""
 
 #: admin.php:240 admin/talkgroup.php:75 index.php:4969 index1.php:4135
-#: index_old.php:3161 indexa.php:3162 requset_reflector_login.php:1128
+#: index_old.php:3161 indexa.php:3162 request_reflector_login.php:1128
 msgid "Talkgroup"
 msgstr ""
 
@@ -116,20 +116,20 @@ msgstr ""
 #: admin/Reflektor_users.php:303 admin/Reflektor_users.php:484
 #: admin/login.php:43 admin/users.php:186 admin/users.php:406 index.php:1565
 #: index.php:4634 index1.php:1195 index1.php:3933
-#: requset_reflector_login.php:606 requset_reflector_login.php:609
-#: requset_reflector_login.php:1110
+#: request_reflector_login.php:606 request_reflector_login.php:609
+#: request_reflector_login.php:1110
 msgid "Password"
 msgstr ""
 
 #: admin/Reflektor_users.php:311 admin/Reflektor_users.php:490
-#: requset_reflector_login.php:612
+#: request_reflector_login.php:612
 msgid "Generate password"
 msgstr ""
 
 #: admin/Reflektor_users.php:323 admin/Reflektor_users.php:375
 #: admin/talkgroup.php:122 admin/talkgroup.php:162 edit_station.php:966
-#: edit_station.php:1078 edit_station.php:1162 requset_reflector_login.php:628
-#: requset_reflector_login.php:631 station_info.php:146
+#: edit_station.php:1078 edit_station.php:1162 request_reflector_login.php:628
+#: request_reflector_login.php:631 station_info.php:146
 msgid "Description"
 msgstr ""
 
@@ -258,7 +258,7 @@ msgid "Date"
 msgstr ""
 
 #: admin/log.php:204 index.php:5071 index1.php:4234 index_old.php:3234
-#: indexa.php:3235 log.php:324 map_pick.php:93 requset_reflector_login.php:841
+#: indexa.php:3235 log.php:324 map_pick.php:93 request_reflector_login.php:841
 msgid "Station"
 msgstr ""
 
@@ -320,8 +320,8 @@ msgstr ""
 #: index1.php:253 index1.php:1374 index1.php:1778 index_old.php:209
 #: index_old.php:806 index_old.php:1098 indexa.php:210 indexa.php:807
 #: indexa.php:1099 list_reciver.php:84 list_reciver_2.php:58
-#: list_reciver_old.php:55 requset_reflector_login.php:446
-#: requset_reflector_login.php:618 requset_reflector_login.php:1101
+#: list_reciver_old.php:55 request_reflector_login.php:446
+#: request_reflector_login.php:618 request_reflector_login.php:1101
 msgid "Callsign"
 msgstr ""
 
@@ -363,7 +363,7 @@ msgstr ""
 #: index.php:2164 index1.php:253 index1.php:1776 index_old.php:209
 #: index_old.php:1096 indexa.php:210 indexa.php:1097 list_reciver.php:84
 #: list_reciver_2.php:58 list_reciver_old.php:55
-#: requset_reflector_login.php:699
+#: request_reflector_login.php:699
 msgid "TG#"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgid "Export"
 msgstr ""
 
 #: database_text.php:2
-msgid "Hide the languge bar"
+msgid "Hide the language bar"
 msgstr ""
 
 #: database_text.php:3
@@ -571,20 +571,20 @@ msgstr ""
 msgid "Driver dashboard"
 msgstr ""
 
-#: edit_station.php:529 requset_reflector_login.php:550
+#: edit_station.php:529 request_reflector_login.php:550
 msgid "Send command to node"
 msgstr ""
 
 #: edit_station.php:537 edit_station.php:1074 edit_station.php:1158
-#: requset_reflector_login.php:558
+#: request_reflector_login.php:558
 msgid "DTMF command"
 msgstr ""
 
-#: edit_station.php:545 requset_reflector_login.php:566
+#: edit_station.php:545 request_reflector_login.php:566
 msgid "Scheduled date"
 msgstr ""
 
-#: edit_station.php:549 requset_reflector_login.php:570
+#: edit_station.php:549 request_reflector_login.php:570
 msgid "Send commnd to repeater"
 msgstr ""
 
@@ -1210,7 +1210,7 @@ msgid "Month chart"
 msgstr ""
 
 #: index.php:4968 index1.php:4134 index_old.php:3160 indexa.php:3161
-#: requset_reflector_login.php:1127
+#: request_reflector_login.php:1127
 msgid "No Talkgroup Filter"
 msgstr ""
 
@@ -1367,195 +1367,195 @@ msgstr ""
 msgid "Not admin"
 msgstr ""
 
-#: requset_reflector_login.php:289
+#: request_reflector_login.php:289
 msgid "Station already exist!"
 msgstr ""
 
-#: requset_reflector_login.php:296
+#: request_reflector_login.php:296
 msgid "Thanks for your registration an admin will contact you soon"
 msgstr ""
 
-#: requset_reflector_login.php:385
+#: request_reflector_login.php:385
 msgid "Network acsess"
 msgstr ""
 
-#: requset_reflector_login.php:407
+#: request_reflector_login.php:407
 msgid "My Stations"
 msgstr ""
 
-#: requset_reflector_login.php:410
+#: request_reflector_login.php:410
 msgid "Request repeater Login"
 msgstr ""
 
-#: requset_reflector_login.php:414
+#: request_reflector_login.php:414
 msgid "Generate node_info.json"
 msgstr ""
 
-#: requset_reflector_login.php:419
+#: request_reflector_login.php:419
 msgid "Generate svx.config parameters"
 msgstr ""
 
-#: requset_reflector_login.php:447
+#: request_reflector_login.php:447
 msgid "Lastseen"
 msgstr ""
 
-#: requset_reflector_login.php:448
+#: request_reflector_login.php:448
 msgid "Svxlink version"
 msgstr ""
 
-#: requset_reflector_login.php:449
+#: request_reflector_login.php:449
 msgid "Send Command"
 msgstr ""
 
-#: requset_reflector_login.php:490
+#: request_reflector_login.php:490
 msgid "Send DTMF to node"
 msgstr ""
 
-#: requset_reflector_login.php:493
+#: request_reflector_login.php:493
 msgid "Send Command to Nod"
 msgstr ""
 
-#: requset_reflector_login.php:496
+#: request_reflector_login.php:496
 msgid "Edit Repeater"
 msgstr ""
 
-#: requset_reflector_login.php:507 station_dash.php:342
+#: request_reflector_login.php:507 station_dash.php:342
 msgid "Station Dashboard"
 msgstr ""
 
-#: requset_reflector_login.php:527
+#: request_reflector_login.php:527
 msgid "Svxlink updated"
 msgstr ""
 
-#: requset_reflector_login.php:530
+#: request_reflector_login.php:530
 msgid "New svxlink version avabel"
 msgstr ""
 
-#: requset_reflector_login.php:533
+#: request_reflector_login.php:533
 msgid "Node disconnected"
 msgstr ""
 
-#: requset_reflector_login.php:593
+#: request_reflector_login.php:593
 msgid "User Credentals"
 msgstr ""
 
-#: requset_reflector_login.php:597
+#: request_reflector_login.php:597
 msgid "Email address"
 msgstr ""
 
-#: requset_reflector_login.php:600
+#: request_reflector_login.php:600
 msgid "Enter email"
 msgstr ""
 
-#: requset_reflector_login.php:638
+#: request_reflector_login.php:638
 msgid "Register User"
 msgstr ""
 
-#: requset_reflector_login.php:658
+#: request_reflector_login.php:658
 msgid "Repater information"
 msgstr ""
 
-#: requset_reflector_login.php:661
+#: request_reflector_login.php:661
 msgid "Station location ( Area )"
 msgstr ""
 
-#: requset_reflector_login.php:664
+#: request_reflector_login.php:664
 msgid "Node location"
 msgstr ""
 
-#: requset_reflector_login.php:671
+#: request_reflector_login.php:671
 msgid "System operator"
 msgstr ""
 
-#: requset_reflector_login.php:691
+#: request_reflector_login.php:691
 msgid "Tone To Talkgroup Mapping"
 msgstr ""
 
-#: requset_reflector_login.php:698
+#: request_reflector_login.php:698
 msgid "CTCSS"
 msgstr ""
 
-#: requset_reflector_login.php:719
+#: request_reflector_login.php:719
 msgid "#TG"
 msgstr ""
 
-#: requset_reflector_login.php:761
+#: request_reflector_login.php:761
 msgid "QTH Settings"
 msgstr ""
 
-#: requset_reflector_login.php:893
+#: request_reflector_login.php:893
 msgid "Location name"
 msgstr ""
 
-#: requset_reflector_login.php:896
+#: request_reflector_login.php:896
 msgid "Stockholm"
 msgstr ""
 
-#: requset_reflector_login.php:902
+#: request_reflector_login.php:902
 msgid "Latitude"
 msgstr ""
 
-#: requset_reflector_login.php:914
+#: request_reflector_login.php:914
 msgid "Longitude"
 msgstr ""
 
-#: requset_reflector_login.php:924
+#: request_reflector_login.php:924
 msgid "Locator"
 msgstr ""
 
-#: requset_reflector_login.php:933
+#: request_reflector_login.php:933
 msgid "Tx Letter \"Get From svxlink.conf\""
 msgstr ""
 
-#: requset_reflector_login.php:943
+#: request_reflector_login.php:943
 msgid "RX letter \"Get From svxlink.conf\""
 msgstr ""
 
-#: requset_reflector_login.php:953
+#: request_reflector_login.php:953
 msgid "Sql type"
 msgstr ""
 
-#: requset_reflector_login.php:967
+#: request_reflector_login.php:967
 msgid "Transmitter Power w"
 msgstr ""
 
-#: requset_reflector_login.php:977
+#: request_reflector_login.php:977
 msgid "Antenna Directon"
 msgstr ""
 
-#: requset_reflector_login.php:988
+#: request_reflector_login.php:988
 msgid "Antenna Height"
 msgstr ""
 
-#: requset_reflector_login.php:998
+#: request_reflector_login.php:998
 msgid "Antenna Description"
 msgstr ""
 
-#: requset_reflector_login.php:1007
+#: request_reflector_login.php:1007
 msgid "TX Frequency"
 msgstr ""
 
-#: requset_reflector_login.php:1016
+#: request_reflector_login.php:1016
 msgid "RX Frequency"
 msgstr ""
 
-#: requset_reflector_login.php:1030
+#: request_reflector_login.php:1030
 msgid "Parameters dor Svxlink.conf"
 msgstr ""
 
-#: requset_reflector_login.php:1034 requset_reflector_login.php:1044
+#: request_reflector_login.php:1034 request_reflector_login.php:1044
 msgid "Parameter"
 msgstr ""
 
-#: requset_reflector_login.php:1079
+#: request_reflector_login.php:1079
 msgid "Generate JSON / Paramters"
 msgstr ""
 
-#: requset_reflector_login.php:1118
+#: request_reflector_login.php:1118
 msgid "Select talkgroups to monitor"
 msgstr ""
 
-#: requset_reflector_login.php:1149
+#: request_reflector_login.php:1149
 msgid "Generate config"
 msgstr ""
 

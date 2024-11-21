@@ -445,9 +445,9 @@ function generate_coulor()
 
     
 }
-function load_languge(lang)
+function load_language(lang)
 {
-	$.post( "change_languge.php", { locate_lang: lang })
+	$.post( "change_language.php", { locate_lang: lang })
 	  .done(function( data ) {
 		  location.reload(); 
 	  });
@@ -566,7 +566,7 @@ function login_form()
 <?php
 /*
 <li>
-<select class="browser-default custom-select custom-select-lg mb-3" onchange="load_languge(this.value)">
+<select class="browser-default custom-select custom-select-lg mb-3" onchange="load_language(this.value)">
   <option  selected value=""  data-content='<span class="flag-icon flag-icon-us" ></span> English'>- Select Language -</option>
   <option  value="en_UK"  data-content='<span class="flag-icon flag-icon-us" ></span> English'>English</option>
   <option  value="sv_SE"   data-content='<span class="flag-icon flag-icon-se" ></span> Swedish'><i class="flag-icon flag-icon-se"></i>Svenska</option>
@@ -586,13 +586,13 @@ function login_form()
 
 <li style="margin-left: 10px">
 
-    <img  onclick="load_languge('en_UK')" src="images/flags/gb.svg" width="30px" alt="GB">
+    <img  onclick="load_language('en_UK')" src="images/flags/gb.svg" width="30px" alt="GB">
 
     
-    <img onclick="load_languge('sv_SE')" src="images/flags/se.svg" width="30px" alt="Se">
+    <img onclick="load_language('sv_SE')" src="images/flags/se.svg" width="30px" alt="Se">
 
 
-    <img onclick="load_languge('nb_NO')" src="images/flags/no.svg" width="30px" alt="NO">
+    <img onclick="load_language('nb_NO')" src="images/flags/no.svg" width="30px" alt="NO">
 
 </li>
 				</ul>
@@ -1919,7 +1919,7 @@ function get_statistics_hour()
 
 	    	
 		  var i =0;
-		  // fuling för time 0-24
+		  // fuling fï¿½r time 0-24
 		  var data_to_set = new Array();
 		  var labels = new Array();
 		  for (talkgroup = 0; talkgroup < 24;talkgroup++) 

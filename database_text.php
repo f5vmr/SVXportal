@@ -1,5 +1,5 @@
 <?php
-_('Hide the languge bar');
+_('Hide the language bar');
 _('Use Custom header in sidebar');
 _('External dokumentation page');
 _('Use login for player');

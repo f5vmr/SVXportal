@@ -13,9 +13,9 @@ function set_laguage() {
     $domain = 'svxportal';
 
     $locale =$lang; //like pt_BR.utf8";
-    if($_SESSION['languge'])
+    if($_SESSION['language'])
     {
-        $locale = $_SESSION['languge'];
+        $locale = $_SESSION['language'];
 
     }
     
@@ -29,11 +29,11 @@ function set_laguage() {
     
     
 }
-function post_languge()
+function post_language()
 {
     if($_POST['locate_lang'])
     {
-        $_SESSION['languge'] = $_POST['locate_lang'];
+        $_SESSION['language'] = $_POST['locate_lang'];
     }
     
 }

@@ -25,7 +25,7 @@ msgstr "Admin grensesnitt"
 
 #: admin.php:228 edit_station.php:394 list_reciver.php:1100
 #: list_reciver_2.php:672 list_reciver_old.php:462
-#: requset_reflector_login.php:346 station_dash.php:352
+#: request_reflector_login.php:346 station_dash.php:352
 msgid "Back"
 msgstr "Tilbake"
 
@@ -34,7 +34,7 @@ msgid "Stations"
 msgstr "Stasjon"
 
 #: admin.php:240 admin/talkgroup.php:75 index.php:4399 index1.php:4135
-#: index_old.php:3161 indexa.php:3162 requset_reflector_login.php:1035
+#: index_old.php:3161 indexa.php:3162 request_reflector_login.php:1035
 msgid "Talkgroup"
 msgstr "Talegrupper"
 
@@ -125,20 +125,20 @@ msgstr "Generer brukernavn"
 #: admin/Reflektor_users.php:303 admin/Reflektor_users.php:484
 #: admin/login.php:43 admin/users.php:186 admin/users.php:406 index.php:1450
 #: index.php:4197 index1.php:1195 index1.php:3933
-#: requset_reflector_login.php:522 requset_reflector_login.php:525
-#: requset_reflector_login.php:1017
+#: request_reflector_login.php:522 request_reflector_login.php:525
+#: request_reflector_login.php:1017
 msgid "Password"
 msgstr "Passord"
 
 #: admin/Reflektor_users.php:311 admin/Reflektor_users.php:490
-#: requset_reflector_login.php:528
+#: request_reflector_login.php:528
 msgid "Generate password"
 msgstr "Generer passord"
 
 #: admin/Reflektor_users.php:323 admin/Reflektor_users.php:375
 #: admin/talkgroup.php:122 admin/talkgroup.php:164 edit_station.php:922
-#: edit_station.php:1035 edit_station.php:1119 requset_reflector_login.php:544
-#: requset_reflector_login.php:547 station_info.php:144
+#: edit_station.php:1035 edit_station.php:1119 request_reflector_login.php:544
+#: request_reflector_login.php:547 station_info.php:144
 msgid "Description"
 msgstr "Beskrivelse"
 
@@ -267,7 +267,7 @@ msgid "Date"
 msgstr "Dato"
 
 #: admin/log.php:204 index.php:4498 index1.php:4234 index_old.php:3234
-#: indexa.php:3235 log.php:324 map_pick.php:93 requset_reflector_login.php:748
+#: indexa.php:3235 log.php:324 map_pick.php:93 request_reflector_login.php:748
 msgid "Station"
 msgstr "Stasjon"
 
@@ -329,8 +329,8 @@ msgstr "Logg Inn"
 #: index1.php:253 index1.php:1374 index1.php:1778 index_old.php:209
 #: index_old.php:806 index_old.php:1098 indexa.php:210 indexa.php:807
 #: indexa.php:1099 list_reciver.php:57 list_reciver_2.php:58
-#: list_reciver_old.php:55 requset_reflector_login.php:387
-#: requset_reflector_login.php:534 requset_reflector_login.php:1008
+#: list_reciver_old.php:55 request_reflector_login.php:387
+#: request_reflector_login.php:534 request_reflector_login.php:1008
 msgid "Callsign"
 msgstr "Kallesignal"
 
@@ -371,7 +371,7 @@ msgstr "Opprett talegrupper"
 #: index.php:2035 index1.php:253 index1.php:1776 index_old.php:209
 #: index_old.php:1096 indexa.php:210 indexa.php:1097 list_reciver.php:57
 #: list_reciver_2.php:58 list_reciver_old.php:55
-#: requset_reflector_login.php:606
+#: request_reflector_login.php:606
 msgid "TG#"
 msgstr "TG#"
 
@@ -452,8 +452,8 @@ msgid "Export"
 msgstr "Eksport"
 
 #: database_text.php:2
-msgid "Hide the languge bar"
-msgstr "Skjul languge-baren"
+msgid "Hide the language bar"
+msgstr "Skjul language-baren"
 
 #: database_text.php:3
 msgid "Use Custom header in sidebar"
@@ -605,20 +605,20 @@ msgstr "Driftsinformasjon"
 msgid "Driver dashboard"
 msgstr "Driver dashbord"
 
-#: edit_station.php:498 requset_reflector_login.php:466
+#: edit_station.php:498 request_reflector_login.php:466
 msgid "Send command to node"
 msgstr "Send kommando til node"
 
 #: edit_station.php:506 edit_station.php:1031 edit_station.php:1115
-#: requset_reflector_login.php:474
+#: request_reflector_login.php:474
 msgid "DTMF command"
 msgstr "DTMF-kommando"
 
-#: edit_station.php:514 requset_reflector_login.php:482
+#: edit_station.php:514 request_reflector_login.php:482
 msgid "Scheduled date"
 msgstr "Planlagt dato"
 
-#: edit_station.php:518 requset_reflector_login.php:486
+#: edit_station.php:518 request_reflector_login.php:486
 msgid "Send commnd to repeater"
 msgstr "Send commnd til repeater"
 
@@ -1224,7 +1224,7 @@ msgid "Repeater"
 msgstr "Repeater"
 
 #: index.php:4398 index1.php:4134 index_old.php:3160 indexa.php:3161
-#: requset_reflector_login.php:1034
+#: request_reflector_login.php:1034
 msgid "No Talkgroup Filter"
 msgstr "Ingen valgt tallgruppe"
 
@@ -1336,179 +1336,179 @@ msgstr "har droppet tilkobling fra reflektor"
 msgid "has connected to  reflector"
 msgstr "har koblet til reflektor"
 
-#: requset_reflector_login.php:240
+#: request_reflector_login.php:240
 msgid "Station already exist!"
 msgstr "Stasjonen eksisterer allerede!"
 
-#: requset_reflector_login.php:247
+#: request_reflector_login.php:247
 msgid "Thanks for your registration an admin will contact you soon"
 msgstr "Takk for registreringen, en administrator vil kontakte deg snart"
 
-#: requset_reflector_login.php:336
+#: request_reflector_login.php:336
 msgid "Network acsess"
 msgstr "Nettverkstilgang"
 
-#: requset_reflector_login.php:358
+#: request_reflector_login.php:358
 msgid "My Stations"
 msgstr "Mine stasjoner"
 
-#: requset_reflector_login.php:361
+#: request_reflector_login.php:361
 msgid "Request repeater Login"
 msgstr "Be om repeater pålogging"
 
-#: requset_reflector_login.php:365
+#: request_reflector_login.php:365
 msgid "Generate node_info.json"
 msgstr "Generer node_info.json"
 
-#: requset_reflector_login.php:370
+#: request_reflector_login.php:370
 msgid "Generate svx.config parameters"
 msgstr "Generer parametere for svxlink.config"
 
-#: requset_reflector_login.php:388
+#: request_reflector_login.php:388
 msgid "Lastseen"
 msgstr "Sist aktiv"
 
-#: requset_reflector_login.php:389
+#: request_reflector_login.php:389
 msgid "Send Command"
 msgstr "Send kommando"
 
-#: requset_reflector_login.php:423
+#: request_reflector_login.php:423
 msgid "Send DTMF to node"
 msgstr "Send DTMF til node"
 
-#: requset_reflector_login.php:426
+#: request_reflector_login.php:426
 msgid "Send Command to Nod"
 msgstr "Send kommando til Nod"
 
-#: requset_reflector_login.php:429
+#: request_reflector_login.php:429
 msgid "Edit Repeater"
 msgstr "Rediger repeater"
 
-#: requset_reflector_login.php:440 station_dash.php:342
+#: request_reflector_login.php:440 station_dash.php:342
 msgid "Station Dashboard"
 msgstr "Station Dashboard"
 
-#: requset_reflector_login.php:509
+#: request_reflector_login.php:509
 msgid "User Credentals"
 msgstr "Brukerlegitimasjon"
 
-#: requset_reflector_login.php:513
+#: request_reflector_login.php:513
 msgid "Email address"
 msgstr "Epostadresse"
 
-#: requset_reflector_login.php:516
+#: request_reflector_login.php:516
 msgid "Enter email"
 msgstr "Skriv inn e-post"
 
-#: requset_reflector_login.php:554
+#: request_reflector_login.php:554
 msgid "Register User"
 msgstr "Registrer bruker"
 
-#: requset_reflector_login.php:565
+#: request_reflector_login.php:565
 msgid "Repater information"
 msgstr "Informasjon om repater"
 
-#: requset_reflector_login.php:568
+#: request_reflector_login.php:568
 msgid "Station location ( Area )"
 msgstr "Stasjonsplassering (område)"
 
-#: requset_reflector_login.php:571
+#: request_reflector_login.php:571
 msgid "Node location"
 msgstr "Nodeplassering"
 
-#: requset_reflector_login.php:578
+#: request_reflector_login.php:578
 msgid "System operator"
 msgstr "Systemoperatør"
 
-#: requset_reflector_login.php:598
+#: request_reflector_login.php:598
 msgid "Tone To Talkgroup Mapping"
 msgstr "Tone To Talkgroup Mapping"
 
-#: requset_reflector_login.php:605
+#: request_reflector_login.php:605
 msgid "CTCSS"
 msgstr "CTCSS"
 
-#: requset_reflector_login.php:626
+#: request_reflector_login.php:626
 msgid "#TG"
 msgstr "#TG"
 
-#: requset_reflector_login.php:668
+#: request_reflector_login.php:668
 msgid "QTH Settings"
 msgstr "QTH-innstillinger"
 
-#: requset_reflector_login.php:800
+#: request_reflector_login.php:800
 msgid "Location name"
 msgstr "Stedsnavn"
 
-#: requset_reflector_login.php:803
+#: request_reflector_login.php:803
 msgid "Stockholm"
 msgstr "Stockholm"
 
-#: requset_reflector_login.php:809
+#: request_reflector_login.php:809
 msgid "Latitude"
 msgstr "Latitude"
 
-#: requset_reflector_login.php:821
+#: request_reflector_login.php:821
 msgid "Longitude"
 msgstr "Longitude"
 
-#: requset_reflector_login.php:831
+#: request_reflector_login.php:831
 msgid "Locator"
 msgstr "Locator"
 
-#: requset_reflector_login.php:840
+#: request_reflector_login.php:840
 msgid "Tx Letter \"Get From svxlink.conf\""
 msgstr "Tx Letter \"Get From svxlink.conf\""
 
-#: requset_reflector_login.php:850
+#: request_reflector_login.php:850
 msgid "RX letter \"Get From svxlink.conf\""
 msgstr "RX-bokstaven \"Get From svxlink.conf\""
 
-#: requset_reflector_login.php:860
+#: request_reflector_login.php:860
 msgid "Sql type"
 msgstr "Sql-type"
 
-#: requset_reflector_login.php:874
+#: request_reflector_login.php:874
 msgid "Transmitter Power w"
 msgstr "Senderkraft  W"
 
-#: requset_reflector_login.php:884
+#: request_reflector_login.php:884
 msgid "Antenna Directon"
 msgstr "Antenneretning"
 
-#: requset_reflector_login.php:895
+#: request_reflector_login.php:895
 msgid "Antenna Height"
 msgstr "Antennehøyde"
 
-#: requset_reflector_login.php:905
+#: request_reflector_login.php:905
 msgid "Antenna Description"
 msgstr "Antennebeskrivelse"
 
-#: requset_reflector_login.php:914
+#: request_reflector_login.php:914
 msgid "TX Frequency"
 msgstr "TX-frekvens"
 
-#: requset_reflector_login.php:923
+#: request_reflector_login.php:923
 msgid "RX Frequency"
 msgstr "RX-frekvens"
 
-#: requset_reflector_login.php:937
+#: request_reflector_login.php:937
 msgid "Parameters dor Svxlink.conf"
 msgstr "Parametere for Svxlink.conf"
 
-#: requset_reflector_login.php:941 requset_reflector_login.php:951
+#: request_reflector_login.php:941 request_reflector_login.php:951
 msgid "Parameter"
 msgstr "Parameter"
 
-#: requset_reflector_login.php:986
+#: request_reflector_login.php:986
 msgid "Generate JSON / Paramters"
 msgstr "Generer JSON / parametere"
 
-#: requset_reflector_login.php:1025
+#: request_reflector_login.php:1025
 msgid "Select talkgroups to monitor"
 msgstr "Velg samtalegrupper du vil overvåke"
 
-#: requset_reflector_login.php:1056
+#: request_reflector_login.php:1056
 msgid "Generate config"
 msgstr "Generer konfigurasjon"
 

@@ -422,7 +422,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
    
    
 
-      <a href="requset_reflector_login.php" onclick="" class="btn btn-outline-success my-2 my-sm-0" id="menu-toggle"><?php echo _('Back') ?></a>
+      <a href="request_reflector_login.php" onclick="" class="btn btn-outline-success my-2 my-sm-0" id="menu-toggle"><?php echo _('Back') ?></a>
       
     </nav> 
 </header>

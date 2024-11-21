@@ -1083,9 +1083,9 @@ function generate_coulor(data)
 
     
 }
-function load_languge(lang)
+function load_language(lang)
 {
-	$.post( "change_languge.php", { locate_lang: lang })
+	$.post( "change_language.php", { locate_lang: lang })
 	  .done(function( data ) {
 		  location.reload(); 
 	  });
@@ -1699,7 +1699,7 @@ ul.dropdown-lr {
             <a class="nav-link d-none d-xl-inline-flex d-lg-inline-flex" href="#register" onclick="" data-toggle="tab"><i class="far fa-plus-square"  style="color: #fff; padding-top:5px" ></i>&nbsp;<?php echo _('Register');?></a>
             
             <?php }?>
-            <?php  if(HIDE_LANGUGE_BAR == 0){?>
+            <?php  if(HIDE_language_BAR == 0){?>
     
           <li class="nav-item dropdown" style="color:#e1e3e9; ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1713,16 +1713,16 @@ ul.dropdown-lr {
             <div style="width: 250px;"></div>
        		 <a href="#" class="dropdown-item"><?php echo _('Select your language')?></a>
        		     <div class="dropdown-divider"></div>
-        	<a onclick="load_languge('bs_BA')" class="dropdown-item table-primary" href="#"><img   src="images/flags/boh.svg" width="30px" alt="bs_BA"> <?php echo _('Bosnian')?></a>
-            <a onclick="load_languge('en_UK')" class="dropdown-item table-primary" href="#"><img   src="images/flags/gb.svg" width="30px" alt="GB"> <?php echo _('English')?></a>
-            <a onclick="load_languge('fr_FR')" class="dropdown-item table-primary" href="#"><img  src="images/flags/fr.svg" width="30px" alt="it"> <?php echo _('French')?></a>
-           	<a onclick="load_languge('de_DE')" class="dropdown-item table-primary" href="#"><img  src="images/flags/de.svg" width="30px" alt="it"> <?php echo _('German')?></a>
-            <a onclick="load_languge('it_IT')" class="dropdown-item table-primary" href="#"><img  src="images/flags/it.svg" width="30px" alt="it"> <?php echo _('Italian')?></a>
-            <a onclick="load_languge('nb_NO')" class="dropdown-item table-primary" href="#"><img src="images/flags/no.svg" width="30px" alt="NO"> <?php echo _('Norwegian')?></a>
-            <a  onclick="load_languge('pl_PL')" class="dropdown-item table-secondary" href="#"><img src="images/flags/pl.svg" width="30px" alt="tr_TR"> <?php echo _('Polish')?></a>
-            <a onclick="load_languge('sv_SE')" class="dropdown-item table-secondary" href="#"><img src="images/flags/se.svg" width="30px" alt="Se"> <?php echo _('Swedish')?></a>
-          	<a  onclick="load_languge('tr_TR')" class="dropdown-item table-secondary" href="#"><img src="images/flags/tr.svg" width="30px" alt="tr_TR"> <?php echo _('Turkish')?></a>
-        	<a onclick="load_languge('uk_UA')" class="dropdown-item table-secondary" href="#"><img  src="images/flags/ua.svg" width="30px" alt="uk"> <?php echo _('Ukrainian')?></a>
+        	<a onclick="load_language('bs_BA')" class="dropdown-item table-primary" href="#"><img   src="images/flags/boh.svg" width="30px" alt="bs_BA"> <?php echo _('Bosnian')?></a>
+            <a onclick="load_language('en_UK')" class="dropdown-item table-primary" href="#"><img   src="images/flags/gb.svg" width="30px" alt="GB"> <?php echo _('English')?></a>
+            <a onclick="load_language('fr_FR')" class="dropdown-item table-primary" href="#"><img  src="images/flags/fr.svg" width="30px" alt="it"> <?php echo _('French')?></a>
+           	<a onclick="load_language('de_DE')" class="dropdown-item table-primary" href="#"><img  src="images/flags/de.svg" width="30px" alt="it"> <?php echo _('German')?></a>
+            <a onclick="load_language('it_IT')" class="dropdown-item table-primary" href="#"><img  src="images/flags/it.svg" width="30px" alt="it"> <?php echo _('Italian')?></a>
+            <a onclick="load_language('nb_NO')" class="dropdown-item table-primary" href="#"><img src="images/flags/no.svg" width="30px" alt="NO"> <?php echo _('Norwegian')?></a>
+            <a  onclick="load_language('pl_PL')" class="dropdown-item table-secondary" href="#"><img src="images/flags/pl.svg" width="30px" alt="tr_TR"> <?php echo _('Polish')?></a>
+            <a onclick="load_language('sv_SE')" class="dropdown-item table-secondary" href="#"><img src="images/flags/se.svg" width="30px" alt="Se"> <?php echo _('Swedish')?></a>
+          	<a  onclick="load_language('tr_TR')" class="dropdown-item table-secondary" href="#"><img src="images/flags/tr.svg" width="30px" alt="tr_TR"> <?php echo _('Turkish')?></a>
+        	<a onclick="load_language('uk_UA')" class="dropdown-item table-secondary" href="#"><img  src="images/flags/ua.svg" width="30px" alt="uk"> <?php echo _('Ukrainian')?></a>
         	
         	
         	
@@ -1925,7 +1925,7 @@ ul.dropdown-lr {
 						data-toggle="tab"><i class="fas fa-terminal"></i> <?php echo _("CTCSS map table")?></a></li>
 						
 						<?php if( $_SESSION['loginid'] >0 ){?>
-						<li class="nav-item"><a class="nav-link" href="requset_reflector_login.php">
+						<li class="nav-item"><a class="nav-link" href="request_reflector_login.php">
 						<i class="fa fa-globe"></i> <?php echo _("My stations")?></a></li>					
 						<?php }?>
 						
@@ -1941,7 +1941,7 @@ ul.dropdown-lr {
 <?php
 /*
 <li>
-<select class="browser-default custom-select custom-select-lg mb-3" onchange="load_languge(this.value)">
+<select class="browser-default custom-select custom-select-lg mb-3" onchange="load_language(this.value)">
   <option  selected value=""  data-content='<span class="flag-icon flag-icon-us" ></span> English'>- Select Language -</option>
   <option  value="en_UK"  data-content='<span class="flag-icon flag-icon-us" ></span> English'>English</option>
   <option  value="sv_SE"   data-content='<span class="flag-icon flag-icon-se" ></span> Swedish'><i class="flag-icon flag-icon-se"></i>Svenska</option>

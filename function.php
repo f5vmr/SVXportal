@@ -86,9 +86,9 @@ function set_laguage() {
     $domain = 'svxportal';
 
     $locale =$lang; //like pt_BR.utf8";
-    if($_SESSION['languge'])
+    if($_SESSION['language'])
     {
-        $locale = $_SESSION['languge'];
+        $locale = $_SESSION['language'];
 
     }
     
@@ -106,11 +106,11 @@ function set_laguage() {
     
     
 }
-function post_languge()
+function post_language()
 {
     if($_POST['locate_lang'])
     {
-        $_SESSION['languge'] = $_POST['locate_lang'];
+        $_SESSION['language'] = $_POST['locate_lang'];
     }
     
 }
@@ -431,7 +431,7 @@ function translate_folder_page($url)
 {
     global $Use_translate_default_lang;
     
-    if($Use_translate_default_lang == $_SESSION['languge'])
+    if($Use_translate_default_lang == $_SESSION['language'])
     {
 
         return $url;
@@ -442,7 +442,7 @@ function translate_folder_page($url)
 
         $url = str_replace(".htm", "", $url);
 
-        return $url."_" .$_SESSION['languge'].".htm";
+        return $url."_" .$_SESSION['language'].".htm";
         
     }
    

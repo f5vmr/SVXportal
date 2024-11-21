@@ -26,11 +26,11 @@ msgstr ""
 
 #: admin.php:222 index1.php:1156
 msgid "admin interface"
-msgstr "Admin gränssnitt"
+msgstr "Admin grï¿½nssnitt"
 
 #: admin.php:228 edit_station.php:425 list_reciver.php:1497
 #: list_reciver_2.php:672 list_reciver_old.php:462 radiomobile_front.php:83
-#: requset_reflector_login.php:398 selftest.php:75 station_dash.php:352
+#: request_reflector_login.php:398 selftest.php:75 station_dash.php:352
 #: tap.php:210 user_settings.php:217
 msgid "Back"
 msgstr "Tillbaka"
@@ -40,7 +40,7 @@ msgid "Stations"
 msgstr "Station"
 
 #: admin.php:240 admin/talkgroup.php:75 index.php:5162 index1.php:4135
-#: index_old.php:3161 indexa.php:3162 requset_reflector_login.php:1175
+#: index_old.php:3161 indexa.php:3162 request_reflector_login.php:1175
 msgid "Talkgroup"
 msgstr "Talgrupper"
 
@@ -50,15 +50,15 @@ msgstr "Fellogg"
 
 #: admin.php:248 admin/users.php:125
 msgid "Users"
-msgstr "Användare"
+msgstr "Anvï¿½ndare"
 
 #: admin.php:252
 msgid "Reflektor users"
-msgstr "Reflektor-användare"
+msgstr "Reflektor-anvï¿½ndare"
 
 #: admin.php:258 admin/Settings.php:76 edit_station.php:464
 msgid "Settings"
-msgstr "Inställningar"
+msgstr "Instï¿½llningar"
 
 #: admin.php:262 index.php:1845 index1.php:1282
 msgid "My stations"
@@ -66,23 +66,23 @@ msgstr "Mina stationer"
 
 #: admin/Reflektor_users.php:25 admin/users.php:16
 msgid "User created sucsessfully!"
-msgstr "Användaren skapad!"
+msgstr "Anvï¿½ndaren skapad!"
 
 #: admin/Reflektor_users.php:41 admin/talkgroup.php:25 admin/users.php:31
 msgid "Please confirm user removal"
-msgstr "Bekräfta användarens borttagning"
+msgstr "Bekrï¿½fta anvï¿½ndarens borttagning"
 
 #: admin/Reflektor_users.php:57
 msgid "Please confirm user enable"
-msgstr "Bekräfta användaraktivering"
+msgstr "Bekrï¿½fta anvï¿½ndaraktivering"
 
 #: admin/Reflektor_users.php:60
 msgid "Please confirm user disable"
-msgstr "Bekräfta att användaren inaktiverar"
+msgstr "Bekrï¿½fta att anvï¿½ndaren inaktiverar"
 
 #: admin/Reflektor_users.php:95 admin/users.php:72
 msgid "Password is updated!"
-msgstr "Lösenordet är updaterart"
+msgstr "Lï¿½senordet ï¿½r updaterart"
 
 #: admin/Reflektor_users.php:179
 msgid "Please enter your message"
@@ -94,11 +94,11 @@ msgstr "Meddelande skickat1"
 
 #: admin/Reflektor_users.php:236
 msgid "Reflector users"
-msgstr "Reflektoranvändare"
+msgstr "Reflektoranvï¿½ndare"
 
 #: admin/Reflektor_users.php:246 admin/users.php:135
 msgid "Print Users"
-msgstr "Användar utskrift"
+msgstr "Anvï¿½ndar utskrift"
 
 #: admin/Reflektor_users.php:248 admin/log.php:109 admin/stations.php:52
 #: admin/talkgroup.php:87 admin/users.php:137 ctcss_map_table.php:213
@@ -119,36 +119,36 @@ msgstr "Exportera XLS"
 #: admin/Reflektor_users.php:356 admin/users.php:151 admin/users.php:182
 #: admin/users.php:234 database_text.php:13
 msgid "Create user"
-msgstr "Skapa använvare"
+msgstr "Skapa anvï¿½nvare"
 
 #: admin/Reflektor_users.php:288 admin/login.php:36 admin/users.php:186
 #: admin/users.php:254 index.php:1750 index.php:1751 index.php:4811
 #: index1.php:1191 index1.php:1192 index1.php:3760 index1.php:3917
 #: index_old.php:3045 indexa.php:3046 user_settings.php:284
 msgid "Username"
-msgstr "Användarnamn"
+msgstr "Anvï¿½ndarnamn"
 
 #: admin/Reflektor_users.php:296
 msgid "Generate Username"
-msgstr "Generera användarnamn"
+msgstr "Generera anvï¿½ndarnamn"
 
 #: admin/Reflektor_users.php:303 admin/Reflektor_users.php:484
 #: admin/login.php:43 admin/users.php:194 admin/users.php:445 index.php:1754
 #: index.php:4827 index1.php:1195 index1.php:3933
-#: requset_reflector_login.php:621 requset_reflector_login.php:624
-#: requset_reflector_login.php:1157
+#: request_reflector_login.php:621 request_reflector_login.php:624
+#: request_reflector_login.php:1157
 msgid "Password"
-msgstr "Lösenord"
+msgstr "Lï¿½senord"
 
 #: admin/Reflektor_users.php:311 admin/Reflektor_users.php:490
-#: requset_reflector_login.php:627
+#: request_reflector_login.php:627
 msgid "Generate password"
-msgstr "Generera lösenord"
+msgstr "Generera lï¿½senord"
 
 #: admin/Reflektor_users.php:323 admin/Reflektor_users.php:375
 #: admin/talkgroup.php:122 admin/talkgroup.php:162 edit_station.php:966
-#: edit_station.php:1078 edit_station.php:1162 requset_reflector_login.php:643
-#: requset_reflector_login.php:646 station_info.php:146
+#: edit_station.php:1078 edit_station.php:1162 request_reflector_login.php:643
+#: request_reflector_login.php:646 station_info.php:146
 msgid "Description"
 msgstr "Beskrivning"
 
@@ -168,12 +168,12 @@ msgstr "Stationinloggning"
 
 #: admin/Reflektor_users.php:374
 msgid "Station password"
-msgstr "Stationens lösenord"
+msgstr "Stationens lï¿½senord"
 
 #: admin/Reflektor_users.php:378 admin/users.php:258 database_text.php:15
 #: edit_station.php:968
 msgid "Action"
-msgstr "Åtgärder"
+msgstr "ï¿½tgï¿½rder"
 
 #: admin/Reflektor_users.php:411 admin/Settings.php:25
 #: admin/get_reflector.php:35 admin/get_station.php:34 admin/get_users.php:31
@@ -189,15 +189,15 @@ msgstr "Nej"
 
 #: admin/Reflektor_users.php:436 admin/get_reflector.php:58
 msgid "Select action"
-msgstr "Välj åtgärd"
+msgstr "Vï¿½lj ï¿½tgï¿½rd"
 
 #: admin/Reflektor_users.php:438 admin/get_reflector.php:60
 msgid "Enable user"
-msgstr "Aktivera användare"
+msgstr "Aktivera anvï¿½ndare"
 
 #: admin/Reflektor_users.php:440 admin/get_reflector.php:62
 msgid "Disable user"
-msgstr "Inaktivera användare"
+msgstr "Inaktivera anvï¿½ndare"
 
 #: admin/Reflektor_users.php:442 admin/get_reflector.php:64
 msgid "Send message to Sysadmin"
@@ -210,14 +210,14 @@ msgstr "Skicka inloggningsuppgifter till sysadmin"
 #: admin/Reflektor_users.php:444 admin/Reflektor_users.php:478
 #: admin/users.php:439
 msgid "Change user password"
-msgstr "Ändra användarlösenord"
+msgstr "ï¿½ndra anvï¿½ndarlï¿½senord"
 
 #: admin/Reflektor_users.php:496 admin/stations.php:179 admin/talkgroup.php:219
 #: admin/users.php:406 admin/users.php:455 edit_station.php:725
 #: edit_station.php:1130 edit_station.php:1208 index.php:179 index.php:2612
 #: index1.php:69 index1.php:2030 index_old.php:59 indexa.php:60
 msgid "Close"
-msgstr "Stäng"
+msgstr "Stï¿½ng"
 
 #: admin/Reflektor_users.php:497 admin/stations.php:65 admin/stations.php:180
 #: admin/talkgroup.php:220 admin/users.php:407 admin/users.php:456
@@ -227,7 +227,7 @@ msgstr "Updatera"
 
 #: admin/Settings.php:67
 msgid "Settings is saved!"
-msgstr "Inställningarna är sparade"
+msgstr "Instï¿½llningarna ï¿½r sparade"
 
 #: admin/Settings.php:113 edit_station.php:492 edit_station.php:595
 #: edit_station.php:883
@@ -236,23 +236,23 @@ msgstr "Spara"
 
 #: admin/get_reflector.php:66
 msgid "Change node password"
-msgstr "Ändra nodlösenord"
+msgstr "ï¿½ndra nodlï¿½senord"
 
 #: admin/get_users.php:39 admin/users.php:294
 msgid "- Select station -"
-msgstr "- Välj station -"
+msgstr "- Vï¿½lj station -"
 
 #: admin/get_users.php:40 admin/users.php:295
 msgid "User granded"
-msgstr "Användaren beviljade stationer"
+msgstr "Anvï¿½ndaren beviljade stationer"
 
 #: admin/get_users.php:56 admin/users.php:310
 msgid "Read only"
-msgstr "Endast läsbart"
+msgstr "Endast lï¿½sbart"
 
 #: admin/get_users.php:67 admin/users.php:320
 msgid "User not granded"
-msgstr "Användaren har inte beviljats åtkomst"
+msgstr "Anvï¿½ndaren har inte beviljats ï¿½tkomst"
 
 #: admin/log.php:89 log.php:155
 msgid "Page size"
@@ -269,7 +269,7 @@ msgstr "Realtid"
 
 #: admin/log.php:142 admin/log.php:143 log.php:253 log.php:254
 msgid "Search"
-msgstr "Sök"
+msgstr "Sï¿½k"
 
 #: admin/log.php:203 edit_station.php:710 edit_station.php:740 index.php:5225
 #: index1.php:4198 index_old.php:3202 indexa.php:3203 log.php:323
@@ -278,21 +278,21 @@ msgid "Date"
 msgstr "Datum"
 
 #: admin/log.php:204 index.php:5264 index1.php:4234 index_old.php:3234
-#: indexa.php:3235 log.php:324 map_pick.php:93 requset_reflector_login.php:856
+#: indexa.php:3235 log.php:324 map_pick.php:93 request_reflector_login.php:856
 msgid "Station"
 msgstr "Station"
 
 #: admin/log.php:205 log.php:325
 msgid "Event"
-msgstr "Händelse"
+msgstr "Hï¿½ndelse"
 
 #: admin/log.php:237 log.php:344
 msgid "is Talker on tg"
-msgstr "Är aktiv på TG"
+msgstr "ï¿½r aktiv pï¿½ TG"
 
 #: admin/log.php:239
 msgid "Stoped talk tg"
-msgstr "Inaktiv på TG"
+msgstr "Inaktiv pï¿½ TG"
 
 #: admin/log.php:243 driver/card/blv20.php:414 driver/card/blv30.php:436
 #: log.php:350
@@ -301,11 +301,11 @@ msgstr "Mottagare"
 
 #: admin/log.php:245
 msgid " is active signal level"
-msgstr "är aktiv signalnivå"
+msgstr "ï¿½r aktiv signalnivï¿½"
 
 #: admin/log.php:247 log.php:354
 msgid "has signal level"
-msgstr "har signalnivå"
+msgstr "har signalnivï¿½"
 
 #: admin/log.php:253 log.php:360
 msgid "Node"
@@ -313,7 +313,7 @@ msgstr "Nod"
 
 #: admin/log.php:255
 msgid "has dropt from reflektor"
-msgstr "har tappat kontakten till från reflektor"
+msgstr "har tappat kontakten till frï¿½n reflektor"
 
 #: admin/log.php:257
 msgid "has connected to  reflektor"
@@ -326,7 +326,7 @@ msgstr "Tillbaka"
 #: admin/login.php:13 index.php:1083 index1.php:665 index_old.php:504
 #: indexa.php:505
 msgid "Wrong username or password"
-msgstr "Felaktigt användarnamn eller lösenord"
+msgstr "Felaktigt anvï¿½ndarnamn eller lï¿½senord"
 
 #: admin/login.php:27
 msgid "Sign In"
@@ -340,8 +340,8 @@ msgstr "Inloggning"
 #: index1.php:253 index1.php:1374 index1.php:1778 index_old.php:209
 #: index_old.php:806 index_old.php:1098 indexa.php:210 indexa.php:807
 #: indexa.php:1099 list_reciver.php:84 list_reciver_2.php:58
-#: list_reciver_old.php:55 requset_reflector_login.php:460
-#: requset_reflector_login.php:633 requset_reflector_login.php:1148
+#: list_reciver_old.php:55 request_reflector_login.php:460
+#: request_reflector_login.php:633 request_reflector_login.php:1148
 msgid "Callsign"
 msgstr "Anropsignal"
 
@@ -358,14 +358,14 @@ msgstr "Senast aktiv"
 
 #: admin/stations.php:94
 msgid "Station down"
-msgstr "Station frånkopplad"
+msgstr "Station frï¿½nkopplad"
 
 #: admin/stations.php:95 admin/stations.php:169 admin/talkgroup.php:131
 #: admin/talkgroup.php:165 admin/talkgroup.php:209 index.php:2362
 #: index1.php:1781 index_old.php:924 index_old.php:1101 indexa.php:925
 #: indexa.php:1102
 msgid "Color"
-msgstr "Färg"
+msgstr "Fï¿½rg"
 
 #: admin/stations.php:151
 msgid "Total up / down"
@@ -373,7 +373,7 @@ msgstr ""
 
 #: admin/stations.php:163 admin/talkgroup.php:203
 msgid "Change station color"
-msgstr "Ändra stationsfärg"
+msgstr "ï¿½ndra stationsfï¿½rg"
 
 #: admin/talkgroup.php:47
 msgid "talkgroup created!"
@@ -387,22 +387,22 @@ msgstr "Skapa talgrupper"
 #: index.php:2358 index1.php:253 index1.php:1776 index_old.php:209
 #: index_old.php:1096 indexa.php:210 indexa.php:1097 list_reciver.php:84
 #: list_reciver_2.php:58 list_reciver_old.php:55
-#: requset_reflector_login.php:714
+#: request_reflector_login.php:714
 msgid "TG#"
 msgstr "TG#"
 
 #: admin/talkgroup.php:164 index.php:2480 index1.php:1899 index_old.php:1211
 #: indexa.php:1212
 msgid "Actions"
-msgstr "Åtgärder"
+msgstr "ï¿½tgï¿½rder"
 
 #: admin/users.php:87
 msgid "Premission is updated!"
-msgstr "Behörigheten är uppdaterad!"
+msgstr "Behï¿½righeten ï¿½r uppdaterad!"
 
 #: admin/users.php:203 admin/users.php:252 database_text.php:11
 msgid "First name"
-msgstr "Förnamn"
+msgstr "Fï¿½rnamn"
 
 #: admin/users.php:214 admin/users.php:253 database_text.php:12
 msgid "Last name"
@@ -410,31 +410,31 @@ msgstr "Efternamn"
 
 #: admin/users.php:229
 msgid "User is admin"
-msgstr "Är administratör"
+msgstr "ï¿½r administratï¿½r"
 
 #: admin/users.php:256 database_text.php:14
 msgid "Is admin"
-msgstr "Är administratör"
+msgstr "ï¿½r administratï¿½r"
 
 #: admin/users.php:257
 msgid "Station permission"
-msgstr "Stations rätigheter"
+msgstr "Stations rï¿½tigheter"
 
 #: admin/users.php:365
 msgid "User image"
-msgstr "Användarbild"
+msgstr "Anvï¿½ndarbild"
 
 #: admin/users.php:386
 msgid "Assign station permission for user"
-msgstr "Tilldela stationsbehörighet för användaren"
+msgstr "Tilldela stationsbehï¿½righet fï¿½r anvï¿½ndaren"
 
 #: admin/users.php:395
 msgid "Read only acsess"
-msgstr "Skrivskyddad åtkomst"
+msgstr "Skrivskyddad ï¿½tkomst"
 
 #: admin/users.php:400
 msgid "Write acsess"
-msgstr "Skrivåtkomst"
+msgstr "Skrivï¿½tkomst"
 
 #: ctcss_map_table.php:200
 msgid "CTCSS Map table"
@@ -464,19 +464,19 @@ msgstr "CSV Postion"
 
 #: ctcss_map_table.php:339
 msgid "Use three last char in call"
-msgstr "Använd 3 sista bokstäverna "
+msgstr "Anvï¿½nd 3 sista bokstï¿½verna "
 
 #: ctcss_map_table.php:344
 msgid "Export"
 msgstr "Exportera"
 
 #: database_text.php:2
-msgid "Hide the languge bar"
-msgstr "Dölj språk fältet"
+msgid "Hide the language bar"
+msgstr "Dï¿½lj sprï¿½k fï¿½ltet"
 
 #: database_text.php:3
 msgid "Use Custom header in sidebar"
-msgstr "Använd anpassad rubrik i sidofältet"
+msgstr "Anvï¿½nd anpassad rubrik i sidofï¿½ltet"
 
 #: database_text.php:4
 msgid "External dokumentation page"
@@ -484,35 +484,35 @@ msgstr "Extern dokumentationssida"
 
 #: database_text.php:5
 msgid "Use login for player"
-msgstr "Använd inloggning för spelare"
+msgstr "Anvï¿½nd inloggning fï¿½r spelare"
 
 #: database_text.php:6
 msgid "Use external dokumentation page"
-msgstr "Använd extern dokumentationssida"
+msgstr "Anvï¿½nd extern dokumentationssida"
 
 #: database_text.php:7
 msgid "The default talkgroup for Recording statistic"
-msgstr "Standardgrupp för inspelningsstatistik"
+msgstr "Standardgrupp fï¿½r inspelningsstatistik"
 
 #: database_text.php:8
 msgid "Send an email to sysop when the node goes down"
-msgstr "Skicka ett e-postmeddelande till sysop när noden går ner"
+msgstr "Skicka ett e-postmeddelande till sysop nï¿½r noden gï¿½r ner"
 
 #: database_text.php:9
 msgid "Mail to system administrator"
-msgstr "E-postadress till systemadministratören"
+msgstr "E-postadress till systemadministratï¿½ren"
 
 #: database_text.php:10
 msgid "E-mail adress for the system"
-msgstr "E-postadress för systemet"
+msgstr "E-postadress fï¿½r systemet"
 
 #: database_text.php:19
 msgid "color"
-msgstr "färg"
+msgstr "fï¿½rg"
 
 #: database_text.php:21 database_text.php:25
 msgid "Hide the Monitor bar"
-msgstr "Dölj övervakning"
+msgstr "Dï¿½lj ï¿½vervakning"
 
 #: database_text.php:22
 msgid "Server adresss to svxreflektor"
@@ -528,7 +528,7 @@ msgstr ""
 
 #: database_text.php:26
 msgid "\"Beta\" Node admin notfication"
-msgstr "Nodadministratörsmeddelande "
+msgstr "Nodadministratï¿½rsmeddelande "
 
 #: div_reciver.php:8 edit_station.php:808 edit_station.php:839
 msgid "None"
@@ -541,7 +541,7 @@ msgstr "Alla"
 
 #: div_reciver.php:127
 msgid "Signal values at"
-msgstr "Signalvärde från mottagaren"
+msgstr "Signalvï¿½rde frï¿½n mottagaren"
 
 #: div_reciver.php:136 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
@@ -584,7 +584,7 @@ msgstr "Batteridrift"
 
 #: driver/card/blv20.php:207 driver/card/blv30.php:229
 msgid "On AC-power"
-msgstr "Nätdrift"
+msgstr "Nï¿½tdrift"
 
 #: driver/card/blv20.php:393 driver/card/blv30.php:415
 msgid "Tempeture"
@@ -612,7 +612,7 @@ msgstr "RSSI"
 
 #: driver/card/blv30.php:143
 msgid "S-Value"
-msgstr "S-Värde"
+msgstr "S-Vï¿½rde"
 
 #: driver/card/blv30.php:147
 msgid "Tempeure"
@@ -624,7 +624,7 @@ msgstr "SWR Larm"
 
 #: driver/card/blv30.php:156
 msgid "AC alarm"
-msgstr "Ström larm"
+msgstr "Strï¿½m larm"
 
 #: driver/card/blv30.php:159
 msgid "PA alarm"
@@ -633,19 +633,19 @@ msgstr "AC alarm"
 #: edit_station.php:132 edit_station.php:148 station_dash.php:132
 #: station_dash.php:148
 msgid "Page is saved"
-msgstr "Sidan är sparad"
+msgstr "Sidan ï¿½r sparad"
 
 #: edit_station.php:160 station_dash.php:160
 msgid "Settings is saved"
-msgstr "Inställningarna är sparade"
+msgstr "Instï¿½llningarna ï¿½r sparade"
 
 #: edit_station.php:174 station_dash.php:174
 msgid "Ticket is created"
-msgstr "Felärendet är sparad"
+msgstr "Felï¿½rendet ï¿½r sparad"
 
 #: edit_station.php:391 station_dash.php:318
 msgid "Premission Denied!"
-msgstr "Åtkonst Nekad!"
+msgstr "ï¿½tkonst Nekad!"
 
 #: edit_station.php:415
 msgid "Station editor"
@@ -657,7 +657,7 @@ msgstr "Information"
 
 #: edit_station.php:440 station_info.php:80
 msgid "Hardware"
-msgstr "Hårdvara"
+msgstr "Hï¿½rdvara"
 
 #: edit_station.php:444
 msgid "DTMF commands"
@@ -671,20 +671,20 @@ msgstr "Drift information"
 msgid "Driver dashboard"
 msgstr "Repeater Panel"
 
-#: edit_station.php:529 requset_reflector_login.php:565
+#: edit_station.php:529 request_reflector_login.php:565
 msgid "Send command to node"
 msgstr "Skicka kommando till nod"
 
 #: edit_station.php:537 edit_station.php:1074 edit_station.php:1158
-#: requset_reflector_login.php:573
+#: request_reflector_login.php:573
 msgid "DTMF command"
 msgstr "Dtmf kommando"
 
-#: edit_station.php:545 requset_reflector_login.php:581
+#: edit_station.php:545 request_reflector_login.php:581
 msgid "Scheduled date"
-msgstr "Schemalägg datum"
+msgstr "Schemalï¿½gg datum"
 
-#: edit_station.php:549 requset_reflector_login.php:585
+#: edit_station.php:549 request_reflector_login.php:585
 msgid "Send commnd to repeater"
 msgstr "Skicka kommando till repeater"
 
@@ -747,7 +747,7 @@ msgstr "DTMF"
 
 #: edit_station.php:985 edit_station.php:1045
 msgid "Command is created"
-msgstr "kommando är skapat"
+msgstr "kommando ï¿½r skapat"
 
 #: edit_station.php:1066
 msgid "New DTMF Command "
@@ -759,7 +759,7 @@ msgstr "Editera DTMF kommando"
 
 #: function.php:264 user_settings.php:254
 msgid "General"
-msgstr "Allmänt"
+msgstr "Allmï¿½nt"
 
 #: function.php:265
 msgid "Echolink"
@@ -779,15 +779,15 @@ msgstr "Macron"
 
 #: index.php:121
 msgid "Please enter your username"
-msgstr "Ange ditt användarnamn"
+msgstr "Ange ditt anvï¿½ndarnamn"
 
 #: index.php:131
 msgid "User doesn't exist!"
-msgstr "Användaren finns inte!"
+msgstr "Anvï¿½ndaren finns inte!"
 
 #: index.php:136
 msgid "An E-mail has been sent to user mail"
-msgstr "Ett e-postmeddelande har skickats till användarens e-post"
+msgstr "Ett e-postmeddelande har skickats till anvï¿½ndarens e-post"
 
 #: index.php:180 index1.php:70 index_old.php:60 indexa.php:61
 msgid "Today"
@@ -855,11 +855,11 @@ msgstr "December"
 
 #: index.php:182 index1.php:72 index_old.php:62 indexa.php:63
 msgid "Su"
-msgstr "Sö"
+msgstr "Sï¿½"
 
 #: index.php:182 index1.php:72 index_old.php:62 indexa.php:63
 msgid "Mo"
-msgstr "Må"
+msgstr "Mï¿½"
 
 #: index.php:182 index1.php:72 index_old.php:62 indexa.php:63
 msgid "Tu"
@@ -879,11 +879,11 @@ msgstr "Fr"
 
 #: index.php:182 index1.php:72 index_old.php:62 indexa.php:63
 msgid "Sa"
-msgstr "Lö"
+msgstr "Lï¿½"
 
 #: index.php:183 index1.php:73 index_old.php:63 indexa.php:64
 msgid "Monday"
-msgstr "Måndag"
+msgstr "Mï¿½ndag"
 
 #: index.php:183 index1.php:73 index_old.php:63 indexa.php:64
 msgid "Tuesday"
@@ -903,15 +903,15 @@ msgstr "Fredag"
 
 #: index.php:183 index1.php:73 index_old.php:63 indexa.php:64
 msgid "Saturday"
-msgstr "Lördag"
+msgstr "Lï¿½rdag"
 
 #: index.php:183 index1.php:73 index_old.php:63 indexa.php:64
 msgid "Sunday"
-msgstr "Söndag"
+msgstr "Sï¿½ndag"
 
 #: index.php:228
 msgid "No Resonse from reflektor server"
-msgstr "Inget svar från reflektorservern"
+msgstr "Inget svar frï¿½n reflektorservern"
 
 #: index.php:228
 msgid "System failure"
@@ -931,7 +931,7 @@ msgstr "Ja"
 
 #: index.php:820 index1.php:412
 msgid "Pleace select station"
-msgstr "Välj station"
+msgstr "Vï¿½lj station"
 
 #: index.php:1627 index.php:4785 index.php:4846 index1.php:3891 index1.php:3952
 msgid "Register"
@@ -939,7 +939,7 @@ msgstr "Registrera"
 
 #: index.php:1642 index1.php:1104
 msgid "Select your language"
-msgstr "Välj språk"
+msgstr "Vï¿½lj sprï¿½k"
 
 #: index.php:1645 index1.php:1107
 msgid "English"
@@ -973,13 +973,13 @@ msgstr "Franska"
 msgid "Turkish"
 msgstr "Turkiska"
 
-#: index.php:1708 requset_reflector_login.php:429
+#: index.php:1708 request_reflector_login.php:429
 msgid "Admin interface"
-msgstr "Admin gränssnitt"
+msgstr "Admin grï¿½nssnitt"
 
 #: index.php:1715
 msgid "Account settings"
-msgstr "Kontoinställningar"
+msgstr "Kontoinstï¿½llningar"
 
 #: index.php:1722 index1.php:1165
 msgid "Sign out"
@@ -993,11 +993,11 @@ msgstr "Logga in"
 #: index.php:1755 index1.php:1196 index1.php:3761 index_old.php:3046
 #: indexa.php:3047
 msgid "password"
-msgstr "Lösenord"
+msgstr "Lï¿½senord"
 
 #: index.php:1760
 msgid "Reset password"
-msgstr "Återställ lösenord"
+msgstr "ï¿½terstï¿½ll lï¿½senord"
 
 #: index.php:1802 index.php:1917 index1.php:1239 index1.php:1356
 #: index_old.php:665 index_old.php:770 indexa.php:666 indexa.php:771
@@ -1006,7 +1006,7 @@ msgstr "Klienter"
 
 #: index.php:1809 index1.php:1246 index_old.php:667 indexa.php:668
 msgid "Monitor"
-msgstr "Övervakning"
+msgstr "ï¿½vervakning"
 
 #: index.php:1816
 msgid "Station information"
@@ -1054,7 +1054,7 @@ msgstr "Aktiva noder"
 
 #: index.php:1911 index.php:2327 index1.php:1350
 msgid "Action menu"
-msgstr "Åtgärder"
+msgstr "ï¿½tgï¿½rder"
 
 #: index.php:1935 index1.php:253 index_old.php:209 indexa.php:210
 msgid "Is talker"
@@ -1062,7 +1062,7 @@ msgstr "Aktiv"
 
 #: index.php:1935 index1.php:253 index_old.php:209 indexa.php:210
 msgid "Monitored TGs"
-msgstr "Övervakade TGs"
+msgstr "ï¿½vervakade TGs"
 
 #: index.php:1935 index1.php:253
 msgid "Start talk"
@@ -1109,11 +1109,11 @@ msgstr "blanda"
 
 #: index.php:2071 index1.php:1506 index_old.php:874 indexa.php:875
 msgid "full screen"
-msgstr "full skärm"
+msgstr "full skï¿½rm"
 
 #: index.php:2125 index1.php:1560
 msgid "Select channel"
-msgstr "Välj kanal"
+msgstr "Vï¿½lj kanal"
 
 #: index.php:2129 index1.php:1564 list_reciver.php:1483
 msgid "Default"
@@ -1125,19 +1125,19 @@ msgstr "Lyssna LIVE"
 
 #: index.php:2150
 msgid "Open in mediaplayer"
-msgstr "Öppna i mediaspelare"
+msgstr "ï¿½ppna i mediaspelare"
 
 #: index.php:2158 index1.php:1590 index_old.php:902 indexa.php:903
 msgid "Select date to listen"
-msgstr "Välj datum för att lyssna"
+msgstr "Vï¿½lj datum fï¿½r att lyssna"
 
 #: index.php:2163 index1.php:1595 index_old.php:904 indexa.php:905
 msgid "to use player you must login"
-msgstr "För att använda spelaren måste du först logga in"
+msgstr "Fï¿½r att anvï¿½nda spelaren mï¿½ste du fï¿½rst logga in"
 
 #: index.php:2179
 msgid "Signal value from receiver"
-msgstr "Signalvärde från mottagaren "
+msgstr "Signalvï¿½rde frï¿½n mottagaren "
 
 #: index.php:2293 index1.php:1710 index_old.php:1022 indexa.php:1023
 #: log.php:173
@@ -1154,7 +1154,7 @@ msgstr "Senast aktiv"
 
 #: index.php:2470 index1.php:1889 index_old.php:1201 indexa.php:1202
 msgid "Coverage"
-msgstr "Täckningskartor"
+msgstr "Tï¿½ckningskartor"
 
 #: index.php:2473 index1.php:1892 index_old.php:1204 indexa.php:1205
 msgid "Show"
@@ -1178,7 +1178,7 @@ msgstr "Visa mottagare"
 
 #: index.php:2506 index1.php:1925 index_old.php:1237 indexa.php:1238
 msgid "Toggle AutoFollow"
-msgstr "Aktivera följ med"
+msgstr "Aktivera fï¿½lj med"
 
 #: index.php:2512 index1.php:1931 index_old.php:1243 indexa.php:1244
 msgid "Reload Map"
@@ -1186,7 +1186,7 @@ msgstr "Ladda om karta"
 
 #: index.php:2552 index1.php:1971 index_old.php:1287 indexa.php:1288
 msgid "Station info for"
-msgstr "Stationsinfo för"
+msgstr "Stationsinfo fï¿½r"
 
 #: index.php:2570 index1.php:1989 index_old.php:1305 indexa.php:1306
 msgid "Version"
@@ -1198,7 +1198,7 @@ msgstr "Aktuell TG"
 
 #: index.php:2572 index1.php:1991 index_old.php:1307 indexa.php:1308
 msgid "Sysop"
-msgstr "Administartör"
+msgstr "Administartï¿½r"
 
 #: index.php:2593 index1.php:2012 index_old.php:1328 indexa.php:1329
 msgid "RX Name"
@@ -1210,7 +1210,7 @@ msgstr "SqlType"
 
 #: index.php:2614 index1.php:2032
 msgid "Show covreage"
-msgstr "Visa täckning"
+msgstr "Visa tï¿½ckning"
 
 #: index.php:2626
 msgid "Radiomobile"
@@ -1223,7 +1223,7 @@ msgstr "Total"
 
 #: index.php:3451 index1.php:2822 index_old.php:2116 indexa.php:2117
 msgid "Year statistics"
-msgstr "Statistik per år"
+msgstr "Statistik per ï¿½r"
 
 #: index.php:3532 index1.php:2902 index_old.php:2196 indexa.php:2197
 msgid "Talkgroup activity"
@@ -1240,11 +1240,11 @@ msgstr "tid"
 
 #: index.php:3891
 msgid "Month activity"
-msgstr "Månads aktiviet"
+msgstr "Mï¿½nads aktiviet"
 
 #: index.php:3915
 msgid "Month activity "
-msgstr "Aktivitet per månad"
+msgstr "Aktivitet per mï¿½nad"
 
 #: index.php:4114 index1.php:3258 index_old.php:2552 indexa.php:2553
 msgid "Station activity"
@@ -1256,23 +1256,23 @@ msgstr "Stationinformation"
 
 #: index.php:4708 index1.php:3814
 msgid "Select station"
-msgstr "Välj station"
+msgstr "Vï¿½lj station"
 
 #: index.php:4751 index1.php:3857
 msgid "Passwords aren same"
-msgstr "Lösenorden är desamma"
+msgstr "Lï¿½senorden ï¿½r desamma"
 
 #: index.php:4763 index1.php:3869
 msgid "User already exist!"
-msgstr "Användaren finns redan!"
+msgstr "Anvï¿½ndaren finns redan!"
 
 #: index.php:4767 index1.php:3873
 msgid "User is creadted!"
-msgstr "Användaren är skapad!"
+msgstr "Anvï¿½ndaren ï¿½r skapad!"
 
 #: index.php:4792 index1.php:3898 user_settings.php:292
 msgid "Firstname"
-msgstr "Förnamn"
+msgstr "Fï¿½rnamn"
 
 #: index.php:4794 index1.php:3900
 msgid "jay"
@@ -1292,15 +1292,15 @@ msgstr ""
 
 #: index.php:4829 index1.php:3935
 msgid "Password should be at least 8 characters"
-msgstr "Lösenordet bör innehålla minst åtta tecken"
+msgstr "Lï¿½senordet bï¿½r innehï¿½lla minst ï¿½tta tecken"
 
 #: index.php:4834 index1.php:3940
 msgid "Password (Confirm)"
-msgstr "Bekräfta lösenord)"
+msgstr "Bekrï¿½fta lï¿½senord)"
 
 #: index.php:4836 index1.php:3942
 msgid "Please confirm password"
-msgstr "Bekräfta lösenordet"
+msgstr "Bekrï¿½fta lï¿½senordet"
 
 #: index.php:4845 index1.php:3951
 msgid "Clear"
@@ -1316,11 +1316,11 @@ msgstr "Timmar"
 
 #: index.php:4873
 msgid "Month"
-msgstr "Månad"
+msgstr "Mï¿½nad"
 
 #: index.php:4874 index1.php:3979 index_old.php:3086 indexa.php:3087
 msgid "Year"
-msgstr "År"
+msgstr "ï¿½r"
 
 #: index.php:4976 index1.php:4069
 msgid "Hour chart"
@@ -1338,10 +1338,10 @@ msgstr "Repeater"
 
 #: index.php:5056
 msgid "Month chart"
-msgstr "Månadsdiagram"
+msgstr "Mï¿½nadsdiagram"
 
 #: index.php:5161 index1.php:4134 index_old.php:3160 indexa.php:3161
-#: requset_reflector_login.php:1174
+#: request_reflector_login.php:1174
 msgid "No Talkgroup Filter"
 msgstr "Ingen utvald talgrupp"
 
@@ -1356,15 +1356,15 @@ msgstr "Uptime"
 
 #: index.php:5266 index1.php:4234 index_old.php:3234 indexa.php:3235
 msgid "Network Usage 24 hour"
-msgstr "Nätverksanvändning 24 timmar"
+msgstr "Nï¿½tverksanvï¿½ndning 24 timmar"
 
 #: index.php:5267 index1.php:4234 index_old.php:3234 indexa.php:3235
 msgid "Usage last 24 hour"
-msgstr "Användning det senaste dygnet"
+msgstr "Anvï¿½ndning det senaste dygnet"
 
 #: index.php:5269 index1.php:4234 index_old.php:3234 indexa.php:3235
 msgid "Most used receiver"
-msgstr "Mest använda mottagare"
+msgstr "Mest anvï¿½nda mottagare"
 
 #: index1.php:1253
 msgid "Station informtation"
@@ -1380,7 +1380,7 @@ msgstr "TGs"
 
 #: index1.php:1611 index_old.php:913 indexa.php:914
 msgid "Signal value  from Reciver"
-msgstr "Signalvärde från mottagaren"
+msgstr "Signalvï¿½rde frï¿½n mottagaren"
 
 #: index1.php:3070 index_old.php:2364 indexa.php:2365
 msgid "Hour activity "
@@ -1407,11 +1407,11 @@ msgstr "Klienter"
 #: indexa.php:901 indexa.php:1027 indexa.php:1036 indexa.php:1070
 #: indexa.php:1259 indexa.php:3077
 msgid "Toggle menu"
-msgstr "Dölj meny "
+msgstr "Dï¿½lj meny "
 
 #: index_old.php:820 indexa.php:821
 msgid "QSO Monitor"
-msgstr "QSO Övervakare"
+msgstr "QSO ï¿½vervakare"
 
 #: index_old.php:921 indexa.php:922
 msgid "Name"
@@ -1427,7 +1427,7 @@ msgstr "Total tid"
 
 #: index_old.php:3063 indexa.php:3064
 msgid "Statistics for Network"
-msgstr "Statistik för nätverk"
+msgstr "Statistik fï¿½r nï¿½tverk"
 
 #: list_reciver.php:16 list_reciver_2.php:16 list_reciver_old.php:15
 msgid "Receiver Monitor"
@@ -1443,27 +1443,27 @@ msgstr "Alla aktiva"
 
 #: list_reciver.php:1492
 msgid "Search for Node"
-msgstr "Sök noder"
+msgstr "Sï¿½k noder"
 
 #: log.php:191
 msgid "Repeater actions"
-msgstr "Repeater ågärder "
+msgstr "Repeater ï¿½gï¿½rder "
 
 #: log.php:198
 msgid "S-values"
-msgstr "S-Värde"
+msgstr "S-Vï¿½rde"
 
 #: log.php:346
 msgid "Ended talk on tg"
-msgstr "slutade med sändningspass på talgrupp"
+msgstr "slutade med sï¿½ndningspass pï¿½ talgrupp"
 
 #: log.php:352
 msgid " is active, signal level"
-msgstr "Noden är aktiv på talgrupp"
+msgstr "Noden ï¿½r aktiv pï¿½ talgrupp"
 
 #: log.php:362
 msgid "has dropped  from reflector"
-msgstr "har tappat kontakten till från reflektor"
+msgstr "har tappat kontakten till frï¿½n reflektor"
 
 #: log.php:364
 msgid "has connected to  reflector"
@@ -1475,7 +1475,7 @@ msgstr "Aktiva Sessioner"
 
 #: radiomobile.php:109
 msgid "Uplad sucess!"
-msgstr "Uppladdning Färdig."
+msgstr "Uppladdning Fï¿½rdig."
 
 #: radiomobile.php:124
 msgid "Error"
@@ -1483,11 +1483,11 @@ msgstr "Fel"
 
 #: radiomobile_front.php:77
 msgid "Radiomobile interface"
-msgstr "Radiomobile gränssnitt"
+msgstr "Radiomobile grï¿½nssnitt"
 
 #: radiomobile_front.php:93
 msgid "Select radiomobile zip file  to upload"
-msgstr "Välj radiomobil zip -fil att ladda upp"
+msgstr "Vï¿½lj radiomobil zip -fil att ladda upp"
 
 #: radiomobile_front.php:98
 msgid "upload Zip file"
@@ -1499,223 +1499,223 @@ msgstr "Skicka in"
 
 #: radiomobile_front.php:109
 msgid "Not admin"
-msgstr "Inte administratör"
+msgstr "Inte administratï¿½r"
 
-#: requset_reflector_login.php:292
+#: request_reflector_login.php:292
 msgid "Station already exist!"
 msgstr "Station finns redan!"
 
-#: requset_reflector_login.php:299
+#: request_reflector_login.php:299
 msgid "Thanks for your registration an admin will contact you soon"
-msgstr "Tack för din registrering kommer en administratör att kontakta dig snart"
+msgstr "Tack fï¿½r din registrering kommer en administratï¿½r att kontakta dig snart"
 
-#: requset_reflector_login.php:388
+#: request_reflector_login.php:388
 msgid "Network acsess"
-msgstr "Nätverkåtkomst"
+msgstr "Nï¿½tverkï¿½tkomst"
 
-#: requset_reflector_login.php:410
+#: request_reflector_login.php:410
 msgid "My Stations"
 msgstr "Mina stationer"
 
-#: requset_reflector_login.php:413
+#: request_reflector_login.php:413
 msgid "Request repeater Login"
-msgstr "Begär repeaterinloggning"
+msgstr "Begï¿½r repeaterinloggning"
 
-#: requset_reflector_login.php:417
+#: request_reflector_login.php:417
 msgid "Generate node_info.json"
 msgstr "Skapa node_info.json"
 
-#: requset_reflector_login.php:422
+#: request_reflector_login.php:422
 msgid "Generate svx.config parameters"
-msgstr "Skapa parametrar för svx.config"
+msgstr "Skapa parametrar fï¿½r svx.config"
 
-#: requset_reflector_login.php:461
+#: request_reflector_login.php:461
 msgid "Lastseen"
 msgstr "Senast sedd"
 
-#: requset_reflector_login.php:462
+#: request_reflector_login.php:462
 msgid "Svxlink version"
 msgstr "Svxlink verson"
 
-#: requset_reflector_login.php:463
+#: request_reflector_login.php:463
 msgid "Send Command"
 msgstr "Skicka kommando"
 
-#: requset_reflector_login.php:505
+#: request_reflector_login.php:505
 msgid "Send DTMF to node"
 msgstr "Skicka DTMF till nod"
 
-#: requset_reflector_login.php:508
+#: request_reflector_login.php:508
 msgid "Send Command to Nod"
 msgstr "Skicka kommando till Nod"
 
-#: requset_reflector_login.php:511
+#: request_reflector_login.php:511
 msgid "Edit Repeater"
 msgstr "Redigera repeater"
 
-#: requset_reflector_login.php:522 station_dash.php:342
+#: request_reflector_login.php:522 station_dash.php:342
 msgid "Station Dashboard"
 msgstr "Stationens Dasboard"
 
-#: requset_reflector_login.php:542
+#: request_reflector_login.php:542
 msgid "Svxlink updated"
 msgstr "Svxlink  updaterad"
 
-#: requset_reflector_login.php:545
+#: request_reflector_login.php:545
 msgid "New svxlink version avabel"
-msgstr "Ny svxlink-version tillgänglig"
+msgstr "Ny svxlink-version tillgï¿½nglig"
 
-#: requset_reflector_login.php:548
+#: request_reflector_login.php:548
 msgid "Node disconnected"
 msgstr "Ej ansluten till reflektor"
 
-#: requset_reflector_login.php:608
+#: request_reflector_login.php:608
 msgid "User Credentals"
-msgstr "Användaruppgifter"
+msgstr "Anvï¿½ndaruppgifter"
 
-#: requset_reflector_login.php:612
+#: request_reflector_login.php:612
 msgid "Email address"
 msgstr "E-postadress"
 
-#: requset_reflector_login.php:615
+#: request_reflector_login.php:615
 msgid "Enter email"
 msgstr "Skriv in e-mail"
 
-#: requset_reflector_login.php:653
+#: request_reflector_login.php:653
 msgid "Register User"
-msgstr "Registrera användare"
+msgstr "Registrera anvï¿½ndare"
 
-#: requset_reflector_login.php:673
+#: request_reflector_login.php:673
 msgid "Repater information"
 msgstr "Information om repeater"
 
-#: requset_reflector_login.php:676
+#: request_reflector_login.php:676
 msgid "Station location ( Area )"
 msgstr "Stationens QTH"
 
-#: requset_reflector_login.php:679
+#: request_reflector_login.php:679
 msgid "Node location"
 msgstr "Nodplacering"
 
-#: requset_reflector_login.php:686
+#: request_reflector_login.php:686
 msgid "System operator"
 msgstr "Systemansvarig"
 
-#: requset_reflector_login.php:706
+#: request_reflector_login.php:706
 msgid "Tone To Talkgroup Mapping"
 msgstr "Ton till talgrupp tabell"
 
-#: requset_reflector_login.php:713
+#: request_reflector_login.php:713
 msgid "CTCSS"
 msgstr "CTCSS"
 
-#: requset_reflector_login.php:734
+#: request_reflector_login.php:734
 msgid "#TG"
 msgstr "#TG"
 
-#: requset_reflector_login.php:776
+#: request_reflector_login.php:776
 msgid "QTH Settings"
-msgstr "QTH-inställningar"
+msgstr "QTH-instï¿½llningar"
 
-#: requset_reflector_login.php:908
+#: request_reflector_login.php:908
 msgid "Location name"
 msgstr "Platsnamn"
 
-#: requset_reflector_login.php:911
+#: request_reflector_login.php:911
 msgid "Stockholm"
 msgstr "Stockholm"
 
-#: requset_reflector_login.php:917
+#: request_reflector_login.php:917
 msgid "Latitude"
 msgstr "Latitud"
 
-#: requset_reflector_login.php:929
+#: request_reflector_login.php:929
 msgid "Longitude"
 msgstr "Longitud"
 
-#: requset_reflector_login.php:939
+#: request_reflector_login.php:939
 msgid "Locator"
 msgstr "PositionLocator"
 
-#: requset_reflector_login.php:948
+#: request_reflector_login.php:948
 msgid "Tx Letter \"Get From svxlink.conf\""
 msgstr "Tx-bokstaven \"Get From svxlink.conf\""
 
-#: requset_reflector_login.php:958
+#: request_reflector_login.php:958
 msgid "RX letter \"Get From svxlink.conf\""
 msgstr "RX-bokstaven \"Get From svxlink.conf\""
 
-#: requset_reflector_login.php:968
+#: request_reflector_login.php:968
 msgid "Sql type"
 msgstr "Sql-typ"
 
-#: requset_reflector_login.php:982
+#: request_reflector_login.php:982
 msgid "Transmitter Power w"
-msgstr "Sändareffekt w"
+msgstr "Sï¿½ndareffekt w"
 
-#: requset_reflector_login.php:992
+#: request_reflector_login.php:992
 msgid "Antenna Directon"
 msgstr "Antenneriktning"
 
-#: requset_reflector_login.php:1003
+#: request_reflector_login.php:1003
 msgid "Antenna Height"
-msgstr "Antennhöjd"
+msgstr "Antennhï¿½jd"
 
-#: requset_reflector_login.php:1013
+#: request_reflector_login.php:1013
 msgid "Antenna Description"
 msgstr "Antennbeskrivning"
 
-#: requset_reflector_login.php:1023
+#: request_reflector_login.php:1023
 msgid "Antenna Type"
 msgstr "Antenn typ"
 
-#: requset_reflector_login.php:1027
+#: request_reflector_login.php:1027
 msgid "Omni"
 msgstr ""
 
-#: requset_reflector_login.php:1028
+#: request_reflector_login.php:1028
 msgid "Ellipse"
 msgstr ""
 
-#: requset_reflector_login.php:1029
+#: request_reflector_login.php:1029
 #, fuzzy
 #| msgid "Card"
 msgid "Cardio"
 msgstr "Kort"
 
-#: requset_reflector_login.php:1030
+#: request_reflector_login.php:1030
 msgid "Yagi"
 msgstr ""
 
-#: requset_reflector_login.php:1044
+#: request_reflector_login.php:1044
 msgid "Antenna Gain"
-msgstr "Antennförstärkning"
+msgstr "Antennfï¿½rstï¿½rkning"
 
-#: requset_reflector_login.php:1054
+#: request_reflector_login.php:1054
 msgid "TX Frequency"
 msgstr "TX-frekvens"
 
-#: requset_reflector_login.php:1063
+#: request_reflector_login.php:1063
 msgid "RX Frequency"
 msgstr "RX-frekvens"
 
-#: requset_reflector_login.php:1077
+#: request_reflector_login.php:1077
 msgid "Parameters dor Svxlink.conf"
-msgstr "Parametrar för Svxlink.conf"
+msgstr "Parametrar fï¿½r Svxlink.conf"
 
-#: requset_reflector_login.php:1081 requset_reflector_login.php:1091
+#: request_reflector_login.php:1081 request_reflector_login.php:1091
 msgid "Parameter"
 msgstr "Parameter"
 
-#: requset_reflector_login.php:1126
+#: request_reflector_login.php:1126
 msgid "Generate JSON / Paramters"
 msgstr "Generera JSON / Parametrar"
 
-#: requset_reflector_login.php:1165
+#: request_reflector_login.php:1165
 msgid "Select talkgroups to monitor"
-msgstr "Välj samtalsgrupper att övervaka"
+msgstr "Vï¿½lj samtalsgrupper att ï¿½vervaka"
 
-#: requset_reflector_login.php:1196
+#: request_reflector_login.php:1196
 msgid "Generate config"
 msgstr "Generera config"
 
@@ -1733,11 +1733,11 @@ msgstr "Logikstatus"
 
 #: tap.php:183
 msgid " network tap "
-msgstr "nätverksknapp"
+msgstr "nï¿½tverksknapp"
 
 #: tap.php:190
 msgid "Select stream"
-msgstr "Välj ström"
+msgstr "Vï¿½lj strï¿½m"
 
 #: user_settings.php:211
 msgid " Account settings "
@@ -1745,15 +1745,15 @@ msgstr ""
 
 #: user_settings.php:228
 msgid "Passwords incorect"
-msgstr "Lösenord är felaktiga"
+msgstr "Lï¿½senord ï¿½r felaktiga"
 
 #: user_settings.php:236
 msgid "Settings updated "
-msgstr "inställningar uppdaterade"
+msgstr "instï¿½llningar uppdaterade"
 
 #: user_settings.php:255
 msgid "Change password"
-msgstr "ändra lösenord"
+msgstr "ï¿½ndra lï¿½senord"
 
 #: user_settings.php:305
 msgid "Image URL"
@@ -1761,22 +1761,22 @@ msgstr "bild URL"
 
 #: user_settings.php:318
 msgid "New password"
-msgstr "Nytt lösenord"
+msgstr "Nytt lï¿½senord"
 
 #: user_settings.php:323
 msgid "Repeat new password"
-msgstr "upprepa nya lösenordet"
+msgstr "upprepa nya lï¿½senordet"
 
 #: user_settings.php:335
 msgid "Save changes"
-msgstr "Spara ändringar"
+msgstr "Spara ï¿½ndringar"
 
 #: user_settings.php:336
 msgid "Cancel"
 msgstr "Avbryt"
 
 #~ msgid "Show covrige"
-#~ msgstr "Visa täckning"
+#~ msgstr "Visa tï¿½ckning"
 
 #~ msgid "Chart"
 #~ msgstr "Diagram"
