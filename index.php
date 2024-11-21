@@ -5680,7 +5680,7 @@ function fnExcelexport(table)
             function create_user()
             {
             	var usern = $('#usern1').val();
-            	var pass = $('#passwordareg').val();
+            	var pass = $('#password_reg').val();
             	var pass1 = $('#password_confirm').val();
 
             	if(pass != pass1)
@@ -5763,7 +5763,7 @@ function fnExcelexport(table)
           <div class="form-group">
                 <label class="control-label col-sm-2" for="password"><?php echo  _('Password')?>:</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="passwordareg" name="password" placeholder="<?php echo _('Password should be at least 8 characters') ?>">
+                  <input type="password" class="form-control" id="password_reg" name="password" placeholder="<?php echo _('Password should be at least 8 characters') ?>">
                 </div>
           </div>                                    
                              
