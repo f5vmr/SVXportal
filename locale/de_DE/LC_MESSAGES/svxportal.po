@@ -486,8 +486,8 @@ msgid "Mail to system administrator"
 msgstr "Mail an den Systemadministrator"
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
-msgstr "E-Mail-Adresse für das System"
+msgid "E-mail address for the system"
+msgstr "E-Mail-addresse für das System"
 
 #: database_text.php:19
 msgid "color"
@@ -1404,7 +1404,7 @@ msgstr "Benutzeranmeldeinformationen"
 
 #: request_reflector_login.php:513
 msgid "Email address"
-msgstr "E-Mail-Adresse"
+msgstr "E-Mail-addresse"
 
 #: request_reflector_login.php:516
 msgid "Enter email"

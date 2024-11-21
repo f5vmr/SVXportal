@@ -118,8 +118,8 @@ if ($_POST) {
         $config_text = str_replace("%DB_DB%", $_POST['Database'],  $config_text);
         $config_text = str_replace("%Stream_url%", $_POST['icecst'],  $config_text);
         
-        $config_text = str_replace("%Recording_folder%", $_POST['recordingfolder'],  $config_text);
-        $config_text = str_replace("%Proxy_Serveradress%", $_POST['proxy'],  $config_text);
+        $config_text = str_replace("%recording_folder%", $_POST['recordingfolder'],  $config_text);
+        $config_text = str_replace("%proxy_serveraddress%", $_POST['proxy'],  $config_text);
         
         echo"<pre>";
         echo htmlspecialchars($config_text);
@@ -134,7 +134,7 @@ if ($_POST) {
         echo"<pre>";
         echo htmlspecialchars( '
         <?php
-        $Svx_reflector_address = "'.$_POST['reflector_adress'].'";  
+        $Svx_reflector_address = "'.$_POST['reflector_address'].'";  
         ?>
         ');
         echo "</pre>";
@@ -190,7 +190,7 @@ screen  -d -m bash -c  'cd <?php echo getcwd()?>; watch -n 1  php logdeamon.php;
 
         
         $current .= "\n".'$dir="'. $_POST['recordingfolder'].'"'."\n";
-        $current .= '$serveradress="'. $_POST['icecst'].'".'-"\n";
+        $current .= '$serveraddress="'. $_POST['icecst'].'".'-"\n";
         
         echo '<pre>';
         echo $current;
@@ -264,8 +264,8 @@ screen  -d -m bash -c  'cd <?php echo getcwd()?>; watch -n 1  php logdeamon.php;
  
  
      			<div class="form-group">
-    				<label for="reflector_adress">Reflector adress</label> <input
-    					type="text" class="form-control" name="reflector_adress" id="reflector_adress"
+    				<label for="reflector_address">Reflector address</label> <input
+    					type="text" class="form-control" name="reflector_address" id="reflector_address"
     					value=http://reflektorserver:8080/status">
     			</div>		
     			

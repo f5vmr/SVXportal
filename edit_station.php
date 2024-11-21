@@ -254,7 +254,7 @@ $( document ).ready(function() {
 
 
 
-$idnr = $_GET["Station_idnr"];
+$idnr = $_GET["station_idnr"];
 $idnr = $link->real_escape_string($idnr);
 
 $result = mysqli_query($link, "SELECT Callsign FROM `RefletorStations` where ID='".$idnr."'");
@@ -311,14 +311,14 @@ function create_station($station_id) {
         
         
         
-        mysqli_query($link, "INSERT INTO `Information_page` (`id`, `Station_Name`, `Station_id`, `Module`, `Html`, `Hardware_page`, `Image`) VALUES (NULL, '$calls', '$idnr', '', '$default_info', '$default_hw', '');");
+        mysqli_query($link, "INSERT INTO `Information_page` (`id`, `station_name`, `station_id`, `Module`, `Html`, `Hardware_page`, `Image`) VALUES (NULL, '$calls', '$idnr', '', '$default_info', '$default_hw', '');");
     }
     
 }
 
 
 
-if($_GET["Station_idnr"])
+if($_GET["station_idnr"])
 {
     
     
@@ -326,7 +326,7 @@ if($_GET["Station_idnr"])
     $call = $link->real_escape_string($call);
     
     
-    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Information_page` WHERE Station_Name='".$call."'");
+    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, station_name, station_id, Module, Image FROM `Information_page` WHERE station_name='".$call."'");
     
     
     
@@ -335,9 +335,9 @@ if($_GET["Station_idnr"])
 else
 {
     
-    $id = $_GET["Station_id"];
+    $id = $_GET["station_id"];
     $id = $link->real_escape_string($id);
-    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image, GrafanaUrl FROM `Information_page` WHERE id='".$id."'");
+    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, station_name, station_id, Module, Image, GrafanaUrl FROM `Information_page` WHERE id='".$id."'");
     
     
     
@@ -352,10 +352,10 @@ $station_data = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
 if($station_data == NULL)
 {
-    if($_GET["Station_idnr"])
+    if($_GET["station_idnr"])
     {
-        create_station($_GET["Station_idnr"]);
-        $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Information_page` WHERE Station_Name='".$call."'");
+        create_station($_GET["station_idnr"]);
+        $result = mysqli_query($link, "SELECT Html , Hardware_page, id, station_name, station_id, Module, Image FROM `Information_page` WHERE station_name='".$call."'");
         $station_data = mysqli_fetch_array($result, MYSQLI_ASSOC);
         
     }
@@ -373,7 +373,7 @@ if($station_data['Module'] !="")
     __autoload_driver($module);
     
     $driver = new $module();
-    $driver->Init($station_data['Station_Name']);
+    $driver->Init($station_data['station_name']);
     
 
 
@@ -387,12 +387,12 @@ if($station_data['Module'] !="")
  */
 
 
-if(check_permission_station($_GET["Station_idnr"],$_SESSION['loginid']) == 0)
+if(check_permission_station($_GET["station_idnr"],$_SESSION['loginid']) == 0)
 {
  echo '<h1>'._('Permission Denied!').'</h1>';
  exit(-1);   
 }
-$permission_rw =check_permission_station_RW($_GET["Station_idnr"],$_SESSION['loginid']);
+$permission_rw =check_permission_station_RW($_GET["station_idnr"],$_SESSION['loginid']);
 
 ?>
 
@@ -539,7 +539,7 @@ $permission_rw =check_permission_station_RW($_GET["Station_idnr"],$_SESSION['log
             <input type="text" name="command" class="form-control" id="command" aria-describedby="emailHelp" placeholder="">
           </div>
           
-          <input type="hidden" name="Station_id" class="form-control" id="Station_id" value="">
+          <input type="hidden" name="station_id" class="form-control" id="station_id" value="">
   
           
           <div class="form-group">
@@ -688,7 +688,7 @@ $permission_rw =check_permission_station_RW($_GET["Station_idnr"],$_SESSION['log
       
     
 		  <input type="hidden" name="Insert_station_status" class="form-control" id="Insert_station_status" value="1">
-          <input type="hidden" name="Station_id" class="form-control" id="Station_id" value="<?php echo $station_data['Station_id'];?>">
+          <input type="hidden" name="station_id" class="form-control" id="station_id" value="<?php echo $station_data['station_id'];?>">
           
           <div class="form-group">
             <label for="text"><?php echo _('Text')?></label>
@@ -747,7 +747,7 @@ $permission_rw =check_permission_station_RW($_GET["Station_idnr"],$_SESSION['log
         
         <?php
     
-        $result = mysqli_query($link, "SELECT * FROM `Operation_log` where Station_id = '".$station_data['Station_id']."' ORDER BY  Date  DESC  LIMIT 30  ");
+        $result = mysqli_query($link, "SELECT * FROM `Operation_log` where station_id = '".$station_data['station_id']."' ORDER BY  Date  DESC  LIMIT 30  ");
         
         // Associative array
         $Operation_message_type = Operation_message_type();
@@ -998,7 +998,7 @@ function  Create_dtmf()
 function get_table()
 {
 	 $("#dtmf_table tbody").html("");
-	 $.get( "admin/get_dtmf_list.php?Station_Name=<?php echo  $station_data['Station_Name']; ?>", function( data ) {
+	 $.get( "admin/get_dtmf_list.php?station_name=<?php echo  $station_data['station_name']; ?>", function( data ) {
 		 $("#dtmf_table tbody").html("");
 		 $("#dtmf_table tbody").html(data);
 		 
@@ -1027,7 +1027,7 @@ function  Remove_command(id)
 
 
 
-function update_commade(id,comand,dectiption,cat)
+function update_command(id,comand,dectiption,cat)
 {
 	$("#dtmf_id").val(id);
 	$("#command_d").val((comand))
@@ -1115,9 +1115,9 @@ function  Update_dtmf()
             
             
           
-          <input type="hidden" name="Station_id" class="form-control" id="Station_id" value="<?php echo $station_data['Station_id'] ?>">
+          <input type="hidden" name="station_id" class="form-control" id="station_id" value="<?php echo $station_data['station_id'] ?>">
           <input type="hidden" name="Mew_DTNF" class="form-control" id="Mew_DTNF" value="1">
-          <input type="hidden" name="Station_name" class="form-control" value="<?php echo $station_data['Station_Name'] ?>">
+          <input type="hidden" name="Station_name" class="form-control" value="<?php echo $station_data['station_name'] ?>">
   
           
           

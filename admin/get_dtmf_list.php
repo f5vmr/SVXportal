@@ -7,17 +7,17 @@ $command_group= DTMF_Catgory();
 
 if( $_SESSION['loginid'] >0 )
 {
-    if($_GET['Station_Name'])
+    if($_GET['station_name'])
     {
-        $callsign =$_GET['Station_Name'];
+        $callsign =$_GET['station_name'];
         $callsign= $link->real_escape_string($callsign);
-        $result = mysqli_query($link, "SELECT * FROM `Dtmf_command` where Station_Name = '$callsign' order by Category,id");
+        $result = mysqli_query($link, "SELECT * FROM `dtmf_command` where station_name = '$callsign' order by Category,id");
     }
-    if($_GET['Station_id'])
+    if($_GET['station_id'])
     {
-        $callsign =$_GET['Station_id'];
+        $callsign =$_GET['station_id'];
         $callsign= $link->real_escape_string($callsign);
-        $result = mysqli_query($link, "SELECT * FROM `Dtmf_command` where Station_id = '$callsign' order by Category,id");
+        $result = mysqli_query($link, "SELECT * FROM `dtmf_command` where station_id = '$callsign' order by Category,id");
         
     }
     
@@ -27,7 +27,7 @@ if( $_SESSION['loginid'] >0 )
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         if($once_lock ==0)
         {
-            $permission_rw =check_permission_station_RW($row['Station_id'],$_SESSION['loginid']);
+            $permission_rw =check_permission_station_RW($row['station_id'],$_SESSION['loginid']);
             $once_lock++;
         }
         
@@ -54,7 +54,7 @@ if( $_SESSION['loginid'] >0 )
        <?php if($permission_rw >0 ){?>
      <a class="navbar-brand" href="#" onclick="Remove_command('<?php echo $row['id']?>')"><i class="fas fa-trash-alt"></i></a>
        
-       <a href="#" data-toggle="modal" data-target="#Update_command" onclick="update_commade(<?php echo $row['id']?>,'<?php echo htmlentities($row['Command'], ENT_QUOTES, "UTF-8");?>','<?php echo htmlentities($row['Description'], ENT_QUOTES, "UTF-8");?>','<?php echo ($row['Category']);?>')">
+       <a href="#" data-toggle="modal" data-target="#Update_command" onclick="update_command(<?php echo $row['id']?>,'<?php echo htmlentities($row['Command'], ENT_QUOTES, "UTF-8");?>','<?php echo htmlentities($row['Description'], ENT_QUOTES, "UTF-8");?>','<?php echo ($row['Category']);?>')">
    		<i class="fas fa-pen"></i>   </a> 
     
     <?php }?>

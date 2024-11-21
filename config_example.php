@@ -18,10 +18,10 @@ $livelink="%Stream_url%";
 #$livelink_station[1]["Node"] ="STREAM23";
 
 // Svx recording folder
-$dir="%Recording_folder%";
+$dir="%recording_folder%";
 
-// svxreflektor server adress;
-$serveradress ="%Proxy_Serveradress%";
+// svxreflector server address;
+$serveraddress ="%proxy_serveraddress%";
 
 // login form recording
 //$use_logein= true;
@@ -29,8 +29,8 @@ $serveradress ="%Proxy_Serveradress%";
 $iframe_documentation_url  ="";
 
 // Default Position
-$default_lat ="62.676160";
-$default_long ="17.633479";
+$default_lat ="50.0";
+$default_long ="0.0";
 $default_zoom =5;
 
 // default tg player
@@ -43,9 +43,9 @@ $start_date_defined ="2020-01-12";
 
 
 #$reflektor_db_host =	 	"127.0.0.1";
-#$reflektor_db_user = 	"svxreflektor";
+#$reflektor_db_user = 	"svxreflector";
 #$reflektor_db_password = 	"%DB_ref%";
-#$reflektor_db_db = 		"svxreflektor";
+#$reflektor_db_db = 		"svxreflector";
 
 #ini_set("SMTP", "MYSMTP.dns.org");
 
@@ -65,8 +65,8 @@ $Use_translate_default_lang = "en_US";
 //$red_Port = 6379;
 //$red_Auth ='';
 
-$definde_qsy_tg  = array(
-    "24099" => "QSY",
+$defined_qsy_tg  = array(
+    "23500" => "QSY",
     "123" => "SIP",
 );
 

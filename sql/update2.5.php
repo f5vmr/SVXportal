@@ -61,7 +61,7 @@ ALTER TABLE `Information_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER S
 
 ALTER TABLE `users` ADD `image_url` VARCHAR(255) NULL DEFAULT NULL AFTER `email`; 
 
-ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
+ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `station_id`;
 
 ALTER TABLE `ReflectorNodeLog` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
 
@@ -72,7 +72,7 @@ ALTER TABLE `users` ADD `Reset_token` VARCHAR(99) NOT NULL AFTER `image_url`;
 
 CREATE TABLE `Station_day_statistic` (
   `Id` int NOT NULL,
-  `Station_id` int NOT NULL,
+  `station_id` int NOT NULL,
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Active_secunds` int NOT NULL,
   `Max_reciver` text NOT NULL,

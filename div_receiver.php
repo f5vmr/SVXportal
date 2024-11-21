@@ -26,7 +26,7 @@
         
         call_svxrefelktor();
 
-        $.getJSON( "<?php echo $serveradress ?>", function( data ) {
+        $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 
    
 

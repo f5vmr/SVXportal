@@ -490,7 +490,7 @@ msgid "Mail to system administrator"
 msgstr "Pošaljite mail administratoru sistema"
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
+msgid "E-mail address for the system"
 msgstr "E-mail adresa za sistem"
 
 #: database_text.php:19
@@ -502,12 +502,12 @@ msgid "Hide the Monitor bar"
 msgstr "Sakrij traku monitora"
 
 #: database_text.php:22
-msgid "Server adresss to svxreflektor"
-msgstr "Adresa servera za svxreflektor"
+msgid "Server address to svxreflector"
+msgstr "Adresa servera za svxreflector"
 
 #: database_text.php:23
-msgid "Svxreflektor server port"
-msgstr "Port servera za svxreflektor"
+msgid "SvxReflector server port"
+msgstr "Port servera za svxreflector"
 
 #: database_text.php:24
 msgid "TinyMCE Cloud API KEY"

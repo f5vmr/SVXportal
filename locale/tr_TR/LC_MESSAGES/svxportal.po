@@ -488,7 +488,7 @@ msgid "Mail to system administrator"
 msgstr "Sistem yöneticisine E-mail gönder"
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
+msgid "E-mail address for the system"
 msgstr "Sistem için E-mail adresi"
 
 #: database_text.php:19

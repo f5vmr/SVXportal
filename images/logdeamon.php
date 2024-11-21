@@ -84,7 +84,7 @@ function read_cache()
 }
 
 // Get data from server
-$json_data = file_get_contents($serveradress);
+$json_data = file_get_contents($serveraddress);
 $json = json_decode($json_data);
 
 if(read_cache() != $json_data)

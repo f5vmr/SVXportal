@@ -486,7 +486,7 @@ msgid "Mail to system administrator"
 msgstr "Написати системному адміністратору"
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
+msgid "E-mail address for the system"
 msgstr "Адреса ел. пошти для системи"
 
 #: database_text.php:19

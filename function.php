@@ -317,7 +317,7 @@ function check_permission_station($station_id,$user_id)
     $station_id = $link->real_escape_string($station_id);
     $user_id =$link->real_escape_string($user_id);
     
-    if ($result = $link->query("SELECT RW FROM `User_Permission` where Station_id='$station_id' AND User_id = '$user_id' ")) {
+    if ($result = $link->query("SELECT RW FROM `User_Permission` where station_id='$station_id' AND User_id = '$user_id' ")) {
         
         /* determine number of rows result set */
         $row_cnt = $result->num_rows;
@@ -339,7 +339,7 @@ function check_permission_station_RW($station_id,$user_id)
     $station_id = $link->real_escape_string($station_id);
     $user_id =$link->real_escape_string($user_id);
     
-    if ($result = $link->query("SELECT RW FROM `User_Permission` where Station_id='$station_id' AND User_id = '$user_id' AND RW >= 1 ")) {
+    if ($result = $link->query("SELECT RW FROM `User_Permission` where station_id='$station_id' AND User_id = '$user_id' AND RW >= 1 ")) {
         
         /* determine number of rows result set */
         $row_cnt = $result->num_rows;
@@ -356,13 +356,13 @@ function check_permission_station_RW($station_id,$user_id)
 function page_id_to_station_id($page_id)
 {
     global $link;
-    $result = mysqli_query($link, "SELECT  Station_id FROM `Information_page` where id='$page_id'");
+    $result = mysqli_query($link, "SELECT  station_id FROM `Information_page` where id='$page_id'");
     
     
     
     while($row = $result->fetch_assoc()) {
         
-        return  $row['Station_id'];
+        return  $row['station_id'];
 
             
         }
@@ -373,13 +373,13 @@ function page_id_to_station_id($page_id)
 function DTMF_ID_TO_STATION($dtmfid)
 {
     global $link;
-    $result = mysqli_query($link, "SELECT * FROM `Dtmf_command` where id= '$dtmfid'  ORDER BY `Station_id` ASC ");
+    $result = mysqli_query($link, "SELECT * FROM `dtmf_command` where id= '$dtmfid'  ORDER BY `station_id` ASC ");
     
     
     
     while($row = $result->fetch_assoc()) {
         
-        return  $row['Station_id'];
+        return  $row['station_id'];
         
         
     }

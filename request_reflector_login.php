@@ -11,18 +11,18 @@ $station_svxlink_versions = array();
 
 
 function Get_version_from_json() {
-    global $serveradress;
+    global $serveraddress;
     global $station_svxlink_versions;
     
     
     $context = stream_context_create(array('http' => array('header'=>'Connection: close\r\n')));
-    $json_data = file_get_contents($serveradress,false,$context);
+    $json_data = file_get_contents($serveraddress,false,$context);
     
     
     $json_data = iconv("utf-8", "utf-8//ignore", $json_data);
     
     
-    //$json_data = file_get_contents($serveradress);
+    //$json_data = file_get_contents($serveraddress);
     $json = json_decode($json_data);
     
     foreach($json->nodes as $st => $station)
@@ -344,7 +344,7 @@ jQuery(function($) {
 
 function load_node(id)
 {
-	$('#Station_id').val(id);
+	$('#station_id').val(id);
 	
 }
 
@@ -469,8 +469,8 @@ Get_version_from_json();
 
 <?php
 $user_id= $_SESSION['loginid'];
-$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.Station_id 
-LEFT JOIN Information_page on Information_page.Station_id = User_Permission.Station_id 
+$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.station_id 
+LEFT JOIN Information_page on Information_page.station_id = User_Permission.station_id 
 WHERE User_Permission.User_id ='$user_id' ");
 
 
@@ -503,13 +503,13 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
    
    <?php if(check_permission_station_RW($row['ID'],$_SESSION['loginid'])>0){?>
-   <a href="#" data-toggle="modal" data-target="#command_to_node" onclick="load_node('<?php echo $row['Station_id'];?>')" data-placement="bottom" ><i data-toggle="tooltip" title="<?php echo  _('Send DTMF to node')?>"  class="fas fa-hashtag"></i></a>
+   <a href="#" data-toggle="modal" data-target="#command_to_node" onclick="load_node('<?php echo $row['station_id'];?>')" data-placement="bottom" ><i data-toggle="tooltip" title="<?php echo  _('Send DTMF to node')?>"  class="fas fa-hashtag"></i></a>
    
 
    <i class="fas fa-cogs" data-toggle="tooltip" title="<?php echo  _('Send Command to Nod')?>" ></i>
    <?php }?>
    
-   <a href="edit_station.php?Station_idnr=<?php echo  $row['ID']?>"><i class="fas fa-file"  data-toggle="tooltip" title="<?php echo  _('Edit Repeater')?>" ></i></a>
+   <a href="edit_station.php?station_idnr=<?php echo  $row['ID']?>"><i class="fas fa-file"  data-toggle="tooltip" title="<?php echo  _('Edit Repeater')?>" ></i></a>
    
    <?php 
    
@@ -520,7 +520,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
    
    <?php if( $row['Module'] != "")
    {?>
-   <a href="station_dash.php?Station_idnr=<?php  echo  $row['Station_id']?>"><i class="fas fa-tachometer-alt"  data-toggle="tooltip" title="<?php echo  _('Station Dashboard')?>" ></i></a>
+   <a href="station_dash.php?station_idnr=<?php  echo  $row['station_id']?>"><i class="fas fa-tachometer-alt"  data-toggle="tooltip" title="<?php echo  _('Station Dashboard')?>" ></i></a>
    <?php }?>
    
    
@@ -575,7 +575,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             <input type="text" name="command" class="form-control" id="command" aria-describedby="emailHelp" placeholder="">
           </div>
           
-          <input type="hidden" name="Station_id" class="form-control" id="Station_id" value="">
+          <input type="hidden" name="station_id" class="form-control" id="station_id" value="">
   
           
           <div class="form-group">

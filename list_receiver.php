@@ -441,7 +441,7 @@ function update_icons_expand()
 
 function generate_coulor()
 {
-    $.getJSON( "<?php echo $serveradress ?>", function( data ) {
+    $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 
     	 sorting_nr =[];
     	 sorting_id =0;
@@ -628,7 +628,7 @@ dryrun=1;
 
 function call_svxrefelktor() {
 	
-$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	if(filter_station != "")
 	{
     	for(var k in data.nodes){

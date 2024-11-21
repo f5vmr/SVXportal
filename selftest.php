@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: <?php echo $serveradress ?>');
+header('Access-Control-Allow-Origin: <?php echo $serveraddress ?>');
 
 include "config.php";
 include 'function.php';
@@ -115,11 +115,11 @@ $ctx = stream_context_create(array('http'=>
     )
 ));
 
-$json_test = file_get_contents($serveradress, false, $ctx);
+$json_test = file_get_contents($serveraddress, false, $ctx);
 
 if($json_test == "")
 {
-    echo "<b class='text-danger'>Fail</b> no contact to proxy check serveradress in config.php <b>HTTP_SRV_PORT</b> in svxreflector.conf and <b>reflector_proxy/config.php url fail</b> ";
+    echo "<b class='text-danger'>Fail</b> no contact to proxy check serveraddress in config.php <b>HTTP_SRV_PORT</b> in svxreflector.conf and <b>reflector_proxy/config.php url fail</b> ";
     
     $fault_counter++;
     
@@ -142,10 +142,10 @@ else
 
        
 
-       $json_data = file_get_contents($serveradress,false,$context);
+       $json_data = file_get_contents($serveraddress,false,$context);
        
        
-       //$json_data = file_get_contents($serveradress);
+       //$json_data = file_get_contents($serveraddress);
        $json_data = iconv("utf-8", "utf-8//ignore", $json_data);
        $data = json_decode($json_data);
        

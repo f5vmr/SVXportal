@@ -11,7 +11,7 @@ $callsign = $link->real_escape_string($callsign);
 
 mysqli_set_charset($link,"utf8");
     
-$result_station = mysqli_query($link, "SELECT * FROM `Information_page`  where Station_Name = '$callsign'");
+$result_station = mysqli_query($link, "SELECT * FROM `Information_page`  where station_name = '$callsign'");
 
 
 
@@ -109,7 +109,7 @@ while ($row = mysqli_fetch_array($result_station, MYSQLI_ASSOC)) {
     $image = $row['Image'];
     $module = $row['Module'];
     $hardware = html_entity_decode ($row['Hardware_page']);
-    $staton_idnr = $row['Station_id'];
+    $staton_idnr = $row['station_id'];
     
     
 }
@@ -130,7 +130,7 @@ while ($row = mysqli_fetch_array($result_station, MYSQLI_ASSOC)) {
     
     foreach ($dtmf_array as $key => $value) 
     {
-        $result = mysqli_query($link, "SELECT * FROM `Dtmf_command` where Station_Name = '$callsign' AND Category='$key'");
+        $result = mysqli_query($link, "SELECT * FROM `dtmf_command` where station_name = '$callsign' AND Category='$key'");
         $rowcount=mysqli_num_rows($result);
         if($rowcount >0)
         {
@@ -198,7 +198,7 @@ while ($row = mysqli_fetch_array($result_station, MYSQLI_ASSOC)) {
         
         <?php
     
-        $result = mysqli_query($link, "SELECT * FROM `Operation_log` where Station_id = '$staton_idnr' ORDER BY  Date  DESC LIMIT 30 ");
+        $result = mysqli_query($link, "SELECT * FROM `Operation_log` where station_id = '$staton_idnr' ORDER BY  Date  DESC LIMIT 30 ");
         $Operation_message_type = Operation_message_type();
         // Associative array
         while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) 

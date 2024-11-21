@@ -21,7 +21,7 @@ CREATE TABLE `Refletor_station_state` (
 
 CREATE TABLE `Station_day_statistic` (
   `Id` int NOT NULL,
-  `Station_id` int NOT NULL,
+  `station_id` int NOT NULL,
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Active_secunds` int NOT NULL,
   `Max_reciver` text NOT NULL,
@@ -174,24 +174,24 @@ CREATE TABLE `trafic_mounth_statistics` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Index för dumpade tabeller
+-- Index fï¿½r dumpade tabeller
 --
 
 --
--- Index för tabell `Refletor_station_state`
+-- Index fï¿½r tabell `Refletor_station_state`
 --
 ALTER TABLE `Refletor_station_state`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `Callsign` (`Callsign`);
 
 --
--- Index för tabell `Station_day_statistic`
+-- Index fï¿½r tabell `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index för tabell `trafic_day_statistics`
+-- Index fï¿½r tabell `trafic_day_statistics`
 --
 ALTER TABLE `trafic_day_statistics`
   ADD PRIMARY KEY (`id`),
@@ -202,7 +202,7 @@ ALTER TABLE `trafic_day_statistics`
   ADD KEY `Day` (`Day`);
 
 --
--- Index för tabell `trafic_mounth_statistics`
+-- Index fï¿½r tabell `trafic_mounth_statistics`
 --
 ALTER TABLE `trafic_mounth_statistics`
   ADD PRIMARY KEY (`id`),
@@ -211,29 +211,29 @@ ALTER TABLE `trafic_mounth_statistics`
   ADD KEY `Year` (`Year`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT fï¿½r dumpade tabeller
 --
 
 --
--- AUTO_INCREMENT för tabell `Refletor_station_state`
+-- AUTO_INCREMENT fï¿½r tabell `Refletor_station_state`
 --
 ALTER TABLE `Refletor_station_state`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT för tabell `Station_day_statistic`
+-- AUTO_INCREMENT fï¿½r tabell `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   MODIFY `Id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT för tabell `trafic_day_statistics`
+-- AUTO_INCREMENT fï¿½r tabell `trafic_day_statistics`
 --
 ALTER TABLE `trafic_day_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT för tabell `trafic_mounth_statistics`
+-- AUTO_INCREMENT fï¿½r tabell `trafic_mounth_statistics`
 --
 ALTER TABLE `trafic_mounth_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;

@@ -12,17 +12,17 @@ $json_data ="";
 
 function Get_station_from_json() 
 {
-    global $serveradress;
+    global $serveraddress;
     global $json_data;
 
 
     //$context = stream_context_create(array('http' => array('header'=>'Connection: close\r\n')));
 
-    $json_data = file_get_contents($serveradress,false,$context);
+    $json_data = file_get_contents($serveraddress,false,$context);
     
 
     
-    //$json_data = file_get_contents($serveradress);
+    //$json_data = file_get_contents($serveraddress);
     $json_data = iconv("utf-8", "utf-8//ignore", $json_data);
     
     $json = json_decode($json_data);

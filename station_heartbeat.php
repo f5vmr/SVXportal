@@ -162,7 +162,7 @@ function read_cache()
 }
 
 // Get data from server
-$json_data = file_get_contents($serveradress);
+$json_data = file_get_contents($serveraddress);
 $json_data = iconv("utf-8", "utf-8//ignore", $json_data);
 $json = json_decode($json_data);
 

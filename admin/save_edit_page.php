@@ -82,8 +82,8 @@ if( $_SESSION['loginid'] >0 )
     {
         
 
-        $stid= $link->real_escape_string($_POST['Station_id']);
-        $Station_Name = $link->real_escape_string($_POST['Station_name']);
+        $stid= $link->real_escape_string($_POST['station_id']);
+        $station_name = $link->real_escape_string($_POST['Station_name']);
         $command= $link->real_escape_string($_POST['command']);
         $Description= $link->real_escape_string($_POST['Description']);
         $Category= $link->real_escape_string($_POST['Category']);
@@ -92,14 +92,14 @@ if( $_SESSION['loginid'] >0 )
         $permission_rw =check_permission_station_RW($stid,$_SESSION['loginid']);
         
         if($permission_rw >0)
-            $link->query("INSERT INTO `Dtmf_command` (`id`, `Station_Name`, `Station_id`, `Command`, `Description`,`Category`) VALUES (NULL, '$Station_Name', '$stid', '$command', '$Description','$Category'); ");
+            $link->query("INSERT INTO `dtmf_command` (`id`, `station_name`, `station_id`, `Command`, `Description`,`Category`) VALUES (NULL, '$station_name', '$stid', '$command', '$Description','$Category'); ");
         
     }
     if($_POST['Remove_DTMF'] == "1")
     {
         
         
-        $stid= $link->real_escape_string($_POST['Station_id']);
+        $stid= $link->real_escape_string($_POST['station_id']);
         $DMF_ID = $link->real_escape_string($_POST['DMF_ID']);
    
         
@@ -110,7 +110,7 @@ if( $_SESSION['loginid'] >0 )
         $permission_rw =check_permission_station_RW($station_id,$_SESSION['loginid']);
         
         if($permission_rw >0)
-            $link->query("DELETE FROM `Dtmf_command` WHERE `Dtmf_command`.`id` = '$DMF_ID'");
+            $link->query("DELETE FROM `dtmf_command` WHERE `dtmf_command`.`id` = '$DMF_ID'");
         
         
     }
@@ -128,7 +128,7 @@ if( $_SESSION['loginid'] >0 )
         
 
 
-        $link->query("UPDATE `Dtmf_command` SET `Command` = '$command', `Description` = '$Description' ,`Category` ='$Category' WHERE `Dtmf_command`.`id` = '$DMF_ID'; ");
+        $link->query("UPDATE `dtmf_command` SET `Command` = '$command', `Description` = '$Description' ,`Category` ='$Category' WHERE `dtmf_command`.`id` = '$DMF_ID'; ");
         
         
     }
@@ -155,7 +155,7 @@ if( $_SESSION['loginid'] >0 )
     {
         
         echo "3";
-        $stid= $link->real_escape_string($_POST['Station_id']);
+        $stid= $link->real_escape_string($_POST['station_id']);
         $Type = $link->real_escape_string($_POST['Type']);
         $date= $link->real_escape_string($_POST['date']);
         $command= $link->real_escape_string($_POST['command']);
@@ -169,7 +169,7 @@ if( $_SESSION['loginid'] >0 )
         $permission_rw =check_permission_station_RW($stid,$_SESSION['loginid']);
         
         if($permission_rw >0)
-         $link->query("INSERT INTO `Operation_log` (`id`, `Station_id`, `Type`, `Date`, `Message`) VALUES (NULL, '$stid', '$Type', '$mysqltime', '$command'); ");
+         $link->query("INSERT INTO `Operation_log` (`id`, `station_id`, `Type`, `Date`, `Message`) VALUES (NULL, '$stid', '$Type', '$mysqltime', '$command'); ");
         
     }
     

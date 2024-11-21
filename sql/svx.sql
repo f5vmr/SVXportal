@@ -47,13 +47,13 @@ CREATE TABLE `Daylog` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Dtmf_command`
+-- Tabellstruktur `dtmf_command`
 --
 
-CREATE TABLE `Dtmf_command` (
+CREATE TABLE `dtmf_command` (
   `id` int(11) NOT NULL,
-  `Station_Name` varchar(90) NOT NULL,
-  `Station_id` int(11) NOT NULL,
+  `station_name` varchar(90) NOT NULL,
+  `station_id` int(11) NOT NULL,
   `Command` varchar(20) NOT NULL,
   `Description` text NOT NULL,
   `Category` int(11) NOT NULL
@@ -80,8 +80,8 @@ CREATE TABLE `Filter` (
 
 CREATE TABLE `Information_page` (
   `id` int(11) NOT NULL,
-  `Station_Name` varchar(20) NOT NULL,
-  `Station_id` int(11) NOT NULL,
+  `station_name` varchar(20) NOT NULL,
+  `station_id` int(11) NOT NULL,
   `Html` text NOT NULL,
   `Hardware_page` text NOT NULL,
   `Image` varchar(90) NOT NULL
@@ -95,7 +95,7 @@ CREATE TABLE `Information_page` (
 
 CREATE TABLE `Operation_log` (
   `id` int(11) NOT NULL,
-  `Station_id` int(11) NOT NULL,
+  `station_id` int(11) NOT NULL,
   `Type` int(11) NOT NULL,
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Message` text NOT NULL
@@ -180,9 +180,9 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES
 (7, 'PLAYER_TALKGROUP_DEFAULT', '240', 'The default talkgroup for Recording statistic', 2),
 (8, 'SEND_MAIL_TO_SYSOP', '0', 'Send an email to sysop when the node goes down', 1),
 (9, 'SYSMASTER_MAIL', 'info@a.se', 'Mail to system administrator', 2),
-(10, 'SYSTEM_MAIL', 'info@a.se', 'E-mail adress for the system', 2),
-(11, 'REFLECTOR_SERVER_ADDRESS', '127.0.0.1', 'Server adresss to svxreflektor', 2),
-(12, 'REFLECTOR_SERVER_PORT', '5300', 'Svxreflektor server port ', 2),
+(10, 'SYSTEM_MAIL', 'info@a.se', 'E-mail address for the system', 2),
+(11, 'REFLECTOR_SERVER_ADDRESS', '127.0.0.1', 'Server address to svxreflector', 2),
+(12, 'REFLECTOR_SERVER_PORT', '5300', 'SvxReflector server port ', 2),
 (13, 'API_KEY_TINY_CLOUD', 'no-api', 'TinyMCE Cloud API KEY', 2),
 (14, 'HIDE_MONITOR_BAR', '0', ' Hide the Monitor bar', 1),
 (15, 'USE_NODE_ADMIN_NOTIFICATION', '0', '\"Beta\" Node admin notfication', 1);
@@ -233,7 +233,7 @@ INSERT INTO `users` (`id`, `Username`, `Password`, `level`, `Is_admin`, `Firstna
 
 CREATE TABLE `User_Permission` (
   `id` int(11) NOT NULL,
-  `Station_id` int(11) NOT NULL,
+  `station_id` int(11) NOT NULL,
   `User_id` int(11) NOT NULL,
   `RW` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -256,9 +256,9 @@ ALTER TABLE `Daylog`
   ADD UNIQUE KEY `ID` (`ID`);
 
 --
--- Index för tabell `Dtmf_command`
+-- Index för tabell `dtmf_command`
 --
-ALTER TABLE `Dtmf_command`
+ALTER TABLE `dtmf_command`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -348,9 +348,9 @@ ALTER TABLE `covrige`
 ALTER TABLE `Daylog`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `Dtmf_command`
+-- AUTO_INCREMENT för tabell `dtmf_command`
 --
-ALTER TABLE `Dtmf_command`
+ALTER TABLE `dtmf_command`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT för tabell `Filter`
@@ -395,7 +395,7 @@ ALTER TABLE `User_Permission`
 
 ALTER TABLE `users` ADD `email` TEXT NOT NULL AFTER `lastname`; 
 
-ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
+ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `station_id`;
 
 ALTER TABLE `ReflectorNodeLog` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
 
@@ -426,7 +426,7 @@ CREATE TABLE `Refletor_station_state` (
 
 CREATE TABLE `Station_day_statistic` (
   `Id` int NOT NULL,
-  `Station_id` int NOT NULL,
+  `station_id` int NOT NULL,
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Active_secunds` int NOT NULL,
   `Max_reciver` text NOT NULL,

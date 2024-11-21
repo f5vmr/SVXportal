@@ -41,7 +41,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
   
 <?php 
 $user_id= $row['id'];
-$result1 = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.Station_id WHERE User_Permission.User_id ='$user_id' ");
+$result1 = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.station_id WHERE User_Permission.User_id ='$user_id' ");
 
 
 
@@ -49,7 +49,7 @@ $result1 = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN Refletor
 while ($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC)) 
 {    
     
-    $idarray[]=$row1['Station_id'];
+    $idarray[]=$row1['station_id'];
     
     if($row1['RW'] == 0)
     {

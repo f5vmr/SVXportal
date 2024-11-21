@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: <?php echo $serveradress ?>');
+header('Access-Control-Allow-Origin: <?php echo $serveraddress ?>');
 include "config.php";
 include 'function.php';
 
@@ -55,7 +55,7 @@ set_language();
 
 
 <script type="text/javascript">
-var refelktor_address="<?php echo $serveradress ?>";
+var refelktor_address="<?php echo $serveraddress ?>";
 //<![CDATA[
 $(document).ready(function(){
 call_svxrefelktor();
@@ -170,7 +170,7 @@ function create_bar_rx(value,element,rx_sql)
 }
 
 function call_svxrefelktor() {
-$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	//console.log(data);
 	for(var k in data.nodes){
 		
@@ -385,7 +385,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 var tg_colours = new Array();
 function generate_coulor()
 {
-    $.getJSON( "<?php echo $serveradress ?>", function( data ) {
+    $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     
     
     	for(var k in data.nodes){
@@ -1177,11 +1177,11 @@ var ico = [
 ];
 function show_station_information(identity)
 {
-	$.getJSON("<?php echo $serveradress ?>", function(data){
+	$.getJSON("<?php echo $serveraddress ?>", function(data){
 		$("#Showstation_info").modal()
 		//console.log(data.nodes[identity]);
 		var name = identity;
-		var ip_adress = data.nodes[identity].addr;
+		var ip_address = data.nodes[identity].addr;
 		var location = data.nodes[identity].NodeLocation;
 		if(location == null)
 		{
@@ -1658,7 +1658,7 @@ function addimage(src,lamin,lomin,lamax,lomax)
 function prosess_json_reflecktor()
 {
 
-  $.getJSON("<?php echo $serveradress ?>", function(data){
+  $.getJSON("<?php echo $serveraddress ?>", function(data){
   //console.log(data);
     
 		for(var k in data.nodes){
@@ -2334,7 +2334,7 @@ function apeend_Recivers_html(id)
 var station_identifire = new Array();
 function add_tx_station()
 {
-	$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 
 
 		for(var k in data.nodes){
@@ -2388,7 +2388,7 @@ function add_tx_station()
 var kill_loop =0;
 function update_tx_station_loop()
 {
-	$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 		for(var k in data.nodes){
 			
 		    if(data.nodes[k].hidden == true)

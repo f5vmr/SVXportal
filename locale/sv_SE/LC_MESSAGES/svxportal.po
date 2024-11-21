@@ -500,11 +500,11 @@ msgstr "Skicka ett e-postmeddelande till sysop n�r noden g�r ner"
 
 #: database_text.php:9
 msgid "Mail to system administrator"
-msgstr "E-postadress till systemadministrat�ren"
+msgstr "E-postaddress till systemadministrat�ren"
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
-msgstr "E-postadress f�r systemet"
+msgid "E-mail address for the system"
+msgstr "E-postaddress f�r systemet"
 
 #: database_text.php:19
 msgid "color"
@@ -515,12 +515,12 @@ msgid "Hide the Monitor bar"
 msgstr "D�lj �vervakning"
 
 #: database_text.php:22
-msgid "Server adresss to svxreflektor"
-msgstr "Serveradresser till svxreflektor"
+msgid "Server address to svxreflector"
+msgstr "Serveraddresser till svxreflector"
 
 #: database_text.php:23
-msgid "Svxreflektor server port"
-msgstr "Svxreflektor serverport"
+msgid "SvxReflector server port"
+msgstr "SvxReflector serverport"
 
 #: database_text.php:24
 msgid "TinyMCE Cloud API KEY"
@@ -1575,7 +1575,7 @@ msgstr "Anv�ndaruppgifter"
 
 #: request_reflector_login.php:612
 msgid "Email address"
-msgstr "E-postadress"
+msgstr "E-postaddress"
 
 #: request_reflector_login.php:615
 msgid "Enter email"

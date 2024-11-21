@@ -56,6 +56,6 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, '
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'SYSMASTER_MAIL', 'info@a.se', 'Mail to system administrator', '2'); 
 
-INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'SYSTEM_MAIL', 'info@a.se', 'E-mail adress for the system', '2');
+INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'SYSTEM_MAIL', 'info@a.se', 'E-mail address for the system', '2');
 
 ALTER TABLE `RefletorStations` ADD `Station_Down_timmer_count` INT NOT NULL AFTER `Station_Down`;

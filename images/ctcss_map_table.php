@@ -8,8 +8,8 @@ $talkgroup_array= array();
 $station_array= array();
 
 function Get_station_from_json() {
-    global $serveradress;
-    $json_data = file_get_contents($serveradress);
+    global $serveraddress;
+    $json_data = file_get_contents($serveraddress);
     $json = json_decode($json_data);
     global $talkgroup_array;
     global $station_array;

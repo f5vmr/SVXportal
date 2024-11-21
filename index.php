@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: <?php echo $serveradress ?>');
+header('Access-Control-Allow-Origin: <?php echo $serveraddress ?>');
 include "config.php";
 include 'function.php';
 include "mqtt_driver.php";
@@ -20,7 +20,7 @@ set_language();
 
 <meta charset="UTF-8">
 <meta name="description" content="Svxportal For SvxReflektor">
-<meta name="keywords" content="svxlink,svxreflektor,sa2blv">
+<meta name="keywords" content="svxlink,svxreflector,sa2blv">
 <meta name="author" content="Peter SA2BLV">
 
 <link rel="icon" type="image/png" href="tower.svg">
@@ -179,7 +179,7 @@ function Load_ctcss_mapping()
 
 
 
-var refelktor_address="<?php echo $serveradress ?>";
+var refelktor_address="<?php echo $serveraddress ?>";
 //<![CDATA[
 	
 	$.datepicker.regional['phplang'] = {
@@ -214,7 +214,7 @@ $(document).ready(function(){
     load_reflector();
 
     // data the is bein loaded once 
-    $.getJSON( "<?php echo $serveradress ?>", function( data ) 
+    $.getJSON( "<?php echo $serveraddress ?>", function( data ) 
     {
     	reflector_init_data=data;
     	generate_coulor(reflector_init_data);
@@ -428,7 +428,7 @@ var start_talk_var;
 
 function reflector_handler()
 {
-    $.getJSON( "<?php echo $serveradress ?>", function( data )
+    $.getJSON( "<?php echo $serveraddress ?>", function( data )
     {
 
   	  if (data === undefined) 
@@ -1021,7 +1021,7 @@ var tg_colours = new Array();
 function generate_coulor(data)
 {
 
-	//$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+	//$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     
     
     	for(var k in data.nodes){
@@ -2423,7 +2423,7 @@ if($usefile != null)
                   				 <i class="fas fa-print"></i>
              						 <?php echo _('Print') ?>          					 </a>
              						 
-             			<a class="nav-link  " href="other/anytone/analog_adressbook.php" target="_blank aria-haspopup="true" aria-expanded="false">
+             			<a class="nav-link  " href="other/anytone/analog_addressbook.php" target="_blank aria-haspopup="true" aria-expanded="false">
                   				 <i class="fa fa-users"></i>
              						 <?php echo _('Export Antyone') ?>          					 </a>
              						 
@@ -2893,11 +2893,11 @@ var ico = [
 function show_station_information(identity)
 {
 	console.log(identity);
-	$.getJSON("<?php echo $serveradress ?>", function(data){
+	$.getJSON("<?php echo $serveraddress ?>", function(data){
 		$("#Showstation_info").modal()
 		//console.log(data.nodes[identity]);
 		var name = identity;
-		var ip_adress = data.nodes[identity].addr;
+		var ip_address = data.nodes[identity].addr;
 		var location = data.nodes[identity].NodeLocation;
 		if(location == null)
 		{
@@ -3401,7 +3401,7 @@ var map_pos_i=0;
 function prosess_json_reflecktor()
 {
 
-  $.getJSON("<?php echo $serveradress ?>", function(data){
+  $.getJSON("<?php echo $serveraddress ?>", function(data){
   //console.log(data);
     
 		for(var k in data.nodes){
@@ -5183,7 +5183,7 @@ function apeend_Recivers_html(id)
 var station_identifire = new Array();
 function add_tx_station()
 {
-	$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 
 
 		for(var k in data.nodes){
@@ -5265,7 +5265,7 @@ function update_tx_station_loop(data)
 
 
 	
-//	$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+//	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	
 		for(var k in data.nodes){
 			
@@ -5645,14 +5645,14 @@ function fnExcelexport(table)
 				 <option value=""><?php echo _('Select station')?></option>
 
   <?php 
-      			$result = mysqli_query($link, "SELECT * FROM `Information_page` ORDER BY `Station_Name` ASC ");
+      			$result = mysqli_query($link, "SELECT * FROM `Information_page` ORDER BY `station_name` ASC ");
 
     			// Numeric array
 
     			// Associative array
     			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     ?>
-    <option value="<?php echo $row["Station_Name"]?>" ><?php echo $row["Station_Name"] ?></option>        
+    <option value="<?php echo $row["station_name"]?>" ><?php echo $row["station_name"] ?></option>        
     <?php }?>
             
                  </optgroup>

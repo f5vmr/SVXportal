@@ -131,7 +131,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
 
         
         
-        $result = mysqli_query($link, "SELECT * FROM `User_Permission` where  `Station_id` = '$page_id' AND User_id = '$urid' ORDER BY `id` ASC  ");
+        $result = mysqli_query($link, "SELECT * FROM `User_Permission` where  `station_id` = '$page_id' AND User_id = '$urid' ORDER BY `id` ASC  ");
         
 
      
@@ -186,7 +186,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
        
             if($read_val > -1)
             {
-                $link->query("INSERT INTO `User_Permission` (`id`, `Station_id`, `User_id`, `RW`) VALUES (NULL, '$page_id', '$urid', '$read_val');");
+                $link->query("INSERT INTO `User_Permission` (`id`, `station_id`, `User_id`, `RW`) VALUES (NULL, '$page_id', '$urid', '$read_val');");
             }
         }
         

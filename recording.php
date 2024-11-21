@@ -2,7 +2,7 @@
 include 'config.php';
 include_once 'function.php';
 $svx_folder="./svxrecording/";
-$site_adress="";
+$site_address="";
 session_start();
 set_language();
 function check_login()

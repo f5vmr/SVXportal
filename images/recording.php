@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 $svx_folder="./svxrecording/";
-$site_adress="";
+$site_address="";
 
 function check_login()
 {

@@ -86,7 +86,7 @@ function get_most_use_reciver($day)
         $moste_used_station[$row2['Callsign']] =$count_array[$row2['Callsign']][0];
     }
     
-    $quvery_optimizer =  "SELECT Max_reciver , `Station_id` , RefletorStations.Callsign as callsing FROM `Station_day_statistic` LEFT JOIN RefletorStations ON `Station_id` = RefletorStations.ID WHERE `Date` = '$day'"; 
+    $quvery_optimizer =  "SELECT Max_reciver , `station_id` , RefletorStations.Callsign as callsing FROM `Station_day_statistic` LEFT JOIN RefletorStations ON `station_id` = RefletorStations.ID WHERE `Date` = '$day'"; 
     $sqla = $link->query($quvery_optimizer);
     while($row2 = $sqla->fetch_assoc())
     {

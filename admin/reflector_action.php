@@ -115,14 +115,14 @@ define_settings();
         
             $userid =   $Reflektor_link->real_escape_string($_POST['user_id']);
             
-            $email_adress ="";
+            $email_address ="";
             
             $result = mysqli_query($Reflektor_link, "SELECT `e-mail` FROM `users` WHERE `id` = $userid ");
             
             while($row = $result->fetch_assoc())
             {
     
-                $email_adress = $row['e-mail'];
+                $email_address = $row['e-mail'];
                 
             }
             
@@ -134,7 +134,7 @@ define_settings();
                 'Reply-To: '.SYSTEM_MAIL.'' . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
             
-            mail($email_adress, $subject, $message, $headers);
+            mail($email_address, $subject, $message, $headers);
             echo "sucsess";
         }
         
@@ -159,8 +159,8 @@ define_settings();
                 $password = $row['password'];
                 $port =REFLECTOR_SERVER_PORT;
                 
-                $msg = "This mail contain login credntials for the svxreflektor \r\n";
-                $msg.="Server adress : $server       \r\n";
+                $msg = "This mail contain login credntials for the svxreflector \r\n";
+                $msg.="Server address : $server       \r\n";
                 $msg.="Server port   : $port       \r\n";
                 
                 $msg.="Username: $user \r\n";

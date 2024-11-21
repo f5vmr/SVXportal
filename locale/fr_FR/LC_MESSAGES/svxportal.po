@@ -486,8 +486,8 @@ msgid "Mail to system administrator"
 msgstr "Mail à l'administrateur système"
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
-msgstr "Adresse e-mail système"
+msgid "E-mail address for the system"
+msgstr "addresse e-mail système"
 
 #: database_text.php:19
 msgid "color"
@@ -498,11 +498,11 @@ msgid "Hide the Monitor bar"
 msgstr "Masquer Monitor"
 
 #: database_text.php:22
-msgid "Server adresss to svxreflektor"
-msgstr "Adresse serveur svxreflector"
+msgid "Server address to svxreflector"
+msgstr "addresse serveur svxreflector"
 
 #: database_text.php:23
-msgid "Svxreflektor server port"
+msgid "SvxReflector server port"
 msgstr "Port serveur svxreflector"
 
 #: database_text.php:24
@@ -1453,7 +1453,7 @@ msgstr "Identifiants utilisateu"
 
 #: request_reflector_login.php:597
 msgid "Email address"
-msgstr "Adresse email"
+msgstr "addresse email"
 
 #: request_reflector_login.php:600
 msgid "Enter email"

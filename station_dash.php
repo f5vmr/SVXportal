@@ -254,7 +254,7 @@ $( document ).ready(function() {
 
 
 
-$idnr = $_GET["Station_idnr"];
+$idnr = $_GET["station_idnr"];
 $idnr = $link->real_escape_string($idnr);
 
 
@@ -263,13 +263,13 @@ $idnr = $link->real_escape_string($idnr);
 
 
 
-if($_GET["Station_idnr"])
+if($_GET["station_idnr"])
 {
     
     
 
     
-    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Information_page` WHERE Station_id  ='".$idnr."'");
+    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, station_name, station_id, Module, Image FROM `Information_page` WHERE station_id  ='".$idnr."'");
     
     
     
@@ -300,7 +300,7 @@ if($station_data['Module'] !="")
     __autoload_driver($module);
     
     $driver = new $module();
-    $driver->Init($station_data['Station_Name']);
+    $driver->Init($station_data['station_name']);
     
 
 
@@ -314,12 +314,12 @@ if($station_data['Module'] !="")
  */
 
 
-if(check_permission_station($_GET["Station_idnr"],$_SESSION['loginid']) == 0)
+if(check_permission_station($_GET["station_idnr"],$_SESSION['loginid']) == 0)
 {
  echo '<h1>'._('Permission Denied!').'</h1>';
  exit(-1);   
 }
-$permission_rw =check_permission_station_RW($_GET["Station_idnr"],$_SESSION['loginid']);
+$permission_rw =check_permission_station_RW($_GET["station_idnr"],$_SESSION['loginid']);
 
 ?>
 

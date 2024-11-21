@@ -152,7 +152,7 @@ function remove_notgouiltychar(string)
 
 function generate_coulor()
 {
-    $.getJSON( "<?php echo $serveradress ?>", function( data ) {
+    $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     
     
     	for(var k in data.nodes){
@@ -219,7 +219,7 @@ function update_filter(value) {
 
 function call_svxrefelktor() {
 	
-$.getJSON( "<?php echo $serveradress ?>", function( data ) {
+$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	if(filter_station != "")
 	{
     	for(var k in data.nodes){

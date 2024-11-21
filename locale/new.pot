@@ -475,7 +475,7 @@ msgid "Mail to system administrator"
 msgstr ""
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
+msgid "E-mail address for the system"
 msgstr ""
 
 #: database_text.php:19
@@ -487,11 +487,11 @@ msgid "Hide the Monitor bar"
 msgstr ""
 
 #: database_text.php:22
-msgid "Server adresss to svxreflektor"
+msgid "Server address to svxreflector"
 msgstr ""
 
 #: database_text.php:23
-msgid "Svxreflektor server port"
+msgid "SvxReflector server port"
 msgstr ""
 
 #: database_text.php:24

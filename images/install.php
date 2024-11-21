@@ -36,7 +36,7 @@ if ($_POST) {
 
         
         $current .= "\n".'$dir="'. $_POST['recordingfolder'].'"'."\n";
-        $current .= '$serveradress="'. $_POST['icecst'].'".'-"\n";
+        $current .= '$serveraddress="'. $_POST['icecst'].'".'-"\n";
         
         echo '<pre>';
         echo $current;
@@ -112,13 +112,13 @@ if ($_POST) {
 			</div>
 
 			<div class="form-group">
-				<label for="formGroupExampleInput">Reflector proxy adress</label> <input
+				<label for="formGroupExampleInput">Reflector proxy address</label> <input
 					type="text" class="form-control" name="proxy" id="formGroupExampleInput"
 					placeholder="http://www.svxportal.se/proxy">
 			</div>
 
 			<div class="form-group">
-				<label for="formGroupExampleInput1">Stemingserver adress</label> <input
+				<label for="formGroupExampleInput1">Stemingserver address</label> <input
 					type="text" class="form-control" name="icecst" id="formGroupExampleInput1"
 					placeholder="http://www.svxportal.se/proxy">
 			</div>

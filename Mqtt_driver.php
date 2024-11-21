@@ -4,7 +4,7 @@ class MQtt_Driver {
     public $name ="MQTT";
     public $username;
     public $password;
-    private $server_adress;
+    private $server_address;
     private $server_port;
     private $server_USE_TLS;
     private $MSG_Java_sctipt_func;
@@ -14,7 +14,7 @@ class MQtt_Driver {
     // Methods
     public function Set_broker($server,$port,$TLS) {
         
-        $this->server_adress    =   $server;
+        $this->server_address    =   $server;
         $this->server_port      =   $port;
         $this->server_USE_TLS   =   $TLS;
         $this->enable = True;
@@ -71,7 +71,7 @@ class MQtt_Driver {
             	var id = number.toString(36).substr(2, 9); // 'xtis06h6'
             	id.length >= 9; // false
                 
-            	mqtt = new Paho.MQTT.Client("<?php echo $this->server_adress?>",<?php echo $this->server_port?>,("portal"+id));
+            	mqtt = new Paho.MQTT.Client("<?php echo $this->server_address?>",<?php echo $this->server_port?>,("portal"+id));
             	//document.write("connecting to "+ host);
             	var options = {
             	<?php if($this->server_USE_TLS == true){?>

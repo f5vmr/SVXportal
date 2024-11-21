@@ -481,11 +481,11 @@ msgstr "Send en e-post til sysop når noden går ned"
 
 #: database_text.php:9
 msgid "Mail to system administrator"
-msgstr "E-postadresse til systemadministrator"
+msgstr "E-postaddresse til systemadministrator"
 
 #: database_text.php:10
-msgid "E-mail adress for the system"
-msgstr "E-postadresse for systemet"
+msgid "E-mail address for the system"
+msgstr "E-postaddresse for systemet"
 
 #: database_text.php:19
 msgid "color"
@@ -1394,7 +1394,7 @@ msgstr "Brukerlegitimasjon"
 
 #: request_reflector_login.php:513
 msgid "Email address"
-msgstr "Epostadresse"
+msgstr "Epostaddresse"
 
 #: request_reflector_login.php:516
 msgid "Enter email"
