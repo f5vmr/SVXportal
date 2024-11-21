@@ -990,7 +990,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 
 					<div style="padding: 0 15px">
-						<div class="row" style="">
+						<div class="row">
 							<div class="col col-md-8">
 								<div class="map"
 									style="width: 83.3%; height: 83.3%; position: fixed" id="map"></div>
@@ -1077,7 +1077,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 
 					<div id="overlay"
-						style="background-color: white; border-radius: 10px; border: 1px solid black; padding:">
+						style="background-color: white; border-radius: 10px; border: 1px solid black; padding: 10px;">
 						<script>
 
 

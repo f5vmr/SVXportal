@@ -88,7 +88,7 @@ var Json_data = JSON.parse(data);
 console.log(Json_data);
 
 $( "#progressbar" ).progressbar({
-    value: Json_data.Siglev;
+    value: Json_data.Siglev,
 });
 
 
@@ -284,21 +284,21 @@ $result = mysqli_query($link, "SELECT * FROM `repeater`");
 
 // Numeric array
 $i = 0;
-echo " 	multi_stat_change('repeater-info-.json','Menu');";
-// Associative array
+echo "multi_stat_change('repeater-info-.json','Menu');";
+
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
     echo 'setTimeout(function(){';
+    
     if ($i == 0) {
-
-        echo " 	multi_stat_change('repeater-info-" . $row["Name"] . ".json','0');";
+        echo "multi_stat_change('repeater-info-" . $row["Name"] . ".json','0');";
     } else {
-        echo " 	multi_stat_change('repeater-info-" . $row["Name"] . ".json',$i);";
+        echo "multi_stat_change('repeater-info-" . $row["Name"] . ".json',$i);";
     }
-
-    echo "}, " . (200 + i * 20) . ");";
-    $i ++;
+    
+    echo "}, " . (200 + $i * 20) . ");";
+    $i++;
 }
+
 ?>	
 
 
@@ -850,7 +850,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 
 					<div id="overlay"
-						style="background-color: white; border-radius: 10px; border: 1px solid black; padding:">
+						style="background-color: white; border-radius: 10px; border: 1px solid black; padding: 10px;">
 						<script>
 
 
