@@ -9,7 +9,7 @@ function update_filter(value) {
 var interval;
 var totalSeconds = 0;
 var current_talker = "";
-function remove_notgouiltychar(string)
+function remove_notguiltychar(string)
 {
 	string= string.replace("(", "");
 	string= string.replace(")", "");

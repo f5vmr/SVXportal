@@ -30,7 +30,7 @@ if(  $_SESSION['loginid'] >0 )
         
         
         
-        $link->query("INSERT INTO `Commads_to_node` (`Node`, `Command`, `action`, `Execute time`) VALUES ( '$station_name', '$commnd', '1', '$date');");
+        $link->query("INSERT INTO `Commands_to_node` (`Node`, `Command`, `action`, `Execute time`) VALUES ( '$station_name', '$commnd', '1', '$date');");
         
         $link->commit();
         $link->close();

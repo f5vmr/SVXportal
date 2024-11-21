@@ -59,7 +59,7 @@ if ($_POST) {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SVX Portal 2.1 Beta</title>
+<title>SVX Portal 2.6 Beta</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <link rel="icon" type="image/png" href="tower.svg">

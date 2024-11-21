@@ -6,22 +6,22 @@ define_settings();
 
 
 
-    $Reflektor_link =  mysqli_connect($reflektor_db_host, $reflektor_db_user, $reflektor_db_password , $reflektor_db_db);
-    mysqli_set_charset($Reflektor_link,"utf8");
+    $Reflector_link =  mysqli_connect($reflector_db_host, $reflector_db_user, $reflector_db_password , $reflector_db_db);
+    mysqli_set_charset($Reflector_link,"utf8");
     if($_POST['newuser'] == 1)
     {
         
         
-        $Reflektor_link->begin_transaction();
-        $Reflektor_link->autocommit(FALSE);
+        $Reflector_link->begin_transaction();
+        $Reflector_link->autocommit(FALSE);
         
         // prepare statement (for multiple inserts) only once
         
-        $username =   $Reflektor_link->real_escape_string($_POST['usern']);
-        $passwd   =   $Reflektor_link->real_escape_string($_POST['password']);
-        $active   =   $Reflektor_link->real_escape_string($_POST['Enable']);
-        $mail   =      $Reflektor_link->real_escape_string($_POST['mail']);
-        $description   =   $Reflektor_link->real_escape_string($_POST['description']);
+        $username =   $Reflector_link->real_escape_string($_POST['usern']);
+        $passwd   =   $Reflector_link->real_escape_string($_POST['password']);
+        $active   =   $Reflector_link->real_escape_string($_POST['Enable']);
+        $mail   =      $Reflector_link->real_escape_string($_POST['mail']);
+        $description   =   $Reflector_link->real_escape_string($_POST['description']);
         if($active !="1")
         {
             $active=0;
@@ -30,16 +30,16 @@ define_settings();
         
         
         
-        $Reflektor_link->query("INSERT INTO `users` (`id`, `user`, `password`, `active`,`description`,`e-mail`) VALUES (NULL, '$username', '$passwd', '$active', '$description', '$mail'); ");
+        $Reflector_link->query("INSERT INTO `users` (`id`, `user`, `password`, `active`,`description`,`e-mail`) VALUES (NULL, '$username', '$passwd', '$active', '$description', '$mail'); ");
 
-        $Reflektor_link->commit();
-        $Reflektor_link->close();
+        $Reflector_link->commit();
+        $Reflector_link->close();
     }
     if($_POST['userdel'] == 1)
     {
         if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
-            $Reflektor_link->begin_transaction();
-            $Reflektor_link->autocommit(FALSE);
+            $Reflector_link->begin_transaction();
+            $Reflector_link->autocommit(FALSE);
             
             // prepare statement (for multiple inserts) only once
             
@@ -48,10 +48,10 @@ define_settings();
             
             
             
-            $Reflektor_link->query("DELETE FROM `users` WHERE `users`.`id` = '$urid'");
+            $Reflector_link->query("DELETE FROM `users` WHERE `users`.`id` = '$urid'");
             
-            $Reflektor_link->commit();
-            $Reflektor_link->close();
+            $Reflector_link->commit();
+            $Reflector_link->close();
         }
         
     }
@@ -59,20 +59,20 @@ define_settings();
     {
         if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
-            $Reflektor_link->begin_transaction();
-            $Reflektor_link->autocommit(FALSE);
+            $Reflector_link->begin_transaction();
+            $Reflector_link->autocommit(FALSE);
             
             // prepare statement (for multiple inserts) only once
             
-            $urid= $Reflektor_link->real_escape_string($_POST['user_id']);
-            $passwd= $Reflektor_link->real_escape_string($_POST['password']);
+            $urid= $Reflector_link->real_escape_string($_POST['user_id']);
+            $passwd= $Reflector_link->real_escape_string($_POST['password']);
     
            
             
-            $Reflektor_link->query("UPDATE `users` SET `password` = '$passwd' WHERE `id` = '$urid'; ");
+            $Reflector_link->query("UPDATE `users` SET `password` = '$passwd' WHERE `id` = '$urid'; ");
             
-            $Reflektor_link->commit();
-            $Reflektor_link->close();
+            $Reflector_link->commit();
+            $Reflector_link->close();
         }
         
     }
@@ -81,13 +81,13 @@ define_settings();
         if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
             
       
-            $Reflektor_link->begin_transaction();
-            $Reflektor_link->autocommit(FALSE);
+            $Reflector_link->begin_transaction();
+            $Reflector_link->autocommit(FALSE);
             
             // prepare statement (for multiple inserts) only once
             
-            $urid= $Reflektor_link->real_escape_string($_POST['user_id']);
-            $active   =   $Reflektor_link->real_escape_string($_POST['Enable']);
+            $urid = $Reflector_link->real_escape_string($_POST['user_id']);
+            $active = $Reflector_link->real_escape_string($_POST['Enable']);
             echo $active;
     
             if($active !="1")
@@ -98,10 +98,10 @@ define_settings();
             
             
             
-            $Reflektor_link->query("UPDATE `users` SET `active` = '$active' WHERE `id` = '$urid'; ");
+            $Reflector_link->query("UPDATE `users` SET `active` = '$active' WHERE `id` = '$urid'; ");
             
-            $Reflektor_link->commit();
-            $Reflektor_link->close();
+            $Reflector_link->commit();
+            $Reflector_link->close();
         
         }
         
@@ -113,11 +113,11 @@ define_settings();
         {
             
         
-            $userid =   $Reflektor_link->real_escape_string($_POST['user_id']);
+            $userid =   $Reflector_link->real_escape_string($_POST['user_id']);
             
             $email_address ="";
             
-            $result = mysqli_query($Reflektor_link, "SELECT `e-mail` FROM `users` WHERE `id` = $userid ");
+            $result = mysqli_query($Reflector_link, "SELECT `e-mail` FROM `users` WHERE `id` = $userid ");
             
             while($row = $result->fetch_assoc())
             {
@@ -147,10 +147,10 @@ define_settings();
         {
             
             
-            $userid =   $Reflektor_link->real_escape_string($_POST['user_id']);
+            $userid =   $Reflector_link->real_escape_string($_POST['user_id']);
             
             
-            $result = mysqli_query($Reflektor_link, "SELECT * FROM `users` WHERE `id` = $userid ");
+            $result = mysqli_query($Reflector_link, "SELECT * FROM `users` WHERE `id` = $userid ");
             
             while($row = $result->fetch_assoc())
             {
@@ -159,7 +159,7 @@ define_settings();
                 $password = $row['password'];
                 $port =REFLECTOR_SERVER_PORT;
                 
-                $msg = "This mail contain login credntials for the svxreflector \r\n";
+                $msg = "This mail contains login credentials for the svxreflector \r\n";
                 $msg.="Server address : $server       \r\n";
                 $msg.="Server port   : $port       \r\n";
                 
@@ -184,7 +184,7 @@ define_settings();
                     'X-Mailer: PHP/' . phpversion();
                 
                 mail($row['e-mail'], $subject, $message, $headers);
-                echo "sucsess";
+                echo "success";
                 
                 
                 

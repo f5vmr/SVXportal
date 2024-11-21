@@ -88,10 +88,10 @@ function calculate_day ($day)
         foreach ($data as $key => $station) {
             
             $timesum = array();
-            $timiesums = array();
-            $timiesums[$key] = array();
-            $timiesums[$key][$timel] = 0;
-            $timiesums[$key][$timel] = array();
+            $timesums = array();
+            $timesums[$key] = array();
+            $timesums[$key][$timel] = 0;
+            $timesums[$key][$timel] = array();
             $numberof_qso[$key] = 0;
             $numberof_qso[$key] = array();
             
@@ -105,7 +105,7 @@ function calculate_day ($day)
                     unset($row);
                 } else {
                     @$tables[$key][$row['Talkgroup']][$timel]["_N"] += (float) 0;
-                    @$tables[$key][$row['Talkgroup']][$timel]["_T"] += (float) $timiesums[$key][$row['Talkgroup']][$timel];
+                    @$tables[$key][$row['Talkgroup']][$timel]["_T"] += (float) $timesums[$key][$row['Talkgroup']][$timel];
                 }
                 
                @$tables[$key][$row['Talkgroup']][$timel]["_X2"] += @(float) pow($tables[$key][$row['Talkgroup']][$timel]["_T"], 2);

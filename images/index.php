@@ -61,7 +61,7 @@ $(document).ready(function(){
 call_svxreflector();
 add_node_colours();
 load_reflector();
-generate_coulor();
+generate_colour();
 
 	$( "#datepicker" ).datepicker({firstDay: 1, dateFormat: 'yy-mm-dd' });
 
@@ -113,10 +113,10 @@ $.post( "signal.php", { time: (TotaltimeTime-currentTime), file: event.jPlayer.s
     
     $('#signalpressent').html(Json_data.Siglev);
 
-		for(var k in Json_data.Subreciver){
+		for(var k in Json_data.Subreceiver){
 
-			$('#Reciverbars_player').append('<p>'+Json_data.Subreciver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
-			create_bar_rx(Json_data.Subreciver[k]['Siglev'],'canvp'+k,false);
+			$('#Reciverbars_player').append('<p>'+Json_data.Subreceiver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
+			create_bar_rx(Json_data.Subreceiver[k]['Siglev'],'canvp'+k,false);
 			
 		}
 
@@ -184,7 +184,7 @@ $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	
 	
 
-$('#Reflectortable').html('<th><?php echo _("Callsign")?></th><th><?php echo _("TG")?></th><th><?php echo _("Is talker")?></th><th><?php echo _("Monitored TGs")?></th><th><?php echo _("Talk time")?></th><th><?php echo _("Active RX")?></th>');
+$('#Reflectortable').html('<th><?php echo _("Callsign")?></th><th><?php echo _("TG")?></th><th><?php echo _("Is talking")?></th><th><?php echo _("Monitored TGs")?></th><th><?php echo _("Talk time")?></th><th><?php echo _("Active RX")?></th>');
 for(var k in data.nodes){
 	var text =" ";
 	for(var nodes in data.nodes[k].monitoredTGs){
@@ -266,7 +266,7 @@ $result = mysqli_query($link, "SELECT * FROM `repeater`");
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
-    echo " prosess_json('repeater-info-" . $row["Name"] . ".json');";
+    echo " process_json('repeater-info-" . $row["Name"] . ".json');";
 }
 ?>	
 
@@ -383,7 +383,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 }
 
 var tg_colours = new Array();
-function generate_coulor()
+function generate_colour()
 {
     $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     
@@ -951,14 +951,14 @@ $result = mysqli_query($link, "SELECT * FROM `filter`");
 
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-    // echo '<a class="dropdown-item" onclick="prosess_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Namn'] . '</a>';
+    // echo '<a class="dropdown-item" onclick="process_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Name'] . '</a>';
 }
 ?>
 		  
 		  <a class="dropdown-item" onclick="map.overlays_.clear();" href="#"><?php echo _("Remove bars")?> </a> <a class="dropdown-item"
 											onclick="vectorSource.clear();Barsource.clear();map.overlays_.clear();"
 											href="#"><?php echo _("Remove ALL stations")?></a> <a class="dropdown-item"
-											onclick="prosess_json_reflecktor();" href="#"><?php echo _("Show Receivers")?></a>
+											onclick="process_json_reflector();" href="#"><?php echo _("Show Receivers")?></a>
 											
 											<a class="nav-link dropdown-toggle" href="#"
 									onclick="toogle_AutoFollow()" id="Autofollow_text"
@@ -1366,8 +1366,8 @@ function connect_reflector()
 
 	setTimeout(function(){
 		add_tx_station();
-		// add recivers on start
-		//prosess_json_reflecktor();
+		// add receivers on start
+		//process_json_reflector();
 
 
 
@@ -1568,7 +1568,7 @@ function add_repeater_transmitter(lat, lon,label,idn,tg)
 	//addtext(0,lat, lon,idn);
 
 }
-var instervalls;
+var intervals;
 
 function hueToRgb (p, q, t) 
 {
@@ -1661,7 +1661,7 @@ function addimage(src,lamin,lomin,lamax,lomax)
     return ov[src];
 }
 
-function prosess_json_reflecktor()
+function process_json_reflector()
 {
 
   $.getJSON("<?php echo $serveraddress ?>", function(data){
@@ -2085,13 +2085,13 @@ function get_station_chat()
 {
 
 	
-	$('#Graph_Cricle_holder').html("");
-	$('#Graph_Cricle_holder').html('<canvas id="Graph_Cricle" width="400px" height="400px"></canvas>');
+	$('#Graph_Circle_holder').html("");
+	$('#Graph_Circle_holder').html('<canvas id="Graph_Circle" width="400px" height="400px"></canvas>');
 
 	
-	var canvas = document.getElementById('Graph_Cricle')
+	var canvas = document.getElementById('Graph_Circle')
 	canvas.width = canvas.width; 
-	var ctx = document.getElementById('Graph_Cricle').getContext('2d');
+	var ctx = document.getElementById('Graph_Circle').getContext('2d');
 	var barDatafromJSON;
 	var date_value = $('#Datepicker_graph').val();
 	var Stations = new Array();
@@ -2123,9 +2123,9 @@ function get_station_chat()
 			  	Stations_colour[j] = Hex_random_css_colour();
 			  }
 			  var preccent= (((Stations_json.data[j].time)/86400) * 100).toFixed(3);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_secounds) * 100).toFixed(3);
+			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity").append('<tr><td>'+Stations_json.data[j].call+'</td><td>'+Stations_json.data[j].Secound+"</td><td>"+preccent_network+"%</td><td>"+preccent+"%</td><td>"+Stations_json.data[j].reciver+"</td><tr>");
+			  $("#nodes_activity").append('<tr><td>'+Stations_json.data[j].call+'</td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td>"+preccent+"%</td><td>"+Stations_json.data[j].reciver+"</td><tr>");
 			  j++;
 
 			 
@@ -2214,7 +2214,7 @@ function secondsToDHMS(seconds) {
 
 
 
-function prosess_json(url)
+function process_json(url)
 {
 
   $.getJSON(url, function(result){
@@ -2240,7 +2240,7 @@ function prosess_json(url)
 }
 // Crearl map and add station with filter
 
-function prosess_json_filter(url,filter)
+function process_json_filter(url,filter)
 {
 
   $.getJSON(url, function(result){
@@ -2513,7 +2513,7 @@ function update_tx_station_loop()
 
 		});
 	if(kill_loop == 0)
-	instervalls = setTimeout(update_tx_station_loop, 500);
+	intervals = setTimeout(update_tx_station_loop, 500);
 }
 
 
@@ -2664,8 +2664,8 @@ function bind_key_statistics()
                 					<canvas id="Graph" width="400px" height="400px"></canvas>
                 				</div>
                 			</div>
-                    		<div class="col-md-6" id="Graph_Cricle_holder">
-                    				<canvas id="Graph_Cricle" width="400px" height="400px"></canvas>
+                    		<div class="col-md-6" id="Graph_Circle_holder">
+                    				<canvas id="Graph_Circle" width="400px" height="400px"></canvas>
                     		</div>	
                     	 </div>
                 	 </div>

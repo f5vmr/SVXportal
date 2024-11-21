@@ -230,7 +230,7 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
 
 
 
-<?php }elseif($_GET['sucess'] == 1){?>
+<?php }elseif($_GET['success'] == 1){?>
 <br />
 <div class="alert alert-success" role="alert">
   <?php echo _('Settings updated ')?>

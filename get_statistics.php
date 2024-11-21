@@ -49,11 +49,11 @@ function get_time($station,$day)
     return $timesum[$station];
     
 }
-$moste_used_station = array();
+$most_used_station = array();
 function get_most_use_reciver($day)
 {
     global $link;
-    global $moste_used_station;
+    global $most_used_station;
     
 
     
@@ -74,7 +74,7 @@ function get_most_use_reciver($day)
         //var_dump($row2);
         $count_array[$row2['Callsign']][$row2['MAX(`Nodename`)']]++;
         
-        $moste_used_station[$row2['Callsign']] = $row2['MAX(`Nodename`)'];
+        $most_used_station[$row2['Callsign']] = $row2['MAX(`Nodename`)'];
     }
     
     //echo '<pre>';
@@ -83,14 +83,14 @@ function get_most_use_reciver($day)
     {
 
         
-        $moste_used_station[$row2['Callsign']] =$count_array[$row2['Callsign']][0];
+        $most_used_station[$row2['Callsign']] =$count_array[$row2['Callsign']][0];
     }
     
     $quvery_optimizer =  "SELECT Max_reciver , `station_id` , ReflectorStations.Callsign as callsing FROM `Station_day_statistic` LEFT JOIN ReflectorStations ON `station_id` = ReflectorStations.ID WHERE `Date` = '$day'"; 
     $sqla = $link->query($quvery_optimizer);
     while($row2 = $sqla->fetch_assoc())
     {
-        $moste_used_station[$row2['callsing']] = $row2['Max_reciver'];
+        $most_used_station[$row2['callsing']] = $row2['Max_reciver'];
         
     }
         
@@ -131,7 +131,7 @@ if($mouth_s != "")
     {
         
         $station = $link->real_escape_string($_GET['filterpicker_repeater_year']);
-        $station_quvery = "AND Callsign ='$station'";
+        $station_query = "AND Callsign ='$station'";
     }
     if($_GET['filterpicker_talgroup_year'] != "")
     {
@@ -144,19 +144,19 @@ if($mouth_s != "")
     
     
     $sql_stations ="SELECT SUM(`Talktime`),MONTH(`Time`)  FROM   ReflectorNodeLog
-    WHERE YEAR(`Time`) = $current_year  AND Type='1' and Active='0' $station_quvery $talkgroup_quvery  GROUP BY MONTH(`Time`)";
+    WHERE YEAR(`Time`) = $current_year  AND Type='1' and Active='0' $station_query $talkgroup_quvery  GROUP BY MONTH(`Time`)";
 
    
     $sqla = $link->query($sql_stations);; 
     while($row = $sqla->fetch_assoc()) 
     {
 
-       $json_array[$row["MONTH(`Time`)"]] ["Secound"] = secondsToDHMS($row['SUM(`Talktime`)']);
+       $json_array[$row["MONTH(`Time`)"]] ["Second"] = secondsToDHMS($row['SUM(`Talktime`)']);
        $json_array[$row["MONTH(`Time`)"]] ["unixtime"] = $row['SUM(`Talktime`)'];
         
     }
 
-    $sql_activity ="SELECT SUM(`Talktime`), MONTH(`Time`) ,DAY(`Time`) FROM ReflectorNodeLog WHERE YEAR(`Time`) = $current_year AND Type='1' and Active='0' $station_quvery $talkgroup_quvery GROUP BY MONTH(`Time`), DAY(`Time`) ORDER BY SUM(`Talktime`) DESC  limit 10";
+    $sql_activity ="SELECT SUM(`Talktime`), MONTH(`Time`) ,DAY(`Time`) FROM ReflectorNodeLog WHERE YEAR(`Time`) = $current_year AND Type='1' and Active='0' $station_query $talkgroup_quvery GROUP BY MONTH(`Time`), DAY(`Time`) ORDER BY SUM(`Talktime`) DESC  limit 10";
 
     $sqla = $link->query($sql_activity);;
     $id=0;
@@ -164,7 +164,7 @@ if($mouth_s != "")
     {
         $daystring=$current_year."-".$row['MONTH(`Time`)']."-".$row['DAY(`Time`)'];
         
-        $json_array["Toplist"][$id]["Secound"] = secondsToDHMS($row['SUM(`Talktime`)']);
+        $json_array["Toplist"][$id]["Second"] = secondsToDHMS($row['SUM(`Talktime`)']);
         $json_array["Toplist"][$id]["unixtime"] = $row['SUM(`Talktime`)'];
         $json_array["Toplist"][$id]["day"] =date("Y-m-d",strtotime($daystring)) ;
         $id++;
@@ -198,15 +198,15 @@ else if($qrv != "")
         //$outarray['data'][$i]['time'] =get_time($row["Callsign"],$day);
         $outarray['data'][$i]['time'] = $row['sum(Talktime)'];
         $time_total_usage = $time_total_usage+$outarray['data'][$i]['time'] ;
-        //$outarray['data'][$i]["Secound"] = secondsToDHMS(get_time($row["Callsign"],$day));
-        $outarray['data'][$i]["Secound"] = secondsToDHMS($row['sum(Talktime)']);
+        //$outarray['data'][$i]["Second"] = secondsToDHMS(get_time($row["Callsign"],$day));
+        $outarray['data'][$i]["Second"] = secondsToDHMS($row['sum(Talktime)']);
         
-        $outarray['data'][$i]["reciver"] = $moste_used_station[$row["Callsign"]];
+        $outarray['data'][$i]["reciver"] = $most_used_station[$row["Callsign"]];
         
         
         $i++;
     }
-    $outarray['total_secounds'] = $time_total_usage;
+    $outarray['total_seconds'] = $time_total_usage;
     
     
     echo json_encode ($outarray);
@@ -251,8 +251,8 @@ else if( $_GET['time'] == "true")
         $high_time =$filterdate+ ($timel*3600)+(59*60)+59;
         
         $timesum =array();
-        $timiesums  =array();
-        $timiesums[$timel] =0;
+        $timesums  =array();
+        $timesums[$timel] =0;
         
         // loop throu remove row if match is found 
         foreach ($data as & $row) {
@@ -261,7 +261,7 @@ else if( $_GET['time'] == "true")
             {
             
                 $timesum[$row['Talkgroup']] = $timesum[$row['Talkgroup']]+$row["Talktime"];
-                $timiesums[$timel] =$timiesums[$timel] +$row["Talktime"];
+                $timesums[$timel] =$timesums[$timel] +$row["Talktime"];
                 unset($row);
             }
             
@@ -323,7 +323,7 @@ else if( $_GET['time'] == "true")
 
             if($timesum[$row['Talkgroup']] >= 0 && $timesum[$row['Talkgroup']] <= 3600)
             {
-                $timiesums[$timel] =$timiesums[$timel] + $timesum[$row['Talkgroup']];
+                $timesums[$timel] =$timesums[$timel] + $timesum[$row['Talkgroup']];
                 
             }
             else
@@ -340,8 +340,8 @@ else if( $_GET['time'] == "true")
          */
 
             
-        $json_array[$timel] ["Secound"] = secondsToDHMS($timiesums[$timel]);
-        $json_array[$timel] ["unixtime"] = $timiesums[$timel];
+        $json_array[$timel] ["Second"] = secondsToDHMS($timesums[$timel]);
+        $json_array[$timel] ["unixtime"] = $timesums[$timel];
         $json_array[$timel] ["TG"]= $timesum;
         
         
@@ -403,7 +403,7 @@ else if( $_GET['totalmount'] != "")
     {
 
         $json_array[$i] = array();
-        $json_array[$i]["secounds"]  = secondsToDHMS($row["total_talktime"]);
+        $json_array[$i]["Seconds"]  = secondsToDHMS($row["total_talktime"]);
         $json_array[$i]["unixtime"]  = $row["total_talktime"];
         $json_array[$i] ["day"] =_(date("D",strtotime( $row["YEAR(`Time`)"].'-'.$row["MONTH(`Time`)"].'-'.$row["DAYOFMONTH(`Time`)"]))). date(" Y-m-d",strtotime( $row["YEAR(`Time`)"].'-'.$row["MONTH(`Time`)"].'-'.$row["DAYOFMONTH(`Time`)"]));
         $i++;
@@ -470,7 +470,7 @@ else
     
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
     {
-        @$json_array[$row["Talkgroup"]] ["Secound"] = secondsToDHMS($timesum[ $row["Talkgroup"]]);
+        @$json_array[$row["Talkgroup"]] ["Second"] = secondsToDHMS($timesum[ $row["Talkgroup"]]);
         @$json_array[$row["Talkgroup"]] ["unixtime"] = $timesum[ $row["Talkgroup"]];
     
     }

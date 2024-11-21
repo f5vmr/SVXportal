@@ -766,7 +766,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
           });
     	<?php 
         }?>
-        generate_coulor();
+        generate_colour();
     });
 
         

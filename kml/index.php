@@ -54,7 +54,7 @@ var reflector_address="<?php echo $serveraddress ?>";
 $(document).ready(function(){
 call_svxreflector();
 load_reflector();
-generate_coulor();
+generate_colour();
 	$( "#datepicker" ).datepicker({firstDay: 1, dateFormat: 'yy-mm-dd' });
 
 		var myPlaylist = new jPlayerPlaylist({
@@ -108,7 +108,7 @@ $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 	}
 	
 
-$('#Reflectortable').html('<th>Callsign</th><th>TG</th><th>Is talker</th><th>Monitored TGs</th><th>Talk time</th><th>Active RX</th>');
+$('#Reflectortable').html('<th>Callsign</th><th>TG</th><th>Is talking</th><th>Monitored TGs</th><th>Talk time</th><th>Active RX</th>');
 for(var k in data.nodes){
 	var text =" ";
 	for(var nodes in data.nodes[k].monitoredTGs){
@@ -190,7 +190,7 @@ $result = mysqli_query($link, "SELECT * FROM `repeater`");
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
-    echo " prosess_json('repeater-info-" . $row["Name"] . ".json');";
+    echo " process_json('repeater-info-" . $row["Name"] . ".json');";
 }
 ?>	
 
@@ -307,7 +307,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 }
 
 var tg_colours = new Array();
-function generate_coulor()
+function generate_colour()
 {
     $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     
@@ -727,7 +727,7 @@ $result = mysqli_query($link, "SELECT * FROM `filter`");
 
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-    // echo '<a class="dropdown-item" onclick="prosess_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Namn'] . '</a>';
+    // echo '<a class="dropdown-item" onclick="process_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Name'] . '</a>';
 }
 ?>
 		  
@@ -735,7 +735,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 											Bars</a> <a class="dropdown-item"
 											onclick="vectorSource.clear();Barsource.clear();map.overlays_.clear();"
 											href="#">Remove ALL</a> <a class="dropdown-item"
-											onclick="prosess_json_reflecktor();" href="#">Show Receivers</a>
+											onclick="process_json_reflector();" href="#">Show Receivers</a>
 											
 											<a class="nav-link dropdown-toggle" href="#"
 									onclick="toogle_AutoFollow()" id="Autofollow_text"
@@ -1143,8 +1143,8 @@ function connect_reflector()
 
 	setTimeout(function(){
 		add_tx_station();
-		// add recivers on start
-		//prosess_json_reflecktor();
+		// add receivers on start
+		//process_json_reflector();
 
 
 
@@ -1345,7 +1345,7 @@ function add_repeater_transmitter(lat, lon,label,idn,tg)
 	//addtext(0,lat, lon,idn);
 
 }
-var instervalls;
+var intervals;
 
 
 function random_css_colour()
@@ -1383,7 +1383,7 @@ function addimage(src,lamin,lomin,lamax,lomax)
     return ov[src];
 }
 
-function prosess_json_reflecktor()
+function process_json_reflector()
 {
 
   $.getJSON("<?php echo $serveraddress ?>", function(data){
@@ -1494,7 +1494,7 @@ function prosess_json_reflecktor()
 
 
 
-function prosess_json(url)
+function process_json(url)
 {
 
   $.getJSON(url, function(result){
@@ -1520,7 +1520,7 @@ function prosess_json(url)
 }
 // Crearl map and add station with filter
 
-function prosess_json_filter(url,filter)
+function process_json_filter(url,filter)
 {
 
   $.getJSON(url, function(result){
@@ -1616,179 +1616,126 @@ function apeend_Receivers_html(id)
  
 	});
 }
-// Idientify station by idn 
+// Identify station by idn 
 var station_identifier = new Array();
 function add_tx_station()
 {
-	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
-		console.log(data);
+    $.getJSON("<?php echo $serveraddress ?>", function (data) {
+        console.log(data);
 
-		for(var k in data.nodes){
-			
-		    if(data.nodes[k].hidden == true)
-		    {
-		    	delete data.nodes[k];
-		    	
-		    }
-		}
-		
-		for(var k in data.nodes){
-		    for(var qth in data.nodes[k].qth){
-		    	console.log(k+" - "+data.nodes[k].qth[qth].name);
-		        for(var qth1 in data.nodes[k].qth[qth].tx){
-			        		        
-    				var lat =data.nodes[k].qth[qth].pos.lat
-    				var lon =data.nodes[k].qth[qth].pos.long;
-    				var name = k+" "+data.nodes[k].qth[qth].tx[qth1].name;
-    				var talkgroup =data.nodes[k].tg;
-    				var idn=k+data.nodes[k].qth[qth].tx[qth1].name;
-    				idn =idn.replace(" ","_");
-    				station_identifier[idn] =k;
-    				console.log(name);
-    				
-    
-    				add_repeater_transmitter(lat,lon,name,idn,talkgroup)
-    		
-    				// tempoary fix if useing mor than 1 transmitter on same qth
-    				setmap(lat, lon,8);
-    				break;
-		        	
-		        }
+        // First loop: Remove hidden nodes
+        for (var k in data.nodes) {
+            if (data.nodes[k].hidden === true) {
+                delete data.nodes[k];
+            }
+        }
 
-			}	
-		}
+        // Second loop: Process remaining nodes
+        for (var k in data.nodes) {
+            for (var qth in data.nodes[k].qth) {
+                console.log(k + " - " + data.nodes[k].qth[qth].name);
 
-		//add_repeater_node()
+                for (var qth1 in data.nodes[k].qth[qth].tx) {
+                    var lat = data.nodes[k].qth[qth].pos.lat;
+                    var lon = data.nodes[k].qth[qth].pos.long;
+                    var name = k + " " + data.nodes[k].qth[qth].tx[qth1].name;
+                    var talkgroup = data.nodes[k].tg;
+                    var idn = k + data.nodes[k].qth[qth].tx[qth1].name;
 
+                 
 
-
-		});
-	
-}
 var kill_loop =0;
 function update_tx_station_loop()
 {
-	$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
-		for(var k in data.nodes){
-			
-		    if(data.nodes[k].hidden == true)
-		    {
-		    	delete data.nodes[k];
-		    	
-		    }
-		}
-		
-		for(var k in data.nodes){
+    $.getJSON("<?php echo $serveraddress ?>", function (data) {
+        for (var k in data.nodes) {
+            if (data.nodes[k].hidden === true) {
+                delete data.nodes[k];
+            }
+        }
 
+        for (var k in data.nodes) {
+            for (var qth in data.nodes[k].qth) {
+                for (var qth1 in data.nodes[k].qth[qth].tx) {
+                    var lat = data.nodes[k].qth[qth].pos.lat;
+                    var lon = data.nodes[k].qth[qth].pos.long;
 
-			
-		    for(var qth in data.nodes[k].qth){
-		        for(var qth1 in data.nodes[k].qth[qth].tx){
-				var lat =data.nodes[k].qth[qth].pos.lat
-				var lon =data.nodes[k].qth[qth].pos.long;
+                    var talkgroup = data.nodes[k].tg;
+                    var name = k + " " + data.nodes[k].qth[qth].tx[qth1].name;
+                    var idn = k + data.nodes[k].qth[qth].tx[qth1].name;
+                    var active = data.nodes[k].qth[qth].tx[qth1].transmit;
+                    if (active == null) {
+                        active = false;
+                    }
+                    idn = idn.replace(" ", "_");
+                    update_tx_station(lat, lon, idn, talkgroup, name, active);
+                }
 
-				var talkgroup =data.nodes[k].tg;
-				
-				var name = k+" "+data.nodes[k].qth[qth].tx[qth1].name;
-				var idn=k+data.nodes[k].qth[qth].tx[qth1].name;
-				var active =data.nodes[k].qth[qth].tx[qth1].transmit;
-				if(active == null)
-				{
-					active = false;
-				}
-				idn =idn.replace(" ","_");
-				update_tx_station(lat,lon,idn,talkgroup,name,active);
-		        	
+                var count_rx = 0;
+                for (var q in data.nodes[k].qth[qth].rx) {
+                    count_rx++;
+                }
 
-		        }
-				var count_rx =0;
-				for(var q in data.nodes[k].qth[qth].rx)
-			    {
-		        	count_rx++;
-			    }	
-        
+                for (var qth1 in data.nodes[k].qth[qth].rx) {
+                    var lat = data.nodes[k].qth[qth].pos.lat;
+                    var lon = data.nodes[k].qth[qth].pos.long;
+                    var name = k + " " + data.nodes[k].qth[qth].rx[qth1].name;
+                    var talkgroup = data.nodes[k].tg;
+                    var idn = k + data.nodes[k].qth[qth].rx[qth1].name;
+                    idn = idn.replace(" ", "_");
 
-		        for(var qth1 in data.nodes[k].qth[qth].rx)
-		        {
-		        
-        			var lat =data.nodes[k].qth[qth].pos.lat
-        			var lon =data.nodes[k].qth[qth].pos.long;
-        			var name = k+" "+data.nodes[k].qth[qth].rx[qth1].name;
-        			var talkgroup =data.nodes[k].tg;
-        			var idn=k+data.nodes[k].qth[qth].rx[qth1].name;
-        			idn =idn.replace(" ","_");
- //       			console.log(idn+" "+lat+" "+lon);
-        			var value =0;
-                   	var qth_name =data.nodes[k].qth[qth].rx[qth1].name;
-                   	var rx_active =data.nodes[k].qth[qth].rx[qth1].active;
-                   	var rx_sql =data.nodes[k].qth[qth].rx[qth1].sql_open;
-                   	value =data.nodes[k].qth[qth].rx[qth1].siglev;
-                   	var Frequency =data.nodes[k].qth[qth].rx[qth1].freq;
+                    var value = 0;
+                    var qth_name = data.nodes[k].qth[qth].rx[qth1].name;
+                    var rx_active = data.nodes[k].qth[qth].rx[qth1].active;
+                    var rx_sql = data.nodes[k].qth[qth].rx[qth1].sql_open;
+                    value = data.nodes[k].qth[qth].rx[qth1].siglev;
+                    var Frequency = data.nodes[k].qth[qth].rx[qth1].freq;
 
-                   	if(value == null)
-                   	{
-                   		value=0;
-                   	}
-    
-    			
-        			var sql =""
-        			if(rx_sql== true)
-        			{
-        				sql='open'
-        			}
-        			if(rx_active== true)
-        			{
-        				sql='active'
-        			}
-        			if(count_rx > 1 && sql != "")
-        			{
-        				var group_idn = k+data.nodes[k].qth[qth].name;
-        				group_idn =group_idn.replace(" ","_");
-        				if(Barsource.getFeatureById(group_idn) != null)
-        				{
-                			update_text_byid(group_idn,value.toString(),sql);
-                			update_bar(group_idn,value.toString(),sql);
-            			}
-            			break;
-            	
-        			}
-        			else if(count_rx > 1)
-        			{
-        				var group_idn = k+data.nodes[k].qth[qth].name;
-        				group_idn =group_idn.replace(" ","_");
-        				if(Barsource.getFeatureById(group_idn) != null)
-        				{
-                			update_text_byid(group_idn,value.toString(),sql);
-                			update_bar(group_idn,value.toString(),sql);
-        				}
-        				            			
-						// DO Nothing 
-						
-        			}
-        			else
-        			{
-        				if(Barsource.getFeatureById(idn) != null)
-        				{
-                			update_text_byid(idn,value.toString(),sql);
-                			update_bar(idn,value.toString(),sql);
-        				}
-        			}
-        			
-	        	}
+                    if (value == null) {
+                        value = 0;
+                    }
 
-			}	
-		}
-		Barsource.refresh()
-		vectorSource.refresh()
+                    var sql = "";
+                    if (rx_sql === true) {
+                        sql = "open";
+                    }
+                    if (rx_active === true) {
+                        sql = "active";
+                    }
+                    if (count_rx > 1 && sql !== "") {
+                        var group_idn = k + data.nodes[k].qth[qth].name;
+                        group_idn = group_idn.replace(" ", "_");
+                        if (Barsource.getFeatureById(group_idn) != null) {
+                            update_text_byid(group_idn, value.toString(), sql);
+                            update_bar(group_idn, value.toString(), sql);
+                        }
+                        break;
+                    } else if (count_rx > 1) {
+                        var group_idn = k + data.nodes[k].qth[qth].name;
+                        group_idn = group_idn.replace(" ", "_");
+                        if (Barsource.getFeatureById(group_idn) != null) {
+                            update_text_byid(group_idn, value.toString(), sql);
+                            update_bar(group_idn, value.toString(), sql);
+                        }
+                    } else {
+                        if (Barsource.getFeatureById(idn) != null) {
+                            update_text_byid(idn, value.toString(), sql);
+                            update_bar(idn, value.toString(), sql);
+                        }
+                    }
+                }
+            }
+        }
 
-		//add_repeater_node()
+        Barsource.refresh();
+        vectorSource.refresh();
+    });
 
-
-
-		});
-	if(kill_loop == 0)
-	instervalls = setTimeout(update_tx_station_loop, 500);
+    if (kill_loop === 0) {
+        intervals = setTimeout(update_tx_station_loop, 500);
+    }
 }
+
 
 
 </script>

@@ -5,25 +5,25 @@ define_settings();
 
 
     
-    $Reflektor_link =  mysqli_connect($reflektor_db_host, $reflektor_db_user, $reflektor_db_password , $reflektor_db_db);
-    mysqli_set_charset($Reflektor_link,"utf8");
+    $Reflector_link =  mysqli_connect($reflector_db_host, $reflector_db_user, $reflector_db_password , $reflector_db_db);
+    mysqli_set_charset($Reflector_link,"utf8");
     if($_POST['newuser'] == 1)
     {
         
         
-        $Reflektor_link->begin_transaction();
-        $Reflektor_link->autocommit(FALSE);
+        $Reflector_link->begin_transaction();
+        $Reflector_link->autocommit(FALSE);
         
         // prepare statement (for multiple inserts) only once
         
-        $username =   $Reflektor_link->real_escape_string($_POST['Callsign']);
-        $passwd   =   $Reflektor_link->real_escape_string($_POST['Password']);
-        $mail   =      $Reflektor_link->real_escape_string($_POST['email']);
-        $description   =   $Reflektor_link->real_escape_string($_POST['Description']);
+        $username =   $Reflector_link->real_escape_string($_POST['Callsign']);
+        $passwd   =   $Reflector_link->real_escape_string($_POST['Password']);
+        $mail   =      $Reflector_link->real_escape_string($_POST['email']);
+        $description   =   $Reflector_link->real_escape_string($_POST['Description']);
    
         $active=0;
         
-        $result = mysqli_query($Reflektor_link, "SELECT user FROM `users` where user ='$username'  ");
+        $result = mysqli_query($Reflector_link, "SELECT user FROM `users` where user ='$username'  ");
         $user ="";
         while($row = $result->fetch_assoc())
         {
@@ -37,18 +37,18 @@ define_settings();
         if(!$user)
         {
         
-            $Reflektor_link->query("INSERT INTO `users` (`id`, `user`, `password`, `active`,`description`,`e-mail`) VALUES (NULL, '$username', '$passwd', '$active', '$description', '$mail'); ");
+            $Reflector_link->query("INSERT INTO `users` (`id`, `user`, `password`, `active`,`description`,`e-mail`) VALUES (NULL, '$username', '$passwd', '$active', '$description', '$mail'); ");
             
-            $Reflektor_link->commit();
-            $Reflektor_link->close();
+            $Reflector_link->commit();
+            $Reflector_link->close();
         }
     }
     if($_POST['uservalidate'] == 1)
     {
-        $username =   $Reflektor_link->real_escape_string($_POST['user']);
+        $username =   $Reflector_link->real_escape_string($_POST['user']);
        
 
-        $result = mysqli_query($Reflektor_link, "SELECT user FROM `users` where user ='$username'  limit 1");
+        $result = mysqli_query($Reflector_link, "SELECT user FROM `users` where user ='$username'  limit 1");
         
         while($row = $result->fetch_assoc())
         {

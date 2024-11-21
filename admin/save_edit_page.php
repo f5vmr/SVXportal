@@ -89,7 +89,7 @@ if( $_SESSION['loginid'] >0 )
         $Category= $link->real_escape_string($_POST['Category']);
 
 
-        $permission_rw =check_permission_station_RW($stid,$_SESSION['loginid']);
+        $permission_rw = check_permission_station_RW($stid,$_SESSION['loginid']);
         
         if($permission_rw >0)
             $link->query("INSERT INTO `dtmf_command` (`id`, `station_name`, `station_id`, `Command`, `Description`,`Category`) VALUES (NULL, '$station_name', '$stid', '$command', '$Description','$Category'); ");
@@ -105,9 +105,9 @@ if( $_SESSION['loginid'] >0 )
         
         
 
-        $station_id =DTMF_ID_TO_STATION($DMF_ID);
+        $station_id = DTMF_ID_TO_STATION($DMF_ID);
         echo $station_id;
-        $permission_rw =check_permission_station_RW($station_id,$_SESSION['loginid']);
+        $permission_rw = check_permission_station_RW($station_id,$_SESSION['loginid']);
         
         if($permission_rw >0)
             $link->query("DELETE FROM `dtmf_command` WHERE `dtmf_command`.`id` = '$DMF_ID'");

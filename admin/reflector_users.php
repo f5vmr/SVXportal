@@ -6,26 +6,26 @@ include_once '../function.php';
 if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
     
    
-   $Reflektor_link =  mysqli_connect($reflektor_db_host, $reflektor_db_user, $reflektor_db_password , $reflektor_db_db);
-   mysqli_set_charset($Reflektor_link,"utf8");
+   $Reflector_link =  mysqli_connect($reflector_db_host, $reflector_db_user, $reflector_db_password , $reflector_db_db);
+   mysqli_set_charset($Reflector_link,"utf8");
     
 ?>
 
 
 <script type="text/javascript">
-function create_reflektor_user()
+function create_reflector_user()
 {
 	var usern = $('#usern2').val();
 	var pass = $('#password2').val();
 
 	if(usern != "" && pass != "")
 	{
-    	$.post( "admin/reflector_action.php", $( "#create_reflektoruser_form" ).serialize() )
+    	$.post( "admin/reflector_action.php", $( "#create_reflector_user_form" ).serialize() )
     	.done(function( data ) {
     		alert("<?php echo _('User created sucsessfully!')?>")
-    		$("#create_reflektoruser_div").hide();
-    		$('#create_reflektoruser_form').trigger("reset");
-    		reaload_reflektor_table();
+    		$("#create_reflector_user_div").hide();
+    		$('#create_reflector_user_form').trigger("reset");
+    		reload_reflector_table();
     		
     
     	});
@@ -35,13 +35,13 @@ function create_reflektor_user()
 	return false;
 }
 
-function Delete_reflektor_user(id)
+function Delete_reflector_user(id)
 {
 
 	if( confirm("<?php echo _('Please confirm user removal')?>") == true )
     	$.post( "admin/reflector_action.php",  { userdel: "1", userid: id } )
     	.done(function( data ) {
-    		reaload_reflektor_table();
+    		reload_reflector_table();
     
     	});
 	
@@ -51,7 +51,7 @@ function Delete_reflektor_user(id)
 }
 
 
-function enable_reflektor_user(id,type)
+function enable_reflector_user(id,type)
 {
 
 	var str="<?php echo _('Please confirm user enable')?>"
@@ -63,7 +63,7 @@ function enable_reflektor_user(id,type)
 	if( confirm(str) == true )
     	$.post( "admin/reflector_action.php",  { change_active: "1", user_id: id, Enable: type } )
     	.done(function( data ) {
-    		reaload_reflektor_table();
+    		reload_reflector_table();
     
     	});
 	
@@ -78,13 +78,13 @@ function change_reflector_password_r(id)
 
 
 	$("#password_id_a").val(id);
-	 $("#myModa_passl").modal() 
+	 $("#myModal_pass").modal() 
 	return false;
 }
 
 
 
-function update_reflektor_password()
+function update_reflector_password()
 {
 	var pass = $('#password_id_r').val();
 	console.log(pass);
@@ -94,9 +94,9 @@ function update_reflektor_password()
     	.done(function( data ) {
     		alert("<?php echo _('Password is updated!')?>");
     		$('#update_password_r').trigger("reset");
-    		$('#myModa_passl').modal('toggle');
+    		$('#myModal_pass').modal('toggle');
 
-    		reaload_reflektor_table();
+    		reload_reflector_table();
     		
 
     
@@ -106,15 +106,15 @@ function update_reflektor_password()
 }
 function user_d()
 {
-	$("#create_reflektoruser_div").toggle()
+	$("#create_reflector_user_div").toggle()
 	
 }
-function reaload_reflektor_table()
+function reload_reflector_table()
 {
 	$.get( "admin/get_reflector.php", function( data ) {
 
 
-		  $("#reflektoruser_table_one_p tbody").html(data);
+		  $("#reflectoruser_table_one_p tbody").html(data);
 		});
 }
 function generate_password(field)
@@ -138,16 +138,16 @@ function generate_user(field)
 
 	$("#"+field).val(id);
 }
-function refector_action(value,id,element)
+function reflector_action(value,id,element)
 {
 	console.log(value);
 	switch(value) {
 	  case "1":
-		  enable_reflektor_user(id,1)
+		  enable_reflector_user(id,1)
 	    // code block
 	    break;
 	  case "2":
-		  enable_reflektor_user(id,0)
+		  enable_reflector_user(id,0)
 	    // code block
 	    break;
 	  case "3":
@@ -183,7 +183,7 @@ function Send_message_to_admin(id)
 
     	$.post( "admin/reflector_action.php",  { send_msg: "1", user_id: id, msg: message } )
     	.done(function( data ) {
-    		reaload_reflektor_table();
+    		reload_reflector_table();
     		alert("<?php echo  _("Message sent")?>");
     
     	});
@@ -203,7 +203,7 @@ function Send_password(id)
 
     	$.post( "admin/reflector_action.php",  { Send_password: "1", user_id: id } )
     	.done(function( data ) {
-    		reaload_reflektor_table();
+    		reload_reflector_table();
     		alert("<?php echo  _("Message sent")?>");
     
     	});
@@ -243,14 +243,14 @@ function Send_password(id)
              <li class="nav-item">
         
              
-        <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="PrintElem('reflektoruser_table_one_p','<?php echo _('Print Users')?>')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="PrintElem('reflectoruser_table_one_p','<?php echo _('Print Users')?>')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                <i class="fas fa-print"></i>
           <?php echo _('Print')?>
         </a>
              
         </li>
          <li class="nav-item">
-                <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="fnExcelexport('reflektoruser_table_one')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link " href="#" id="navbarDropdownMenuLink" onclick="fnExcelexport('reflectoruser_table_one')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              <i class="far fa-file-excel"></i>
           <?php echo _('Export xls')?>
         </a>
@@ -275,12 +275,12 @@ function Send_password(id)
       
     </nav>
     
-    <div id="create_reflektoruser_div" style="display: none">
+    <div id="create_reflector_user_div" style="display: none">
     
 
 
         
-    <form id="create_reflektoruser_form"  onsubmit="return create_reflektor_user()">
+    <form id="create_reflector_user_form"  onsubmit="return create_reflector_user()">
         <h2><?php echo _('Create user')?>:</h2>
           <fieldset class="form-group">
       <div class="form-group ">
@@ -324,7 +324,7 @@ function Send_password(id)
        	</div>
    	   <div class="row">
            <div class="col-sm-8">
-            	<input type="text" name="description" class="form-control" id="description" placeholder="Sk0RK Stockholm">
+            	<input type="text" name="description" class="form-control" id="description" placeholder="G0ABC London">
            </div>
        </div>
       </div>
@@ -365,8 +365,8 @@ function Send_password(id)
 
 </div>
 <br />
-<div id="reflektoruser_table_one_p">
-    <table class="table" id="reflektoruser_table_one">
+<div id="reflectoruser_table_one_p">
+    <table class="table" id="reflectoruser_table_one">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
@@ -383,7 +383,7 @@ function Send_password(id)
       <?php 
       
       
-      $result = mysqli_query($Reflektor_link, "SELECT * FROM `users` ");
+      $result = mysqli_query($Reflector_link, "SELECT * FROM `users` ");
  
       
       
@@ -416,11 +416,11 @@ function Send_password(id)
         <?php   
     if($row['active'] == 1)
     {
-        $enable_str="enable_reflektor_user(".$row['id'].",0)";
+        $enable_str="enable_reflector_user(".$row['id'].",0)";
     }
     else
     {
-        $enable_str="enable_reflektor_user(".$row['id'].",1)";
+        $enable_str="enable_reflector_user(".$row['id'].",1)";
     }
         
         
@@ -432,7 +432,7 @@ function Send_password(id)
     
 
       <td>
-      <select class="form-control" onchange="refector_action(this.value,<?php echo $row['id'] ?>,this)">
+      <select class="form-control" onchange="reflector_action(this.value,<?php echo $row['id'] ?>,this)">
       	  <option value ="">- <?php echo _("Select action")?> -</option>
       	  <?php   if($row['active'] == 0){?>
           <option value ="1"><?php echo _("Enable user")?></option>
@@ -450,7 +450,7 @@ function Send_password(id)
       
        </td>
        
-             <td><i class="fas fa-trash" onclick="Delete_reflektor_user(<?php echo $row['id']?>)"></i> <i onclick="change_reflector_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i>
+             <td><i class="fas fa-trash" onclick="Delete_reflector_user(<?php echo $row['id']?>)"></i> <i onclick="change_reflector_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i>
       </td>
        
       </tr>
@@ -468,9 +468,9 @@ function Send_password(id)
 <!-- Trigger the modal with a button -->
 
 <!-- Modal -->
-<div id="myModa_passl" class="modal fade" role="dialog">
+<div id="myModal_pass" class="modal fade" role="dialog">
   <div class="modal-dialog">
- <form id="update_password_r" onsubmit="return update_reflektor_password()">
+ <form id="update_password_r" onsubmit="return update_reflector_password()">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
@@ -504,7 +504,7 @@ function Send_password(id)
 
 <?php 
 
-$Reflektor_link -> close();
+$Reflector_link -> close();
 ?>
 
 

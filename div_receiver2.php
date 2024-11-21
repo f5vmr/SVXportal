@@ -102,11 +102,11 @@ function div_call_svxreflector(data) {
 
 							var image = '<img src="images/talking.gif" alt="talk" id="talking" width="25px">';
 							
-							if (document.getElementById('div' + remove_notgouiltychar(k))) {
+							if (document.getElementById('div' + remove_notguiltychar(k))) {
 								if (data.nodes[k].isTalker == false) {
 									// $('#holder').html('<div
 									// id="div'+k+'">'+k+''+data.nodes[k].tg+'</div>');
-									$('#div' + remove_notgouiltychar(k) + ' h1').removeClass(
+									$('#div' + remove_notguiltychar(k) + ' h1').removeClass(
 											"bg-success");
 
 								} else {
@@ -115,7 +115,7 @@ function div_call_svxreflector(data) {
 									// >YES'+image+'</td><td></td><td></td><td><label
 									// id="minutes">00</label>:<label
 									// id="seconds">00</label></td>');
-									$('#div' + remove_notgouiltychar(k) + ' h1')
+									$('#div' + remove_notguiltychar(k) + ' h1')
 											.addClass("bg-success");
 								}
 								$('#tg_'+k+'_value').html(data.nodes[k].tg);
@@ -123,15 +123,15 @@ function div_call_svxreflector(data) {
 								$('#holder')
 										.append(
 												'<div id="div'
-														+ remove_notgouiltychar(k)
+														+ remove_notguiltychar(k)
 														+ '"><h2><?php echo _("Signal values at")?> '
 														+ k
 														+ ' (<span id="tg_'+k+'_value"> '
 														+ data.nodes[k].tg
 														+ ' </span>)</h2><table class="table table-striped  table-hover"  id="status-'
-														+ remove_notgouiltychar(k)
+														+ remove_notguiltychar(k)
 														+ '"></table></div>');
-								$('#status-' + remove_notgouiltychar(k))
+								$('#status-' + remove_notguiltychar(k))
 										.html(
 												'<thead class="bg-info"><th class="w-25 p-2"><?php echo _("Receiver")?></th><th><?php echo _("Location")?></th><th></th><th> </th><th><?php echo _("Signal")?></th><th><?php echo _("Frequency")?></th><?php echo _("Frequency")?><th></th></thead>');
 							}
@@ -178,29 +178,29 @@ function div_call_svxreflector(data) {
 										
 										qth_html_add = '<td> * ' + qth_name
 												+ '</td><td>'+qth_node_name+'</td><td colspan="2" id="td'
-												+ remove_notgouiltychar(k) + '_' + qth_name
-												+ '"><canvas id="bar_' + remove_notgouiltychar(k)
+												+ remove_notguiltychar(k) + '_' + qth_name
+												+ '"><canvas id="bar_' + remove_notguiltychar(k)
 												+ '_' + qth_name+qth1
 												+ '"></canvas></p> </td><td>'
 												+ parseInt(value)
 												+ '%</td><td>' + String(Frequency)
 												+ ' <?php echo _("MHz")?></td><td></td>';
-										$('#row' + remove_notgouiltychar(name_id)).html(qth_html_add);
-										$('#row' + remove_notgouiltychar(name_id)).addClass(
+										$('#row' + remove_notguiltychar(name_id)).html(qth_html_add);
+										$('#row' + remove_notguiltychar(name_id)).addClass(
 												"class_row");
 									} else {
 										qth_html_add = '<tr class="table-striped  '
 												+ class_row
 												+ ' table-borderless" id="row'
-												+ remove_notgouiltychar(name_id)
+												+ remove_notguiltychar(name_id)
 												+ '"  ><td> * '
 												+ qth_name
 												+ '</td><td>'+qth_node_name+'</td><td colspan="2" id="td'
-												+ remove_notgouiltychar(k)
+												+ remove_notguiltychar(k)
 												+ '_'
 												+ qth_name
 												+ '"><canvas id="bar_'
-												+ remove_notgouiltychar(k)
+												+ remove_notguiltychar(k)
 												+ '_'
 												+ qth_name+qth1
 												+ '"></canvas></p> </td><td>'
@@ -209,7 +209,7 @@ function div_call_svxreflector(data) {
 												+ String(Frequency)
 												+ ' MHz</td><td></td></tr>';
 
-										$('#status-' + remove_notgouiltychar(k)).append(qth_html_add);
+										$('#status-' + remove_notguiltychar(k)).append(qth_html_add);
 										$('#row' + qth_name).removeClass(
 												"class_row");
 									}

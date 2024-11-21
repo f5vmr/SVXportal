@@ -106,7 +106,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 )
             
             ?>
             <script>
-            alert("<?php echo _('Uplad sucess!'); ?>");
+            alert("<?php echo _('Uplad success!'); ?>");
             window.close();
             
             </script>

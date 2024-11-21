@@ -71,7 +71,7 @@ if($_POST['password1'] != "username")
     
     $link->commit();
     
-    header("Location: ../user_settings.php?sucess=1");
+    header("Location: ../user_settings.php?success=1");
     
 
     

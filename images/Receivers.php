@@ -2,7 +2,7 @@
 
 include "config.php";
 ?> 
-	<div class=recivers>
+	<div class=receivers>
 <?php 
 if($_GET['id'] == "Menu" || $_GET['id'] == '')
 {

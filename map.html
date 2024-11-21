@@ -234,7 +234,7 @@ function addimage(src,lamin,lomin,lamax,lomax)
 
 
 
-function prosess_json()
+function process_json()
 {
 
   $.getJSON("repeater-info-SK2RIU.json", function(result){
@@ -273,7 +273,7 @@ function skow_Coverage()
 // A $( document ).ready() block.
 $( document ).ready(function() {
     console.log( "ready!" );
-	prosess_json();
+	process_json();
 	start_data();
 	
 });

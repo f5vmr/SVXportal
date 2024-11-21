@@ -42,10 +42,10 @@ $reflektor_db = 0;
 $start_date_defined ="2020-01-12";
 
 
-#$reflektor_db_host =	 	"127.0.0.1";
-#$reflektor_db_user = 	"svxreflector";
-#$reflektor_db_password = 	"%DB_ref%";
-#$reflektor_db_db = 		"svxreflector";
+#$reflector_db_host =	 	"127.0.0.1";
+#$reflector_db_user = 	"svxreflector";
+#$reflector_db_password = 	"%DB_ref%";
+#$reflector_db_db = 		"svxreflector";
 
 #ini_set("SMTP", "MYSMTP.dns.org");
 

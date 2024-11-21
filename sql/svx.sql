@@ -69,7 +69,7 @@ CREATE TABLE `filter` (
   `id` int(11) NOT NULL,
   `JSON` text NOT NULL,
   `filter` text NOT NULL,
-  `Namn` text NOT NULL
+  `Name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

@@ -6,9 +6,9 @@ set_language();
 
 
 if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
-    $Reflektor_link =  mysqli_connect($reflektor_db_host, $reflektor_db_user, $reflektor_db_password , $reflektor_db_db);
-    mysqli_set_charset($Reflektor_link,"utf8");
-    $result = mysqli_query($Reflektor_link, "SELECT * FROM `users` ");
+    $Reflector_link =  mysqli_connect($reflector_db_host, $reflector_db_user, $reflector_db_password , $reflector_db_db);
+    mysqli_set_charset($Reflector_link,"utf8");
+    $result = mysqli_query($Reflector_link, "SELECT * FROM `users` ");
     
     
     
@@ -40,11 +40,11 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         <?php   
         if($row['active'] == 1)
         {
-            $enable_str="enable_reflektor_user(".$row['id'].",0)";
+            $enable_str="enable_reflector_user(".$row['id'].",0)";
         }
         else
         {
-            $enable_str="enable_reflektor_user(".$row['id'].",1)";
+            $enable_str="enable_reflector_user(".$row['id'].",1)";
         }
         if($row['Monitor'] == 0)
         {
@@ -54,7 +54,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
 
         ?>
        <td> 
-           <select class="form-control" onchange="refector_action(this.value,<?php echo $row['id'] ?>,this)">
+           <select class="form-control" onchange="reflector_action(this.value,<?php echo $row['id'] ?>,this)">
           	  <option value ="">- <?php echo _("Select action")?> -</option>
           	  <?php   if($row['active'] == 0){?>
               <option value ="1"><?php echo _("Enable user")?></option>
@@ -73,7 +73,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
    
        
-          <td><i class="fas fa-trash" onclick="Delete_reflektor_user(<?php echo $row['id']?>)"></i> <i onclick="change_reflector_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i> </td>
+          <td><i class="fas fa-trash" onclick="Delete_reflector_user(<?php echo $row['id']?>)"></i> <i onclick="change_reflector_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i> </td>
       </tr>
           
           

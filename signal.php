@@ -93,9 +93,9 @@ while ($row1 = $result->fetch_assoc()) {
     
     if(($data["Siglev"] != $row1["Siglev"] && $row1["Siglev"] != 0) && ($row1["Nodename"] != $data["Nodename"] ) && !in_array ($row1["Nodename"] , $node_array)   )
     {
-        $data["Subreciver"][$j]["Callsign"] =   $row1["Callsign"];
-        $data["Subreciver"][$j]["Siglev"]   =   $row1["Siglev"];
-        $data["Subreciver"][$j]["Nodename"] =   $row1["Nodename"];
+        $data["Subreceiver"][$j]["Callsign"] =   $row1["Callsign"];
+        $data["Subreceiver"][$j]["Siglev"]   =   $row1["Siglev"];
+        $data["Subreceiver"][$j]["Nodename"] =   $row1["Nodename"];
         $node_array[] =  $row1["Nodename"];
         
         $j++;

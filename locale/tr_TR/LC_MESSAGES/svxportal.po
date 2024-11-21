@@ -236,7 +236,7 @@ msgid "- Select station -"
 msgstr "- İstasyon seçiniz  -"
 
 #: admin/get_users.php:32 admin/users.php:277
-msgid "User granded"
+msgid "User granted"
 msgstr "Kullanıcı yetkilendirildi"
 
 #: admin/get_users.php:48 admin/users.php:292
@@ -244,7 +244,7 @@ msgid "Read only"
 msgstr "Salt okunur"
 
 #: admin/get_users.php:59 admin/users.php:302
-msgid "User not granded"
+msgid "User not granted"
 msgstr "Kullanıcı yetkilendirilmedi"
 
 #: admin/log.php:89 log.php:155
@@ -280,7 +280,7 @@ msgid "Event"
 msgstr "Olay"
 
 #: admin/log.php:237 log.php:344
-msgid "is Talker on tg"
+msgid "Is talking on tg"
 msgstr "kg içinde konuşan mı"
 
 #: admin/log.php:239
@@ -980,7 +980,7 @@ msgid "Action menu"
 msgstr "Aksiyon menüsü"
 
 #: index.php:1629 index1.php:253 index_old.php:209 indexa.php:210
-msgid "Is talker"
+msgid "Is talking"
 msgstr "Konuşan mı"
 
 #: index.php:1629 index1.php:253 index_old.php:209 indexa.php:210

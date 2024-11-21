@@ -35,9 +35,9 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
        <td>
 
-<select  name="station" class="form-control" id="station_permission" onchange="chahge_premmision(this.value,<?php echo $row['id']?>)">
+<select  name="station" class="form-control" id="station_permission" onchange="change_permission(this.value,<?php echo $row['id']?>)">
  <option value=""> <?php echo _('- Select station -')?></option>
-  <optgroup label="<?php echo _('User granded'); ?>">
+  <optgroup label="<?php echo _('User granted'); ?>">
   
 <?php 
 $user_id= $row['id'];
@@ -64,7 +64,7 @@ while ($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC))
 ?>
     <option value="<?php echo $row1['ID'];?>"> <?php echo $row1['Callsign'].'' .$rostr;?></option>
 <?php }?>
-   <optgroup label="<?php echo _('User not granded'); ?>">
+   <optgroup label="<?php echo _('User not granted'); ?>">
    
 <?php 
 
@@ -90,7 +90,7 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC))
 
   
      </td>
-          <td><i class="fas fa-trash" onclick="Delete_user(<?php echo $row['id']?>)"></i> <i onclick="chahge_password(<?php echo $row['id']?>)" class="fas fa-key"></i> </td>
+          <td><i class="fas fa-trash" onclick="Delete_user(<?php echo $row['id']?>)"></i> <i onclick="change_password(<?php echo $row['id']?>)" class="fas fa-key"></i> </td>
           </tr>
           
           

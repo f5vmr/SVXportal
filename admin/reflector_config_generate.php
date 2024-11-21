@@ -12,11 +12,11 @@ echo '<pre>';
 
 [ReflectorLogic]
 TYPE=Reflector
-HOST=<?php echo REFLECTOR_SERVER_ADDRESS?> 
-PORT=<?php echo REFLECTOR_SERVER_PORT?> 
+HOSTS=<?php echo REFLECTOR_SERVER_ADDRESS?> 
+HOST_PORT=<?php echo REFLECTOR_SERVER_PORT?> 
 CALLSIGN=<?php echo $_POST['Callsign1a']?> 
 AUTH_KEY="<?php echo $_POST["password"]?>" 
-AUDIO_CODEC=OPUS
+#AUDIO_CODEC=OPUS
 MONITOR_TGS=<?php echo  join(",",$_POST['tg']);?> 
 EVENT_HANDLER=/usr/share/svxlink/events.tcl
 NODE_INFO_FILE=/etc/svxlink/node_info.json

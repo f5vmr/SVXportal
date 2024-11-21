@@ -45,11 +45,11 @@ function get_time($station,$day)
     return $timesum[$station];
     
 }
-$moste_used_station = array();
+$most_used_station = array();
 function get_most_use_reciver($day)
 {
     global $link;
-    global $moste_used_station;
+    global $most_used_station;
     
 
     
@@ -69,7 +69,7 @@ function get_most_use_reciver($day)
         //var_dump($row2);
         $count_array[$row2['Callsign']][$row2['MAX(`Nodename`)']]++;
         
-        $moste_used_station[$row2['Callsign']] = $row2['MAX(`Nodename`)'];
+        $most_used_station[$row2['Callsign']] = $row2['MAX(`Nodename`)'];
     }
     
     //echo '<pre>';
@@ -78,7 +78,7 @@ function get_most_use_reciver($day)
     {
 
         
-        $moste_used_station[$row2['Callsign']] =$count_array[$row2['Callsign']][0];
+        $most_used_station[$row2['Callsign']] =$count_array[$row2['Callsign']][0];
     }
 
 
@@ -130,15 +130,15 @@ if($qrv != "")
         //$outarray['data'][$i]['time'] =get_time($row["Callsign"],$day);
         $outarray['data'][$i]['time'] = $row['sum(Talktime)'];
         $time_total_usage = $time_total_usage+$outarray['data'][$i]['time'] ;
-        //$outarray['data'][$i]["Secound"] = secondsToDHMS(get_time($row["Callsign"],$day));
-        $outarray['data'][$i]["Secound"] = secondsToDHMS($row['sum(Talktime)']);
+        //$outarray['data'][$i]["Second"] = secondsToDHMS(get_time($row["Callsign"],$day));
+        $outarray['data'][$i]["Second"] = secondsToDHMS($row['sum(Talktime)']);
         
-        $outarray['data'][$i]["reciver"] = $moste_used_station[$row["Callsign"]];
+        $outarray['data'][$i]["reciver"] = $most_used_station[$row["Callsign"]];
         
         
         $i++;
     }
-    $outarray['total_secounds'] = $time_total_usage;
+    $outarray['total_seconds'] = $time_total_usage;
     
     
     echo json_encode ($outarray);
@@ -175,8 +175,8 @@ else if( $_GET['time'] == "true")
         $high_time =$filterdate+ ($timel*3600)+(59*60)+59;
         
         $timesum =array();
-        $timiesums  =array();
-        $timiesums[$timel] =0;
+        $timesums  =array();
+        $timesums[$timel] =0;
         
         // loop throu remove row if match is found 
         foreach ($data as & $row) {
@@ -185,7 +185,7 @@ else if( $_GET['time'] == "true")
             {
             
                 $timesum[$row['Talkgroup']] = $timesum[$row['Talkgroup']]+$row["Talktime"];
-                $timiesums[$timel] =$timiesums[$timel] +$row["Talktime"];
+                $timesums[$timel] =$timesums[$timel] +$row["Talktime"];
                 unset($row);
             }
             
@@ -247,7 +247,7 @@ else if( $_GET['time'] == "true")
 
             if($timesum[$row['Talkgroup']] >= 0 && $timesum[$row['Talkgroup']] <= 3600)
             {
-                $timiesums[$timel] =$timiesums[$timel] + $timesum[$row['Talkgroup']];
+                $timesums[$timel] =$timesums[$timel] + $timesum[$row['Talkgroup']];
                 
             }
             else
@@ -264,8 +264,8 @@ else if( $_GET['time'] == "true")
          */
 
             
-        $json_array[$timel] ["Secound"] = secondsToDHMS($timiesums[$timel]);
-        $json_array[$timel] ["unixtime"] = $timiesums[$timel];
+        $json_array[$timel] ["Second"] = secondsToDHMS($timesums[$timel]);
+        $json_array[$timel] ["unixtime"] = $timesums[$timel];
         $json_array[$timel] ["TG"]= $timesum;
         
         
@@ -317,7 +317,7 @@ else
     
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
     {
-        $json_array[$row["Talkgroup"]] ["Secound"] = secondsToDHMS($timesum[ $row["Talkgroup"]]);
+        $json_array[$row["Talkgroup"]] ["Second"] = secondsToDHMS($timesum[ $row["Talkgroup"]]);
         $json_array[$row["Talkgroup"]] ["unixtime"] = $timesum[ $row["Talkgroup"]];
     
     }

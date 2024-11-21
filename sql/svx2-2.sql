@@ -786,14 +786,14 @@ CREATE TABLE `filter` (
   `id` int(11) NOT NULL,
   `JSON` text NOT NULL,
   `filter` text NOT NULL,
-  `Namn` text NOT NULL
+  `Name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping all Data in table `filter`
 --
 
-INSERT INTO `filter` (`id`, `JSON`, `filter`, `Namn`) VALUES
+INSERT INTO `filter` (`id`, `JSON`, `filter`, `Name`) VALUES
 (1, 'SK3GW', 'RU11', 'SK3GW RU11'),
 (2, 'repeater-info-SK3GW.json', '', 'SK3GW ALL'),
 (3, 'repeater-info-SK2RIU.json', 'RIU', 'SK2RIU'),

@@ -9,7 +9,7 @@ class MQtt_Driver {
     private $server_USE_TLS;
     private $MSG_Java_sctipt_func;
     private $enable;
-    private $message_recivers = array();
+    private $message_receivers = array();
     
     // Methods
     public function Set_broker($server,$port,$TLS) {
@@ -24,7 +24,7 @@ class MQtt_Driver {
     public function Set_Msg_Function($func)
     {
 
-        array_push($this->message_recivers,$func);
+        array_push($this->message_receivers,$func);
         
     }
     public function get_enable()

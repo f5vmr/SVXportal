@@ -172,7 +172,7 @@ else
 
 if($fault_counter == 0)
 {
-    echo "<p> All test <b class='text-success'>sucess</b> go to admin to change settings </p>";
+    echo "<p> All test <b class='text-success'>success</b> go to admin to change settings </p>";
 }
 
 

@@ -1,21 +1,21 @@
-.recivers div.head {
+.receivers div.head {
     font-size: 1.5em;
     font-family: sans-serif;
     font-weight: bold;
     width: 644px;
 }
 
-.recivers img {
+.receivers img {
     border: 0px;
     vertical-align: bottom;
 }
 
-.recivers table {
+.receivers table {
     border-collapse: collapse;
     empty-cells: show;
 }
 
-.recivers td,.recivers  th {
+.receivers td,.receivers  th {
     font-family: sans-serif;
     border: 1px solid black;
     padding: 3px;
@@ -25,27 +25,27 @@
 	background-image: url("sidebar.png");
 	}
 
-.recivers td.rx {
+.receivers td.rx {
     width: 100px;
     text-align: left;
 }
 
-.recivers td.sql {
+.receivers td.sql {
     width: 50px;
     text-align: center;
 }
 
-.recivers td.lvl {
+.receivers td.lvl {
     width: 60px;
     padding-right: 8px;
     text-align: right;
 }
 
-.recivers td.bar {
+.receivers td.bar {
     width: 402px;
 }
 
-.recivers td.bar div {
+.receivers td.bar div {
     width: 0px;
     height: 10px;
     border: 1px solid black;

@@ -96,7 +96,7 @@ if($_GET['search'])
 {
     $station = $conn->real_escape_string($_GET['search']);
     $tg = $conn->real_escape_string($_GET['search']);
-    $station_quvery ="AND (Callsign like '%$station%' OR Talkgroup like '$tg') ";
+    $station_query ="AND (Callsign like '%$station%' OR Talkgroup like '$tg') ";
 
     
 
@@ -108,15 +108,15 @@ else
      if($_GET['Station'])
      {
          $station = $conn->real_escape_string($_GET['Station']);
-         $station_quvery ="AND Callsign = '$station' "; 
+         $station_query ="AND Callsign = '$station' "; 
      }
      if($_GET['tg'])
      {
          $tg = $conn->real_escape_string($_GET['tg']);
-         $tg_quvery ="AND Talkgroup = '$tg' ";
+         $tg_query ="AND Talkgroup = '$tg' ";
      }
 }
-$sql ="SELECT * FROM `ReflectorNodeLog` where $filter   $station_quvery $tg_quvery ORDER BY `ReflectorNodeLog`.`Id` DESC limit $logoffset,$size ";
+$sql ="SELECT * FROM `ReflectorNodeLog` where $filter   $station_query $tg_query ORDER BY `ReflectorNodeLog`.`Id` DESC limit $logoffset,$size ";
 $result = $conn->query($sql);
 
 if(!$_GET['only_table'])
@@ -126,7 +126,7 @@ if(!$_GET['only_table'])
      * 
      * count nr of rows in log 
      */
-    $sql1 ="SELECT count(*) FROM `ReflectorNodeLog` where  $filter $station_quvery $tg_quvery";
+    $sql1 ="SELECT count(*) FROM `ReflectorNodeLog` where  $filter $station_query $tg_query";
     $result1 = $conn->query($sql1);
     
     
@@ -341,7 +341,7 @@ while($row = $result->fetch_assoc()) {
     if($row['Type'] ==1) 
     {
     if($row['Active'] == 1)
-         echo _("is Talker on tg")." ".$row['Talkgroup'];
+         echo _("Is talking on tg")." ".$row['Talkgroup'];
         else
          echo _("Ended talk on tg")." ".$row['Talkgroup'];
     }

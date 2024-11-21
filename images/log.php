@@ -37,7 +37,7 @@ while($row = $result->fetch_assoc()) {
     if($row['Type'] ==1) 
     {
     if($row['Active'] == 1)
-         echo _("is Talker on tg")." ".$row['Talkgroup'];
+         echo _("Is talking on tg")." ".$row['Talkgroup'];
         else
          echo _("Stoped talk tg")." ".$row['Talkgroup'];
     }

@@ -56,7 +56,7 @@ function random_css_colour()
 
 $(document).ready(function(){
 	add_header();
-	generate_coulor();
+	generate_colour();
 	call_svxreflector();
 	MQTTconnect();
 	
@@ -380,7 +380,7 @@ function apeend_echolink(obj,stn)
 
 
 
-function remove_notgouiltychar(string)
+function remove_notguiltychar(string)
 {
 	string= string.replace("(", "");
 	string= string.replace(")", "");
@@ -439,7 +439,7 @@ function update_icons_expand()
 	
 	
 
-function generate_coulor()
+function generate_colour()
 {
     $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
 
@@ -637,9 +637,9 @@ $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     		{
        
     			delete data.nodes[k];
-    			$('#body-of-'+remove_notgouiltychar(k)).remove();
-    			$('#group-of-'+remove_notgouiltychar(k)).remove();
-    			$('#row'+remove_notgouiltychar(k)+'').remove();
+    			$('#body-of-'+remove_notguiltychar(k)).remove();
+    			$('#group-of-'+remove_notguiltychar(k)).remove();
+    			$('#row'+remove_notguiltychar(k)+'').remove();
     			
 
     
@@ -648,9 +648,9 @@ $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     		else if(data.nodes[k].tg != filter_station && filter_station != 'A')
     		{
     			delete data.nodes[k];
-    			$('#body-of-'+remove_notgouiltychar(k)).remove();
-    			$('#group-of-'+remove_notgouiltychar(k)).remove();
-    			$('#row'+remove_notgouiltychar(k)+'').remove();
+    			$('#body-of-'+remove_notguiltychar(k)).remove();
+    			$('#group-of-'+remove_notguiltychar(k)).remove();
+    			$('#row'+remove_notguiltychar(k)+'').remove();
     		}
     	
     		
@@ -735,13 +735,13 @@ for(var k in data.nodes){
 		conole.log("empty data");
 		break;
 	}
-	var printk =remove_notgouiltychar(k)
+	var printk =remove_notguiltychar(k)
 	
 	
 	data.nodes[k] =  apeend_echolink(data.nodes[k],k);
 	
 	
-	//k=remove_notgouiltychar(k);
+	//k=remove_notguiltychar(k);
 
 	  var cirkel_string = "<i id=\"icon_"+printk+"\"  class=\"far fa-circle\"></i>";
 
@@ -836,14 +836,14 @@ for(var k in data.nodes){
 		          }
 		    		
 		    	
-	    		$('#row'+remove_notgouiltychar(k)+'').addClass("table-secondary");
-    			$('#row'+remove_notgouiltychar(k)+'').css('background-color', tg_colours[data.nodes[k].tg]["color"]);
-    			$('#row'+remove_notgouiltychar(k)+'').removeClass("table-secondary");
+	    		$('#row'+remove_notguiltychar(k)+'').addClass("table-secondary");
+    			$('#row'+remove_notguiltychar(k)+'').css('background-color', tg_colours[data.nodes[k].tg]["color"]);
+    			$('#row'+remove_notguiltychar(k)+'').removeClass("table-secondary");
 	    	}
 	    	else
 	    	{
-	    		$('#row'+remove_notgouiltychar(k)+'').css('background-color', "");
-	    		$('#row'+remove_notgouiltychar(k)+'').addClass("table-secondary");
+	    		$('#row'+remove_notguiltychar(k)+'').css('background-color', "");
+	    		$('#row'+remove_notguiltychar(k)+'').addClass("table-secondary");
 	    	}
 	    	
     		if(mqtt_station_array[k]  && mqtt_station_array[k]["RSSI"] != "-200")
@@ -854,16 +854,16 @@ for(var k in data.nodes){
     			$('#rssi_canas_'+printk).html(rssi_str1);
 
     			
-    			create_bar_rssi('bar_RSSI_'+remove_notgouiltychar(k));
+    			create_bar_rssi('bar_RSSI_'+remove_notguiltychar(k));
     			
     		}
 
     		
 	    	
-	    	create_bar('bar_'+remove_notgouiltychar(k));
+	    	create_bar('bar_'+remove_notguiltychar(k));
 	    	
 
-    		//create_bar_rssi('bar_RSSI_'+remove_notgouiltychar(k));
+    		//create_bar_rssi('bar_RSSI_'+remove_notguiltychar(k));
 	    	
     	 }
     	 else
@@ -999,15 +999,15 @@ for(var k in data.nodes){
           //console.log('bar_'+printk+'_'+qth_name+qth1);
 
     
-     	  if(document.getElementById('row'+remove_notgouiltychar(name_id)))
+     	  if(document.getElementById('row'+remove_notguiltychar(name_id)))
      	  {
 
 
   
               qth_html_add ='<td>'+sub_icon+'</td><td>'+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="1" id="td'+k+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas></p> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td>';
-              $('#row'+remove_notgouiltychar(name_id)).html(qth_html_add);
-              $('#row'+remove_notgouiltychar(name_id)).addClass("class_row");
-              $('#row'+remove_notgouiltychar(name_id)).addClass("normal_pounter");
+              $('#row'+remove_notguiltychar(name_id)).html(qth_html_add);
+              $('#row'+remove_notguiltychar(name_id)).addClass("class_row");
+              $('#row'+remove_notguiltychar(name_id)).addClass("normal_pounter");
               
   
               
@@ -1032,7 +1032,7 @@ for(var k in data.nodes){
               $('#group-of-'+printk).append(qth_html_add);
    
               //$('#Reflectortable').append(qth_html_add);
-              $('#row'+remove_notgouiltychar(name_id)+'').removeClass("class_row");
+              $('#row'+remove_notguiltychar(name_id)+'').removeClass("class_row");
               
               counter_tbody++;
      

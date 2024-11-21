@@ -58,7 +58,7 @@ function check_last_time($call) {
 }
 
 
-function wrie_to_cache($json) {
+function write_to_cache($json) {
     global $file;
     $myfile = fopen($file, "w");
     fwrite($myfile, $json);
@@ -90,7 +90,7 @@ $json = json_decode($json_data);
 if(read_cache() != $json_data)
 {
     echo "write data!";
-    wrie_to_cache($json_data);
+    write_to_cache($json_data);
     mysqli_set_charset($conn,"utf8");
     
     $sql ="SELECT `Callsign` FROM ReflectorStations";
@@ -177,7 +177,7 @@ if(read_cache() != $json_data)
                             if(@$Rx->siglev == null)
                                 $Rx->siglev =0;
         
-                        echo $key." Node ". $station."-> is Talker". $Rx->siglev;
+                        echo $key." Node ". $station."-> Is talking". $Rx->siglev;
                         
                         $sql_insert = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`, `Time`,`Nodename`,`Talktime`) 
                                        VALUES (NULL, '$key', '2', '".$Rx->active."', '$value->tg', '$station', '".$Rx->siglev."', '0', '1', CURRENT_TIMESTAMP,'".$qth_value->name."','0');";

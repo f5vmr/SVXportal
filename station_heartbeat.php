@@ -136,7 +136,7 @@ function send_mail($email,$node,$type)
 
 
 
-function wrie_to_cache($json) {
+function write_to_cache($json) {
     global $file;
     $myfile = fopen($file, "w");
     fwrite($myfile, $json);
@@ -168,7 +168,7 @@ $json = json_decode($json_data);
 
 
     echo "check data to write!";
-    wrie_to_cache($json_data);
+    write_to_cache($json_data);
     mysqli_set_charset($conn,"utf8");
     
     $sql ="SELECT `Callsign` FROM ReflectorStations where  Monitor=1";

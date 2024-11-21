@@ -234,7 +234,7 @@ msgid "- Select station -"
 msgstr "- Виберіть станцію -"
 
 #: admin/get_users.php:32 admin/users.php:277
-msgid "User granded"
+msgid "User granted"
 msgstr "Користувачу надано"
 
 #: admin/get_users.php:48 admin/users.php:292
@@ -242,7 +242,7 @@ msgid "Read only"
 msgstr "Тільки читання"
 
 #: admin/get_users.php:59 admin/users.php:302
-msgid "User not granded"
+msgid "User not granted"
 msgstr "Користувачу не надано"
 
 #: admin/log.php:89 log.php:155
@@ -278,7 +278,7 @@ msgid "Event"
 msgstr "Подія"
 
 #: admin/log.php:237 log.php:344
-msgid "is Talker on tg"
+msgid "Is talking on tg"
 msgstr "Активний в TG"
 
 #: admin/log.php:239
@@ -914,7 +914,7 @@ msgid "Action menu"
 msgstr "Дії"
 
 #: index.php:1628 index1.php:253 index_old.php:209 indexa.php:210
-msgid "Is talker"
+msgid "Is talking"
 msgstr "Активна"
 
 #: index.php:1628 index1.php:253 index_old.php:209 indexa.php:210

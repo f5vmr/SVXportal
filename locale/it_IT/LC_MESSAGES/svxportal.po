@@ -81,7 +81,7 @@ msgid "TG"
 msgstr "TG"
 
 #: index.php:189
-msgid "Is talker"
+msgid "Is talking"
 msgstr "In trasmissione"
 
 #: index.php:189
@@ -377,7 +377,7 @@ msgid "Event"
 msgstr "Eventi"
 
 #: log.php:113
-msgid "is Talker on tg"
+msgid "Is talking on tg"
 msgstr "Trasmissione sul TG"
 
 #: log.php:115

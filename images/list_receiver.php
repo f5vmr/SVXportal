@@ -40,7 +40,7 @@ function random_css_colour()
 
 $(document).ready(function(){
 	add_header();
-	generate_coulor();
+	generate_colour();
 	call_svxreflector();
 
 });
@@ -55,7 +55,7 @@ function add_header()
 	$('#Reflectortable').html('<thead class="thead-dark"><tr><th scope="col" class="col-xs-2 text-left" ><?php echo _('Callsign')?> &emsp;&emsp;&emsp;&emsp;</th><th scope="col" class="col-xs-1" >Location</th><th scope="col" class="col-xs-1 text-left"><?php echo _('TG')?></th><th scope="col" class="col-xs-1"></th><th scope="col" class="col-xs-2">Receiver</th><th scope="col" class="col-xs-1"><?php echo _('Signal')?></th><th scope="col" class="col-xs-2"><?php echo _('Frequency')?></th><th class="col-xs-2"><?php echo _('Talk time')?></th></tr></thead>');
  	
 }
-function remove_notgouiltychar(string)
+function remove_notguiltychar(string)
 {
 	string= string.replace("(", "");
 	string= string.replace(")", "");
@@ -65,7 +65,7 @@ function remove_notgouiltychar(string)
 	return string;
 }
 
-function generate_coulor()
+function generate_colour()
 {
     $.getJSON( "<?php echo $serveraddress ?>", function( data ) {
     
@@ -175,9 +175,9 @@ for(var k in data.nodes){
 		conole.log("empty data");
 		break;
 	}
-	var printk =remove_notgouiltychar(k)
+	var printk =remove_notguiltychar(k)
 	
-	//k=remove_notgouiltychar(k);
+	//k=remove_notguiltychar(k);
 
 	
 	
@@ -233,17 +233,17 @@ for(var k in data.nodes){
 		          }
 		    		
 		    	
-	    		$('#row'+remove_notgouiltychar(k)+'').addClass("table-secondary");
-    			$('#row'+remove_notgouiltychar(k)+'').css('background-color', tg_colours[data.nodes[k].tg]["color"]);
-    			$('#row'+remove_notgouiltychar(k)+'').removeClass("table-secondary");
+	    		$('#row'+remove_notguiltychar(k)+'').addClass("table-secondary");
+    			$('#row'+remove_notguiltychar(k)+'').css('background-color', tg_colours[data.nodes[k].tg]["color"]);
+    			$('#row'+remove_notguiltychar(k)+'').removeClass("table-secondary");
 	    	}
 	    	else
 	    	{
-	    		$('#row'+remove_notgouiltychar(k)+'').css('background-color', "");
-	    		$('#row'+remove_notgouiltychar(k)+'').addClass("table-secondary");
+	    		$('#row'+remove_notguiltychar(k)+'').css('background-color', "");
+	    		$('#row'+remove_notguiltychar(k)+'').addClass("table-secondary");
 	    	}
     		
-    		create_bar('bar_'+remove_notgouiltychar(k));
+    		create_bar('bar_'+remove_notguiltychar(k));
 	    	
     	 }
     	 else
@@ -309,12 +309,12 @@ for(var k in data.nodes){
            }
 
 
-     	  if(document.getElementById('row'+remove_notgouiltychar(name_id)))
+     	  if(document.getElementById('row'+remove_notguiltychar(name_id)))
      	  {
 
               qth_html_add ='<td> * '+qth_name+'</td><td></td><td></td><td colspan="1" id="td'+k+'_'+qth_name+'"><canvas id="bar_'+printk+'_'+qth_name+'"></canvas></p> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td>';
-              $('#row'+remove_notgouiltychar(name_id)).html(qth_html_add);
-              $('#row'+remove_notgouiltychar(name_id)).addClass("class_row");
+              $('#row'+remove_notguiltychar(name_id)).html(qth_html_add);
+              $('#row'+remove_notguiltychar(name_id)).addClass("class_row");
               
               
               //create_bar('bar_'+k);
@@ -323,7 +323,7 @@ for(var k in data.nodes){
      	  {
               qth_html_add ='<tbody id="group-of-'+printk+'" class="collapse"><tr class="table-striped  '+class_row+' table-borderless" id="row'+name_id+'"  ><td> * '+qth_name+'</td><td></td><td></td><td colspan="" id="td'+printk+'_'+qth_name+'"><canvas id="bar_'+printk+'_'+qth_name+'"></canvas> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td></tr></tbody>';
               $('#Reflectortable').append(qth_html_add);
-              $('#row'+remove_notgouiltychar(name_id)+'').removeClass("class_row");
+              $('#row'+remove_notguiltychar(name_id)+'').removeClass("class_row");
               
      	  }
           

@@ -16,7 +16,7 @@ function create_user()
     		alert("<?php echo _('User created sucsessfully!')?>")
     		$("#create_user_div").hide();
     		$('#create_user_form').trigger("reset");
-    		reaload_user_table();
+    		reload_user_table();
     		
     
     	});
@@ -31,7 +31,7 @@ function Delete_user(id)
 	if( confirm("<?php echo _('Please confirm user removal')?>") == true )
     	$.post( "admin/user_action.php",  { userdel: "1", userid: id } )
     	.done(function( data ) {
-    		reaload_user_table();
+    		reload_user_table();
     
     	});
 	
@@ -39,7 +39,7 @@ function Delete_user(id)
 
 	return false;
 }
-function chahge_password(id)
+function change_password(id)
 {
 
 
@@ -48,7 +48,7 @@ function chahge_password(id)
 	return false;
 }
 
-function chahge_premmision(station,id)
+function change_permission(station,id)
 {
 
 
@@ -70,7 +70,7 @@ function update_password()
     	$.post( "admin/user_action.php", $( "#update_password" ).serialize() )
     	.done(function( data ) {
     		alert("<?php echo _('Password is updated!')?>")
-    		reaload_user_table();
+    		reload_user_table();
     		$('#myModal').modal('toggle'); 
 
     
@@ -85,7 +85,7 @@ function update_permission()
     	$.post( "admin/user_action.php", $( "#set_permission" ).serialize() )
     	.done(function( data ) {
     		alert("<?php echo _('Permission is updated!')?>")
-    		reaload_user_table();
+    		reload_user_table();
     		$('#Permission').modal('toggle'); 
 
     
@@ -100,7 +100,7 @@ function user_c()
 	$("#create_user_div").toggle()
 	
 }
-function reaload_user_table()
+function reload_user_table()
 {
 	$.get( "admin/get_users.php", function( data ) {
 
@@ -290,9 +290,9 @@ function expand_image(image)
       <td><?php echo _('No')?></td>
     <?php }?>
 <td>
-<select  name="station" class="form-control" id="station_permission" onchange="chahge_premmision(this.value,<?php echo $row['id']?>)">
+<select  name="station" class="form-control" id="station_permission" onchange="change_permission(this.value,<?php echo $row['id']?>)">
  <option value=""> <?php echo _('- Select station -')?></option>
-  <optgroup label="<?php echo _('User granded');?>">
+  <optgroup label="<?php echo _('User granted');?>">
   
 <?php 
 $user_id= $row['id'];
@@ -317,7 +317,7 @@ while ($row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC))
 ?>
     <option value="<?php echo $row1['ID'];?>"> <?php echo $row1['Callsign'].'' .$rostr;?> </option>
 <?php }?>
-   <optgroup label="<?php echo _('User not granded'); ?>">
+   <optgroup label="<?php echo _('User not granted'); ?>">
    
 <?php 
 $idin= join(",",$idarray);
@@ -343,7 +343,7 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC))
 
   
      </td>
-      <td><i class="fas fa-trash" onclick="Delete_user(<?php echo $row['id']?>)"></i> <i onclick="chahge_password(<?php echo $row['id']?>)" class="fas fa-key"></i> </td>
+      <td><i class="fas fa-trash" onclick="Delete_user(<?php echo $row['id']?>)"></i> <i onclick="change_password(<?php echo $row['id']?>)" class="fas fa-key"></i> </td>
       </tr>
       
       
@@ -403,7 +403,7 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC))
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reaload_user_table();"><?php echo _('Close')?></button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="reload_user_table();"><?php echo _('Close')?></button>
         <button type="submit" class="btn btn-default"><?php echo _('Update')?></button>
       </div>
       

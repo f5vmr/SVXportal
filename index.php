@@ -217,7 +217,7 @@ $(document).ready(function(){
     $.getJSON( "<?php echo $serveraddress ?>", function( data ) 
     {
     	reflector_init_data=data;
-    	generate_coulor(reflector_init_data);
+    	generate_colour(reflector_init_data);
     	
     });
     
@@ -385,10 +385,10 @@ $.post( "signal.php", { time: (TotaltimeTime-currentTime), file: event.jPlayer.s
     
     $('#signalpressent').html(Json_data.Siglev);
 
-		for(var k in Json_data.Subreciver){
+		for(var k in Json_data.Subreceiver){
 
-			$('#Reciverbars_player').append('<p>'+Json_data.Subreciver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
-			create_bar_rx(Json_data.Subreciver[k]['Siglev'],'canvp'+k,false);
+			$('#Reciverbars_player').append('<p>'+Json_data.Subreceiver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
+			create_bar_rx(Json_data.Subreceiver[k]['Siglev'],'canvp'+k,false);
 			
 		}
 
@@ -1018,7 +1018,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 }
 
 var tg_colours = new Array();
-function generate_coulor(data)
+function generate_colour(data)
 {
 
 	//$.getJSON( "<?php echo $serveraddress ?>", function( data ) {
@@ -1528,7 +1528,7 @@ if($_SESSION['loginid'] && USE_NODE_ADMIN_NOTIFICATION == 1)
 	});
 
 	
-	instervalls = setTimeout(request_notification, 20000);
+	intervals = setTimeout(request_notification, 20000);
 <?php }?>
 }
 
@@ -2016,7 +2016,7 @@ ul.dropdown-lr {
                     	<div id="Reflectortable_div"> 
 					<table id="Reflectortable" class="table table-sm">
 					<thead>
-					<tr class="dash_header"><th><?php echo _("Callsign")?></th><th class="text-nowrap"><?php echo _("TG#")?></th><th class="text-nowrap"><?php echo _("Is talker")?></th><th><?php echo _("Monitored TGs")?></th><th class="d-none d-md-table-cell text-nowrap" ><?php echo _("Start talk")?></th><th class="d-none d-md-table-cell text-nowrap" ><?php echo _("Talk time")?></th></tr>
+					<tr class="dash_header"><th><?php echo _("Callsign")?></th><th class="text-nowrap"><?php echo _("TG#")?></th><th class="text-nowrap"><?php echo _("Is talking")?></th><th><?php echo _("Monitored TGs")?></th><th class="d-none d-md-table-cell text-nowrap" ><?php echo _("Start talk")?></th><th class="d-none d-md-table-cell text-nowrap" ><?php echo _("Talk time")?></th></tr>
 					</thead>
 					<tbody>
 					</tbody>
@@ -2592,14 +2592,14 @@ $result = mysqli_query($link, "SELECT * FROM `filter`");
 
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-    // echo '<a class="dropdown-item" onclick="prosess_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Namn'] . '</a>';
+    // echo '<a class="dropdown-item" onclick="process_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Name'] . '</a>';
 }
 ?>
 		  
 		  <a class="dropdown-item" onclick="map.overlays_.clear();" href="#"><i class="fas fa-minus-circle"></i> <?php echo _("Remove bars")?> </a> <a class="dropdown-item"
 											onclick="vectorSource.clear();Barsource.clear();map.overlays_.clear();"
 											href="#"><i class="fas fa-minus-circle"></i> <?php echo _("Remove ALL stations")?></a> <a class="dropdown-item"
-											onclick="prosess_json_reflecktor();" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Show Receivers")?></a>
+											onclick="process_json_reflector();" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Show Receivers")?></a>
 											
 											
 											<?php 
@@ -3098,8 +3098,8 @@ function connect_reflector()
 
 	setTimeout(function(){
 		add_tx_station();
-		// add recivers on start
-		//prosess_json_reflecktor();
+		// add receivers on start
+		//process_json_reflector();
 
 
 
@@ -3304,7 +3304,7 @@ function add_repeater_transmitter(lat, lon,label,idn,tg)
 	//addtext(0,lat, lon,idn);
 
 }
-var instervalls;
+var intervals;
 
 function hueToRgb (p, q, t) 
 {
@@ -3403,7 +3403,7 @@ var  map_lon_lat = new Array();
 var map_pos_i=0;
 
 
-function prosess_json_reflecktor()
+function process_json_reflector()
 {
 
   $.getJSON("<?php echo $serveraddress ?>", function(data){
@@ -3605,7 +3605,7 @@ function get_year_static()
 		  $("#toplist_table tbody").html("");
 		  for(var top in json_data_year.Toplist)
 		  {
-			  $("#toplist_table tbody").append("<tr><td>"+json_data_year.Toplist[top]['day']+"</td><td>"+json_data_year.Toplist[top]['Secound']+"</td></tr>");
+			  $("#toplist_table tbody").append("<tr><td>"+json_data_year.Toplist[top]['day']+"</td><td>"+json_data_year.Toplist[top]['Second']+"</td></tr>");
 
 		  }
 
@@ -4523,13 +4523,13 @@ function get_station_chat_mo()
 {
 
 	
-	$('#Graph_Cricle_mo_holder').html("");
-	$('#Graph_Cricle_mo_holder').html('<canvas id="Graph_Cricle_mo" width="400px" height="600px"></canvas>');
+	$('#Graph_Circle_mo_holder').html("");
+	$('#Graph_Circle_mo_holder').html('<canvas id="Graph_Circle_mo" width="400px" height="600px"></canvas>');
 
 	
-	var canvas = document.getElementById('Graph_Cricle_mo')
+	var canvas = document.getElementById('Graph_Circle_mo')
 	canvas.width = canvas.width; 
-	var ctx = document.getElementById('Graph_Cricle_mo').getContext('2d');
+	var ctx = document.getElementById('Graph_Circle_mo').getContext('2d');
 	var barDatafromJSON;
 	var date_value = $('#Datepicker_graph').val();
 	var Stations = new Array();
@@ -4566,9 +4566,9 @@ function get_station_chat_mo()
 			  }
 			  var preccent= (((Stations_json.data[j].time)/(86400*30)) * 100).toFixed(3);
 			  total_present=total_present+parseFloat(preccent);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_secounds) * 100).toFixed(3);
+			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Secound+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
+			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
 			  j++;
 
 			 
@@ -4644,13 +4644,13 @@ function get_station_chat_year()
 {
 
 	
-	$('#Graph_Cricle_year_holder').html("");
-	$('#Graph_Cricle_year_holder').html('<canvas id="Graph_Cricle_year" width="400px" height="600px"></canvas>');
+	$('#Graph_Circle_year_holder').html("");
+	$('#Graph_Circle_year_holder').html('<canvas id="Graph_Circle_year" width="400px" height="600px"></canvas>');
 
 	
-	var canvas = document.getElementById('Graph_Cricle_year')
+	var canvas = document.getElementById('Graph_Circle_year')
 	canvas.width = canvas.width; 
-	var ctx = document.getElementById('Graph_Cricle_year').getContext('2d');
+	var ctx = document.getElementById('Graph_Circle_year').getContext('2d');
 	var barDatafromJSON;
 	var date_value = $('#Datepicker_graph').val();
 	var Stations = new Array();
@@ -4687,9 +4687,9 @@ function get_station_chat_year()
 			  }
 			  var preccent= (((Stations_json.data[j].time)/(86400*365)) * 100).toFixed(3);
 			  total_present=total_present+parseFloat(preccent);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_secounds) * 100).toFixed(3);
+			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Secound+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
+			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
 			  j++;
 
 			 
@@ -4699,9 +4699,9 @@ function get_station_chat_year()
 		  $("#nodes_activity > thead ").html('<tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage year")?></th><th  class="d-none  d-md-table-cell"><?php echo _("Usage based on year")?></th><th class="d-none  d-md-table-cell"></tr>');
 
 		  
-		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(Stations_json.total_secounds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
+		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(Stations_json.total_seconds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
 		
-			console.log(Stations_json.total_secounds);
+			console.log(Stations_json.total_seconds);
 
 		    var data = {
 		    	    datasets: [{
@@ -4783,13 +4783,13 @@ function get_station_chat()
 {
 
 	
-	$('#Graph_Cricle_holder').html("");
-	$('#Graph_Cricle_holder').html('<canvas id="Graph_Cricle" width="400px" height="600px"></canvas>');
+	$('#Graph_Circle_holder').html("");
+	$('#Graph_Circle_holder').html('<canvas id="Graph_Circle" width="400px" height="600px"></canvas>');
 
 	
-	var canvas = document.getElementById('Graph_Cricle')
+	var canvas = document.getElementById('Graph_Circle')
 	canvas.width = canvas.width; 
-	var ctx = document.getElementById('Graph_Cricle').getContext('2d');
+	var ctx = document.getElementById('Graph_Circle').getContext('2d');
 	var barDatafromJSON;
 	var date_value = $('#Datepicker_graph').val();
 	var Stations = new Array();
@@ -4826,9 +4826,9 @@ function get_station_chat()
 			  }
 			  var preccent= (((Stations_json.data[j].time)/86400) * 100).toFixed(3);
 			  total_present=total_present+parseFloat(preccent);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_secounds) * 100).toFixed(3);
+			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Secound+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td><td  class=\"d-none  d-md-table-cell\">"+Stations_json.data[j].reciver+"</td></tr>");
+			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td><td  class=\"d-none  d-md-table-cell\">"+Stations_json.data[j].reciver+"</td></tr>");
 			  j++;
 
 			 
@@ -4943,7 +4943,7 @@ function secondsToDayHMS(seconds) {
 
 
 
-function prosess_json(url)
+function process_json(url)
 {
 
   $.getJSON(url, function(result){
@@ -4969,7 +4969,7 @@ function prosess_json(url)
 }
 // Crearl map and add station with filter
 
-function prosess_json_filter(url,filter)
+function process_json_filter(url,filter)
 {
 
   $.getJSON(url, function(result){
@@ -5405,7 +5405,7 @@ function update_tx_station_loop(data)
 
 //		});
 	//if(kill_loop == 0)
-	  //instervalls = setTimeout(update_tx_station_loop, 500);
+	  //intervals = setTimeout(update_tx_station_loop, 500);
 }
 
 
@@ -5892,8 +5892,8 @@ function fnExcelexport(table)
                     
                 	
                 	
-                		<div class="" id="Graph_Cricle_holder">
-                				<canvas id="Graph_Cricle" width="400px" height="400px"></canvas>
+                		<div class="" id="Graph_Circle_holder">
+                				<canvas id="Graph_Circle" width="400px" height="400px"></canvas>
                 		</div>	
                 		
                     </div>
@@ -6098,8 +6098,8 @@ function fnExcelexport(table)
    		 						</div>
             					<div class="card-body" style="min-height:540px;">
 
-        						<div class="" id="Graph_Cricle_mo_holder">
-        							<canvas id="Graph_Cricle_mo" width="400px" height="400px"></canvas>
+        						<div class="" id="Graph_Circle_mo_holder">
+        							<canvas id="Graph_Circle_mo" width="400px" height="400px"></canvas>
         						</div>	
         		
             				</div>
@@ -6286,8 +6286,8 @@ function fnExcelexport(table)
    		 						</div>
             					<div class="card-body" style="min-height:540px;">
 
-        						<div class="" id="Graph_Cricle_year_holder">
-        							<canvas id="Graph_Cricle_year" width="400px" height="400px"></canvas>
+        						<div class="" id="Graph_Circle_year_holder">
+        							<canvas id="Graph_Circle_year" width="400px" height="400px"></canvas>
         						</div>	
         		
             				</div>
