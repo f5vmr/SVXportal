@@ -353,7 +353,7 @@ msgstr ""
 msgid "Callsign"
 msgstr "Znak"
 
-#: admin/stations.php:163 ctcss_map_table.php:264 div_reciver.php:136
+#: admin/stations.php:163 ctcss_map_table.php:264 div_receiver2.php:136
 #: index.php:2597 index.php:2623 index1.php:1987 index_old.php:1303
 #: indexa.php:1304 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
@@ -471,7 +471,7 @@ msgstr "Tabela mapowań CTCSS"
 msgid "CTSS map table"
 msgstr "Tabela CTSS"
 
-#: ctcss_map_table.php:263 div_reciver.php:136 index.php:2625 index1.php:2014
+#: ctcss_map_table.php:263 div_receiver2.php:136 index.php:2625 index1.php:2014
 #: index_old.php:1330 indexa.php:1331 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Frequency"
@@ -559,32 +559,32 @@ msgstr "TinyMCE Cloud API KEY"
 msgid "\"Beta\" Node admin notfication"
 msgstr "Powiadomienia administratora \"beta\" node"
 
-#: div_reciver.php:8 edit_station.php:779 edit_station.php:810
+#: div_receiver2.php:8 edit_station.php:779 edit_station.php:810
 msgid "None"
 msgstr "Nic"
 
 # grammar for can be different based on context
-#: div_reciver.php:9 index.php:2319 index1.php:1712 index_old.php:1024
+#: div_receiver2.php:9 index.php:2319 index1.php:1712 index_old.php:1024
 #: indexa.php:1025 list_reciver_2.php:669 list_reciver_old.php:459
 msgid "All"
 msgstr "Wszystkie"
 
-#: div_reciver.php:127
+#: div_receiver2.php:127
 msgid "Signal values at"
 msgstr "Wartości sygnałów "
 
-#: div_reciver.php:136 list_reciver.php:84 list_reciver_2.php:58
+#: div_receiver2.php:136 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Receiver"
 msgstr "Odbiornik"
 
-#: div_reciver.php:136 index.php:2200 index1.php:1608 index_old.php:912
+#: div_receiver2.php:136 index.php:2200 index1.php:1608 index_old.php:912
 #: indexa.php:913 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Signal"
 msgstr "Sygnał"
 
-#: div_reciver.php:187
+#: div_receiver2.php:187
 #, fuzzy
 #| msgid "Mhz"
 msgid "MHz"

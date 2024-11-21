@@ -427,7 +427,7 @@ msgstr "CTCSS-Kartentabelle"
 msgid "CTSS map table"
 msgstr "CTSS-Kartentabelle"
 
-#: ctcss_map_table.php:251 div_reciver.php:94 index.php:2273 index1.php:2014
+#: ctcss_map_table.php:251 div_receiver2.php:94 index.php:2273 index1.php:2014
 #: index_old.php:1330 indexa.php:1331 list_reciver.php:57 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Frequency"
@@ -497,28 +497,28 @@ msgstr "Farbe"
 msgid "Hide the Monitor bar"
 msgstr "Blenden Sie die Monitorleiste aus"
 
-#: div_reciver.php:8 index.php:1971 index1.php:1712 index_old.php:1024
+#: div_receiver2.php:8 index.php:1971 index1.php:1712 index_old.php:1024
 #: indexa.php:1025 list_reciver.php:1097 list_reciver_2.php:669
 #: list_reciver_old.php:459
 msgid "All"
 msgstr "Alles"
 
-#: div_reciver.php:85
+#: div_receiver2.php:85
 msgid "Signal values at"
 msgstr "Signalwerte bei"
 
-#: div_reciver.php:94 list_reciver.php:57 list_reciver_2.php:58
+#: div_receiver2.php:94 list_reciver.php:57 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Receiver"
 msgstr "Funkempfänger"
 
-#: div_reciver.php:94 index.php:1867 index1.php:1608 index_old.php:912
+#: div_receiver2.php:94 index.php:1867 index1.php:1608 index_old.php:912
 #: indexa.php:913 list_reciver.php:57 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Signal"
 msgstr "Signal"
 
-#: div_reciver.php:131
+#: div_receiver2.php:131
 msgid "Mhz"
 msgstr "Mhz"
 

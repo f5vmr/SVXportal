@@ -27,7 +27,7 @@ msgstr "Tabella CTSS  "
 msgid "Callsign"
 msgstr "Nominativo"
 
-#: ctcss_map_table.php:200 div_reciver.php:94 index.php:1134
+#: ctcss_map_table.php:200 div_receiver2.php:94 index.php:1134
 #: list_reciver.php:55
 msgid "Frequency"
 msgstr "Frequenza"
@@ -56,23 +56,23 @@ msgstr "Usa l'ultimo carattere in chiamata"
 msgid "Export"
 msgstr "Еsporta"
 
-#: div_reciver.php:8 index.php:880 list_reciver.php:455
+#: div_receiver2.php:8 index.php:880 list_reciver.php:455
 msgid "All"
 msgstr "Tutti"
 
-#: div_reciver.php:85
+#: div_receiver2.php:85
 msgid "Signal values at"
 msgstr "Livello segnale del "
 
-#: div_reciver.php:94 list_reciver.php:55
+#: div_receiver2.php:94 list_reciver.php:55
 msgid "Receiver"
 msgstr "Ricevitori"
 
-#: div_reciver.php:94 index.php:773 list_reciver.php:55
+#: div_receiver2.php:94 index.php:773 list_reciver.php:55
 msgid "Signal"
 msgstr "Segnale"
 
-#: div_reciver.php:131
+#: div_receiver2.php:131
 msgid "Mhz"
 msgstr "Mhz"
 

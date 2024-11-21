@@ -51,7 +51,7 @@ set_laguage();
 <!--load all styles -->
 <script src="./js/chart/Chart.min.js"></script>
 <script src="./js/div_recivers.js"></script>
-<?php include "div_reciver.php";?>
+<?php include "div_receiver2.php";?>
 
 
 <script type="text/javascript">

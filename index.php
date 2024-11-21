@@ -59,7 +59,7 @@ set_laguage();
 
 
 
-<?php include "div_reciver.php";?>
+<?php include "div_receiver2.php";?>
 
 
 <script type="text/javascript">

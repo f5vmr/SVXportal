@@ -345,7 +345,7 @@ msgstr "Inloggning"
 msgid "Callsign"
 msgstr "Anropsignal"
 
-#: admin/stations.php:92 ctcss_map_table.php:255 div_reciver.php:136
+#: admin/stations.php:92 ctcss_map_table.php:255 div_receiver2.php:136
 #: index.php:2568 index.php:2594 index1.php:1987 index_old.php:1303
 #: indexa.php:1304 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
@@ -444,7 +444,7 @@ msgstr "CTCSS Mappning"
 msgid "CTSS map table"
 msgstr "CTCSS tabell"
 
-#: ctcss_map_table.php:254 div_reciver.php:136 index.php:2596 index1.php:2014
+#: ctcss_map_table.php:254 div_receiver2.php:136 index.php:2596 index1.php:2014
 #: index_old.php:1330 indexa.php:1331 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Frequency"
@@ -530,31 +530,31 @@ msgstr ""
 msgid "\"Beta\" Node admin notfication"
 msgstr "Nodadministrat�rsmeddelande "
 
-#: div_reciver.php:8 edit_station.php:808 edit_station.php:839
+#: div_receiver2.php:8 edit_station.php:808 edit_station.php:839
 msgid "None"
 msgstr "Ingen"
 
-#: div_reciver.php:9 index.php:2295 index1.php:1712 index_old.php:1024
+#: div_receiver2.php:9 index.php:2295 index1.php:1712 index_old.php:1024
 #: indexa.php:1025 list_reciver_2.php:669 list_reciver_old.php:459
 msgid "All"
 msgstr "Alla"
 
-#: div_reciver.php:127
+#: div_receiver2.php:127
 msgid "Signal values at"
 msgstr "Signalv�rde fr�n mottagaren"
 
-#: div_reciver.php:136 list_reciver.php:84 list_reciver_2.php:58
+#: div_receiver2.php:136 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Receiver"
 msgstr "Mottagare"
 
-#: div_reciver.php:136 index.php:2176 index1.php:1608 index_old.php:912
+#: div_receiver2.php:136 index.php:2176 index1.php:1608 index_old.php:912
 #: indexa.php:913 list_reciver.php:84 list_reciver_2.php:58
 #: list_reciver_old.php:55
 msgid "Signal"
 msgstr "Signal"
 
-#: div_reciver.php:187
+#: div_receiver2.php:187
 msgid "MHz"
 msgstr "MHz"
 
