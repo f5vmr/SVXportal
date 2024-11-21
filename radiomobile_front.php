@@ -1,4 +1,5 @@
 <?php
+
 include "config.php";
 include 'function.php';
 define_settings();

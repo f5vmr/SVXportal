@@ -1,0 +1,14 @@
+<?php
+define('SYSTEM_MAIL','');
+define('REFLECTOR_SERVER_ADDRESS','');
+define('REFLECTOR_SERVER_PORT','');
+define('EOT','');
+define('PORTAL_VERSION','');
+define('API_KEY_TINY_CLOUD','');
+define('USE_NODE_ADMIN_NOTIFICATION','');
+define('USE_CUSTOM_SIDEBAR_HEADER','');
+define('HIDE_LANGUAGE_BAR','');
+define('HIDE_MONITOR_BAR','');
+define('USE_LOGIN','');
+define('USE_EXTERNAL_URL','');
+define('PLAYER_TALKGROUP_DEFAULT','');

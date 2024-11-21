@@ -2,7 +2,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-include "config.php";
+include "system_config.php"; include "config.php";
 set_time_limit(10000);
 
 ini_set('mysql.connect_timeout','0');

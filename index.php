@@ -1650,7 +1650,7 @@ ul.dropdown-lr {
   <div>
 
     			
-    <?php if(!USE_CUSTOM_SIDBAR_HEADER && USE_CUSTOM_SIDBAR_HEADER == 0)
+    <?php if(!USE_CUSTOM_SIDEBAR_HEADER && USE_CUSTOM_SIDEBAR_HEADER == 0)
     {?>
     
     
@@ -1699,7 +1699,7 @@ ul.dropdown-lr {
             <a class="nav-link d-none d-xl-inline-flex d-lg-inline-flex" href="#register" onclick="" data-toggle="tab"><i class="far fa-plus-square"  style="color: #fff; padding-top:5px" ></i>&nbsp;<?php echo _('Register');?></a>
             
             <?php }?>
-            <?php  if(HIDE_language_BAR == 0){?>
+            <?php  if(HIDE_LANGUAGE_BAR == 0){?>
     
           <li class="nav-item dropdown" style="color:#e1e3e9; ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

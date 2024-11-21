@@ -116,7 +116,7 @@ function send_mail($email,$node,$type)
     }
 
     
-    $to      = SYSMATER_MAIL;
+    $to      = SYSMASTER_MAIL;
     $headers = 'From: '.SYSTEM_MAIL.'' . "\r\n" .
         'Reply-To:'.SYSTEM_MAIL.'' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();

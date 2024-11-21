@@ -12,8 +12,8 @@ echo '<pre>';
 
 [ReflectorLogic]
 TYPE=Reflector
-HOST=<?php echo REFLEKTOR_SERVER_ADRESS?> 
-PORT=<?php echo REFLEKTOR_SERVER_PORT?> 
+HOST=<?php echo REFLECTOR_SERVER_ADDRESS?> 
+PORT=<?php echo REFLECTOR_SERVER_PORT?> 
 CALLSIGN=<?php echo $_POST['Callsign1a']?> 
 AUTH_KEY="<?php echo $_POST["password"]?>" 
 AUDIO_CODEC=OPUS

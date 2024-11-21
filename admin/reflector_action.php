@@ -154,10 +154,10 @@ define_settings();
             
             while($row = $result->fetch_assoc())
             {
-                $server =REFLEKTOR_SERVER_ADRESS;
+                $server =REFLECTOR_SERVER_ADDRESS;
                 $user =$row['user'];
                 $password = $row['password'];
-                $port =REFLEKTOR_SERVER_PORT;
+                $port =REFLECTOR_SERVER_PORT;
                 
                 $msg = "This mail contain login credntials for the svxreflektor \r\n";
                 $msg.="Server adress : $server       \r\n";

@@ -1,8 +1,8 @@
 SET autocommit = 0;
 start transaction;
 
-INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'REFLEKTOR_SERVER_ADRESS', '127.0.0.1', 'Server adresss to svxreflektor', '2'); 
-INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'REFLEKTOR_SERVER_PORT', '5300', 'Svxreflektor server port ', '2'); 
+INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'REFLECTOR_SERVER_ADDRESS', '127.0.0.1', 'Server adresss to svxreflektor', '2'); 
+INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'REFLECTOR_SERVER_PORT', '5300', 'Svxreflektor server port ', '2'); 
 ALTER TABLE `RefletorStations` ADD `Monitor` INT NOT NULL DEFAULT '1' AFTER `Station_Down_timmer_count`; 
 
 

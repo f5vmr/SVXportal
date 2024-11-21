@@ -172,17 +172,17 @@ CREATE TABLE `Settings` (
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES
 (1, 'PORTAL_VERSION', '2.4', 'protal version number ', 1),
-(2, 'HIDE_language_BAR', '0', 'Hide the language bar', 1),
-(3, 'USE_CUSTOM_SIDBAR_HEADER', '0', 'Use Custom header in sidebar', 1),
+(2, 'HIDE_LANGUAGE_BAR', '0', 'Hide the language bar', 1),
+(3, 'USE_CUSTOM_SIDEBAR_HEADER', '0', 'Use Custom header in sidebar', 1),
 (4, 'iframe_documentation_url', 'http://sk3w.se/dokuwiki/doku.php?id=svxreflector&do=export_xhtml', 'External dokumentation page', 2),
 (5, 'USE_LOGIN', '0', 'Use login for player', 1),
 (6, 'USE_EXTERNAL_URL', '1', 'Use external dokumentation page', 1),
 (7, 'PLAYER_TALKGROUP_DEFAULT', '240', 'The default talkgroup for Recording statistic', 2),
 (8, 'SEND_MAIL_TO_SYSOP', '0', 'Send an email to sysop when the node goes down', 1),
-(9, 'SYSMATER_MAIL', 'info@a.se', 'Mail to system administrator', 2),
+(9, 'SYSMASTER_MAIL', 'info@a.se', 'Mail to system administrator', 2),
 (10, 'SYSTEM_MAIL', 'info@a.se', 'E-mail adress for the system', 2),
-(11, 'REFLEKTOR_SERVER_ADRESS', '127.0.0.1', 'Server adresss to svxreflektor', 2),
-(12, 'REFLEKTOR_SERVER_PORT', '5300', 'Svxreflektor server port ', 2),
+(11, 'REFLECTOR_SERVER_ADDRESS', '127.0.0.1', 'Server adresss to svxreflektor', 2),
+(12, 'REFLECTOR_SERVER_PORT', '5300', 'Svxreflektor server port ', 2),
 (13, 'API_KEY_TINY_CLOUD', 'no-api', 'TinyMCE Cloud API KEY', 2),
 (14, 'HIDE_MONITOR_BAR', '0', ' Hide the Monitor bar', 1),
 (15, 'USE_NODE_ADMIN_NOTIFICATION', '0', '\"Beta\" Node admin notfication', 1);
