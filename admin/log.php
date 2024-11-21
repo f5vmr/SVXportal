@@ -1,7 +1,7 @@
 <?php
 include_once '../config.php';
 include_once '../function.php';
-set_laguage();
+set_language();
 $last_id = $_GET['id'];
 if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
     

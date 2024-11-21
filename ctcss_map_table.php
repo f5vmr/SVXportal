@@ -154,7 +154,7 @@ var_dump($station_array);
 ?>
 
 <?php 
-set_laguage();
+set_language();
 
 $noheader =$_GET['NOHEAD'];
 

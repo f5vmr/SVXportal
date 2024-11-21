@@ -2,7 +2,7 @@
 include 'config.php';
 $link->set_charset("utf8");
 include 'function.php';
-set_laguage();
+set_language();
 
 
 ?>

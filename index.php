@@ -4,7 +4,7 @@ include "config.php";
 include 'function.php';
 include "Mqtt_driver.php";
 define_settings();
-set_laguage();
+set_language();
 
 ?>
 <?php $start_time = microtime(true); ?>

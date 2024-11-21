@@ -1,7 +1,7 @@
 <?php
 include_once '../config.php';
 include_once '../function.php';
-set_laguage();
+set_language();
 
 
 

@@ -4,7 +4,7 @@ include_once 'function.php';
 $svx_folder="./svxrecording/";
 $site_adress="";
 session_start();
-set_laguage();
+set_language();
 function check_login()
 {
     // Start the session

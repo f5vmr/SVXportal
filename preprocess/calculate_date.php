@@ -4,7 +4,7 @@ include '../config.php';
 $link->set_charset("utf8");
 include '../function.php';
 define_settings();
-set_laguage();
+set_language();
 
 $link-> options(MYSQLI_OPT_CONNECT_TIMEOUT, 86400);
 

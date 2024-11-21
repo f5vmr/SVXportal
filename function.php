@@ -1,7 +1,7 @@
 <?php
 session_start();
 $current_lagnuge="";
-function set_laguage() {
+function set_language() {
     global $current_lagnuge;
     // Check if gettext is enable
     if(!function_exists("gettext")) die("gettext is not enable");

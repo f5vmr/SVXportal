@@ -2,7 +2,7 @@
 include "config.php";
 include 'function.php';
 define_settings();
-set_laguage();
+set_language();
 
 mysqli_set_charset($link,"utf8");
 

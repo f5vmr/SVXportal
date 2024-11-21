@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 include 'function.php';
-set_laguage();
+set_language();
 
 $json_array=array();
 function secondsToDHMS($seconds) {

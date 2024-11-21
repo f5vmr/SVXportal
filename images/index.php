@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: <?php echo $serveradress ?>');
 include "config.php";
 include 'function.php';
 
-set_laguage();
+set_language();
 
 
 ?>

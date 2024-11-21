@@ -7,7 +7,7 @@ if($_SESSION['language'])
     
     $lang = $_SESSION['language'];
 }
-set_laguage();
+set_language();
 // destroy the session
 session_destroy(); 
 session_start();
