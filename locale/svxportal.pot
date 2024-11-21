@@ -1019,7 +1019,7 @@ msgid "Signal value  from Reciver"
 msgstr ""
 
 #: index.php:1752 index1.php:1710 index_old.php:1022 indexa.php:1023
-msgid "Filter"
+msgid "filter"
 msgstr ""
 
 #: index.php:1819 index1.php:1777 index_old.php:1097 indexa.php:1098
@@ -1199,7 +1199,7 @@ msgid "Hour chart"
 msgstr ""
 
 #: index.php:4143 index1.php:4101 index_old.php:3142 indexa.php:3143
-msgid "No Repeater Filter"
+msgid "No Repeater filter"
 msgstr ""
 
 #: index.php:4144 index1.php:4102 index_old.php:3143 indexa.php:3144
@@ -1208,7 +1208,7 @@ msgstr ""
 
 #: index.php:4176 index1.php:4134 index_old.php:3160 indexa.php:3161
 #: request_reflector_login.php:1018
-msgid "No Talkgroup Filter"
+msgid "No Talkgroup filter"
 msgstr ""
 
 #: index.php:4233 index1.php:4191 index_old.php:3195 indexa.php:3196

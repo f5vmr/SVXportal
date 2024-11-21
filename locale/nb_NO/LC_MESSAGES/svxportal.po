@@ -419,11 +419,11 @@ msgstr "Skrivetilgang"
 
 #: ctcss_map_table.php:197
 msgid "CTCSS Map table"
-msgstr "CTCSS Karttabell"
+msgstr "CTCSS Karttable"
 
 #: ctcss_map_table.php:208
 msgid "CTSS map table"
-msgstr "CTSS-tabell"
+msgstr "CTSS-table"
 
 #: ctcss_map_table.php:251 div_receiver2.php:94 index.php:2273 index1.php:2014
 #: index_old.php:1330 indexa.php:1331 list_receiver.php:57 list_receiver_2.php:58
@@ -937,7 +937,7 @@ msgstr "Mottager"
 
 #: index.php:1533 index1.php:1278 index_old.php:685 indexa.php:686
 msgid "CTCSS map table"
-msgstr "CTCSS-tabell"
+msgstr "CTCSS-table"
 
 #: index.php:1537 index1.php:1282
 msgid "My stations"
@@ -1036,8 +1036,8 @@ msgstr "Signalverdi fra mottager"
 
 #: index.php:1969 index1.php:1710 index_old.php:1022 indexa.php:1023
 #: log.php:173
-msgid "Filter"
-msgstr "Filter"
+msgid "filter"
+msgstr "filter"
 
 #: index.php:2036 index1.php:1777 index_old.php:1097 indexa.php:1098
 msgid "Talkgroup Name"
@@ -1213,10 +1213,10 @@ msgstr "År"
 
 #: index.php:4333 index1.php:4069
 msgid "Hour chart"
-msgstr "Timetabell"
+msgstr "Timetable"
 
 #: index.php:4365 index1.php:4101 index_old.php:3142 indexa.php:3143
-msgid "No Repeater Filter"
+msgid "No Repeater filter"
 msgstr "ingen valgt repeater"
 
 #: index.php:4366 index1.php:4102 index_old.php:3143 indexa.php:3144
@@ -1225,7 +1225,7 @@ msgstr "Repeater"
 
 #: index.php:4398 index1.php:4134 index_old.php:3160 indexa.php:3161
 #: request_reflector_login.php:1034
-msgid "No Talkgroup Filter"
+msgid "No Talkgroup filter"
 msgstr "Ingen valgt tallgruppe"
 
 #: index.php:4455 index1.php:4191 index_old.php:3195 indexa.php:3196

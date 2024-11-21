@@ -668,7 +668,7 @@ var i,
 		"*\\]",
 
 	pseudos = ":(" + identifier + ")(?:\\((" +
-		// To reduce the number of selectors needing tokenize in the preFilter, prefer arguments:
+		// To reduce the number of selectors needing tokenize in the prefilter, prefer arguments:
 		// 1. quoted (capture 3; capture 4 or capture 5)
 		"('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|" +
 		// 2. simple (capture 6)
@@ -1176,7 +1176,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 				// By happy coincidence, a (broken) gEBTN appears on DocumentFragment nodes too
 				results = context.getElementsByTagName( tag );
 
-			// Filter out possible comments
+			// filter out possible comments
 			if ( tag === "*" ) {
 				while ( (elem = results[i++]) ) {
 					if ( elem.nodeType === 1 ) {
@@ -1590,7 +1590,7 @@ Expr = Sizzle.selectors = {
 		"~": { dir: "previousSibling" }
 	},
 
-	preFilter: {
+	prefilter: {
 		"ATTR": function( match ) {
 			match[1] = match[1].replace( runescape, funescape );
 
@@ -1843,9 +1843,9 @@ Expr = Sizzle.selectors = {
 			// pseudo-class names are case-insensitive
 			// http://www.w3.org/TR/selectors/#pseudo-classes
 			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
-			// Remember that setFilters inherits from pseudos
+			// Remember that setfilters inherits from pseudos
 			var args,
-				fn = Expr.pseudos[ pseudo ] || Expr.setFilters[ pseudo.toLowerCase() ] ||
+				fn = Expr.pseudos[ pseudo ] || Expr.setfilters[ pseudo.toLowerCase() ] ||
 					Sizzle.error( "unsupported pseudo: " + pseudo );
 
 			// The user may use createPseudo to indicate that
@@ -1858,7 +1858,7 @@ Expr = Sizzle.selectors = {
 			// But maintain support for old signatures
 			if ( fn.length > 1 ) {
 				args = [ pseudo, pseudo, "", argument ];
-				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
+				return Expr.setfilters.hasOwnProperty( pseudo.toLowerCase() ) ?
 					markFunction(function( seed, matches ) {
 						var idx,
 							matched = fn( seed, argument ),
@@ -2089,14 +2089,14 @@ for ( i in { submit: true, reset: true } ) {
 	Expr.pseudos[ i ] = createButtonPseudo( i );
 }
 
-// Easy API for creating new setFilters
-function setFilters() {}
-setFilters.prototype = Expr.filters = Expr.pseudos;
-Expr.setFilters = new setFilters();
+// Easy API for creating new setfilters
+function setfilters() {}
+setfilters.prototype = Expr.filters = Expr.pseudos;
+Expr.setfilters = new setfilters();
 
 tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 	var matched, match, tokens, type,
-		soFar, groups, preFilters,
+		soFar, groups, prefilters,
 		cached = tokenCache[ selector + " " ];
 
 	if ( cached ) {
@@ -2105,7 +2105,7 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 
 	soFar = selector;
 	groups = [];
-	preFilters = Expr.preFilter;
+	prefilters = Expr.prefilter;
 
 	while ( soFar ) {
 
@@ -2131,10 +2131,10 @@ tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
 			soFar = soFar.slice( matched.length );
 		}
 
-		// Filters
+		// filters
 		for ( type in Expr.filter ) {
-			if ( (match = matchExpr[ type ].exec( soFar )) && (!preFilters[ type ] ||
-				(match = preFilters[ type ]( match ))) ) {
+			if ( (match = matchExpr[ type ].exec( soFar )) && (!prefilters[ type ] ||
+				(match = prefilters[ type ]( match ))) ) {
 				matched = match.shift();
 				tokens.push({
 					value: matched,
@@ -2273,9 +2273,9 @@ function condense( unmatched, map, filter, context, xml ) {
 	return newUnmatched;
 }
 
-function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postSelector ) {
-	if ( postFilter && !postFilter[ expando ] ) {
-		postFilter = setMatcher( postFilter );
+function setMatcher( prefilter, selector, matcher, postfilter, postFinder, postSelector ) {
+	if ( postfilter && !postfilter[ expando ] ) {
+		postfilter = setMatcher( postfilter );
 	}
 	if ( postFinder && !postFinder[ expando ] ) {
 		postFinder = setMatcher( postFinder, postSelector );
@@ -2290,13 +2290,13 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 			elems = seed || multipleContexts( selector || "*", context.nodeType ? [ context ] : context, [] ),
 
 			// Prefilter to get matcher input, preserving a map for seed-results synchronization
-			matcherIn = preFilter && ( seed || !selector ) ?
-				condense( elems, preMap, preFilter, context, xml ) :
+			matcherIn = prefilter && ( seed || !selector ) ?
+				condense( elems, preMap, prefilter, context, xml ) :
 				elems,
 
 			matcherOut = matcher ?
-				// If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
-				postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
+				// If we have a postFinder, or filtered seed, or non-seed postfilter or preexisting results,
+				postFinder || ( seed ? prefilter : preexisting || postfilter ) ?
 
 					// ...intermediate processing is necessary
 					[] :
@@ -2310,10 +2310,10 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 			matcher( matcherIn, matcherOut, context, xml );
 		}
 
-		// Apply postFilter
-		if ( postFilter ) {
+		// Apply postfilter
+		if ( postfilter ) {
 			temp = condense( matcherOut, postMap );
-			postFilter( temp, [], context, xml );
+			postfilter( temp, [], context, xml );
 
 			// Un-match failing elements by moving them back to matcherIn
 			i = temp.length;
@@ -2325,7 +2325,7 @@ function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postS
 		}
 
 		if ( seed ) {
-			if ( postFinder || preFilter ) {
+			if ( postFinder || prefilter ) {
 				if ( postFinder ) {
 					// Get the final matcherOut by condensing this intermediate into postFinder contexts
 					temp = [];
@@ -7682,7 +7682,7 @@ function defaultPrefilter( elem, props, opts ) {
 	}
 }
 
-function propFilter( props, specialEasing ) {
+function propfilter( props, specialEasing ) {
 	var index, name, easing, value, hooks;
 
 	// camelCase, specialEasing and expand cssHook pass
@@ -7801,7 +7801,7 @@ function Animation( elem, properties, options ) {
 		} ),
 		props = animation.props;
 
-	propFilter( props, animation.opts.specialEasing );
+	propfilter( props, animation.opts.specialEasing );
 
 	for ( ; index < length ; index++ ) {
 		result = Animation.prefilters[ index ].call( animation, elem, props, animation.opts );
@@ -9275,9 +9275,9 @@ function ajaxConvert( s, response, jqXHR, isSuccess ) {
 			jqXHR[ s.responseFields[ current ] ] = response;
 		}
 
-		// Apply the dataFilter if provided
-		if ( !prev && isSuccess && s.dataFilter ) {
-			response = s.dataFilter( response, s.dataType );
+		// Apply the datafilter if provided
+		if ( !prev && isSuccess && s.datafilter ) {
+			response = s.datafilter( response, s.dataType );
 		}
 
 		prev = current;
@@ -10291,7 +10291,7 @@ if ( xhrSupported ) {
 									statusText = "";
 								}
 
-								// Filter status for non standard behaviors
+								// filter status for non standard behaviors
 
 								// If the request is local and we have data: assume a success
 								// (success with no data won't get notified, that's the best we

@@ -11293,11 +11293,11 @@ function parseTickFontOptions(options) {
 	return {minor: minor, major: major};
 }
 
-function nonSkipped(ticksToFilter) {
+function nonSkipped(ticksTofilter) {
 	var filtered = [];
 	var item, index, len;
-	for (index = 0, len = ticksToFilter.length; index < len; ++index) {
-		item = ticksToFilter[index];
+	for (index = 0, len = ticksTofilter.length; index < len; ++index) {
+		item = ticksTofilter[index];
 		if (typeof item._index !== 'undefined') {
 			filtered.push(item);
 		}

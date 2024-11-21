@@ -16,17 +16,17 @@ CREATE TABLE `dtmf_command` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index för tabell `dtmf_command`
+-- Index för table `dtmf_command`
 --
 ALTER TABLE `dtmf_command`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT för dumpade tableer
 --
 
 --
--- AUTO_INCREMENT för tabell `dtmf_command`
+-- AUTO_INCREMENT för table `dtmf_command`
 --
 ALTER TABLE `dtmf_command`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
@@ -37,7 +37,7 @@ ALTER TABLE `dtmf_command`
 
 
 --
--- Tabellstruktur `Information_page`
+-- Table Structure`Information_page`
 --
 
 CREATE TABLE `Information_page` (
@@ -47,18 +47,18 @@ CREATE TABLE `Information_page` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index för dumpade tabeller
+-- Index för dumpade tableer
 --
 
 --
--- Index för tabell `Information_page`
+-- Index för table `Information_page`
 --
 ALTER TABLE `Information_page`
   ADD PRIMARY KEY (`id`);
 
 
 --
--- AUTO_INCREMENT för tabell `Information_page`
+-- AUTO_INCREMENT för table `Information_page`
 --
 ALTER TABLE `Information_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
@@ -83,7 +83,7 @@ ALTER TABLE `dtmf_command` ADD `Category` INT NOT NULL AFTER `Description`;
 
 
 --
--- Tabellstruktur `Operation_log`
+-- Table Structure`Operation_log`
 --
 
 CREATE TABLE `Operation_log` (
@@ -94,21 +94,21 @@ CREATE TABLE `Operation_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index för dumpade tabeller
+-- Index för dumpade tableer
 --
 
 --
--- Index för tabell `Operation_log`
+-- Index för table `Operation_log`
 --
 ALTER TABLE `Operation_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT för dumpade tableer
 --
 
 --
--- AUTO_INCREMENT för tabell `Operation_log`
+-- AUTO_INCREMENT för table `Operation_log`
 --
 ALTER TABLE `Operation_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
@@ -134,17 +134,17 @@ CREATE TABLE `User_Permission` (
 
 
 --
--- Index för tabell `User_Permission`
+-- Index för table `User_Permission`
 --
 ALTER TABLE `User_Permission`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT för dumpade tableer
 --
 
 --
--- AUTO_INCREMENT för tabell `User_Permission`
+-- AUTO_INCREMENT för table `User_Permission`
 --
 ALTER TABLE `User_Permission`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;

@@ -7,7 +7,7 @@ include 'function.php';
 
 $target_dir = "/tmp/svxportal/";
 
-$covrige_folder ="/var/www/svx/covrige";
+$Coverage_folder ="/var/www/svx/Coverage";
 
 
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -69,9 +69,9 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 )
                         
                         
                         
-                        $link->query("  DELETE FROM `covrige` WHERE `Name` = '$station';");
+                        $link->query("  DELETE FROM `Coverage` WHERE `Name` = '$station';");
                         
-                        $link->query(" INSERT INTO `covrige` (`Id`, `Name`, `Radiomobilestring`) VALUES (NULL, '$station', '$radiomobie_str_to_db'); ");
+                        $link->query(" INSERT INTO `Coverage` (`Id`, `Name`, `Radiomobilestring`) VALUES (NULL, '$station', '$radiomobie_str_to_db'); ");
 
                     }
                     
@@ -86,7 +86,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 )
                     foreach( glob( '*.png' ) as $html_file )
                     {
 
-                         copy($html_file, $covrige_folder."/".$html_file);
+                         copy($html_file, $Coverage_folder."/".$html_file);
                         
                     }
                 }

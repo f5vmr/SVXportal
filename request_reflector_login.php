@@ -1172,7 +1172,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 	?>
        <div class="col-sm-8">
  	<select class="custom-select custom-select-sm" id="selectpicker" name="tg[]"  multiple="multiple" size="<?php echo  ($result->num_rows+3)?>" >
-                                 <option value=""><?php echo _('No Talkgroup Filter')?></option>
+                                 <option value=""><?php echo _('No Talkgroup filter')?></option>
                                   <optgroup label="<?php echo _('Talkgroup')?>">
                                   
                  <?php 

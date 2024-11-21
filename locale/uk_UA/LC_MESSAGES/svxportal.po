@@ -994,7 +994,7 @@ msgstr "Рівень сигналу від Приймача"
 
 #: index.php:1968 index1.php:1710 index_old.php:1022 indexa.php:1023
 #: log.php:173
-msgid "Filter"
+msgid "filter"
 msgstr "Фільтр"
 
 #: index.php:2035 index1.php:1777 index_old.php:1097 indexa.php:1098
@@ -1175,7 +1175,7 @@ msgid "Hour chart"
 msgstr "Погодинний графік"
 
 #: index.php:4392 index1.php:4101 index_old.php:3142 indexa.php:3143
-msgid "No Repeater Filter"
+msgid "No Repeater filter"
 msgstr "Фільтр Вузлів"
 
 #: index.php:4393 index1.php:4102 index_old.php:3143 indexa.php:3144
@@ -1184,7 +1184,7 @@ msgstr "Вузли"
 
 #: index.php:4425 index1.php:4134 index_old.php:3160 indexa.php:3161
 #: request_reflector_login.php:1034
-msgid "No Talkgroup Filter"
+msgid "No Talkgroup filter"
 msgstr "Фільтр Розмовних груп"
 
 #: index.php:4482 index1.php:4191 index_old.php:3195 indexa.php:3196

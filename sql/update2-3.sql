@@ -10,7 +10,7 @@ ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Id`);
 
 
 --
--- Tabellstruktur `Settings`
+-- Table Structure`Settings`
 --
 
 CREATE TABLE `Settings` (

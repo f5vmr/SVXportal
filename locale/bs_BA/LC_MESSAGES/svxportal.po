@@ -1025,7 +1025,7 @@ msgstr "Vrijednost signala sa prijemnika"
 
 #: index.php:2099 index1.php:1710 index_old.php:1022 indexa.php:1023
 #: log.php:173
-msgid "Filter"
+msgid "filter"
 msgstr ""
 
 #: index.php:2165 index1.php:1777 index_old.php:1097 indexa.php:1098
@@ -1212,7 +1212,7 @@ msgstr "Satni grafikon"
 
 #: index.php:4789 index.php:4869 index.php:4935 index1.php:4101
 #: index_old.php:3142 indexa.php:3143
-msgid "No Repeater Filter"
+msgid "No Repeater filter"
 msgstr "Bez filtera za repetitore"
 
 #: index.php:4790 index.php:4870 index.php:4936 index1.php:4102
@@ -1226,7 +1226,7 @@ msgstr "Mjesečni grafikon"
 
 #: index.php:4968 index1.php:4134 index_old.php:3160 indexa.php:3161
 #: request_reflector_login.php:1127
-msgid "No Talkgroup Filter"
+msgid "No Talkgroup filter"
 msgstr "Bez filtera grupe za razgovor"
 
 #: index.php:5025 index1.php:4191 index_old.php:3195 indexa.php:3196
@@ -1319,7 +1319,7 @@ msgstr "Monitor prijemnika"
 
 #: list_receiver.php:1425 list_receiver_2.php:668 list_receiver_old.php:458
 msgid "Talkgroup filter"
-msgstr "Filter grupe za razgovor"
+msgstr "filter grupe za razgovor"
 
 #: list_receiver.php:1426
 msgid "All active"
@@ -1629,7 +1629,7 @@ msgstr "Status logike"
 #~ msgid "alarm"
 #~ msgstr "alarm"
 
-#~ msgid "Show covrige"
+#~ msgid "Show Coverage"
 #~ msgstr "Prikaži pokrivenost"
 
 #~ msgid "Chart"

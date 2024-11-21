@@ -170,7 +170,7 @@ if(!$_GET['only_table'])
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
         <i class="fas fa-align-justify"></i>
-          <?php echo _('Filter')?>
+          <?php echo _('filter')?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 

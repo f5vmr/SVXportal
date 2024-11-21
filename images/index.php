@@ -827,7 +827,7 @@ if ($usefile !== null) {
 					<div class="container">
 						<nav
 							class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-light bg-light justify-content-between">
-							Filter:<select id="selects" class="w-25"
+							filter:<select id="selects" class="w-25"
 								onchange="update_filter(this.value)">
 								<option value="">-- <?php echo _("All")?> --</option>
 							</select> <a href="#menu-toggle" onclick="toggle_menu()"
@@ -929,8 +929,8 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 									aria-haspopup="true" aria-expanded="false"> <?php echo _("Coverage")?> </a>
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item" onclick="show_coverage()" href="#"><?php echo _("Show")?></a>
-										<a class="dropdown-item" onclick="remove_coverage()" href="#"><?php echo _("Remove")?></a>
+										<a class="dropdown-item" onclick="show_Coverage()" href="#"><?php echo _("Show")?></a>
+										<a class="dropdown-item" onclick="remove_Coverage()" href="#"><?php echo _("Remove")?></a>
 
 									</div></li>
 								<li class="nav-item dropdown"><a
@@ -944,13 +944,13 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 		  
 	<?php
 
-$result = mysqli_query($link, "SELECT * FROM `Filter`");
+$result = mysqli_query($link, "SELECT * FROM `filter`");
 
 // Numeric array
 
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-    // echo '<a class="dropdown-item" onclick="prosess_json_filter(\'' . $row['JSON'] . '\',\'' . $row['Filter'] . '\')" href="#">' . $row['Namn'] . '</a>';
+    // echo '<a class="dropdown-item" onclick="prosess_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Namn'] . '</a>';
 }
 ?>
 		  
@@ -2248,7 +2248,7 @@ function prosess_json_filter(url,filter)
 			
 	
 			var name =result.antenna[result.rx[k].antenna].name;
-			if(filter == "" || result.rx[k].Filter == filter)
+			if(filter == "" || result.rx[k].filter == filter)
 			{
 				//console.log(result.rx[k]);
 				add_repeater_node(result.antenna[result.rx[k].antenna].location.lat, result.antenna[result.rx[k].antenna].location.lon,name,k);
@@ -2282,7 +2282,7 @@ function setmap_noTransform(lon,lat,z)
 
 
 var Lock_show =0;
-function show_coverage()
+function show_Coverage()
 {
 	if(Lock_show == 0)
 	{
@@ -2290,7 +2290,7 @@ function show_coverage()
 
 		<?php
 
-				$result = mysqli_query($link, "SELECT * FROM `covrige` ");
+				$result = mysqli_query($link, "SELECT * FROM `Coverage` ");
 
 				// Numeric array
 
@@ -2309,7 +2309,7 @@ function show_coverage()
 		
 	}
 }
-function remove_coverage()
+function remove_Coverage()
 {
 	window.map.removeLayer(ov["riu.png"]);
 	window.map.removeLayer(ov["gw.png"]);

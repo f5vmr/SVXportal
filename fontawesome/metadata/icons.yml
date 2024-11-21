@@ -7108,7 +7108,7 @@ filter:
   changes:
     - '2'
     - 5.0.0
-  label: Filter
+  label: filter
   search:
     terms:
       - funnel

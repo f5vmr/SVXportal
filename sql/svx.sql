@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `covrige`
+-- Table Structure`Coverage`
 --
 
-CREATE TABLE `covrige` (
+CREATE TABLE `Coverage` (
   `Id` int(11) NOT NULL,
   `Name` text NOT NULL,
   `Radiomobilestring` text NOT NULL
@@ -35,7 +35,7 @@ CREATE TABLE `covrige` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Daylog`
+-- Table Structure`Daylog`
 --
 
 CREATE TABLE `Daylog` (
@@ -47,7 +47,7 @@ CREATE TABLE `Daylog` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `dtmf_command`
+-- Table Structure`dtmf_command`
 --
 
 CREATE TABLE `dtmf_command` (
@@ -62,20 +62,20 @@ CREATE TABLE `dtmf_command` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Filter`
+-- Table Structure`filter`
 --
 
-CREATE TABLE `Filter` (
+CREATE TABLE `filter` (
   `id` int(11) NOT NULL,
   `JSON` text NOT NULL,
-  `Filter` text NOT NULL,
+  `filter` text NOT NULL,
   `Namn` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Information_page`
+-- Table Structure`Information_page`
 --
 
 CREATE TABLE `Information_page` (
@@ -90,7 +90,7 @@ CREATE TABLE `Information_page` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Operation_log`
+-- Table Structure`Operation_log`
 --
 
 CREATE TABLE `Operation_log` (
@@ -104,7 +104,7 @@ CREATE TABLE `Operation_log` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `ReflectorNodeLog`
+-- Table Structure`ReflectorNodeLog`
 --
 
 CREATE TABLE `ReflectorNodeLog` (
@@ -125,7 +125,7 @@ CREATE TABLE `ReflectorNodeLog` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `RefletorStations`
+-- Table Structure`RefletorStations`
 --
 
 CREATE TABLE `RefletorStations` (
@@ -142,7 +142,7 @@ CREATE TABLE `RefletorStations` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `repeater`
+-- Table Structure`repeater`
 --
 
 CREATE TABLE `repeater` (
@@ -155,7 +155,7 @@ CREATE TABLE `repeater` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Settings`
+-- Table Structure`Settings`
 --
 
 CREATE TABLE `Settings` (
@@ -167,7 +167,7 @@ CREATE TABLE `Settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `Settings`
+-- Dumping all Data in table `Settings`
 --
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES
@@ -190,7 +190,7 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Talkgroup`
+-- Table Structure`Talkgroup`
 --
 
 CREATE TABLE `Talkgroup` (
@@ -203,7 +203,7 @@ CREATE TABLE `Talkgroup` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `users`
+-- Table Structure`users`
 --
 
 CREATE TABLE `users` (
@@ -219,7 +219,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `users`
+-- Dumping all Data in table `users`
 --
 
 INSERT INTO `users` (`id`, `Username`, `Password`, `level`, `Is_admin`, `Firstname`, `lastname`) VALUES
@@ -228,7 +228,7 @@ INSERT INTO `users` (`id`, `Username`, `Password`, `level`, `Is_admin`, `Firstna
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `User_Permission`
+-- Table Structure`User_Permission`
 --
 
 CREATE TABLE `User_Permission` (
@@ -239,48 +239,48 @@ CREATE TABLE `User_Permission` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index för dumpade tabeller
+-- Index för dumpade tableer
 --
 
 --
--- Index för tabell `covrige`
+-- Index för table `Coverage`
 --
-ALTER TABLE `covrige`
+ALTER TABLE `Coverage`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index för tabell `Daylog`
+-- Index för table `Daylog`
 --
 ALTER TABLE `Daylog`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `ID` (`ID`);
 
 --
--- Index för tabell `dtmf_command`
+-- Index för table `dtmf_command`
 --
 ALTER TABLE `dtmf_command`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `Filter`
+-- Index för table `filter`
 --
-ALTER TABLE `Filter`
+ALTER TABLE `filter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `Information_page`
+-- Index för table `Information_page`
 --
 ALTER TABLE `Information_page`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `Operation_log`
+-- Index för table `Operation_log`
 --
 ALTER TABLE `Operation_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `ReflectorNodeLog`
+-- Index för table `ReflectorNodeLog`
 --
 ALTER TABLE `ReflectorNodeLog`
   ADD PRIMARY KEY (`Id`),
@@ -295,7 +295,7 @@ ALTER TABLE `ReflectorNodeLog`
   ADD KEY `Id` (`Id`);
 
 --
--- Index för tabell `RefletorStations`
+-- Index för table `RefletorStations`
 --
 ALTER TABLE `RefletorStations`
   ADD PRIMARY KEY (`ID`),
@@ -303,87 +303,87 @@ ALTER TABLE `RefletorStations`
   ADD KEY `Callsign_2` (`Callsign`);
 
 --
--- Index för tabell `repeater`
+-- Index för table `repeater`
 --
 ALTER TABLE `repeater`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `Settings`
+-- Index för table `Settings`
 --
 ALTER TABLE `Settings`
   ADD PRIMARY KEY (`id`),
   ADD KEY `Define` (`Define`);
 
 --
--- Index för tabell `Talkgroup`
+-- Index för table `Talkgroup`
 --
 ALTER TABLE `Talkgroup`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index för tabell `users`
+-- Index för table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `User_Permission`
+-- Index för table `User_Permission`
 --
 ALTER TABLE `User_Permission`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT för dumpade tableer
 --
 
 --
--- AUTO_INCREMENT för tabell `covrige`
+-- AUTO_INCREMENT för table `Coverage`
 --
-ALTER TABLE `covrige`
+ALTER TABLE `Coverage`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `Daylog`
+-- AUTO_INCREMENT för table `Daylog`
 --
 ALTER TABLE `Daylog`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `dtmf_command`
+-- AUTO_INCREMENT för table `dtmf_command`
 --
 ALTER TABLE `dtmf_command`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `Filter`
+-- AUTO_INCREMENT för table `filter`
 --
-ALTER TABLE `Filter`
+ALTER TABLE `filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `Information_page`
+-- AUTO_INCREMENT för table `Information_page`
 --
 ALTER TABLE `Information_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `Operation_log`
+-- AUTO_INCREMENT för table `Operation_log`
 --
 ALTER TABLE `Operation_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `Settings`
+-- AUTO_INCREMENT för table `Settings`
 --
 ALTER TABLE `Settings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
--- AUTO_INCREMENT för tabell `Talkgroup`
+-- AUTO_INCREMENT för table `Talkgroup`
 --
 ALTER TABLE `Talkgroup`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `users`
+-- AUTO_INCREMENT för table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT för tabell `User_Permission`
+-- AUTO_INCREMENT för table `User_Permission`
 --
 ALTER TABLE `User_Permission`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
@@ -406,7 +406,7 @@ ALTER TABLE ReflectorNodeLog AUTO_INCREMENT = 1;
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Refletor_station_state`
+-- Table Structure`Refletor_station_state`
 --
 
 CREATE TABLE `Refletor_station_state` (
@@ -421,7 +421,7 @@ CREATE TABLE `Refletor_station_state` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Station_day_statistic`
+-- Table Structure`Station_day_statistic`
 --
 
 CREATE TABLE `Station_day_statistic` (
@@ -438,7 +438,7 @@ CREATE TABLE `Station_day_statistic` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `trafic_day_statistics`
+-- Table Structure`trafic_day_statistics`
 --
 
 CREATE TABLE `trafic_day_statistics` (
@@ -529,7 +529,7 @@ CREATE TABLE `trafic_day_statistics` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `trafic_mounth_statistics`
+-- Table Structure`trafic_mounth_statistics`
 --
 
 CREATE TABLE `trafic_mounth_statistics` (
@@ -579,24 +579,24 @@ CREATE TABLE `trafic_mounth_statistics` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Index f�r dumpade tabeller
+-- Index f�r dumpade tableer
 --
 
 --
--- Index f�r tabell `Refletor_station_state`
+-- Index f�r table `Refletor_station_state`
 --
 ALTER TABLE `Refletor_station_state`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `Callsign` (`Callsign`);
 
 --
--- Index f�r tabell `Station_day_statistic`
+-- Index f�r table `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index f�r tabell `trafic_day_statistics`
+-- Index f�r table `trafic_day_statistics`
 --
 ALTER TABLE `trafic_day_statistics`
   ADD PRIMARY KEY (`id`),
@@ -607,7 +607,7 @@ ALTER TABLE `trafic_day_statistics`
   ADD KEY `Day` (`Day`);
 
 --
--- Index f�r tabell `trafic_mounth_statistics`
+-- Index f�r table `trafic_mounth_statistics`
 --
 ALTER TABLE `trafic_mounth_statistics`
   ADD PRIMARY KEY (`id`),
@@ -616,29 +616,29 @@ ALTER TABLE `trafic_mounth_statistics`
   ADD KEY `Year` (`Year`);
 
 --
--- AUTO_INCREMENT f�r dumpade tabeller
+-- AUTO_INCREMENT f�r dumpade tableer
 --
 
 --
--- AUTO_INCREMENT f�r tabell `Refletor_station_state`
+-- AUTO_INCREMENT f�r table `Refletor_station_state`
 --
 ALTER TABLE `Refletor_station_state`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r tabell `Station_day_statistic`
+-- AUTO_INCREMENT f�r table `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   MODIFY `Id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r tabell `trafic_day_statistics`
+-- AUTO_INCREMENT f�r table `trafic_day_statistics`
 --
 ALTER TABLE `trafic_day_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r tabell `trafic_mounth_statistics`
+-- AUTO_INCREMENT f�r table `trafic_mounth_statistics`
 --
 ALTER TABLE `trafic_mounth_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;

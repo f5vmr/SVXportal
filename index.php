@@ -1303,19 +1303,19 @@ function show_station_cover(ident,stationid)
 	 
 	//peter
 	
-	remove_coverage();
+	remove_Coverage();
 	
-	coverageGroup = new ol.layer.Group({
+	CoverageGroup = new ol.layer.Group({
             layers: [],
-            name: 'coverage'
+            name: 'Coverage'
         });
-	map.addLayer(this.coverageGroup);
+	map.addLayer(this.CoverageGroup);
 
 
 	        
 	<?php
 
-			$result = mysqli_query($link, "SELECT * FROM `covrige` ");
+			$result = mysqli_query($link, "SELECT * FROM `Coverage` ");
 
 			// Numeric array
 
@@ -1337,7 +1337,7 @@ function show_station_cover(ident,stationid)
 			
 			
 			
-			$result = mysqli_query($link, "SELECT * FROM `covrige` ");
+			$result = mysqli_query($link, "SELECT * FROM `Coverage` ");
 			
 			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 			    
@@ -2385,7 +2385,7 @@ if ($usefile !== null) {
 					<div class="container">
 						<nav
 							class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-light bg-light justify-content-between">
-							<?php echo _('Filter')?>:<select id="selects" class="w-25"
+							<?php echo _('filter')?>:<select id="selects" class="w-25"
 								onchange="update_filter(this.value)">
 								<option value="">-- <?php echo _("All")?> --</option>
 							</select>
@@ -2570,9 +2570,9 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 									aria-haspopup="true" aria-expanded="false"><i class="fas fa-broadcast-tower"></i> <?php echo _("Coverage")?> </a>
 									<div class="dropdown-menu"
 										aria-labelledby="navbarDropdownMenuLink">
-										<a class="dropdown-item" onclick="show_coverage()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Show")?></a>
+										<a class="dropdown-item" onclick="show_Coverage()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Show")?></a>
 										<a class="dropdown-item" onclick="open_select_map()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Select")?></a>
-										<a class="dropdown-item" onclick="remove_coverage()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Remove")?></a>
+										<a class="dropdown-item" onclick="remove_Coverage()" href="#"><i class="fas fa-asterisk"></i> <?php echo _("Remove")?></a>
 
 									</div></li>
 								<li class="nav-item dropdown"><a
@@ -2586,13 +2586,13 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 		  
 	<?php
 
-$result = mysqli_query($link, "SELECT * FROM `Filter`");
+$result = mysqli_query($link, "SELECT * FROM `filter`");
 
 // Numeric array
 
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-    // echo '<a class="dropdown-item" onclick="prosess_json_filter(\'' . $row['JSON'] . '\',\'' . $row['Filter'] . '\')" href="#">' . $row['Namn'] . '</a>';
+    // echo '<a class="dropdown-item" onclick="prosess_json_filter(\'' . $row['JSON'] . '\',\'' . $row['filter'] . '\')" href="#">' . $row['Namn'] . '</a>';
 }
 ?>
 		  
@@ -2743,7 +2743,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 									</div>
 									<button type="button" class="btn btn-secondary"
 										data-dismiss="modal"><?php echo _('Close')?></button>
-									<button type="button" class="btn btn-secondary" id="Show_coverage_button"
+									<button type="button" class="btn btn-secondary" id="Show_Coverage_button"
 										><?php echo _('Show covreage')?></button>
 
 								
@@ -2855,7 +2855,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 			 else
 		     	var identity =station_identifire[idn.slice(4)];
 			// Get the <a> element with id="myAnchor"
-			 var x = document.getElementById("Show_coverage_button");  
+			 var x = document.getElementById("Show_Coverage_button");  
 			 x.setAttribute("onclick", "show_station_cover('"+identity+"','"+idn+"')");
 
 			 <?Php
@@ -3388,13 +3388,13 @@ function addimage(src,lamin,lomin,lamax,lomax)
 
     ov[src] = new ol.layer.Image({
             source: new ol.source.ImageStatic({
-            url: "covrige/"+src,
+            url: "Coverage/"+src,
             imageExtent: [c1[0], c1[1], c2[0], c2[1]]
         })
     });
     ov[src].setZIndex(parseInt(0, 10) || 0);  
      
-    this.coverageGroup.getLayers().array_.push(ov[src])
+    this.CoverageGroup.getLayers().array_.push(ov[src])
     //map.addLayer(ov[src]);
     return ov[src];
 }
@@ -4978,7 +4978,7 @@ function prosess_json_filter(url,filter)
 			
 	
 			var name =result.antenna[result.rx[k].antenna].name;
-			if(filter == "" || result.rx[k].Filter == filter)
+			if(filter == "" || result.rx[k].filter == filter)
 			{
 				//console.log(result.rx[k]);
 				add_repeater_node(result.antenna[result.rx[k].antenna].location.lat, result.antenna[result.rx[k].antenna].location.lon,name,k);
@@ -5012,7 +5012,7 @@ function setmap_noTransform(lon,lat,z)
 
 
 var Lock_show =0;
-var coverageGroup;
+var CoverageGroup;
 
 
 function open_select_map()
@@ -5025,7 +5025,7 @@ function open_select_map()
 			var data =  event.data.toString();
 			console.log(data.split(","));
 			
-			show_coverage_stations(data.split(","))
+			show_Coverage_stations(data.split(","))
 			 popupWindow.close();
 		  });
 	}
@@ -5082,21 +5082,21 @@ function idn_loocup_select(site,array)
 }
 
 
-function show_coverage()
+function show_Coverage()
 {
-	remove_coverage();
+	remove_Coverage();
 	if(Lock_show == 0)
 	{
 		Lock_show =1;
 
-		coverageGroup = new ol.layer.Group({
+		CoverageGroup = new ol.layer.Group({
             layers: [],
-            name: 'coverage'
+            name: 'Coverage'
         });
 
 		<?php
 
-				$result = mysqli_query($link, "SELECT * FROM `covrige` ");
+				$result = mysqli_query($link, "SELECT * FROM `Coverage` ");
 
 				// Numeric array
 
@@ -5112,36 +5112,36 @@ function show_coverage()
 				?>
 
 		
-				map.addLayer(this.coverageGroup);
+				map.addLayer(this.CoverageGroup);
 		
 	}
 }
-function remove_coverage()
+function remove_Coverage()
 {
-	this.map.removeLayer(this.coverageGroup);
+	this.map.removeLayer(this.CoverageGroup);
 	Lock_show  =0;
 }
 
-function show_coverage_stations(arrays)
+function show_Coverage_stations(arrays)
 {
 
 	
-	remove_coverage();
+	remove_Coverage();
 	if(Lock_show == 0)
 	{
 		Lock_show =1;
 		
 
-		coverageGroup = new ol.layer.Group({
+		CoverageGroup = new ol.layer.Group({
             layers: [],
-            name: 'coverage'
+            name: 'Coverage'
         });
 
 		console.log(arrays);
 		
 		<?php
 
-				$result = mysqli_query($link, "SELECT * FROM `covrige` ");
+				$result = mysqli_query($link, "SELECT * FROM `Coverage` ");
 
 				// Numeric array
 
@@ -5157,7 +5157,7 @@ function show_coverage_stations(arrays)
 				?>
 
 		
-				map.addLayer(this.coverageGroup);
+				map.addLayer(this.CoverageGroup);
 		
 	}
 }
@@ -5921,7 +5921,7 @@ function fnExcelexport(table)
                   					
                   						<select class="selectpicker float-right col-11" id="filterpicker_repeater_time" onchange="set_repater_statics_time()" >
                   					              
-                               		  <option value=""><?php echo _('No Repeater Filter')?></option>
+                               		  <option value=""><?php echo _('No Repeater filter')?></option>
                                  		 <optgroup label="<?php echo _('Repeater')?>">
   <?php 
       			$result = mysqli_query($link, "SELECT * FROM `RefletorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
@@ -6001,7 +6001,7 @@ function fnExcelexport(table)
                   					
                   						<select class="selectpicker float-right col-11" id="filterpicker_repeater_mouth" onchange="set_repater_statics_mounth()" >
                   					              
-                               		  <option value=""><?php echo _('No Repeater Filter')?></option>
+                               		  <option value=""><?php echo _('No Repeater filter')?></option>
                                  		 <optgroup label="<?php echo _('Repeater')?>">
   <?php 
       			$result = mysqli_query($link, "SELECT * FROM `RefletorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
@@ -6131,7 +6131,7 @@ function fnExcelexport(table)
                        	
                         	
                         	<select class="selectpicker" id="filterpicker_repeater_year" onchange="get_year_static()">
-                                 <option value=""><?php echo _('No Repeater Filter')?></option>
+                                 <option value=""><?php echo _('No Repeater filter')?></option>
                                   <optgroup label="<?php echo _('Repeater')?>">
   <?php 
       			$result = mysqli_query($link, "SELECT * FROM `RefletorStations` WHERE Callsign != '' ORDER BY `Callsign` ASC");
@@ -6164,7 +6164,7 @@ function fnExcelexport(table)
          </th>    
          <th scope="col">
                          	<select class="selectpicker" id="filterpicker_talgroup_year" onchange="get_year_static()">
-                                 <option value=""><?php echo _('No Talkgroup Filter')?></option>
+                                 <option value=""><?php echo _('No Talkgroup filter')?></option>
                                   <optgroup label="<?php echo _('Talkgroup')?>">
                                   
                  <?php 

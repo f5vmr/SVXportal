@@ -17,30 +17,30 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Databas: `svx`
+-- Databas-: `svx`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `covrige`
+-- Table Structure`Coverage`
 --
 
-CREATE TABLE `covrige` (
+CREATE TABLE `Coverage` (
   `Id` int(11) NOT NULL,
   `Name` text NOT NULL,
   `Radiomobilestring` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `covrige`
+-- Dumping all Data in table `Coverage`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Daylog`
+-- Table Structure`Daylog`
 --
 
 CREATE TABLE `Daylog` (
@@ -50,7 +50,7 @@ CREATE TABLE `Daylog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `Daylog`
+-- Dumping all Data inn table `Daylog`
 --
 
 
@@ -58,18 +58,18 @@ CREATE TABLE `Daylog` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Filter`
+-- Table Structure `filter`
 --
 
-CREATE TABLE `Filter` (
+CREATE TABLE `filter` (
   `id` int(11) NOT NULL,
   `JSON` text NOT NULL,
-  `Filter` text NOT NULL,
+  `filter` text NOT NULL,
   `Namn` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `Filter`
+-- Dumping all Data inn table `filter`
 --
 
 
@@ -77,7 +77,7 @@ CREATE TABLE `Filter` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `repeater`
+-- Table Structure`repeater`
 --
 
 CREATE TABLE `repeater` (
@@ -88,7 +88,7 @@ CREATE TABLE `repeater` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `repeater`
+-- Dumping all Data in table `repeater`
 --
 
 
@@ -96,7 +96,7 @@ CREATE TABLE `repeater` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Talkgroup`
+-- Table Structure`Talkgroup`
 --
 
 CREATE TABLE `Talkgroup` (
@@ -107,66 +107,66 @@ CREATE TABLE `Talkgroup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `Talkgroup`
+-- Dumping all Data in table `Talkgroup`
 --
 
 
 --
--- Index för dumpade tabeller
+-- Index för dumpade tableer
 --
 
 --
--- Index för tabell `covrige`
+-- Index för table `Coverage`
 --
-ALTER TABLE `covrige`
+ALTER TABLE `Coverage`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index för tabell `Daylog`
+-- Index för table `Daylog`
 --
 ALTER TABLE `Daylog`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `ID` (`ID`);
 
 --
--- Index för tabell `Filter`
+-- Index för table `filter`
 --
-ALTER TABLE `Filter`
+ALTER TABLE `filter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `repeater`
+-- Index för table `repeater`
 --
 ALTER TABLE `repeater`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `Talkgroup`
+-- Index för table `Talkgroup`
 --
 ALTER TABLE `Talkgroup`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT för dumpade tableer
 --
 
 --
--- AUTO_INCREMENT för tabell `covrige`
+-- AUTO_INCREMENT för table `Coverage`
 --
-ALTER TABLE `covrige`
+ALTER TABLE `Coverage`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT för tabell `Daylog`
+-- AUTO_INCREMENT för table `Daylog`
 --
 ALTER TABLE `Daylog`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=727;
 --
--- AUTO_INCREMENT för tabell `Filter`
+-- AUTO_INCREMENT för table `filter`
 --
-ALTER TABLE `Filter`
+ALTER TABLE `filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT för tabell `Talkgroup`
+-- AUTO_INCREMENT för table `Talkgroup`
 --
 ALTER TABLE `Talkgroup`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;

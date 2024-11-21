@@ -442,7 +442,7 @@ msgstr "CTCSS Mappning"
 
 #: ctcss_map_table.php:211
 msgid "CTSS map table"
-msgstr "CTCSS tabell"
+msgstr "CTCSS table"
 
 #: ctcss_map_table.php:254 div_receiver2.php:136 index.php:2596 index1.php:2014
 #: index_old.php:1330 indexa.php:1331 list_receiver.php:84 list_receiver_2.php:58
@@ -1141,8 +1141,8 @@ msgstr "Signalv�rde fr�n mottagaren "
 
 #: index.php:2293 index1.php:1710 index_old.php:1022 indexa.php:1023
 #: log.php:173
-msgid "Filter"
-msgstr "Filter"
+msgid "filter"
+msgstr "filter"
 
 #: index.php:2359 index1.php:1777 index_old.php:1097 indexa.php:1098
 msgid "Talkgroup Name"
@@ -1328,7 +1328,7 @@ msgstr "Timdiagram"
 
 #: index.php:4982 index.php:5062 index.php:5128 index1.php:4101
 #: index_old.php:3142 indexa.php:3143
-msgid "No Repeater Filter"
+msgid "No Repeater filter"
 msgstr "Ingen utvald repeater"
 
 #: index.php:4983 index.php:5063 index.php:5129 index1.php:4102
@@ -1342,7 +1342,7 @@ msgstr "M�nadsdiagram"
 
 #: index.php:5161 index1.php:4134 index_old.php:3160 indexa.php:3161
 #: request_reflector_login.php:1174
-msgid "No Talkgroup Filter"
+msgid "No Talkgroup filter"
 msgstr "Ingen utvald talgrupp"
 
 #: index.php:5218 index1.php:4191 index_old.php:3195 indexa.php:3196
@@ -1603,7 +1603,7 @@ msgstr "Systemansvarig"
 
 #: request_reflector_login.php:706
 msgid "Tone To Talkgroup Mapping"
-msgstr "Ton till talgrupp tabell"
+msgstr "Ton till talgrupp table"
 
 #: request_reflector_login.php:713
 msgid "CTCSS"
@@ -1775,7 +1775,7 @@ msgstr "Spara �ndringar"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#~ msgid "Show covrige"
+#~ msgid "Show Coverage"
 #~ msgstr "Visa t�ckning"
 
 #~ msgid "Chart"

@@ -5016,7 +5016,7 @@ var widgetsMenu = $.widget( "ui.menu", {
 				// Ignore mouse events while typeahead is active, see #10458.
 				// Prevents focusing the wrong item when typeahead causes a scroll while the mouse
 				// is over an item in the menu
-				if ( this.previousFilter ) {
+				if ( this.previousfilter ) {
 					return;
 				}
 
@@ -5139,7 +5139,7 @@ var widgetsMenu = $.widget( "ui.menu", {
 			break;
 		default:
 			preventDefault = false;
-			prev = this.previousFilter || "";
+			prev = this.previousfilter || "";
 			skip = false;
 
 			// Support number pad values
@@ -5168,12 +5168,12 @@ var widgetsMenu = $.widget( "ui.menu", {
 
 			if ( match.length ) {
 				this.focus( event, match );
-				this.previousFilter = character;
+				this.previousfilter = character;
 				this.filterTimer = this._delay( function() {
-					delete this.previousFilter;
+					delete this.previousfilter;
 				}, 1000 );
 			} else {
-				delete this.previousFilter;
+				delete this.previousfilter;
 			}
 		}
 
@@ -7846,7 +7846,7 @@ $.extend( Datepicker.prototype, {
 		}
 	},
 
-	/* Filter entered characters - based on date format. */
+	/* filter entered characters - based on date format. */
 	_doKeyPress: function( event ) {
 		var chars, chr,
 			inst = $.datepicker._getInst( event.target );
@@ -13165,7 +13165,7 @@ $.ui.ddmanager = {
 				continue;
 			}
 
-			// Filter out elements in the current dragged item
+			// filter out elements in the current dragged item
 			for ( j = 0; j < list.length; j++ ) {
 				if ( list[ j ] === m[ i ].element[ 0 ] ) {
 					m[ i ].proportions().height = 0;

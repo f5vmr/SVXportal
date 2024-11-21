@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Refletor_station_state`
+-- Table Structure`Refletor_station_state`
 --
 
 CREATE TABLE `Refletor_station_state` (
@@ -16,7 +16,7 @@ CREATE TABLE `Refletor_station_state` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Station_day_statistic`
+-- Table Structure`Station_day_statistic`
 --
 
 CREATE TABLE `Station_day_statistic` (
@@ -33,7 +33,7 @@ CREATE TABLE `Station_day_statistic` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `trafic_day_statistics`
+-- Table Structure`trafic_day_statistics`
 --
 
 CREATE TABLE `trafic_day_statistics` (
@@ -124,7 +124,7 @@ CREATE TABLE `trafic_day_statistics` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `trafic_mounth_statistics`
+-- Table Structure`trafic_mounth_statistics`
 --
 
 CREATE TABLE `trafic_mounth_statistics` (
@@ -174,24 +174,24 @@ CREATE TABLE `trafic_mounth_statistics` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Index f�r dumpade tabeller
+-- Index f�r dumpade tableer
 --
 
 --
--- Index f�r tabell `Refletor_station_state`
+-- Index f�r table `Refletor_station_state`
 --
 ALTER TABLE `Refletor_station_state`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `Callsign` (`Callsign`);
 
 --
--- Index f�r tabell `Station_day_statistic`
+-- Index f�r table `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index f�r tabell `trafic_day_statistics`
+-- Index f�r table `trafic_day_statistics`
 --
 ALTER TABLE `trafic_day_statistics`
   ADD PRIMARY KEY (`id`),
@@ -202,7 +202,7 @@ ALTER TABLE `trafic_day_statistics`
   ADD KEY `Day` (`Day`);
 
 --
--- Index f�r tabell `trafic_mounth_statistics`
+-- Index f�r table `trafic_mounth_statistics`
 --
 ALTER TABLE `trafic_mounth_statistics`
   ADD PRIMARY KEY (`id`),
@@ -211,29 +211,29 @@ ALTER TABLE `trafic_mounth_statistics`
   ADD KEY `Year` (`Year`);
 
 --
--- AUTO_INCREMENT f�r dumpade tabeller
+-- AUTO_INCREMENT f�r dumpade tableer
 --
 
 --
--- AUTO_INCREMENT f�r tabell `Refletor_station_state`
+-- AUTO_INCREMENT f�r table `Refletor_station_state`
 --
 ALTER TABLE `Refletor_station_state`
   MODIFY `ID` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r tabell `Station_day_statistic`
+-- AUTO_INCREMENT f�r table `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   MODIFY `Id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r tabell `trafic_day_statistics`
+-- AUTO_INCREMENT f�r table `trafic_day_statistics`
 --
 ALTER TABLE `trafic_day_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT f�r tabell `trafic_mounth_statistics`
+-- AUTO_INCREMENT f�r table `trafic_mounth_statistics`
 --
 ALTER TABLE `trafic_mounth_statistics`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;

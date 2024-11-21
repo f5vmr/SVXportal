@@ -23,20 +23,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `covrige`
+-- Table Structure`Coverage`
 --
 
-CREATE TABLE `covrige` (
+CREATE TABLE `Coverage` (
   `Id` int(11) NOT NULL,
   `Name` text NOT NULL,
   `Radiomobilestring` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `covrige`
+-- Dumping all Data in table `Coverage`
 --
 
-INSERT INTO `covrige` (`Id`, `Name`, `Radiomobilestring`) VALUES
+INSERT INTO `Coverage` (`Id`, `Name`, `Radiomobilestring`) VALUES
 (1, 'RIU', 'addimage(\"riu.png\",61.59199,14.72304,66.08859,24.92233);'),
 (2, 'GW', 'addimage(\"riu.png\",61.59199,14.72304,66.08859,24.92233);'),
 (3, 'RWJ', 'addimage(\"rwj.png\",63.86345,16.58593,67.46074,25.31472);'),
@@ -49,7 +49,7 @@ INSERT INTO `covrige` (`Id`, `Name`, `Radiomobilestring`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Daylog`
+-- Table Structure`Daylog`
 --
 
 CREATE TABLE `Daylog` (
@@ -59,7 +59,7 @@ CREATE TABLE `Daylog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `Daylog`
+-- Dumping all Data in table `Daylog`
 --
 
 INSERT INTO `Daylog` (`ID`, `Repeater`, `Date`) VALUES
@@ -779,21 +779,21 @@ INSERT INTO `Daylog` (`ID`, `Repeater`, `Date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Filter`
+-- Table Structure`filter`
 --
 
-CREATE TABLE `Filter` (
+CREATE TABLE `filter` (
   `id` int(11) NOT NULL,
   `JSON` text NOT NULL,
-  `Filter` text NOT NULL,
+  `filter` text NOT NULL,
   `Namn` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `Filter`
+-- Dumping all Data in table `filter`
 --
 
-INSERT INTO `Filter` (`id`, `JSON`, `Filter`, `Namn`) VALUES
+INSERT INTO `filter` (`id`, `JSON`, `filter`, `Namn`) VALUES
 (1, 'SK3GW', 'RU11', 'SK3GW RU11'),
 (2, 'repeater-info-SK3GW.json', '', 'SK3GW ALL'),
 (3, 'repeater-info-SK2RIU.json', 'RIU', 'SK2RIU'),
@@ -802,7 +802,7 @@ INSERT INTO `Filter` (`id`, `JSON`, `Filter`, `Namn`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `repeater`
+-- Table Structure`repeater`
 --
 
 CREATE TABLE `repeater` (
@@ -813,7 +813,7 @@ CREATE TABLE `repeater` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `repeater`
+-- Dumping all Data in table `repeater`
 --
 
 INSERT INTO `repeater` (`id`, `Openings`, `Nag`, `Name`) VALUES
@@ -824,7 +824,7 @@ INSERT INTO `repeater` (`id`, `Openings`, `Nag`, `Name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Talkgroup`
+-- Table Structure`Talkgroup`
 --
 
 CREATE TABLE `Talkgroup` (
@@ -835,7 +835,7 @@ CREATE TABLE `Talkgroup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumpning av Data i tabell `Talkgroup`
+-- Dumping all Data in table `Talkgroup`
 --
 
 INSERT INTO `Talkgroup` (`ID`, `TG`, `TXT`, `Colour`) VALUES
@@ -852,61 +852,61 @@ INSERT INTO `Talkgroup` (`ID`, `TG`, `TXT`, `Colour`) VALUES
 (11, 24099, 'Secrets', '#FF6347');
 
 --
--- Index för dumpade tabeller
+-- Index för dumpade tableer
 --
 
 --
--- Index för tabell `covrige`
+-- Index för table `Coverage`
 --
-ALTER TABLE `covrige`
+ALTER TABLE `Coverage`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Index för tabell `Daylog`
+-- Index för table `Daylog`
 --
 ALTER TABLE `Daylog`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `ID` (`ID`);
 
 --
--- Index för tabell `Filter`
+-- Index för table `filter`
 --
-ALTER TABLE `Filter`
+ALTER TABLE `filter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `repeater`
+-- Index för table `repeater`
 --
 ALTER TABLE `repeater`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `Talkgroup`
+-- Index för table `Talkgroup`
 --
 ALTER TABLE `Talkgroup`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT för dumpade tableer
 --
 
 --
--- AUTO_INCREMENT för tabell `covrige`
+-- AUTO_INCREMENT för table `Coverage`
 --
-ALTER TABLE `covrige`
+ALTER TABLE `Coverage`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT för tabell `Daylog`
+-- AUTO_INCREMENT för table `Daylog`
 --
 ALTER TABLE `Daylog`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=727;
 --
--- AUTO_INCREMENT för tabell `Filter`
+-- AUTO_INCREMENT för table `filter`
 --
-ALTER TABLE `Filter`
+ALTER TABLE `filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT för tabell `Talkgroup`
+-- AUTO_INCREMENT för table `Talkgroup`
 --
 ALTER TABLE `Talkgroup`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;

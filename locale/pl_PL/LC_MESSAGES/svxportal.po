@@ -1107,7 +1107,7 @@ msgstr "Siła sygnały odbiornika"
 
 #: index.php:2317 index1.php:1710 index_old.php:1022 indexa.php:1023
 #: log.php:173
-msgid "Filter"
+msgid "filter"
 msgstr "Filtr"
 
 #: index.php:2362
@@ -1285,7 +1285,7 @@ msgstr "Wykres godzinny"
 
 #: index.php:5011 index.php:5091 index.php:5157 index1.php:4101
 #: index_old.php:3142 indexa.php:3143
-msgid "No Repeater Filter"
+msgid "No Repeater filter"
 msgstr "Bez filtrów przemiennika"
 
 #: index.php:5012 index.php:5092 index.php:5158 index1.php:4102
@@ -1299,7 +1299,7 @@ msgstr "Wykres godzinny"
 
 #: index.php:5190 index1.php:4134 index_old.php:3160 indexa.php:3161
 #: request_reflector_login.php:1174
-msgid "No Talkgroup Filter"
+msgid "No Talkgroup filter"
 msgstr "Bez filtrów dla grup rozmownych"
 
 #: index.php:5247 index1.php:4191 index_old.php:3195 indexa.php:3196

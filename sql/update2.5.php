@@ -10,7 +10,7 @@
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `ReflectorNodeLOG_History`
+-- Table Structure`ReflectorNodeLOG_History`
 --
 
 CREATE TABLE `ReflectorNodeLOG_History` (
@@ -29,21 +29,21 @@ CREATE TABLE `ReflectorNodeLOG_History` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index f�r dumpade tabeller
+-- Index f�r dumpade tableer
 --
 
 --
--- Index f�r tabell `ReflectorNodeLOG_History`
+-- Index f�r table `ReflectorNodeLOG_History`
 --
 ALTER TABLE `ReflectorNodeLOG_History`
   ADD PRIMARY KEY (`Id`)
 
 --
--- AUTO_INCREMENT f�r dumpade tabeller
+-- AUTO_INCREMENT f�r dumpade tableer
 --
 
 --
--- AUTO_INCREMENT f�r tabell `ReflectorNodeLOG_History`
+-- AUTO_INCREMENT f�r table `ReflectorNodeLOG_History`
 --
 ALTER TABLE `ReflectorNodeLOG_History`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
@@ -82,21 +82,21 @@ CREATE TABLE `Station_day_statistic` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Statistcs for reciver day by day';
 
 --
--- Index f�r dumpade tabeller
+-- Index f�r dumpade tableer
 --
 
 --
--- Index f�r tabell `Station_day_statistic`
+-- Index f�r table `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   ADD PRIMARY KEY (`Id`);
 
 --
--- AUTO_INCREMENT f�r dumpade tabeller
+-- AUTO_INCREMENT f�r dumpade tableer
 --
 
 --
--- AUTO_INCREMENT f�r tabell `Station_day_statistic`
+-- AUTO_INCREMENT f�r table `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   MODIFY `Id` int NOT NULL AUTO_INCREMENT;
