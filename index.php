@@ -1913,7 +1913,7 @@ ul.dropdown-lr {
 						
 						
 
-					<li class="nav-item"><a class="nav-link" href="#Recivers2"
+					<li class="nav-item"><a class="nav-link" href="#Receivers2"
 						onclick="load_reflector();hide_menu_click()" data-toggle="tab"><i
 							class="fas fa-broadcast-tower"></i>  <?php echo _("Receivers")?></a></li>
 							
@@ -2339,11 +2339,16 @@ $result = mysqli_query($link, "SELECT * FROM `RefletorStations` where Callsign !
 				<div class="tab-pane" id="Echolink">
 <!-- 					<h1>Commands</h1> -->
   <div class="">
-			<?php
-if($usefile != null)
-{
-    $myfile = fopen("echolink.txt", "r") or die("Unable to fla file!");
-    echo utf8_encode(fread($myfile, filesize("echolink.txt")));
+  <?php
+if ($usefile !== null) {
+    // Open the file for reading
+    $myfile = fopen("echolink.txt", "r") or die("Unable to open file!");
+
+    // Read the file content and convert it to UTF-8 encoding
+    $content = fread($myfile, filesize("echolink.txt"));
+    echo mb_convert_encoding($content, "UTF-8", "auto");
+
+    // Close the file
     fclose($myfile);
 }else
 {
@@ -2376,7 +2381,7 @@ if($usefile != null)
 <?php }?>	
 	</div>
 				</div>
-				<div class="tab-pane" id="Recivers2">
+				<div class="tab-pane" id="Receivers2">
 					<div class="container">
 						<nav
 							class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-light bg-light justify-content-between">
@@ -2398,7 +2403,7 @@ if($usefile != null)
 
 
 
-				<div class="tab-pane" id="Recivers2"></div>
+				<div class="tab-pane" id="Receivers2"></div>
 				<div class="tab-pane" id="Dictionary">
 
     

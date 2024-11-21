@@ -543,7 +543,7 @@ function login_form()
 						data-toggle="tab"><i class="fas fa-chart-bar"></i>  <?php echo _("Statistics")?></a></li>
 						
 
-					<li class="nav-item"><a class="nav-link" href="#Recivers2"
+					<li class="nav-item"><a class="nav-link" href="#Receivers2"
 						onclick="load_reflector()" data-toggle="tab"><i
 							class="fas fa-broadcast-tower"></i>  <?php echo _("Receivers")?></a></li>
 					<li class="nav-item"><a class="nav-link" href="#Log"
@@ -803,10 +803,14 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 <!-- 					<h1>Commands</h1> -->
   <div class="row">
 			<?php
-if($usefile != null)
-{
-    $myfile = fopen("echolink.txt", "r") or die("Unable to fla file!");
+if ($usefile !== null) {
+    // Open the file for reading
+    $myfile = fopen("echolink.txt", "r") or die("Unable to open file!");
+
+    // Read and output the file content with UTF-8 encoding
     echo utf8_encode(fread($myfile, filesize("echolink.txt")));
+
+    // Close the file
     fclose($myfile);
 }else
 {
@@ -819,7 +823,7 @@ if($usefile != null)
 <?php }?>	
 	</div>
 				</div>
-				<div class="tab-pane" id="Recivers2">
+				<div class="tab-pane" id="Receivers2">
 					<div class="container">
 						<nav
 							class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-light bg-light justify-content-between">
@@ -841,7 +845,7 @@ if($usefile != null)
 
 
 
-				<div class="tab-pane" id="Recivers2"></div>
+				<div class="tab-pane" id="Receivers2"></div>
 				<div class="tab-pane" id="Dictionary">
 					<table class="table table-striped">
 						<thead>

@@ -416,7 +416,7 @@ function generate_coulor()
 						data-toggle="tab"><i class="fas fa-terminal"></i> Log</a></li>
 
 
-					<li class="nav-item"><a class="nav-link" href="#Recivers2"
+					<li class="nav-item"><a class="nav-link" href="#Receivers2"
 						onclick="load_reflector()" data-toggle="tab"><i
 							class="fas fa-broadcast-tower"></i> Receivers</a></li>
 
@@ -601,13 +601,22 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 					<h1>Commands</h1>
 					<pre>
 			<?php
-$myfile = fopen("echolink.txt", "r") or die("Unable to fla file!");
-echo utf8_encode(fread($myfile, filesize("echolink.txt")));
-fclose($myfile);
+if ($usefile !== null) {
+    // Open the file for reading
+    $myfile = fopen("echolink.txt", "r") or die("Unable to open file!");
+
+    // Read the file content and convert it to UTF-8 encoding
+    $content = fread($myfile, filesize("echolink.txt"));
+    echo mb_convert_encoding($content, "UTF-8", "auto");
+
+    // Close the file
+    fclose($myfile);
+}
 ?>
+
 		</pre>
 				</div>
-				<div class="tab-pane" id="Recivers2">
+				<div class="tab-pane" id="Receivers2">
 					<div class="container">
 						<nav
 							class="navbar navbar-expand-lg navbar-light bg-light navbar navbar-light bg-light justify-content-between">
@@ -630,7 +639,7 @@ fclose($myfile);
 
 
 
-				<div class="tab-pane" id="Recivers2"></div>
+				<div class="tab-pane" id="Receivers2"></div>
 				<div class="tab-pane" id="Dictionary">
 					<table class="table table-striped">
 						<thead>
