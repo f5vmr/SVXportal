@@ -831,14 +831,14 @@ CREATE TABLE `Talkgroup` (
   `ID` int(11) NOT NULL,
   `TG` int(11) NOT NULL,
   `TXT` text NOT NULL,
-  `Collor` text NOT NULL
+  `Colour` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumpning av Data i tabell `Talkgroup`
 --
 
-INSERT INTO `Talkgroup` (`ID`, `TG`, `TXT`, `Collor`) VALUES
+INSERT INTO `Talkgroup` (`ID`, `TG`, `TXT`, `Colour`) VALUES
 (1, 2402, 'SM2', '#cfe0e8'),
 (2, 24021, 'SK2HG Norrbotten link', '#b7d7e8'),
 (3, 2403, 'SM3', '#d9ad7c'),

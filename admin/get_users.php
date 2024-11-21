@@ -35,13 +35,13 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
        <td>
 
-<select  name="station" class="form-control" id="station_premission" onchange="chahge_premmision(this.value,<?php echo $row['id']?>)">
+<select  name="station" class="form-control" id="station_permission" onchange="chahge_premmision(this.value,<?php echo $row['id']?>)">
  <option value=""> <?php echo _('- Select station -')?></option>
   <optgroup label="<?php echo _('User granded'); ?>">
   
 <?php 
 $user_id= $row['id'];
-$result1 = mysqli_query($link, "SELECT * FROM User_Premission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Premission.Station_id WHERE User_Premission.User_id ='$user_id' ");
+$result1 = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.Station_id WHERE User_Permission.User_id ='$user_id' ");
 
 
 

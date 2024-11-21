@@ -37,10 +37,10 @@ ALTER TABLE `Dtmf_command`
 
 
 --
--- Tabellstruktur `Infotmation_page`
+-- Tabellstruktur `Information_page`
 --
 
-CREATE TABLE `Infotmation_page` (
+CREATE TABLE `Information_page` (
   `id` int(11) NOT NULL,
   `Station_Name` varchar(20) NOT NULL,
   `Html` text NOT NULL
@@ -51,32 +51,32 @@ CREATE TABLE `Infotmation_page` (
 --
 
 --
--- Index för tabell `Infotmation_page`
+-- Index för tabell `Information_page`
 --
-ALTER TABLE `Infotmation_page`
+ALTER TABLE `Information_page`
   ADD PRIMARY KEY (`id`);
 
 
 --
--- AUTO_INCREMENT för tabell `Infotmation_page`
+-- AUTO_INCREMENT för tabell `Information_page`
 --
-ALTER TABLE `Infotmation_page`
+ALTER TABLE `Information_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 
 
 
-ALTER TABLE `Infotmation_page` ADD `Image` VARCHAR(90) NOT NULL AFTER `Html`; 
+ALTER TABLE `Information_page` ADD `Image` VARCHAR(90) NOT NULL AFTER `Html`; 
 
-ALTER TABLE `Infotmation_page` ADD `Hardware_page` TEXT NOT NULL AFTER `Html`; 
+ALTER TABLE `Information_page` ADD `Hardware_page` TEXT NOT NULL AFTER `Html`; 
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'API_KEY_TINY_CLOUD', 'no-api', 'TinyMCE Cloud API KEY', '2'); 
 
 
 ALTER TABLE `Dtmf_command` ADD `Station_id` INT NOT NULL AFTER `Station_Name`; 
 
-ALTER TABLE `Infotmation_page` ADD `Station_id` INT NOT NULL AFTER `Station_Name`; 
+ALTER TABLE `Information_page` ADD `Station_id` INT NOT NULL AFTER `Station_Name`; 
 
 ALTER TABLE `Dtmf_command` ADD `Category` INT NOT NULL AFTER `Description`; 
 
@@ -124,7 +124,7 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, '
 UPDATE `Settings` SET `value` = '2.4' WHERE `Settings`.`Define` = 'PORTAL_VERSION'; 
 
 
-CREATE TABLE `User_Premission` (
+CREATE TABLE `User_Permission` (
   `id` int(11) NOT NULL,
   `Station_id` int(11) NOT NULL,
   `User_id` int(11) NOT NULL,
@@ -134,9 +134,9 @@ CREATE TABLE `User_Premission` (
 
 
 --
--- Index för tabell `User_Premission`
+-- Index för tabell `User_Permission`
 --
-ALTER TABLE `User_Premission`
+ALTER TABLE `User_Permission`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -144,18 +144,18 @@ ALTER TABLE `User_Premission`
 --
 
 --
--- AUTO_INCREMENT för tabell `User_Premission`
+-- AUTO_INCREMENT för tabell `User_Permission`
 --
-ALTER TABLE `User_Premission`
+ALTER TABLE `User_Permission`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 
 
 
 ALTER TABLE `users` ADD `email` TEXT NOT NULL AFTER `lastname`; 
 
-ALTER TABLE `Infotmation_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
+ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
 
-ALTER TABLE `RefletorNodeLOG` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
+ALTER TABLE `ReflectorNodeLog` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
 
 
 

@@ -16,18 +16,18 @@ CREATE TABLE `ReflectorNodeLOG_History` (
 
 
 
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Talktime`); 
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Talktime`); 
 
-ALTER TABLE `Infotmation_page` ADD `GrafanaUrl` TEXT NOT NULL AFTER `Image`; 
+ALTER TABLE `Information_page` ADD `GrafanaUrl` TEXT NOT NULL AFTER `Image`; 
 
-ALTER TABLE `Infotmation_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL; 
+ALTER TABLE `Information_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL; 
 
 
 ALTER TABLE `users` ADD `image_url` VARCHAR(255) NULL DEFAULT NULL AFTER `email`; 
 
-ALTER TABLE `Infotmation_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
+ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
 
-ALTER TABLE `RefletorNodeLOG` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
+ALTER TABLE `ReflectorNodeLog` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
 
 
 ALTER TABLE `users` ADD `Reset_token` VARCHAR(99) NOT NULL AFTER `image_url`; 

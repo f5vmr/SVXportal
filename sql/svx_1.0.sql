@@ -103,7 +103,7 @@ CREATE TABLE `Talkgroup` (
   `ID` int(11) NOT NULL,
   `TG` int(11) NOT NULL,
   `TXT` text NOT NULL,
-  `Collor` text NOT NULL
+  `Colour` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

@@ -62,7 +62,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
               <option value ="2"><?php echo _("Disable user")?></option>
               <?php }?>
               <option value ="3" ><?php echo _("Send message to Sysadmin")?></option>
-              <option value ="4" ><?php echo _("Send login credentaial to sysadmin")?></option>
+              <option value ="4" ><?php echo _("Send login credential to sysadmin")?></option>
               <option value ="5" ><?php echo _("Change node password")?></option>
               
              
@@ -73,7 +73,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
    
        
-          <td><i class="fas fa-trash" onclick="Delete_reflektor_user(<?php echo $row['id']?>)"></i> <i onclick="chahge_reflektor_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i> </td>
+          <td><i class="fas fa-trash" onclick="Delete_reflektor_user(<?php echo $row['id']?>)"></i> <i onclick="change_reflector_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i> </td>
       </tr>
           
           

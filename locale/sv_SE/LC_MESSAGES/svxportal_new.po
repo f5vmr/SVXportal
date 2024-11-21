@@ -60,43 +60,43 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: admin/Reflektor_users.php:25 admin/users.php:16
+#: admin/reflector_users.php:25 admin/users.php:16
 msgid "User created sucsessfully!"
 msgstr ""
 
-#: admin/Reflektor_users.php:41 admin/talkgroup.php:25 admin/users.php:31
+#: admin/reflector_users.php:41 admin/talkgroup.php:25 admin/users.php:31
 msgid "Please confirm user removal"
 msgstr ""
 
-#: admin/Reflektor_users.php:57
+#: admin/reflector_users.php:57
 msgid "Please confirm user enable"
 msgstr ""
 
-#: admin/Reflektor_users.php:60
+#: admin/reflector_users.php:60
 msgid "Please confirm user disable"
 msgstr ""
 
-#: admin/Reflektor_users.php:95 admin/users.php:72
+#: admin/reflector_users.php:95 admin/users.php:72
 msgid "Password is updated!"
 msgstr ""
 
-#: admin/Reflektor_users.php:179
+#: admin/reflector_users.php:179
 msgid "Please enter your message"
 msgstr ""
 
-#: admin/Reflektor_users.php:187 admin/Reflektor_users.php:207
+#: admin/reflector_users.php:187 admin/reflector_users.php:207
 msgid "Message sent"
 msgstr ""
 
-#: admin/Reflektor_users.php:236
+#: admin/reflector_users.php:236
 msgid "Reflector users"
 msgstr ""
 
-#: admin/Reflektor_users.php:246 admin/users.php:127
+#: admin/reflector_users.php:246 admin/users.php:127
 msgid "Print Users"
 msgstr ""
 
-#: admin/Reflektor_users.php:248 admin/log.php:109 admin/stations.php:52
+#: admin/reflector_users.php:248 admin/log.php:109 admin/stations.php:52
 #: admin/talkgroup.php:87 admin/users.php:129 ctcss_map_table.php:209
 #: index.php:1728 index.php:2140 index.php:4490 index1.php:1358 index1.php:1751
 #: index_old.php:772 index_old.php:1057 indexa.php:773 indexa.php:1058
@@ -104,31 +104,31 @@ msgstr ""
 msgid "Print"
 msgstr ""
 
-#: admin/Reflektor_users.php:255 admin/log.php:116 admin/stations.php:59
+#: admin/reflector_users.php:255 admin/log.php:116 admin/stations.php:59
 #: admin/talkgroup.php:94 admin/users.php:136 ctcss_map_table.php:216
 #: index.php:1723 index1.php:1353 index_old.php:779 index_old.php:1064
 #: indexa.php:780 indexa.php:1065 log.php:230
 msgid "Export xls"
 msgstr ""
 
-#: admin/Reflektor_users.php:262 admin/Reflektor_users.php:284
-#: admin/Reflektor_users.php:356 admin/users.php:143 admin/users.php:174
+#: admin/reflector_users.php:262 admin/reflector_users.php:284
+#: admin/reflector_users.php:356 admin/users.php:143 admin/users.php:174
 #: admin/users.php:226 database_text.php:13
 msgid "Create user"
 msgstr ""
 
-#: admin/Reflektor_users.php:288 admin/login.php:36 admin/users.php:178
+#: admin/reflector_users.php:288 admin/login.php:36 admin/users.php:178
 #: admin/users.php:245 index.php:1561 index.php:1562 index.php:4461
 #: index.php:4618 index1.php:1191 index1.php:1192 index1.php:3760
 #: index1.php:3917 index_old.php:3045 indexa.php:3046
 msgid "Username"
 msgstr ""
 
-#: admin/Reflektor_users.php:296
+#: admin/reflector_users.php:296
 msgid "Generate Username"
 msgstr ""
 
-#: admin/Reflektor_users.php:303 admin/Reflektor_users.php:484
+#: admin/reflector_users.php:303 admin/reflector_users.php:484
 #: admin/login.php:43 admin/users.php:186 admin/users.php:406 index.php:1565
 #: index.php:4634 index1.php:1195 index1.php:3933
 #: request_reflector_login.php:606 request_reflector_login.php:609
@@ -136,85 +136,85 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
-#: admin/Reflektor_users.php:311 admin/Reflektor_users.php:490
+#: admin/reflector_users.php:311 admin/reflector_users.php:490
 #: request_reflector_login.php:612
 msgid "Generate password"
 msgstr ""
 
-#: admin/Reflektor_users.php:323 admin/Reflektor_users.php:375
+#: admin/reflector_users.php:323 admin/reflector_users.php:375
 #: admin/talkgroup.php:122 admin/talkgroup.php:162 edit_station.php:966
 #: edit_station.php:1078 edit_station.php:1162 request_reflector_login.php:628
 #: request_reflector_login.php:631 station_info.php:146
 msgid "Description"
 msgstr ""
 
-#: admin/Reflektor_users.php:334 admin/Reflektor_users.php:376 index.php:4627
+#: admin/reflector_users.php:334 admin/reflector_users.php:376 index.php:4627
 msgid "E-mail"
 msgstr ""
 
-#: admin/Reflektor_users.php:351 admin/Reflektor_users.php:377 index.php:2403
+#: admin/reflector_users.php:351 admin/reflector_users.php:377 index.php:2403
 #: index1.php:2015 index_old.php:1331 indexa.php:1332
 msgid "Enable"
 msgstr ""
 
-#: admin/Reflektor_users.php:373
+#: admin/reflector_users.php:373
 msgid "Station login"
 msgstr ""
 
-#: admin/Reflektor_users.php:374
+#: admin/reflector_users.php:374
 msgid "Station password"
 msgstr ""
 
-#: admin/Reflektor_users.php:378 admin/users.php:248 database_text.php:15
+#: admin/reflector_users.php:378 admin/users.php:248 database_text.php:15
 #: edit_station.php:968
 msgid "Action"
 msgstr ""
 
-#: admin/Reflektor_users.php:411 admin/Settings.php:25
+#: admin/reflector_users.php:411 admin/Settings.php:25
 #: admin/get_reflector.php:35 admin/get_station.php:34 admin/get_users.php:23
 #: admin/stations.php:130 admin/users.php:270 database_text.php:17
 msgid "Yes"
 msgstr ""
 
-#: admin/Reflektor_users.php:413 admin/Settings.php:19
+#: admin/reflector_users.php:413 admin/Settings.php:19
 #: admin/get_reflector.php:37 admin/get_station.php:36 admin/get_users.php:25
 #: admin/stations.php:132 admin/users.php:272 database_text.php:16
 msgid "No"
 msgstr ""
 
-#: admin/Reflektor_users.php:436 admin/get_reflector.php:58
+#: admin/reflector_users.php:436 admin/get_reflector.php:58
 msgid "Select action"
 msgstr ""
 
-#: admin/Reflektor_users.php:438 admin/get_reflector.php:60
+#: admin/reflector_users.php:438 admin/get_reflector.php:60
 msgid "Enable user"
 msgstr ""
 
-#: admin/Reflektor_users.php:440 admin/get_reflector.php:62
+#: admin/reflector_users.php:440 admin/get_reflector.php:62
 msgid "Disable user"
 msgstr ""
 
-#: admin/Reflektor_users.php:442 admin/get_reflector.php:64
+#: admin/reflector_users.php:442 admin/get_reflector.php:64
 msgid "Send message to Sysadmin"
 msgstr ""
 
-#: admin/Reflektor_users.php:443 admin/get_reflector.php:65
-msgid "Send login credentaial to sysadmin"
+#: admin/reflector_users.php:443 admin/get_reflector.php:65
+msgid "Send login credential to sysadmin"
 msgstr ""
 
-#: admin/Reflektor_users.php:444 admin/Reflektor_users.php:478
+#: admin/reflector_users.php:444 admin/reflector_users.php:478
 #: admin/users.php:400
 msgid "Change user password"
 msgstr ""
 
-#: admin/Reflektor_users.php:496 admin/stations.php:171 admin/talkgroup.php:219
+#: admin/reflector_users.php:496 admin/stations.php:171 admin/talkgroup.php:219
 #: admin/users.php:367 admin/users.php:416 edit_station.php:725
 #: edit_station.php:1130 edit_station.php:1208 index.php:109 index.php:2418
 #: index1.php:69 index1.php:2030 index_old.php:59 indexa.php:60
 msgid "Close"
 msgstr ""
 
-#: admin/Reflektor_users.php:497 admin/stations.php:65 admin/stations.php:172
+#: admin/reflector_users.php:497 admin/stations.php:65 admin/stations.php:172
 #: admin/talkgroup.php:220 admin/users.php:368 admin/users.php:417
 #: edit_station.php:1201
 msgid "Update"
@@ -388,7 +388,7 @@ msgid "Actions"
 msgstr ""
 
 #: admin/users.php:87
-msgid "Premission is updated!"
+msgid "Permission is updated!"
 msgstr ""
 
 #: admin/users.php:195 admin/users.php:243 database_text.php:11
@@ -559,7 +559,7 @@ msgid "Ticket is created"
 msgstr ""
 
 #: edit_station.php:391 station_dash.php:318
-msgid "Premission Denied!"
+msgid "Permission Denied!"
 msgstr ""
 
 #: edit_station.php:415

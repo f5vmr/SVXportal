@@ -28,7 +28,7 @@
 
 </head>
 <body>
-<nav class="navbar   navbar-dark sidebar_collor justify-content-between">
+<nav class="navbar   navbar-dark sidebar_colour justify-content-between">
       
        
         <div>

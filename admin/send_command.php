@@ -7,7 +7,7 @@ mysqli_set_charset($link,"utf8");
 if(  $_SESSION['loginid'] >0 )
 {
     
-    if($_POST['Station_id'] >= 0 && check_premission_station_RW($_POST['Station_id'],$_SESSION['loginid']) >0 )
+    if($_POST['Station_id'] >= 0 && check_permission_station_RW($_POST['Station_id'],$_SESSION['loginid']) >0 )
     {
         
         $link->begin_transaction();

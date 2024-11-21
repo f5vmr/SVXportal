@@ -22,7 +22,7 @@ $result = mysqli_query($link, "SELECT * FROM `Talkgroup` ");
     
                 <td><i class="fas fa-trash" onclick="Delete_tg(<?php echo $row['ID']?>)"></i></td>
           
-          <?php     echo "<td>".'<div onclick="update_color_tg('. $row['ID'].',\''.$row["Collor"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Collor"].' ">'."</td>"; ?>
+          <?php     echo "<td>".'<div onclick="update_color_tg('. $row['ID'].',\''.$row["Colour"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Colour"].' ">'."</td>"; ?>
           </tr>
     <?php }?>
       

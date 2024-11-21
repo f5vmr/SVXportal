@@ -11,7 +11,7 @@ $callsign = $link->real_escape_string($callsign);
 
 mysqli_set_charset($link,"utf8");
     
-$result_station = mysqli_query($link, "SELECT * FROM `Infotmation_page`  where Station_Name = '$callsign'");
+$result_station = mysqli_query($link, "SELECT * FROM `Information_page`  where Station_Name = '$callsign'");
 
 
 

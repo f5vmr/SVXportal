@@ -56,7 +56,7 @@ function chahge_premmision(station,id)
 		$("#user_page_id").val(id);
 		$("#station_page_id").val(station);
 
-	 $("#Premission").modal() 
+	 $("#Permission").modal() 
 	return false;
 }
 
@@ -79,14 +79,14 @@ function update_password()
 	return false;
 }
 
-function update_premission()
+function update_permission()
 {
 
-    	$.post( "admin/user_action.php", $( "#set_premission" ).serialize() )
+    	$.post( "admin/user_action.php", $( "#set_permission" ).serialize() )
     	.done(function( data ) {
-    		alert("<?php echo _('Premission is updated!')?>")
+    		alert("<?php echo _('Permission is updated!')?>")
     		reaload_user_table();
-    		$('#Premission').modal('toggle'); 
+    		$('#Permission').modal('toggle'); 
 
     
     	});
@@ -290,13 +290,13 @@ function expand_image(image)
       <td><?php echo _('No')?></td>
     <?php }?>
 <td>
-<select  name="station" class="form-control" id="station_premission" onchange="chahge_premmision(this.value,<?php echo $row['id']?>)">
+<select  name="station" class="form-control" id="station_permission" onchange="chahge_premmision(this.value,<?php echo $row['id']?>)">
  <option value=""> <?php echo _('- Select station -')?></option>
   <optgroup label="<?php echo _('User granded');?>">
   
 <?php 
 $user_id= $row['id'];
-$result1 = mysqli_query($link, "SELECT * FROM User_Premission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Premission.Station_id WHERE User_Premission.User_id ='$user_id' ");
+$result1 = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.Station_id WHERE User_Permission.User_id ='$user_id' ");
 
 
 
@@ -378,7 +378,7 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC))
 
 
   <!-- Modal -->
-<div id="Premission" class="modal fade" role="dialog">
+<div id="Permission" class="modal fade" role="dialog">
   <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
@@ -386,7 +386,7 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC))
             <h4 class="modal-title"><?php echo _('Assign station permission for user') ?></h4>
             
           </div>
-      <form id="set_premission" onsubmit="return update_premission()">
+      <form id="set_permission" onsubmit="return update_permission()">
     	<div class="modal-body">
        
 

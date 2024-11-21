@@ -29,21 +29,21 @@ CREATE TABLE `ReflectorNodeLOG_History` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Index för dumpade tabeller
+-- Index fï¿½r dumpade tabeller
 --
 
 --
--- Index för tabell `ReflectorNodeLOG_History`
+-- Index fï¿½r tabell `ReflectorNodeLOG_History`
 --
 ALTER TABLE `ReflectorNodeLOG_History`
   ADD PRIMARY KEY (`Id`)
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT fï¿½r dumpade tabeller
 --
 
 --
--- AUTO_INCREMENT för tabell `ReflectorNodeLOG_History`
+-- AUTO_INCREMENT fï¿½r tabell `ReflectorNodeLOG_History`
 --
 ALTER TABLE `ReflectorNodeLOG_History`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
@@ -52,18 +52,18 @@ ALTER TABLE `ReflectorNodeLOG_History`
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Talktime`); 
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Talktime`); 
 
-ALTER TABLE `Infotmation_page` ADD `GrafanaUrl` TEXT NOT NULL AFTER `Image`; 
+ALTER TABLE `Information_page` ADD `GrafanaUrl` TEXT NOT NULL AFTER `Image`; 
 
-ALTER TABLE `Infotmation_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL; 
+ALTER TABLE `Information_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL; 
 
 
 ALTER TABLE `users` ADD `image_url` VARCHAR(255) NULL DEFAULT NULL AFTER `email`; 
 
-ALTER TABLE `Infotmation_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
+ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
 
-ALTER TABLE `RefletorNodeLOG` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
+ALTER TABLE `ReflectorNodeLog` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
 
 
 ALTER TABLE `users` ADD `Reset_token` VARCHAR(99) NOT NULL AFTER `image_url`; 
@@ -82,21 +82,21 @@ CREATE TABLE `Station_day_statistic` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Statistcs for reciver day by day';
 
 --
--- Index för dumpade tabeller
+-- Index fï¿½r dumpade tabeller
 --
 
 --
--- Index för tabell `Station_day_statistic`
+-- Index fï¿½r tabell `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   ADD PRIMARY KEY (`Id`);
 
 --
--- AUTO_INCREMENT för dumpade tabeller
+-- AUTO_INCREMENT fï¿½r dumpade tabeller
 --
 
 --
--- AUTO_INCREMENT för tabell `Station_day_statistic`
+-- AUTO_INCREMENT fï¿½r tabell `Station_day_statistic`
 --
 ALTER TABLE `Station_day_statistic`
   MODIFY `Id` int NOT NULL AUTO_INCREMENT;

@@ -310,14 +310,14 @@ function __autoload_driver($className)
 }
 
 
-function check_premission_station($staion_id,$user_id)
+function check_permission_station($station_id,$user_id)
 {
     
     global $link;
-    $staion_id = $link->real_escape_string($staion_id);
+    $station_id = $link->real_escape_string($station_id);
     $user_id =$link->real_escape_string($user_id);
     
-    if ($result = $link->query("SELECT RW FROM `User_Premission` where Station_id='$staion_id' AND User_id = '$user_id' ")) {
+    if ($result = $link->query("SELECT RW FROM `User_Permission` where Station_id='$station_id' AND User_id = '$user_id' ")) {
         
         /* determine number of rows result set */
         $row_cnt = $result->num_rows;
@@ -332,14 +332,14 @@ function check_premission_station($staion_id,$user_id)
   
     
 }
-function check_premission_station_RW($staion_id,$user_id)
+function check_permission_station_RW($station_id,$user_id)
 {
     
     global $link;
-    $staion_id = $link->real_escape_string($staion_id);
+    $station_id = $link->real_escape_string($station_id);
     $user_id =$link->real_escape_string($user_id);
     
-    if ($result = $link->query("SELECT RW FROM `User_Premission` where Station_id='$staion_id' AND User_id = '$user_id' AND RW >= 1 ")) {
+    if ($result = $link->query("SELECT RW FROM `User_Permission` where Station_id='$station_id' AND User_id = '$user_id' AND RW >= 1 ")) {
         
         /* determine number of rows result set */
         $row_cnt = $result->num_rows;
@@ -353,10 +353,10 @@ function check_premission_station_RW($staion_id,$user_id)
     
     
 }
-function page_id_to_staion_id($page_id)
+function page_id_to_station_id($page_id)
 {
     global $link;
-    $result = mysqli_query($link, "SELECT  Station_id FROM `Infotmation_page` where id='$page_id'");
+    $result = mysqli_query($link, "SELECT  Station_id FROM `Information_page` where id='$page_id'");
     
     
     
@@ -415,13 +415,13 @@ function hex2rgb( $colour ) {
     return array( 'red' => $r, 'green' => $g, 'blue' => $b );
 }
 
-function return_diff_to_darkness($collor)
+function return_diff_to_darkness($colour)
 {
-    if($collor == '')
+    if($colour == '')
         return 0;
     else
     {
-        $colloar_array =hex2rgb(trim($collor));
+        $colloar_array =hex2rgb(trim($colour));
     }
     return brghtdiff($colloar_array['red'],$colloar_array['green'],$colloar_array['blue'],0,0,0);
     

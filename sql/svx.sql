@@ -75,10 +75,10 @@ CREATE TABLE `Filter` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `Infotmation_page`
+-- Tabellstruktur `Information_page`
 --
 
-CREATE TABLE `Infotmation_page` (
+CREATE TABLE `Information_page` (
   `id` int(11) NOT NULL,
   `Station_Name` varchar(20) NOT NULL,
   `Station_id` int(11) NOT NULL,
@@ -104,10 +104,10 @@ CREATE TABLE `Operation_log` (
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `RefletorNodeLOG`
+-- Tabellstruktur `ReflectorNodeLog`
 --
 
-CREATE TABLE `RefletorNodeLOG` (
+CREATE TABLE `ReflectorNodeLog` (
   `Id` int(11) NOT NULL,
   `Callsign` varchar(40) NOT NULL,
   `Type` int(11) NOT NULL,
@@ -132,7 +132,7 @@ CREATE TABLE `RefletorStations` (
   `ID` int(11) NOT NULL,
   `Callsign` varchar(40) CHARACTER SET utf8 COLLATE utf8_swedish_ci NOT NULL,
   `Location` text NOT NULL,
-  `Collor` text,
+  `Colour` text,
   `Last_Seen` datetime DEFAULT NULL,
   `Station_Down` int(11) NOT NULL,
   `Station_Down_timmer_count` int(11) NOT NULL,
@@ -197,7 +197,7 @@ CREATE TABLE `Talkgroup` (
   `ID` int(11) NOT NULL,
   `TG` int(11) NOT NULL,
   `TXT` text NOT NULL,
-  `Collor` text NOT NULL
+  `Colour` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -228,10 +228,10 @@ INSERT INTO `users` (`id`, `Username`, `Password`, `level`, `Is_admin`, `Firstna
 -- --------------------------------------------------------
 
 --
--- Tabellstruktur `User_Premission`
+-- Tabellstruktur `User_Permission`
 --
 
-CREATE TABLE `User_Premission` (
+CREATE TABLE `User_Permission` (
   `id` int(11) NOT NULL,
   `Station_id` int(11) NOT NULL,
   `User_id` int(11) NOT NULL,
@@ -268,9 +268,9 @@ ALTER TABLE `Filter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `Infotmation_page`
+-- Index för tabell `Information_page`
 --
-ALTER TABLE `Infotmation_page`
+ALTER TABLE `Information_page`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -280,9 +280,9 @@ ALTER TABLE `Operation_log`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `RefletorNodeLOG`
+-- Index för tabell `ReflectorNodeLog`
 --
-ALTER TABLE `RefletorNodeLOG`
+ALTER TABLE `ReflectorNodeLog`
   ADD PRIMARY KEY (`Id`),
   ADD KEY `Callsign` (`Callsign`),
   ADD KEY `NODE` (`NODE`),
@@ -328,9 +328,9 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index för tabell `User_Premission`
+-- Index för tabell `User_Permission`
 --
-ALTER TABLE `User_Premission`
+ALTER TABLE `User_Permission`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -358,9 +358,9 @@ ALTER TABLE `Dtmf_command`
 ALTER TABLE `Filter`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT för tabell `Infotmation_page`
+-- AUTO_INCREMENT för tabell `Information_page`
 --
-ALTER TABLE `Infotmation_page`
+ALTER TABLE `Information_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT för tabell `Operation_log`
@@ -383,9 +383,9 @@ ALTER TABLE `Talkgroup`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT för tabell `User_Premission`
+-- AUTO_INCREMENT för tabell `User_Permission`
 --
-ALTER TABLE `User_Premission`
+ALTER TABLE `User_Permission`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
@@ -395,11 +395,11 @@ ALTER TABLE `User_Premission`
 
 ALTER TABLE `users` ADD `email` TEXT NOT NULL AFTER `lastname`; 
 
-ALTER TABLE `Infotmation_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
+ALTER TABLE `Information_page` ADD `Module` VARCHAR(90) NOT NULL AFTER `Station_id`;
 
-ALTER TABLE `RefletorNodeLOG` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
+ALTER TABLE `ReflectorNodeLog` CHANGE `Id` `Id` INT(11) NOT NULL AUTO_INCREMENT; 
 
-ALTER TABLE RefletorNodeLOG AUTO_INCREMENT = 1;
+ALTER TABLE ReflectorNodeLog AUTO_INCREMENT = 1;
 
 
 
@@ -656,4 +656,4 @@ TRUNCATE `RefletorStations`;
 ALTER TABLE `RefletorStations` CHANGE `ID` `ID` INT NOT NULL AUTO_INCREMENT; 
 
 ALTER TABLE `RefletorStations` ADD `Version` VARCHAR(200) NOT NULL AFTER `Last_Seen`; 
-ALTER TABLE `RefletorStations` ADD `Sysop` VARCHAR(200) NOT NULL AFTER `Collor`; 
+ALTER TABLE `RefletorStations` ADD `Sysop` VARCHAR(200) NOT NULL AFTER `Colour`; 

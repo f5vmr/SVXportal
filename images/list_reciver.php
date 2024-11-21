@@ -30,7 +30,7 @@ set_language();
 
 <script>
 
-function random_css_collor()
+function random_css_colour()
 {
 	  return "hsl(" + 360 * Math.random() + ',' +
       (25 + 70 * Math.random()) + '%,' + 
@@ -48,7 +48,7 @@ $(document).ready(function(){
 var interval;
 var totalSeconds =  new Array();
 var current_talker= new Array();
-var tg_collors = new Array();
+var tg_colours = new Array();
 function add_header()
 {
 
@@ -73,18 +73,18 @@ function generate_coulor()
     	for(var k in data.nodes){
     		
     		for(var nodes in data.nodes[k].monitoredTGs){
-    			//tg_collors[data.nodes[k].monitoredTGs[nodes]]['color']="";	
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]= new Array();
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]["id"] =data.nodes[k].monitoredTGs[nodes];
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]["color"] =random_css_collor();   
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]["TXT"] ="";
+    			//tg_colours[data.nodes[k].monitoredTGs[nodes]]['color']="";	
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]= new Array();
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]["id"] =data.nodes[k].monitoredTGs[nodes];
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]["color"] =random_css_colour();   
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]["TXT"] ="";
     			totalSeconds[data.nodes[k].tg]=0;
     		}
     
-    		tg_collors[data.nodes[k].tg]= new Array();
-    		tg_collors[data.nodes[k].tg]["id"] =data.nodes[k].tg;
-    		tg_collors[data.nodes[k].tg]["color"] =random_css_collor();
-    		tg_collors[data.nodes[k].tg]["TXT"] ="";
+    		tg_colours[data.nodes[k].tg]= new Array();
+    		tg_colours[data.nodes[k].tg]["id"] =data.nodes[k].tg;
+    		tg_colours[data.nodes[k].tg]["color"] =random_css_colour();
+    		tg_colours[data.nodes[k].tg]["TXT"] ="";
     		totalSeconds[data.nodes[k].tg]=0;
     
     	}
@@ -98,18 +98,18 @@ function generate_coulor()
     			// Associative array
     			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     ?>
-    				tg_collors[<?php echo $row["TG"]?>]= new Array();
-            		tg_collors[<?php echo $row["TG"]?>]["id"] =<?php echo $row["TG"]?>;
-            		tg_collors[<?php echo $row["TG"]?>]["color"] = "<?php echo $row["Collor"]?>";      
-            		tg_collors[<?php echo $row["TG"]?>]["TXT"] = "<?php echo $row["TXT"]?>";             
+    				tg_colours[<?php echo $row["TG"]?>]= new Array();
+            		tg_colours[<?php echo $row["TG"]?>]["id"] =<?php echo $row["TG"]?>;
+            		tg_colours[<?php echo $row["TG"]?>]["color"] = "<?php echo $row["Colour"]?>";      
+            		tg_colours[<?php echo $row["TG"]?>]["TXT"] = "<?php echo $row["TXT"]?>";             
     <?php }?>
 
-    for(var k in tg_collors){
+    for(var k in tg_colours){
         
       	$('#selects').append($('<option>', {
       	    value: k,
-      	    text: k+"		"+tg_collors[k]["TXT"],
-      	  style:"background-color: "+tg_collors[k]["color"] 
+      	    text: k+"		"+tg_colours[k]["TXT"],
+      	  style:"background-color: "+tg_colours[k]["color"] 
       	}));
       }
 	
@@ -150,11 +150,11 @@ $.getJSON( "<?php echo $serveradress ?>", function( data ) {
 for(var k in data.nodes){
 	
 	for(var nodes in data.nodes[k].monitoredTGs){
-		//tg_collors[data.nodes[k].monitoredTGs[nodes]]['color']="";	   
+		//tg_colours[data.nodes[k].monitoredTGs[nodes]]['color']="";	   
 	}
 
-	tg_collors[data.nodes[k].tg.to]= new Array();
-	tg_collors[data.nodes[k].tg.to]["id"] =0;
+	tg_colours[data.nodes[k].tg.to]= new Array();
+	tg_colours[data.nodes[k].tg.to]["id"] =0;
 
 
 }
@@ -203,38 +203,38 @@ for(var k in data.nodes){
            	
     		if(data.nodes[k].isTalker == false)
     		{
-	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="red_collor"><canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>');
+	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="red_colour"><canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>');
 	 	  		$('#row'+printk+'').removeClass("font-weight-bold");
 	 	  		
     			
     		}
     		else
     		{
-	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="green_collor" ><canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
+	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="green_colour" ><canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
 	 	  		$('#row'+printk+'').addClass("font-weight-bold");	
 
 	 	  		
 	    	}
 	    	if(data.nodes[k].tg != 0)
 	    	{
-		    	if(tg_collors[data.nodes[k].tg]== null)
+		    	if(tg_colours[data.nodes[k].tg]== null)
 		    	{
-		    		tg_collors[data.nodes[k].tg]= new Array();
-		    		tg_collors[data.nodes[k].tg]["id"] =data.nodes[k].tg;
-		    		tg_collors[data.nodes[k].tg]["color"] =random_css_collor();
+		    		tg_colours[data.nodes[k].tg]= new Array();
+		    		tg_colours[data.nodes[k].tg]["id"] =data.nodes[k].tg;
+		    		tg_colours[data.nodes[k].tg]["color"] =random_css_colour();
 		    		totalSeconds[data.nodes[k].tg]=0;
-		    		tg_collors[data.nodes[k].tg]["TXT"] ="";
+		    		tg_colours[data.nodes[k].tg]["TXT"] ="";
 
 		          	$('#selects').append($('<option>', {
 		          	    value: data.nodes[k].tg,
-		          	    text: data.nodes[k].tg+"		"+tg_collors[data.nodes[k].tg]["TXT"],
-		          	  style:"background-color: "+tg_collors[data.nodes[k].tg]["color"] 
+		          	    text: data.nodes[k].tg+"		"+tg_colours[data.nodes[k].tg]["TXT"],
+		          	  style:"background-color: "+tg_colours[data.nodes[k].tg]["color"] 
 		          	}));
 		          }
 		    		
 		    	
 	    		$('#row'+remove_notgouiltychar(k)+'').addClass("table-secondary");
-    			$('#row'+remove_notgouiltychar(k)+'').css('background-color', tg_collors[data.nodes[k].tg]["color"]);
+    			$('#row'+remove_notgouiltychar(k)+'').css('background-color', tg_colours[data.nodes[k].tg]["color"]);
     			$('#row'+remove_notgouiltychar(k)+'').removeClass("table-secondary");
 	    	}
 	    	else

@@ -21,7 +21,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
         
         
-        $link->query("UPDATE `RefletorStations` SET `Collor` = '$color' WHERE `RefletorStations`.`ID` = $id; ");
+        $link->query("UPDATE `RefletorStations` SET `Colour` = '$color' WHERE `RefletorStations`.`ID` = $id; ");
         
         $link->commit();
         $link->close();
@@ -41,7 +41,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
         
         
-        $link->query("UPDATE `Talkgroup` SET `Collor` = '$color' WHERE `Talkgroup`.`ID` = $id; ");
+        $link->query("UPDATE `Talkgroup` SET `Colour` = '$color' WHERE `Talkgroup`.`ID` = $id; ");
         
         $link->commit();
         $link->close();
@@ -81,7 +81,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
         
         
         
-        $link->query(" INSERT INTO `Talkgroup` (`ID`, `TG`, `TXT`, `Collor`) VALUES (NULL, '$tgid', '$Description', '$Color');");
+        $link->query(" INSERT INTO `Talkgroup` (`ID`, `TG`, `TXT`, `Colour`) VALUES (NULL, '$tgid', '$Description', '$Color');");
         $link->commit();
         $link->close();
         

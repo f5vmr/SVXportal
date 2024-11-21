@@ -16,7 +16,7 @@ if($_GET['id'] == "Menu" || $_GET['id'] == '')
 		echo " <button class=\"btn btn-outline-success my-2 my-sm-0\" onclick=\"stat_change('repeater-info-".$row["Name"].".json')\" class=\"btn btn-default\" type=\"button\">".$row["Name"]."</button> ";
 	}
 	echo '<a href="#menu-toggle" onclick="Show_all_Recivers()"   class="btn btn-outline-success my-2 my-sm-0" id="menu-toggle1">Show all repeaters</a>';
-	echo '<a href="#menu-toggle" onclick="toogle_menu()"   class="btn btn-outline-success my-2 my-sm-0" id="menu-toggle1">Toggle Menu</a>';
+	echo '<a href="#menu-toggle" onclick="toggle_menu()"   class="btn btn-outline-success my-2 my-sm-0" id="menu-toggle1">Toggle Menu</a>';
 }
 ?>
 

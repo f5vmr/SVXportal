@@ -57,7 +57,7 @@ $fault_counter =0;
 
 
    <header>
- <nav class="navbar   navbar-dark sidebar_collor">
+ <nav class="navbar   navbar-dark sidebar_colour">
  <div>
    <a class="navbar-brand" href="#">
     <img src="logo.png" alt="Logo" style="width:40px;">

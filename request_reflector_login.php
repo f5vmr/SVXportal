@@ -284,7 +284,7 @@ function check_register_user(input)
 
 	 var user_v = $("#Callsign").val();
 	 
-	 $.post( "admin/Reflektor_user_request.php", { uservalidate: "1", user: user_v })
+	 $.post( "admin/reflector_user_request.php", { uservalidate: "1", user: user_v })
 	  .done(function( data ) {
 
 		  if(data ==user_v )
@@ -294,7 +294,7 @@ function check_register_user(input)
 		  }
 		  else
 		  {
-				$.post( "admin/Reflektor_user_request.php", $( "#Request_user_create" ).serialize())
+				$.post( "admin/reflector_user_request.php", $( "#Request_user_create" ).serialize())
 				  .done(function( data ) {
 			    	    alert("<?php echo _('Thanks for your registration an admin will contact you soon')?>");
 			    	    $('#Request_user_create').trigger("reset");
@@ -314,7 +314,7 @@ function check_register_user(input)
 function Generate_svxlinkconf()
 {
 
-	$.post( "admin/Reflektor_config_generate.php", $( "#Generate_svxlinkconf" ).serialize())
+	$.post( "admin/reflector_config_generate", $( "#Generate_svxlinkconf" ).serialize())
 	  .done(function( data ) {
   	    $('#result_config').html(data);
 	  });;
@@ -374,7 +374,7 @@ function send_command_to_node()
 
     
 <header>
-     <nav class="navbar   navbar-dark sidebar_collor justify-content-between">
+     <nav class="navbar   navbar-dark sidebar_colour justify-content-between">
       
        
         <div>
@@ -468,9 +468,9 @@ Get_version_from_json();
 
 <?php
 $user_id= $_SESSION['loginid'];
-$result = mysqli_query($link, "SELECT * FROM User_Premission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Premission.Station_id 
-LEFT JOIN Infotmation_page on Infotmation_page.Station_id = User_Premission.Station_id 
-WHERE User_Premission.User_id ='$user_id' ");
+$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.Station_id 
+LEFT JOIN Information_page on Information_page.Station_id = User_Permission.Station_id 
+WHERE User_Permission.User_id ='$user_id' ");
 
 
 
@@ -501,7 +501,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
    
 
    
-   <?php if(check_premission_station_RW($row['ID'],$_SESSION['loginid'])>0){?>
+   <?php if(check_permission_station_RW($row['ID'],$_SESSION['loginid'])>0){?>
    <a href="#" data-toggle="modal" data-target="#command_to_node" onclick="load_node('<?php echo $row['Station_id'];?>')" data-placement="bottom" ><i data-toggle="tooltip" title="<?php echo  _('Send DTMF to node')?>"  class="fas fa-hashtag"></i></a>
    
 
@@ -1182,7 +1182,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     			// Associative array
     			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     ?>
-    <option value="<?php echo $row["TG"]?>" style="background-color: <?php echo $row["Collor"]?>"><?php echo $row["TG"] ?>		<?php echo  $row["TXT"] ?></option>        
+    <option value="<?php echo $row["TG"]?>" style="background-color: <?php echo $row["Colour"]?>"><?php echo $row["TG"] ?>		<?php echo  $row["TXT"] ?></option>        
     <?php }?>
 
 

@@ -199,7 +199,7 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
 
 
 <header>
- <nav class="navbar   navbar-dark sidebar_collor">
+ <nav class="navbar   navbar-dark sidebar_colour">
  <div>
    <a class="navbar-brand" href="#">
     <img src="logo.png" alt="Logo" style="width:40px;">

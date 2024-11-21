@@ -1,12 +1,12 @@
 
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Talkgroup`);
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Callsign`); 
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Type`); 
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Talkgroup`);
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Callsign`); 
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Type`); 
 ALTER TABLE `RefletorStations` ADD INDEX(`Callsign`); 
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Nodename`); 
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Time`); 
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Nodename`); 
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Time`); 
 ALTER TABLE `RefletorStations` ADD INDEX(`Callsign`); 
-ALTER TABLE `RefletorNodeLOG` ADD INDEX(`Id`); 
+ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Id`); 
 
 
 --
@@ -46,7 +46,7 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, '
 
 ALTER TABLE `users` ADD `Firstname` VARCHAR(100) NOT NULL AFTER `Is_admin`, ADD `lastname` VARCHAR(100) NOT NULL AFTER `Firstname`; 
 
-ALTER TABLE `RefletorStations` ADD `Last_Seen` DATETIME NULL DEFAULT NULL AFTER `Collor`; 
+ALTER TABLE `RefletorStations` ADD `Last_Seen` DATETIME NULL DEFAULT NULL AFTER `Colour`; 
 
 ALTER TABLE `RefletorStations` ADD `Station_Down` INT NOT NULL AFTER `Last_Seen`; 
 

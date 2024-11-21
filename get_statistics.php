@@ -31,9 +31,9 @@ function get_time($station,$day)
     
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)),Callsign FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Callsign`";
+    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)),Callsign FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Callsign`";
     
-    $sql_nonactive ="SELECT sum(Talktime), Callsign FROM RefletorNodeLOG WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Callsign` ";
+    $sql_nonactive ="SELECT sum(Talktime), Callsign FROM ReflectorNodeLog WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Callsign` ";
     
 //     echo $sql_active;
 //      echo "<br>";
@@ -60,7 +60,7 @@ function get_most_use_reciver($day)
     
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:00.000000'";
     $quvery ="
-    SELECT MAX(`Nodename`),`Callsign` FROM `RefletorNodeLOG`  WHERE  $tme_string  AND`Type` = 2 AND `Active` = 1  GROUP BY Callsign";
+    SELECT MAX(`Nodename`),`Callsign` FROM `ReflectorNodeLog`  WHERE  $tme_string  AND`Type` = 2 AND `Active` = 1  GROUP BY Callsign";
     //echo $quvery;
 
 
@@ -143,7 +143,7 @@ if($mouth_s != "")
     
     
     
-    $sql_stations ="SELECT SUM(`Talktime`),MONTH(`Time`)  FROM   RefletorNodeLOG
+    $sql_stations ="SELECT SUM(`Talktime`),MONTH(`Time`)  FROM   ReflectorNodeLog
     WHERE YEAR(`Time`) = $current_year  AND Type='1' and Active='0' $station_quvery $talkgroup_quvery  GROUP BY MONTH(`Time`)";
 
    
@@ -156,7 +156,7 @@ if($mouth_s != "")
         
     }
 
-    $sql_activity ="SELECT SUM(`Talktime`), MONTH(`Time`) ,DAY(`Time`) FROM RefletorNodeLOG WHERE YEAR(`Time`) = $current_year AND Type='1' and Active='0' $station_quvery $talkgroup_quvery GROUP BY MONTH(`Time`), DAY(`Time`) ORDER BY SUM(`Talktime`) DESC  limit 10";
+    $sql_activity ="SELECT SUM(`Talktime`), MONTH(`Time`) ,DAY(`Time`) FROM ReflectorNodeLog WHERE YEAR(`Time`) = $current_year AND Type='1' and Active='0' $station_quvery $talkgroup_quvery GROUP BY MONTH(`Time`), DAY(`Time`) ORDER BY SUM(`Talktime`) DESC  limit 10";
 
     $sqla = $link->query($sql_activity);;
     $id=0;
@@ -181,7 +181,7 @@ else if($qrv != "")
     $day = $link->real_escape_string($day);
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    $sql_stations ="SELECT Callsign , sum(Talktime)  FROM RefletorNodeLOG WHERE `Type` = '1' and Active='0'  AND $tme_string group by  `Callsign`";
+    $sql_stations ="SELECT Callsign , sum(Talktime)  FROM ReflectorNodeLog WHERE `Type` = '1' and Active='0'  AND $tme_string group by  `Callsign`";
 
     
     $sqlstat = $link->query($sql_stations);
@@ -223,7 +223,7 @@ else if( $_GET['time'] == "true")
     //$tme_string ="`Time` BETWEEN '$day $timel:00:00.000000' AND '$day $timel:59:59.000000'";
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
+    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
     $station_string= "";
     
     if ($_GET['station'] !="")
@@ -232,7 +232,7 @@ else if( $_GET['time'] == "true")
         $station_string = "AND Callsign ='$station'";
     }
     
-    $sql_nonactive ="SELECT UNIX_TIMESTAMP(Time), Talktime, `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND `Active` ='0' AND $tme_string $station_string  ";
+    $sql_nonactive ="SELECT UNIX_TIMESTAMP(Time), Talktime, `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND `Active` ='0' AND $tme_string $station_string  ";
     $sqla = $link->query($sql_nonactive);
     $data = array();
     while($row = $sqla->fetch_assoc()) {
@@ -362,7 +362,7 @@ else if( $_GET['totalmount'] != "")
 {
     /*
      *
-     * SELECT count(id), YEAR(`Time`), MONTH(`Time`), DAYOFMONTH(`Time`), sum(`Talktime`) as total_talktime FROM `RefletorNodeLOG` WHERE Type = 1 AND Active = 0 AND YEAR(`Time`) =2020 GROUP BY YEAR(`Time`), MONTH(`Time`) , DAYOFMONTH(`Time`) ORDER BY YEAR(`Time`) DESC, MONTH(`Time`) DESC, DAYOFMONTH(`Time`) DESC
+     * SELECT count(id), YEAR(`Time`), MONTH(`Time`), DAYOFMONTH(`Time`), sum(`Talktime`) as total_talktime FROM `ReflectorNodeLog` WHERE Type = 1 AND Active = 0 AND YEAR(`Time`) =2020 GROUP BY YEAR(`Time`), MONTH(`Time`) , DAYOFMONTH(`Time`) ORDER BY YEAR(`Time`) DESC, MONTH(`Time`) DESC, DAYOFMONTH(`Time`) DESC
      *
      *
      */
@@ -389,7 +389,7 @@ else if( $_GET['totalmount'] != "")
     
 
     
-    $sql="SELECT count(id), YEAR(`Time`), MONTH(`Time`), DAYOFMONTH(`Time`), sum(`Talktime`) as total_talktime FROM `RefletorNodeLOG` WHERE $tme_string AND Type = 1 AND Active = 0  $station_string GROUP BY YEAR(`Time`), MONTH(`Time`) , DAYOFMONTH(`Time`)  ORDER BY YEAR(`Time`) ASC, MONTH(`Time`) ASC, DAYOFMONTH(`Time`) ASC";
+    $sql="SELECT count(id), YEAR(`Time`), MONTH(`Time`), DAYOFMONTH(`Time`), sum(`Talktime`) as total_talktime FROM `ReflectorNodeLog` WHERE $tme_string AND Type = 1 AND Active = 0  $station_string GROUP BY YEAR(`Time`), MONTH(`Time`) , DAYOFMONTH(`Time`)  ORDER BY YEAR(`Time`) ASC, MONTH(`Time`) ASC, DAYOFMONTH(`Time`) ASC";
     
    // echo $sql;
     
@@ -437,9 +437,9 @@ else
     
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(Talktime), `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
+    //$sql_active ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
     
-    $sql_nonactive ="SELECT sum(Talktime), `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Talkgroup` ";
+    $sql_nonactive ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Talkgroup` ";
     
     /*
     echo $sql_active;
@@ -459,7 +459,7 @@ else
     }
 
 
-    $result = mysqli_query($link, "SELECT `Talkgroup` FROM `RefletorNodeLOG` GROUP BY `Talkgroup` ");
+    $result = mysqli_query($link, "SELECT `Talkgroup` FROM `ReflectorNodeLog` GROUP BY `Talkgroup` ");
     
     
     

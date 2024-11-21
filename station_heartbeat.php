@@ -207,7 +207,7 @@ $json = json_decode($json_data);
                 echo $key ." is has joned  reflektor ";
                 
                 // set station is restored
-                $sql = "INSERT INTO `RefletorNodeLOG` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`) VALUES (NULL, '".$key."', '3', '0', '0', '', '0', '0', '0', '','0');";
+                $sql = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`) VALUES (NULL, '".$key."', '3', '0', '0', '', '0', '0', '0', '','0');";
                 
                 $conn->query($sql);
                 
@@ -246,7 +246,7 @@ $json = json_decode($json_data);
 
                 echo $value ." is has dropt from reflektor ";
                 
-                $sql = "INSERT INTO `RefletorNodeLOG` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`) VALUES (NULL, '".$value."', '3', '1', '0', '', '0', '0', '0', '','0');";
+                $sql = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`) VALUES (NULL, '".$value."', '3', '1', '0', '', '0', '0', '0', '','0');";
     
                 $conn->query($sql);
                 

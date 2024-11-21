@@ -94,9 +94,9 @@ else
     
 if($_GET['search'])
 {
-    $staion = $conn->real_escape_string($_GET['search']);
+    $station = $conn->real_escape_string($_GET['search']);
     $tg = $conn->real_escape_string($_GET['search']);
-    $staion_quvery ="AND (Callsign like '%$staion%' OR Talkgroup like '$tg') ";
+    $station_quvery ="AND (Callsign like '%$station%' OR Talkgroup like '$tg') ";
 
     
 
@@ -107,8 +107,8 @@ else
     
      if($_GET['Station'])
      {
-         $staion = $conn->real_escape_string($_GET['Station']);
-         $staion_quvery ="AND Callsign = '$staion' "; 
+         $station = $conn->real_escape_string($_GET['Station']);
+         $station_quvery ="AND Callsign = '$station' "; 
      }
      if($_GET['tg'])
      {
@@ -116,7 +116,7 @@ else
          $tg_quvery ="AND Talkgroup = '$tg' ";
      }
 }
-$sql ="SELECT * FROM `RefletorNodeLOG` where $filter   $staion_quvery $tg_quvery ORDER BY `RefletorNodeLOG`.`Id` DESC limit $logoffset,$size ";
+$sql ="SELECT * FROM `ReflectorNodeLog` where $filter   $station_quvery $tg_quvery ORDER BY `ReflectorNodeLog`.`Id` DESC limit $logoffset,$size ";
 $result = $conn->query($sql);
 
 if(!$_GET['only_table'])
@@ -126,7 +126,7 @@ if(!$_GET['only_table'])
      * 
      * count nr of rows in log 
      */
-    $sql1 ="SELECT count(*) FROM `RefletorNodeLOG` where  $filter $staion_quvery $tg_quvery";
+    $sql1 ="SELECT count(*) FROM `ReflectorNodeLog` where  $filter $station_quvery $tg_quvery";
     $result1 = $conn->query($sql1);
     
     

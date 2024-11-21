@@ -65,7 +65,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 )
 
 
    <header>
- <nav class="navbar   navbar-dark sidebar_collor">
+ <nav class="navbar   navbar-dark sidebar_colour">
  <div>
    <a class="navbar-brand" href="#">
     <img src="logo.png" alt="Logo" style="width:40px;">

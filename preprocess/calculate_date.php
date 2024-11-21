@@ -28,7 +28,7 @@ function detect_empty()
 function detect_first_date()
 {
     global $link;
-    $date = $link->query("SELECT Time as c FROM `RefletorNodeLOG` WHERE `Type` = 1 AND `Active` = 0 ORDER BY `RefletorNodeLOG`.`Time` ASC LIMIT 1 ")->fetch_object()->c;
+    $date = $link->query("SELECT Time as c FROM `ReflectorNodeLog` WHERE `Type` = 1 AND `Active` = 0 ORDER BY `ReflectorNodeLog`.`Time` ASC LIMIT 1 ")->fetch_object()->c;
     
     return date("Y-m-d",strtotime($date));
     
@@ -56,12 +56,12 @@ function calculate_day ($day)
     // $tme_string ="`Time` BETWEEN '$day $timel:00:00.000000' AND '$day $timel:59:59.000000'";
     $tme_string = "`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    // $sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND `Active` ='1' AND $tme_string group by `Talkgroup`";
+    // $sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND `Active` ='1' AND $tme_string group by `Talkgroup`";
     //$station_string = " `Callsign` = 'SIP1' AND";
     
     
     
-    $sql_nonactive = "SELECT UNIX_TIMESTAMP(Time), Callsign, Talktime, `Talkgroup` FROM RefletorNodeLOG WHERE  `Type` = 1  AND `Active` = 0 AND $tme_string   ";
+    $sql_nonactive = "SELECT UNIX_TIMESTAMP(Time), Callsign, Talktime, `Talkgroup` FROM ReflectorNodeLog WHERE  `Type` = 1  AND `Active` = 0 AND $tme_string   ";
     
     // echo $sql_nonactive;
     

@@ -64,43 +64,43 @@ msgstr "Inst�llningar"
 msgid "My stations"
 msgstr "Mina stationer"
 
-#: admin/Reflektor_users.php:25 admin/users.php:16
+#: admin/reflector_users.php:25 admin/users.php:16
 msgid "User created sucsessfully!"
 msgstr "Anv�ndaren skapad!"
 
-#: admin/Reflektor_users.php:41 admin/talkgroup.php:25 admin/users.php:31
+#: admin/reflector_users.php:41 admin/talkgroup.php:25 admin/users.php:31
 msgid "Please confirm user removal"
 msgstr "Bekr�fta anv�ndarens borttagning"
 
-#: admin/Reflektor_users.php:57
+#: admin/reflector_users.php:57
 msgid "Please confirm user enable"
 msgstr "Bekr�fta anv�ndaraktivering"
 
-#: admin/Reflektor_users.php:60
+#: admin/reflector_users.php:60
 msgid "Please confirm user disable"
 msgstr "Bekr�fta att anv�ndaren inaktiverar"
 
-#: admin/Reflektor_users.php:95 admin/users.php:72
+#: admin/reflector_users.php:95 admin/users.php:72
 msgid "Password is updated!"
 msgstr "L�senordet �r updaterart"
 
-#: admin/Reflektor_users.php:179
+#: admin/reflector_users.php:179
 msgid "Please enter your message"
 msgstr "Ange ditt meddelande"
 
-#: admin/Reflektor_users.php:187 admin/Reflektor_users.php:207
+#: admin/reflector_users.php:187 admin/reflector_users.php:207
 msgid "Message sent"
 msgstr "Meddelande skickat1"
 
-#: admin/Reflektor_users.php:236
+#: admin/reflector_users.php:236
 msgid "Reflector users"
 msgstr "Reflektoranv�ndare"
 
-#: admin/Reflektor_users.php:246 admin/users.php:135
+#: admin/reflector_users.php:246 admin/users.php:135
 msgid "Print Users"
 msgstr "Anv�ndar utskrift"
 
-#: admin/Reflektor_users.php:248 admin/log.php:109 admin/stations.php:52
+#: admin/reflector_users.php:248 admin/log.php:109 admin/stations.php:52
 #: admin/talkgroup.php:87 admin/users.php:137 ctcss_map_table.php:213
 #: index.php:1919 index.php:2334 index.php:4683 index1.php:1358 index1.php:1751
 #: index_old.php:772 index_old.php:1057 indexa.php:773 indexa.php:1058
@@ -108,31 +108,31 @@ msgstr "Anv�ndar utskrift"
 msgid "Print"
 msgstr "Skriv ut"
 
-#: admin/Reflektor_users.php:255 admin/log.php:116 admin/stations.php:59
+#: admin/reflector_users.php:255 admin/log.php:116 admin/stations.php:59
 #: admin/talkgroup.php:94 admin/users.php:144 ctcss_map_table.php:220
 #: index.php:1914 index1.php:1353 index_old.php:779 index_old.php:1064
 #: indexa.php:780 indexa.php:1065 log.php:230
 msgid "Export xls"
 msgstr "Exportera XLS"
 
-#: admin/Reflektor_users.php:262 admin/Reflektor_users.php:284
-#: admin/Reflektor_users.php:356 admin/users.php:151 admin/users.php:182
+#: admin/reflector_users.php:262 admin/reflector_users.php:284
+#: admin/reflector_users.php:356 admin/users.php:151 admin/users.php:182
 #: admin/users.php:234 database_text.php:13
 msgid "Create user"
 msgstr "Skapa anv�nvare"
 
-#: admin/Reflektor_users.php:288 admin/login.php:36 admin/users.php:186
+#: admin/reflector_users.php:288 admin/login.php:36 admin/users.php:186
 #: admin/users.php:254 index.php:1750 index.php:1751 index.php:4811
 #: index1.php:1191 index1.php:1192 index1.php:3760 index1.php:3917
 #: index_old.php:3045 indexa.php:3046 user_settings.php:284
 msgid "Username"
 msgstr "Anv�ndarnamn"
 
-#: admin/Reflektor_users.php:296
+#: admin/reflector_users.php:296
 msgid "Generate Username"
 msgstr "Generera anv�ndarnamn"
 
-#: admin/Reflektor_users.php:303 admin/Reflektor_users.php:484
+#: admin/reflector_users.php:303 admin/reflector_users.php:484
 #: admin/login.php:43 admin/users.php:194 admin/users.php:445 index.php:1754
 #: index.php:4827 index1.php:1195 index1.php:3933
 #: request_reflector_login.php:621 request_reflector_login.php:624
@@ -140,86 +140,86 @@ msgstr "Generera anv�ndarnamn"
 msgid "Password"
 msgstr "L�senord"
 
-#: admin/Reflektor_users.php:311 admin/Reflektor_users.php:490
+#: admin/reflector_users.php:311 admin/reflector_users.php:490
 #: request_reflector_login.php:627
 msgid "Generate password"
 msgstr "Generera l�senord"
 
-#: admin/Reflektor_users.php:323 admin/Reflektor_users.php:375
+#: admin/reflector_users.php:323 admin/reflector_users.php:375
 #: admin/talkgroup.php:122 admin/talkgroup.php:162 edit_station.php:966
 #: edit_station.php:1078 edit_station.php:1162 request_reflector_login.php:643
 #: request_reflector_login.php:646 station_info.php:146
 msgid "Description"
 msgstr "Beskrivning"
 
-#: admin/Reflektor_users.php:334 admin/Reflektor_users.php:376
+#: admin/reflector_users.php:334 admin/reflector_users.php:376
 #: admin/users.php:255 index.php:4820 user_settings.php:300
 msgid "E-mail"
 msgstr "E-post"
 
-#: admin/Reflektor_users.php:351 admin/Reflektor_users.php:377 index.php:2597
+#: admin/reflector_users.php:351 admin/reflector_users.php:377 index.php:2597
 #: index1.php:2015 index_old.php:1331 indexa.php:1332
 msgid "Enable"
 msgstr "Ativerad"
 
-#: admin/Reflektor_users.php:373
+#: admin/reflector_users.php:373
 msgid "Station login"
 msgstr "Stationinloggning"
 
-#: admin/Reflektor_users.php:374
+#: admin/reflector_users.php:374
 msgid "Station password"
 msgstr "Stationens l�senord"
 
-#: admin/Reflektor_users.php:378 admin/users.php:258 database_text.php:15
+#: admin/reflector_users.php:378 admin/users.php:258 database_text.php:15
 #: edit_station.php:968
 msgid "Action"
 msgstr "�tg�rder"
 
-#: admin/Reflektor_users.php:411 admin/Settings.php:25
+#: admin/reflector_users.php:411 admin/Settings.php:25
 #: admin/get_reflector.php:35 admin/get_station.php:34 admin/get_users.php:31
 #: admin/stations.php:135 admin/users.php:288 database_text.php:17
 msgid "Yes"
 msgstr "Ja"
 
-#: admin/Reflektor_users.php:413 admin/Settings.php:19
+#: admin/reflector_users.php:413 admin/Settings.php:19
 #: admin/get_reflector.php:37 admin/get_station.php:36 admin/get_users.php:33
 #: admin/stations.php:137 admin/users.php:290 database_text.php:16
 msgid "No"
 msgstr "Nej"
 
-#: admin/Reflektor_users.php:436 admin/get_reflector.php:58
+#: admin/reflector_users.php:436 admin/get_reflector.php:58
 msgid "Select action"
 msgstr "V�lj �tg�rd"
 
-#: admin/Reflektor_users.php:438 admin/get_reflector.php:60
+#: admin/reflector_users.php:438 admin/get_reflector.php:60
 msgid "Enable user"
 msgstr "Aktivera anv�ndare"
 
-#: admin/Reflektor_users.php:440 admin/get_reflector.php:62
+#: admin/reflector_users.php:440 admin/get_reflector.php:62
 msgid "Disable user"
 msgstr "Inaktivera anv�ndare"
 
-#: admin/Reflektor_users.php:442 admin/get_reflector.php:64
+#: admin/reflector_users.php:442 admin/get_reflector.php:64
 msgid "Send message to Sysadmin"
 msgstr "Skicka meddelande till Sysadmin"
 
-#: admin/Reflektor_users.php:443 admin/get_reflector.php:65
-msgid "Send login credentaial to sysadmin"
+#: admin/reflector_users.php:443 admin/get_reflector.php:65
+msgid "Send login credential to sysadmin"
 msgstr "Skicka inloggningsuppgifter till sysadmin"
 
-#: admin/Reflektor_users.php:444 admin/Reflektor_users.php:478
+#: admin/reflector_users.php:444 admin/reflector_users.php:478
 #: admin/users.php:439
 msgid "Change user password"
 msgstr "�ndra anv�ndarl�senord"
 
-#: admin/Reflektor_users.php:496 admin/stations.php:179 admin/talkgroup.php:219
+#: admin/reflector_users.php:496 admin/stations.php:179 admin/talkgroup.php:219
 #: admin/users.php:406 admin/users.php:455 edit_station.php:725
 #: edit_station.php:1130 edit_station.php:1208 index.php:179 index.php:2612
 #: index1.php:69 index1.php:2030 index_old.php:59 indexa.php:60
 msgid "Close"
 msgstr "St�ng"
 
-#: admin/Reflektor_users.php:497 admin/stations.php:65 admin/stations.php:180
+#: admin/reflector_users.php:497 admin/stations.php:65 admin/stations.php:180
 #: admin/talkgroup.php:220 admin/users.php:407 admin/users.php:456
 #: edit_station.php:1201
 msgid "Update"
@@ -397,7 +397,7 @@ msgid "Actions"
 msgstr "�tg�rder"
 
 #: admin/users.php:87
-msgid "Premission is updated!"
+msgid "Permission is updated!"
 msgstr "Beh�righeten �r uppdaterad!"
 
 #: admin/users.php:203 admin/users.php:252 database_text.php:11
@@ -644,7 +644,7 @@ msgid "Ticket is created"
 msgstr "Fel�rendet �r sparad"
 
 #: edit_station.php:391 station_dash.php:318
-msgid "Premission Denied!"
+msgid "Permission Denied!"
 msgstr "�tkonst Nekad!"
 
 #: edit_station.php:415

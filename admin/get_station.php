@@ -36,7 +36,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
       <td><?php echo _('No')?></td>
     <?php }?>
     
-    <?php     echo "<td>".'<div onclick="update_color('. $row['ID'].',\''.$row["Collor"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Collor"].' ">'."</td>"; ?>
+    <?php     echo "<td>".'<div onclick="update_color('. $row['ID'].',\''.$row["Colour"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Colour"].' ">'."</td>"; ?>
       </tr>
       
       

@@ -21,13 +21,13 @@ if( $_SESSION['loginid'] >0 )
         
     }
     
-    $premission_rw=0;
+    $permission_rw=0;
     // Associative array
     $once_lock =0;
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         if($once_lock ==0)
         {
-            $premission_rw =check_premission_station_RW($row['Station_id'],$_SESSION['loginid']);
+            $permission_rw =check_permission_station_RW($row['Station_id'],$_SESSION['loginid']);
             $once_lock++;
         }
         
@@ -51,7 +51,7 @@ if( $_SESSION['loginid'] >0 )
        <td>
        
        
-       <?php if($premission_rw >0 ){?>
+       <?php if($permission_rw >0 ){?>
      <a class="navbar-brand" href="#" onclick="Remove_command('<?php echo $row['id']?>')"><i class="fas fa-trash-alt"></i></a>
        
        <a href="#" data-toggle="modal" data-target="#Update_command" onclick="update_commade(<?php echo $row['id']?>,'<?php echo htmlentities($row['Command'], ENT_QUOTES, "UTF-8");?>','<?php echo htmlentities($row['Description'], ENT_QUOTES, "UTF-8");?>','<?php echo ($row['Category']);?>')">

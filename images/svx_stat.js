@@ -329,7 +329,7 @@ function update_bar(id,value,sql)
 }
 
 var icon_save = new Array();
-function canvas_icon(html,lat, lon,label,collor)
+function canvas_icon(html,lat, lon,label,colour)
 {
 
 html=html.replace(" ","_");
@@ -348,7 +348,7 @@ ctx.lineTo(30, 80);
 ctx.lineTo(55, 35);
 ctx.lineWidth = 3;
 ctx.stroke();
-ctx.fillStyle =collor;
+ctx.fillStyle =colour;
 ctx.fill();
 ctx.beginPath();
 ctx.arc(30, 30, 10, 0, Math.PI * 2, true); // Outer circle

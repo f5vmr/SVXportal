@@ -6,12 +6,12 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
 function update_color_tg(id,color) {
 	$('#color_id1').val(id);
 	$('#colo1r').val(color.trim());
-	$("#Collor_tg").modal() 
+	$("#Colour_tg").modal() 
 }
 function update_color_tg_submit(){
 
 
-	$.post( "admin/update_color.php", $( "#Collor_form_tg" ).serialize() )
+	$.post( "admin/update_color.php", $( "#Colour_form_tg" ).serialize() )
 	.done(function( data ) {
 		reaload_tg_table();
 	});
@@ -186,16 +186,16 @@ function reaload_tg_table()
 
             <td><i class="fas fa-trash" onclick="Delete_tg(<?php echo $row['ID']?>)"></i></td>
       
-      <?php     echo "<td>".'<div onclick="update_color_tg('. $row['ID'].',\''.$row["Collor"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Collor"].' ">'."</td>"; ?>
+      <?php     echo "<td>".'<div onclick="update_color_tg('. $row['ID'].',\''.$row["Colour"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Colour"].' ">'."</td>"; ?>
       </tr>
       <?php }?>
       </tbody>
       </table>
       
 </div>      
-   <div id="Collor_tg" class="modal fade" role="dialog">
+   <div id="Colour_tg" class="modal fade" role="dialog">
   <div class="modal-dialog">
- <form id="Collor_form_tg" onsubmit="return update_color_tg_submit()">
+ <form id="Colour_form_tg" onsubmit="return update_color_tg_submit()">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">

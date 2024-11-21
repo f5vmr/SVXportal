@@ -70,7 +70,7 @@ function call_svxrefelktor() {
 
 								} else {
 									// $('#row'+k+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td
-									// class="green_collor"
+									// class="green_colour"
 									// >YES'+image+'</td><td></td><td></td><td><label
 									// id="minutes">00</label>:<label
 									// id="seconds">00</label></td>');

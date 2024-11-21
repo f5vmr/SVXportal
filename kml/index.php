@@ -120,7 +120,7 @@ for(var k in data.nodes){
 		var image= '<img src="images/talking.gif" alt="talk" id="talking" width="25px">';	
        if(data.nodes[k].isTalker == false)
 	{
-	  $('#Reflektortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="red_collor">NO</td><td class="text-primary">'+text+'</td><td></td><td></td></tr>');
+	  $('#Reflektortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="red_colour">NO</td><td class="text-primary">'+text+'</td><td></td><td></td></tr>');
 	  if(current_talker == k)
 	  {
 		totalSeconds=0;
@@ -129,7 +129,7 @@ for(var k in data.nodes){
 	}
 	else
 	{
-         $('#Reflektortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="green_collor" >YES'+image+'</td><td class="text-primary">'+text+'</td><td><label id="minutes">00</label>:<label id="seconds">00</label></td><td></td></tr>');
+         $('#Reflektortable').append('<tr><td>'+k+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="green_colour" >YES'+image+'</td><td class="text-primary">'+text+'</td><td><label id="minutes">00</label>:<label id="seconds">00</label></td><td></td></tr>');
            ++totalSeconds;
 		var minutesLabel = document.getElementById("minutes");
        	var secondsLabel = document.getElementById("seconds");
@@ -306,7 +306,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
 }
 
-var tg_collors = new Array();
+var tg_colours = new Array();
 function generate_coulor()
 {
     $.getJSON( "<?php echo $serveradress ?>", function( data ) {
@@ -315,26 +315,26 @@ function generate_coulor()
     	for(var k in data.nodes){
     		
     		for(var nodes in data.nodes[k].monitoredTGs){
-    			//tg_collors[data.nodes[k].monitoredTGs[nodes]]['color']="";	
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]= new Array();
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]["id"] =data.nodes[k].monitoredTGs[nodes];
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]["color"] =random_css_collor();   
-    			tg_collors[data.nodes[k].monitoredTGs[nodes]]["TXT"] ="";
+    			//tg_colours[data.nodes[k].monitoredTGs[nodes]]['color']="";	
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]= new Array();
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]["id"] =data.nodes[k].monitoredTGs[nodes];
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]["color"] =random_css_colour();   
+    			tg_colours[data.nodes[k].monitoredTGs[nodes]]["TXT"] ="";
 
     		}
     
-    		tg_collors[data.nodes[k].tg]= new Array();
-    		tg_collors[data.nodes[k].tg]["id"] =data.nodes[k].tg;
-    		tg_collors[data.nodes[k].tg]["color"] =random_css_collor();
-    		tg_collors[data.nodes[k].tg]["TXT"] ="";
+    		tg_colours[data.nodes[k].tg]= new Array();
+    		tg_colours[data.nodes[k].tg]["id"] =data.nodes[k].tg;
+    		tg_colours[data.nodes[k].tg]["color"] =random_css_colour();
+    		tg_colours[data.nodes[k].tg]["TXT"] ="";
     		
 
     
     	}
-    	tg_collors[0]= new Array();
-    	tg_collors[0]["id"] =0;
-    	tg_collors[0]["color"] ="#6c757d";
-    	tg_collors[0]["TXT"] ="";
+    	tg_colours[0]= new Array();
+    	tg_colours[0]["id"] =0;
+    	tg_colours[0]["color"] ="#6c757d";
+    	tg_colours[0]["TXT"] ="";
     	
     	<?php
 
@@ -345,18 +345,18 @@ function generate_coulor()
     // Associative array
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         ?>
-    				tg_collors[<?php echo $row["TG"]?>]= new Array();
-            		tg_collors[<?php echo $row["TG"]?>]["id"] =<?php echo $row["TG"]?>;
-            		tg_collors[<?php echo $row["TG"]?>]["color"] = "<?php echo $row["Collor"]?>";      
-            		tg_collors[<?php echo $row["TG"]?>]["TXT"] = "<?php echo $row["TXT"]?>";             
+    				tg_colours[<?php echo $row["TG"]?>]= new Array();
+            		tg_colours[<?php echo $row["TG"]?>]["id"] =<?php echo $row["TG"]?>;
+            		tg_colours[<?php echo $row["TG"]?>]["color"] = "<?php echo $row["Colour"]?>";      
+            		tg_colours[<?php echo $row["TG"]?>]["TXT"] = "<?php echo $row["TXT"]?>";             
     <?php }?>
 
-    for(var k in tg_collors){
+    for(var k in tg_colours){
         
       	$('#selects').append($('<option>', {
       	    value: k,
-      	    text: k+"		"+tg_collors[k]["TXT"],
-      	  style:"background-color: "+tg_collors[k]["color"] 
+      	    text: k+"		"+tg_colours[k]["TXT"],
+      	  style:"background-color: "+tg_colours[k]["color"] 
       	}));
       }
 	
@@ -614,7 +614,7 @@ fclose($myfile);
 							Filter:<select id="selects" class="w-25"
 								onchange="update_filter(this.value)">
 								<option value="">-- All --</option>
-							</select> <a href="#menu-toggle" onclick="toogle_menu()"
+							</select> <a href="#menu-toggle" onclick="toggle_menu()"
 								class="btn btn-outline-success my-2 my-sm-0" id="menu-toggle">Toggle
 								Menu</a>
 						</nav>
@@ -658,7 +658,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
     echo "<tr>";
     echo "<td>" . $row["TG"] . "</td>";
     echo "<td>" . $row["TXT"] . "</td>";
-    $result1 = mysqli_query($link, "SELECT Callsign,Time FROM `RefletorNodeLOG` WHERE `Talkgroup` ='".$row["TG"]."' ORDER BY `RefletorNodeLOG`.`Id` DESC limit 1");
+    $result1 = mysqli_query($link, "SELECT Callsign,Time FROM `ReflectorNodeLog` WHERE `Talkgroup` ='".$row["TG"]."' ORDER BY `ReflectorNodeLog`.`Id` DESC limit 1");
     $row1 = mysqli_fetch_array($result1, MYSQLI_ASSOC);
 
     
@@ -740,7 +740,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 									aria-expanded="false">Connect map to reflector </a>
 									
 									<a class="nav-link dropdown-toggle" href="#"
-									onclick="toogle_menu()" id="navbarDropdownMenuLink"
+									onclick="toggle_menu()" id="navbarDropdownMenuLink"
 									data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false"> Toggle Menu </a>
 
@@ -1023,18 +1023,18 @@ function update_tx_station(lat,lon,idn,tg,label,active)
 	if(update_icon!= null )
 	{
 
-    	if(tg_collors[tg] == null)
+    	if(tg_colours[tg] == null)
     	{
-    		tg_collors[tg]= new Array();
-    		tg_collors[tg]["id"] =tg;
-    		tg_collors[tg]["color"] =random_css_collor();
-    		tg_collors[tg]["TXT"] ="";
+    		tg_colours[tg]= new Array();
+    		tg_colours[tg]["id"] =tg;
+    		tg_colours[tg]["color"] =random_css_colour();
+    		tg_colours[tg]["TXT"] ="";
     	}
     	var geometry =update_icon.getGeometry()
     	var style = update_icon.getStyle();
     	var html = "stn_"+idn;
 //    	console.log(style);
-    	var collor = tg_collors[tg]['color'];
+    	var colour = tg_colours[tg]['color'];
     
     
     	
@@ -1059,7 +1059,7 @@ function update_tx_station(lat,lon,idn,tg,label,active)
     	ctx.lineTo(55, 35);
     	ctx.lineWidth = 3;
     	ctx.stroke();
-    	ctx.fillStyle =collor;
+    	ctx.fillStyle =colour;
     	ctx.fill();
     	ctx.beginPath();
     	ctx.arc(30, 30, 10, 0, Math.PI * 2, true); // Outer circle
@@ -1331,15 +1331,15 @@ function add_repeater_node(lat, lon,label,idn)
 }
 function add_repeater_transmiter(lat, lon,label,idn,tg)
 {
-//	console.log(tg_collors[tg]['color']);
-	canvas_icon("stn_"+idn,lat, lon,label,tg_collors[tg]['color']);
+//	console.log(tg_colours[tg]['color']);
+	canvas_icon("stn_"+idn,lat, lon,label,tg_colours[tg]['color']);
 	//addtext(0,lat, lon,idn);
 
 }
 var instervalls;
 
 
-function random_css_collor()
+function random_css_colour()
 {
 	  return "hsl(" + 360 * Math.random() + ',' +
       (25 + 70 * Math.random()) + '%,' + 
@@ -1802,7 +1802,7 @@ function update_tx_station_loop()
         $("#wrapper").toggleClass("toggled");
     });
 	
-function toogle_menu()
+function toggle_menu()
 {
         $("#wrapper").toggleClass("toggled");	
 }

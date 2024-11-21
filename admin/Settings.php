@@ -62,7 +62,7 @@ if($_SESSION['is_admin'] >0 && $_SESSION['loginid'] >0 ){
 <script type="text/javascript">
 function settings_form_sumbit()
 {
-	$.post( "admin/update_setings.php", $( "#Setting_from" ).serialize() )
+	$.post( "admin/update_settings.php", $( "#Setting_from" ).serialize() )
 	.done(function( data ) {
 		alert("<?php echo _('Settings is saved!')?>")
 

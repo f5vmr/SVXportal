@@ -310,7 +310,7 @@ function create_station($station_id) {
         
         
         
-        mysqli_query($link, "INSERT INTO `Infotmation_page` (`id`, `Station_Name`, `Station_id`, `Module`, `Html`, `Hardware_page`, `Image`) VALUES (NULL, '$calls', '$idnr', '', '$default_info', '$default_hw', '');");
+        mysqli_query($link, "INSERT INTO `Information_page` (`id`, `Station_Name`, `Station_id`, `Module`, `Html`, `Hardware_page`, `Image`) VALUES (NULL, '$calls', '$idnr', '', '$default_info', '$default_hw', '');");
     }
     
 }
@@ -325,7 +325,7 @@ if($_GET["Station_idnr"])
     $call = $link->real_escape_string($call);
     
     
-    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Infotmation_page` WHERE Station_Name='".$call."'");
+    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Information_page` WHERE Station_Name='".$call."'");
     
     
     
@@ -336,7 +336,7 @@ else
     
     $id = $_GET["Station_id"];
     $id = $link->real_escape_string($id);
-    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image, GrafanaUrl FROM `Infotmation_page` WHERE id='".$id."'");
+    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image, GrafanaUrl FROM `Information_page` WHERE id='".$id."'");
     
     
     
@@ -354,7 +354,7 @@ if($station_data == NULL)
     if($_GET["Station_idnr"])
     {
         create_station($_GET["Station_idnr"]);
-        $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Infotmation_page` WHERE Station_Name='".$call."'");
+        $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Information_page` WHERE Station_Name='".$call."'");
         $station_data = mysqli_fetch_array($result, MYSQLI_ASSOC);
         
     }
@@ -380,18 +380,18 @@ if($station_data['Module'] !="")
 
 
 /*
- * Check for premission
+ * Check for permission
  * 
  * 
  */
 
 
-if(check_premission_station($_GET["Station_idnr"],$_SESSION['loginid']) == 0)
+if(check_permission_station($_GET["Station_idnr"],$_SESSION['loginid']) == 0)
 {
- echo '<h1>'._('Premission Denied!').'</h1>';
+ echo '<h1>'._('Permission Denied!').'</h1>';
  exit(-1);   
 }
-$premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['loginid']);
+$permission_rw =check_permission_station_RW($_GET["Station_idnr"],$_SESSION['loginid']);
 
 ?>
 
@@ -401,7 +401,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
 
     
 <header>
-     <nav class="navbar   navbar-dark sidebar_collor justify-content-between">
+     <nav class="navbar   navbar-dark sidebar_colour justify-content-between">
       
        
         <div>
@@ -459,7 +459,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
   </li>
   
   <?php }?>
-<?php if($premission_rw >0 ){?>
+<?php if($permission_rw >0 ){?>
  	<li class="nav-item">
     	<a class="nav-link" id="config-tab" data-toggle="tab" href="#config" onclick="" role="tab" aria-controls="log" aria-selected="false"><?php echo _('Settings')?></a> 
 	</li>
@@ -484,7 +484,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
       
          <li class="nav-item d-none d-lg-inline-flex">
         
-        <?php if($premission_rw >0 ){?>
+        <?php if($permission_rw >0 ){?>
         <li class="nav-item d-none d-lg-inline-flex">
 
             <a class="nav-link  " href="#" id="navbarDropdownMenuLink" onclick="save_information()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -587,7 +587,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
          <li class="nav-item d-none d-lg-inline-flex">
         
 
-        <?php if($premission_rw >0 ){?>
+        <?php if($permission_rw >0 ){?>
         <li class="nav-item d-none d-lg-inline-flex">
 
             <a class="nav-link  " href="#" id="navbarDropdownMenuLink" onclick="save_Hardware()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -652,7 +652,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
       
          <li class="nav-item d-none d-lg-inline-flex">
         
-        <?php if($premission_rw >0 ){?>
+        <?php if($permission_rw >0 ){?>
         <li class="nav-item d-none d-lg-inline-flex">
 
             <a class="nav-link  " href="#" id="navbarDropdownMenuLink"  data-toggle="modal" data-target="#NedStatus"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -794,7 +794,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
 ?>
 <div class="tab-pane fade show" id="config" role="tabpanel" aria-labelledby="config-tab">
 
-<?php if($premission_rw >0 ){?>
+<?php if($permission_rw >0 ){?>
  <form action="#" id="Station_edit_settings"  onsubmit="return save_setings()">
   <div class="form-group">
   
@@ -940,7 +940,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
 
       
          <li class="nav-item d-none d-lg-inline-flex">
-        <?php if($premission_rw >0 ){?>
+        <?php if($permission_rw >0 ){?>
             <li class="nav-item d-none d-lg-inline-flex">
     
                 <a class="nav-link  " href="#" id="navbarDropdownMenuLink"  data-toggle="modal" data-target="#New_Command"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -1076,7 +1076,7 @@ function  Update_dtmf()
           </div>
            <div class="form-group">
             <label for="command"><?php echo _('Description')?></label>
-            <input type="text" name="Desciption" class="form-control" id="command"  placeholder="">
+            <input type="text" name="Description" class="form-control" id="command"  placeholder="">
           </div>
           
          <div class="form-group">
@@ -1160,7 +1160,7 @@ function  Update_dtmf()
           </div>
            <div class="form-group">
             <label for="command"><?php echo _('Description')?></label>
-            <input type="text" name="Desciption" class="form-control" id="Command_descript_d"  placeholder="">
+            <input type="text" name="Description" class="form-control" id="Command_descript_d"  placeholder="">
           </div>
           
           <input type="hidden" name="dtmf_id" class="form-control" id="dtmf_id" value="">

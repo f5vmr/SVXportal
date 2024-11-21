@@ -28,15 +28,15 @@ if( $_SESSION['loginid'] >0 )
         
         $id= $link->real_escape_string($_POST['id']);
         
-        $station_id =page_id_to_staion_id($id);
+        $station_id =page_id_to_station_id($id);
 
-        $premission_rw =check_premission_station_RW($station_id,$_SESSION['loginid']);
+        $permission_rw =check_permission_station_RW($station_id,$_SESSION['loginid']);
 
         
-        if($premission_rw >0)
+        if($permission_rw >0)
         {
-            $link->query(" UPDATE `Infotmation_page` SET `Html` = '$station' where id ='$id' ");
-            echo " UPDATE `Infotmation_page` SET `Html` = '$station' where id ='$id' ";
+            $link->query(" UPDATE `Information_page` SET `Html` = '$station' where id ='$id' ");
+            echo " UPDATE `Information_page` SET `Html` = '$station' where id ='$id' ";
         }
 
         
@@ -66,11 +66,11 @@ if( $_SESSION['loginid'] >0 )
         $id= $link->real_escape_string($_POST['id']);
         
         
-        $station_id =page_id_to_staion_id($id);
-        $premission_rw =check_premission_station_RW($station_id,$_SESSION['loginid']);
+        $station_id =page_id_to_station_id($id);
+        $permission_rw =check_permission_station_RW($station_id,$_SESSION['loginid']);
         
-        if($premission_rw >0)
-            $link->query(" UPDATE `Infotmation_page` SET `Hardware_page` = '$station' where id ='$id' ");
+        if($permission_rw >0)
+            $link->query(" UPDATE `Information_page` SET `Hardware_page` = '$station' where id ='$id' ");
         
         
         
@@ -85,14 +85,14 @@ if( $_SESSION['loginid'] >0 )
         $stid= $link->real_escape_string($_POST['Station_id']);
         $Station_Name = $link->real_escape_string($_POST['Station_name']);
         $command= $link->real_escape_string($_POST['command']);
-        $Desciption= $link->real_escape_string($_POST['Desciption']);
+        $Description= $link->real_escape_string($_POST['Description']);
         $Category= $link->real_escape_string($_POST['Category']);
 
 
-        $premission_rw =check_premission_station_RW($stid,$_SESSION['loginid']);
+        $permission_rw =check_permission_station_RW($stid,$_SESSION['loginid']);
         
-        if($premission_rw >0)
-            $link->query("INSERT INTO `Dtmf_command` (`id`, `Station_Name`, `Station_id`, `Command`, `Description`,`Category`) VALUES (NULL, '$Station_Name', '$stid', '$command', '$Desciption','$Category'); ");
+        if($permission_rw >0)
+            $link->query("INSERT INTO `Dtmf_command` (`id`, `Station_Name`, `Station_id`, `Command`, `Description`,`Category`) VALUES (NULL, '$Station_Name', '$stid', '$command', '$Description','$Category'); ");
         
     }
     if($_POST['Remove_DTMF'] == "1")
@@ -107,9 +107,9 @@ if( $_SESSION['loginid'] >0 )
 
         $station_id =DTMF_ID_TO_STATION($DMF_ID);
         echo $station_id;
-        $premission_rw =check_premission_station_RW($station_id,$_SESSION['loginid']);
+        $permission_rw =check_permission_station_RW($station_id,$_SESSION['loginid']);
         
-        if($premission_rw >0)
+        if($permission_rw >0)
             $link->query("DELETE FROM `Dtmf_command` WHERE `Dtmf_command`.`id` = '$DMF_ID'");
         
         
@@ -119,7 +119,7 @@ if( $_SESSION['loginid'] >0 )
     {
         
         $command= $link->real_escape_string($_POST['command']);
-        $Desciption= $link->real_escape_string($_POST['Desciption']);
+        $Description= $link->real_escape_string($_POST['Description']);
         $Category= $link->real_escape_string($_POST['Category']);
        
         $DMF_ID = $link->real_escape_string($_POST['dtmf_id']);
@@ -128,7 +128,7 @@ if( $_SESSION['loginid'] >0 )
         
 
 
-        $link->query("UPDATE `Dtmf_command` SET `Command` = '$command', `Description` = '$Desciption' ,`Category` ='$Category' WHERE `Dtmf_command`.`id` = '$DMF_ID'; ");
+        $link->query("UPDATE `Dtmf_command` SET `Command` = '$command', `Description` = '$Description' ,`Category` ='$Category' WHERE `Dtmf_command`.`id` = '$DMF_ID'; ");
         
         
     }
@@ -142,12 +142,12 @@ if( $_SESSION['loginid'] >0 )
 
         
         $Update_id = $link->real_escape_string($_POST['Update_id']);
-        $station_id =page_id_to_staion_id($Update_id);
-        $premission_rw =check_premission_station_RW($station_id,$_SESSION['loginid']);
+        $station_id =page_id_to_station_id($Update_id);
+        $permission_rw =check_permission_station_RW($station_id,$_SESSION['loginid']);
         
-        if($premission_rw >0)
+        if($permission_rw >0)
         
-           $link->query("UPDATE `Infotmation_page` SET `Module` = '$Driver', `Image` = '$radio_image' , GrafanaUrl= '$GrafanaUrl' WHERE `Infotmation_page`.`id` = '$Update_id'; ");
+           $link->query("UPDATE `Information_page` SET `Module` = '$Driver', `Image` = '$radio_image' , GrafanaUrl= '$GrafanaUrl' WHERE `Information_page`.`id` = '$Update_id'; ");
         
         
     }
@@ -166,9 +166,9 @@ if( $_SESSION['loginid'] >0 )
 
 
 
-        $premission_rw =check_premission_station_RW($stid,$_SESSION['loginid']);
+        $permission_rw =check_permission_station_RW($stid,$_SESSION['loginid']);
         
-        if($premission_rw >0)
+        if($permission_rw >0)
          $link->query("INSERT INTO `Operation_log` (`id`, `Station_id`, `Type`, `Date`, `Message`) VALUES (NULL, '$stid', '$Type', '$mysqltime', '$command'); ");
         
     }

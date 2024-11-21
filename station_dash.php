@@ -268,7 +268,7 @@ if($_GET["Station_idnr"])
     
 
     
-    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Infotmation_page` WHERE Station_id  ='".$idnr."'");
+    $result = mysqli_query($link, "SELECT Html , Hardware_page, id, Station_Name, Station_id, Module, Image FROM `Information_page` WHERE Station_id  ='".$idnr."'");
     
     
     
@@ -307,18 +307,18 @@ if($station_data['Module'] !="")
 
 
 /*
- * Check for premission
+ * Check for permission
  * 
  * 
  */
 
 
-if(check_premission_station($_GET["Station_idnr"],$_SESSION['loginid']) == 0)
+if(check_permission_station($_GET["Station_idnr"],$_SESSION['loginid']) == 0)
 {
- echo '<h1>'._('Premission Denied!').'</h1>';
+ echo '<h1>'._('Permission Denied!').'</h1>';
  exit(-1);   
 }
-$premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['loginid']);
+$permission_rw =check_permission_station_RW($_GET["Station_idnr"],$_SESSION['loginid']);
 
 ?>
 
@@ -328,7 +328,7 @@ $premission_rw =check_premission_station_RW($_GET["Station_idnr"],$_SESSION['log
 
     
 <header>
-     <nav class="navbar   navbar-dark sidebar_collor justify-content-between">
+     <nav class="navbar   navbar-dark sidebar_colour justify-content-between">
       
        
         <div>

@@ -27,9 +27,9 @@ function get_time($station,$day)
     
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)),Callsign FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Callsign`";
+    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)),Callsign FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Callsign`";
     
-    $sql_nonactive ="SELECT sum(Talktime), Callsign FROM RefletorNodeLOG WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Callsign` ";
+    $sql_nonactive ="SELECT sum(Talktime), Callsign FROM ReflectorNodeLog WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Callsign` ";
     
 //     echo $sql_active;
 //      echo "<br>";
@@ -55,7 +55,7 @@ function get_most_use_reciver($day)
     
     
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:00.000000'";
-    $quvery =" SELECT MAX(`Nodename`),`Callsign` FROM `RefletorNodeLOG`  WHERE  $tme_string  AND`Type` = 2 AND `Active` = 1  GROUP BY Callsign";
+    $quvery =" SELECT MAX(`Nodename`),`Callsign` FROM `ReflectorNodeLog`  WHERE  $tme_string  AND`Type` = 2 AND `Active` = 1  GROUP BY Callsign";
     echo $quvery;
 
 
@@ -113,7 +113,7 @@ if($qrv != "")
     $day = $link->real_escape_string($day);
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    $sql_stations ="SELECT Callsign , sum(Talktime)  FROM RefletorNodeLOG WHERE `Type` = '1' and Active='0'  AND $tme_string group by  `Callsign`";
+    $sql_stations ="SELECT Callsign , sum(Talktime)  FROM ReflectorNodeLog WHERE `Type` = '1' and Active='0'  AND $tme_string group by  `Callsign`";
 
     echo 
     $sqlstat = $link->query($sql_stations);
@@ -155,9 +155,9 @@ else if( $_GET['time'] == "true")
     //$tme_string ="`Time` BETWEEN '$day $timel:00:00.000000' AND '$day $timel:59:59.000000'";
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
+    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
     
-    $sql_nonactive ="SELECT UNIX_TIMESTAMP(Time), Talktime, `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND `Active` ='0' AND $tme_string  ";
+    $sql_nonactive ="SELECT UNIX_TIMESTAMP(Time), Talktime, `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND `Active` ='0' AND $tme_string  ";
     $sqla = $link->query($sql_nonactive);
     $data = array();
     while($row = $sqla->fetch_assoc()) {
@@ -291,9 +291,9 @@ else
     $day = $link->real_escape_string($day);
     $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(Talktime), `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
+    //$sql_active ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
     
-    $sql_nonactive ="SELECT sum(Talktime), `Talkgroup` FROM RefletorNodeLOG WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Talkgroup` ";
+    $sql_nonactive ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Talkgroup` ";
     
     /*echo $sql_active;
     echo "<br>";
@@ -306,7 +306,7 @@ else
         $timesum[$row["Talkgroup"]] =$row["sum(Talktime)"];
     }
 
-    $result = mysqli_query($link, "SELECT `Talkgroup` FROM `RefletorNodeLOG` GROUP BY `Talkgroup` ");
+    $result = mysqli_query($link, "SELECT `Talkgroup` FROM `ReflectorNodeLog` GROUP BY `Talkgroup` ");
     
     
     

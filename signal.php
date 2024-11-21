@@ -36,19 +36,19 @@ $filetime_nr = ($filetime_nr -$time)-2;
 $upper = date("Y-m-d H:i:s",$filetime_nr);
 $lower = date("Y-m-d H:i:s",$filetime_nr-1);
 
-//$sql ="SELECT * FROM `RefletorNodeLOG` WHERE `Type` = 2 AND  `Talkgroup` = 240 AND `Active` = 1 AND `Time` BETWEEN  '".$lower."' AND  '".$upper."' ORDER BY `Id` DESC LIMIT 1";
-$sql ="SELECT * FROM `RefletorNodeLOG` WHERE `Type` = 2 AND  `Talkgroup` = '$default_tg' AND  `Time` BETWEEN  '".$lower."' AND  '".$upper."'  ORDER BY `Active` DESC ";
+//$sql ="SELECT * FROM `ReflectorNodeLog` WHERE `Type` = 2 AND  `Talkgroup` = 240 AND `Active` = 1 AND `Time` BETWEEN  '".$lower."' AND  '".$upper."' ORDER BY `Id` DESC LIMIT 1";
+$sql ="SELECT * FROM `ReflectorNodeLog` WHERE `Type` = 2 AND  `Talkgroup` = '$default_tg' AND  `Time` BETWEEN  '".$lower."' AND  '".$upper."'  ORDER BY `Active` DESC ";
 
 
 /*
-$sql_count ="SELECT count(*) FROM `RefletorNodeLOG` WHERE `Type` = 2 AND  `Talkgroup` = 240 AND `Active` = 0 AND `Time` BETWEEN  '".$lower."' AND  '".$upper."' ORDER BY `Id` DESC LIMIT 1";
+$sql_count ="SELECT count(*) FROM `ReflectorNodeLog` WHERE `Type` = 2 AND  `Talkgroup` = 240 AND `Active` = 0 AND `Time` BETWEEN  '".$lower."' AND  '".$upper."' ORDER BY `Id` DESC LIMIT 1";
 $sql_Data = $conn->query($sql_count);
 $count = $sql_Data->fetch_assoc();
 */
 //echo $row["count(*)"];
-//$sql ="SELECT * FROM `RefletorNodeLOG` WHERE `Type` = 2 AND  `Talkgroup` = 240  AND `Time` BETWEEN  '".$lower."' AND  '".$upper."' ORDER BY `Active` DESC";
+//$sql ="SELECT * FROM `ReflectorNodeLog` WHERE `Type` = 2 AND  `Talkgroup` = 240  AND `Time` BETWEEN  '".$lower."' AND  '".$upper."' ORDER BY `Active` DESC";
 
-//$sql_nonactive ="SELECT * FROM `RefletorNodeLOG` WHERE `Type` = 2 AND Callsign='".$row["Callsign"]."' AND `Talkgroup` = 240 AND `Active` = 0 AND `Time` ='".$row["Time"]."' ORDER BY `Id` DESC ";
+//$sql_nonactive ="SELECT * FROM `ReflectorNodeLog` WHERE `Type` = 2 AND Callsign='".$row["Callsign"]."' AND `Talkgroup` = 240 AND `Active` = 0 AND `Time` ='".$row["Time"]."' ORDER BY `Id` DESC ";
 
 
 
@@ -77,7 +77,7 @@ while ($row = $result->fetch_assoc()) {
     break;
     
     /*
-    $sql_nonactive ="SELECT * FROM `RefletorNodeLOG` WHERE `Type` = 2 AND Callsign='".$row["Callsign"]."' AND `Talkgroup` = '$default_tg' AND `Active` = 0 AND `Time` ='".$row["Time"]."' ORDER BY `Id` DESC ";
+    $sql_nonactive ="SELECT * FROM `ReflectorNodeLog` WHERE `Type` = 2 AND Callsign='".$row["Callsign"]."' AND `Talkgroup` = '$default_tg' AND `Active` = 0 AND `Time` ='".$row["Time"]."' ORDER BY `Id` DESC ";
     $result1 = $conn->query($sql_nonactive);
     
     */

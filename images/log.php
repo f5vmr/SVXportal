@@ -9,7 +9,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 mysqli_set_charset($conn,"utf8");
-$sql ="SELECT * FROM `RefletorNodeLOG` where Type ='1' OR (Type = '2' AND Active = '1')  ORDER BY `RefletorNodeLOG`.`Id` DESC limit 500 ";
+$sql ="SELECT * FROM `ReflectorNodeLog` where Type ='1' OR (Type = '2' AND Active = '1')  ORDER BY `ReflectorNodeLog`.`Id` DESC limit 500 ";
 $result = $conn->query($sql);
 $i=1;
 ?>

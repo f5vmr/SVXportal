@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 
 function check_if_active($call) {
     global $conn;
-    $sql ="SELECT `Active` FROM RefletorNodeLOG where Type =1 AND  Callsign='".$call."'  ORDER BY `RefletorNodeLOG`.`Id` DESC limit 1 ";
+    $sql ="SELECT `Active` FROM ReflectorNodeLog where Type =1 AND  Callsign='".$call."'  ORDER BY `ReflectorNodeLog`.`Id` DESC limit 1 ";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -28,7 +28,7 @@ function check_if_active($call) {
 }
 function check_if_HasBeenActive($call) {
     global $conn;
-    $sql ="SELECT count(Id) FROM RefletorNodeLOG where Type =1 and Callsign='".$call."' ORDER BY `RefletorNodeLOG`.`Id` ";
+    $sql ="SELECT count(Id) FROM ReflectorNodeLog where Type =1 and Callsign='".$call."' ORDER BY `ReflectorNodeLog`.`Id` ";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -38,7 +38,7 @@ function check_if_HasBeenActive($call) {
 }
 function check_last_tg($call) {
     global $conn;
-    $sql ="SELECT Talkgroup,id FROM RefletorNodeLOG where Type =1 AND Active='1'  and Callsign='".$call."' ORDER BY `RefletorNodeLOG`.`Id` DESC LIMIT 1  ";
+    $sql ="SELECT Talkgroup,id FROM ReflectorNodeLog where Type =1 AND Active='1'  and Callsign='".$call."' ORDER BY `ReflectorNodeLog`.`Id` DESC LIMIT 1  ";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -48,7 +48,7 @@ function check_last_tg($call) {
 }
 function check_last_time($call) {
     global $conn;
-    $sql ="SELECT UNIX_TIMESTAMP(Time),id FROM RefletorNodeLOG where Type =1 AND Active='1'  and Callsign='".$call."' ORDER BY `RefletorNodeLOG`.`Id` DESC LIMIT 1  ";
+    $sql ="SELECT UNIX_TIMESTAMP(Time),id FROM ReflectorNodeLog where Type =1 AND Active='1'  and Callsign='".$call."' ORDER BY `ReflectorNodeLog`.`Id` DESC LIMIT 1  ";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
     
@@ -130,7 +130,7 @@ if(read_cache() != $json_data)
             //echo $key." talker is active " .check_if_active($key);
             if(check_if_active($key) == 0  )
             {
-                $sql_insert = "INSERT INTO `RefletorNodeLOG` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`)
+                $sql_insert = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`)
                  VALUES (NULL, '".$key."', '1', '1', '".$value->tg."', '', '0', '0', '0', '','0');";
                 $conn->query($sql_insert);
                 
@@ -146,7 +146,7 @@ if(read_cache() != $json_data)
                 $last_active_timestamp =check_last_time($key);
                 $curcent_diftime= time() -$last_active_timestamp;
                 echo "difftime: " . $curcent_diftime ;
-                $sql_insert = "INSERT INTO `RefletorNodeLOG` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`)
+                $sql_insert = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`)
                  VALUES (NULL, '".$key."', '1', '0', '".$last_active_id."', '', '0', '0', '0', '','$curcent_diftime');";
                 
                 //echo $sql_insert;
@@ -174,7 +174,7 @@ if(read_cache() != $json_data)
         
                         echo $key." Node ". $station."-> is Talker". $Rx->siglev;
                         
-                        $sql_insert = "INSERT INTO `RefletorNodeLOG` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`, `Time`,`Nodename`,`Talktime`) 
+                        $sql_insert = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`, `Time`,`Nodename`,`Talktime`) 
                                        VALUES (NULL, '$key', '2', '".$Rx->active."', '$value->tg', '$station', '".$Rx->siglev."', '0', '1', CURRENT_TIMESTAMP,'".$qth_value->name."','0');";
         
                         $conn->query($sql_insert);

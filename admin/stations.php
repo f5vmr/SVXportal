@@ -6,13 +6,13 @@
  function update_color(id,color) {
 	$('#color_id').val(id);
 	$('#color').val(color.trim());
-	$("#Collor").modal() 
+	$("#Colour").modal() 
 }
 function update_color_set()
 {
 
 
-	$.post( "admin/update_color.php", $( "#Collor_form" ).serialize() )
+	$.post( "admin/update_color.php", $( "#Colour_form" ).serialize() )
 	.done(function( data ) {
 		reaload_user_stations();
 	});
@@ -137,7 +137,7 @@ function reaload_user_stations()
       <td><?php echo _('No')?></td>
     <?php }?>
     
-    <?php     echo "<td>".'<div onclick="update_color('. $row['ID'].',\''.$row["Collor"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Collor"].' ">'."</td>"; ?>
+    <?php     echo "<td>".'<div onclick="update_color('. $row['ID'].',\''.$row["Colour"].'\')" style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Colour"].' ">'."</td>"; ?>
       </tr>
       
       
@@ -153,9 +153,9 @@ function reaload_user_stations()
 </table>
 </div>
 
-<div id="Collor" class="modal fade" role="dialog">
+<div id="Colour" class="modal fade" role="dialog">
   <div class="modal-dialog">
- <form id="Collor_form" onsubmit="return update_color_set()">
+ <form id="Colour_form" onsubmit="return update_color_set()">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">

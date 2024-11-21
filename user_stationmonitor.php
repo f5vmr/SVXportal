@@ -2,7 +2,7 @@
 
 
 $user_id= $_SESSION['loginid'];
-$result = mysqli_query($link, "SELECT * FROM User_Premission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Premission.Station_id WHERE User_Premission.User_id ='$user_id' ");
+$result = mysqli_query($link, "SELECT * FROM User_Permission LEFT JOIN RefletorStations ON RefletorStations.ID = User_Permission.Station_id WHERE User_Permission.User_id ='$user_id' ");
 ?>
 var talkgroups_active = new Array();
 

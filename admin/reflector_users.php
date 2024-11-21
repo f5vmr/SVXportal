@@ -20,7 +20,7 @@ function create_reflektor_user()
 
 	if(usern != "" && pass != "")
 	{
-    	$.post( "admin/reflektor_action.php", $( "#create_reflektoruser_form" ).serialize() )
+    	$.post( "admin/reflector_action.php", $( "#create_reflektoruser_form" ).serialize() )
     	.done(function( data ) {
     		alert("<?php echo _('User created sucsessfully!')?>")
     		$("#create_reflektoruser_div").hide();
@@ -39,7 +39,7 @@ function Delete_reflektor_user(id)
 {
 
 	if( confirm("<?php echo _('Please confirm user removal')?>") == true )
-    	$.post( "admin/reflektor_action.php",  { userdel: "1", userid: id } )
+    	$.post( "admin/reflector_action.php",  { userdel: "1", userid: id } )
     	.done(function( data ) {
     		reaload_reflektor_table();
     
@@ -61,7 +61,7 @@ function enable_reflektor_user(id,type)
 	}
 
 	if( confirm(str) == true )
-    	$.post( "admin/reflektor_action.php",  { change_active: "1", user_id: id, Enable: type } )
+    	$.post( "admin/reflector_action.php",  { change_active: "1", user_id: id, Enable: type } )
     	.done(function( data ) {
     		reaload_reflektor_table();
     
@@ -73,7 +73,7 @@ function enable_reflektor_user(id,type)
 }
 
 
-function chahge_reflektor_password_r(id)
+function change_reflector_password_r(id)
 {
 
 
@@ -90,7 +90,7 @@ function update_reflektor_password()
 	console.log(pass);
 	if(pass)
 	{
-    	$.post( "admin/reflektor_action.php", $( "#update_password_r" ).serialize() )
+    	$.post( "admin/reflector_action.php", $( "#update_password_r" ).serialize() )
     	.done(function( data ) {
     		alert("<?php echo _('Password is updated!')?>");
     		$('#update_password_r').trigger("reset");
@@ -161,7 +161,7 @@ function refector_action(value,id,element)
 	    break;
 
 	  case "5":
-		  chahge_reflektor_password_r(id);
+		  change_reflector_password_r(id);
 	    // code block
 	    break;
 	  default:
@@ -181,7 +181,7 @@ function Send_message_to_admin(id)
 	if (message != null) 
 	{
 
-    	$.post( "admin/reflektor_action.php",  { send_msg: "1", user_id: id, msg: message } )
+    	$.post( "admin/reflector_action.php",  { send_msg: "1", user_id: id, msg: message } )
     	.done(function( data ) {
     		reaload_reflektor_table();
     		alert("<?php echo  _("Message sent")?>");
@@ -201,7 +201,7 @@ function Send_password(id)
 
 
 
-    	$.post( "admin/reflektor_action.php",  { Send_password: "1", user_id: id } )
+    	$.post( "admin/reflector_action.php",  { Send_password: "1", user_id: id } )
     	.done(function( data ) {
     		reaload_reflektor_table();
     		alert("<?php echo  _("Message sent")?>");
@@ -440,7 +440,7 @@ function Send_password(id)
           <option value ="2"><?php echo _("Disable user")?></option>
           <?php }?>
           <option value ="3" ><?php echo _("Send message to Sysadmin")?></option>
-          <option value ="4" ><?php echo _("Send login credentaial to sysadmin")?></option>
+          <option value ="4" ><?php echo _("Send login credential to sysadmin")?></option>
           <option value ="5" ><?php echo _("Change user password")?></option>
           
          
@@ -450,7 +450,7 @@ function Send_password(id)
       
        </td>
        
-             <td><i class="fas fa-trash" onclick="Delete_reflektor_user(<?php echo $row['id']?>)"></i> <i onclick="chahge_reflektor_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i>
+             <td><i class="fas fa-trash" onclick="Delete_reflektor_user(<?php echo $row['id']?>)"></i> <i onclick="change_reflector_password_r(<?php echo $row['id']?>)" class="fas fa-key"></i> <i onclick="<?php echo $enable_str?>" class="fa fa-certificate" aria-hidden="true"></i>
       </td>
        
       </tr>
