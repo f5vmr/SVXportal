@@ -32,23 +32,30 @@ function get_fcontent( $url,  $javascript_loop = 0, $timeout = 5 ) {
     if ($response['http_code'] == 301 || $response['http_code'] == 302) {
         ini_set("user_agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; rv:1.7.3) Gecko/20041001 Firefox/0.10.1");
 
-        if ( $headers = get_headers($response['url']) ) {
-            foreach( $headers as $value ) {
-                if ( substr( strtolower($value), 0, 9 ) == "location:" )
-                    return get_url( trim( substr( $value, 9, strlen($value) ) ) );
+        if ($headers = get_headers($response['url'])) {
+            foreach ($headers as $value) {
+                if (substr(strtolower($value), 0, 9) == "location:") {
+                    return trim(substr($value, 9, strlen($value)));
+                }
             }
         }
+        
+
     }
     // clean temp from cookie data
     @array_map('unlink', glob("/tmp/cookie.txt*"));
     @array_map('unlink', glob("/tmp/CURLCOOKIE*"));
 
 
-    if (    ( preg_match("/>[[:space:]]+window\.location\.replace\('(.*)'\)/i", $content, $value) || preg_match("/>[[:space:]]+window\.location\=\"(.*)\"/i", $content, $value) ) && $javascript_loop < 5) {
-        return get_url( $value[1], $javascript_loop+1 );
-    } else {
-        return array( $content, $response );
-    }
+    if ((preg_match("/>[[:space:]]+window\.location\.replace\('(.*)'\)/i", $content, $value) || 
+    preg_match("/>[[:space:]]+window\.location\=\"(.*)\"/i", $content, $value)) && 
+    $javascript_loop < 5) {
+    
+    return get_url($value[1]);
+} else {
+    return $content;
+}
+
 }
 
 

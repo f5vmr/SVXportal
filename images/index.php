@@ -363,18 +363,18 @@ $i = 0;
 echo " 	multi_stat_change('repeater-info-.json','Menu');";
 // Associative array
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
     echo 'setTimeout(function(){';
+    
     if ($i == 0) {
-
-        echo " 	multi_stat_change('repeater-info-" . $row["Name"] . ".json','0');";
+        echo " multi_stat_change('repeater-info-" . $row["Name"] . ".json','0');";
     } else {
-        echo " 	multi_stat_change('repeater-info-" . $row["Name"] . ".json',$i);";
+        echo " multi_stat_change('repeater-info-" . $row["Name"] . ".json',$i);";
     }
-
-    echo "}, " . (200 + i * 20) . ");";
-    $i ++;
+    
+    echo "}, " . (200 + $i * 20) . ");";
+    $i++;
 }
+
 ?>	
 
 
@@ -776,7 +776,8 @@ $result = mysqli_query($link, "SELECT * FROM `RefletorStations` where Callsign !
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     echo "<tr>";
     echo "<td>" . $row["Callsign"] . "</td>";
-    echo "<td>" . utf8_encode($row["Location"]) . "</td>";
+    echo "<td>" . mb_convert_encoding($row["Location"], 'UTF-8') . "</td>";
+
     echo "<td>" .secondsToDHMS($timesum_node[$row["Callsign"]]). "</td>";
     
     echo "<td>".'<div style="border:2px solid black; width: 25px; height :25px;  background-color:'.$row["Colour"].' ">'."</td>";

@@ -17,7 +17,11 @@ function Get_station_from_json()
 
     
     //$context = stream_context_create(array('http' => array('header'=>'Connection: close\r\n')));
-
+    $context = stream_context_create([
+        'http' => [
+            'header' => 'Connection: close\r\n'
+        ]
+    ]);
     $json_data = file_get_contents($serveraddress,false,$context);
     
 

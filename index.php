@@ -1704,7 +1704,7 @@ ul.dropdown-lr {
           <li class="nav-item dropdown" style="color:#e1e3e9; ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    
-              <?php return_flag($current_lagnuge)?>
+              <?php return_flag($current_language)?>
               
     
             </a>

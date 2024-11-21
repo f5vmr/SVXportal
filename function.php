@@ -1,8 +1,8 @@
 <?php
 session_start();
-$current_lagnuge="";
+$current_language="";
 function set_language() {
-    global $current_lagnuge;
+    global $current_language;
     // Check if gettext is enable
     if(!function_exists("gettext")) die("gettext is not enable");
     
@@ -95,7 +95,7 @@ function set_language() {
 
     
     
-    $current_lagnuge= $locale;
+    $current_language= $locale;
 
     putenv("LANG=".$locale); //not needed for my tests, but people say it's useful for windows
     putenv("LANGUAGE=".$locale); 
@@ -451,6 +451,20 @@ function translate_folder_page($url)
     
 }
 
+function get_url($url) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_HEADER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_NOBODY, true);
+    
+    $response = curl_exec($ch);
+    $response_info = curl_getinfo($ch);
+    curl_close($ch);
+
+    return $response_info;
+}
 
 function detect_empty_cache_table()
 {
