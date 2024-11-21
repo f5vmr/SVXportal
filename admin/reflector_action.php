@@ -135,7 +135,7 @@ define_settings();
                 'X-Mailer: PHP/' . phpversion();
             
             mail($email_address, $subject, $message, $headers);
-            echo "sucsess";
+            echo "success";
         }
         
         

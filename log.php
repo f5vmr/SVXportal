@@ -203,7 +203,7 @@ $ceked_val_arr = explode(",", $filter);
        
               <input class="form-check-input" name="Log_filter_checkbox[]" onclick="get_log_filter()" type="checkbox" value="3" onclick="get_log_filter()" id="defaultCheck2" <?php  if (in_array("3", $ceked_val_arr)) echo "checked='checked'";?> >
               <label class="form-check-label" for="defaultCheck2">
-                <?php echo _('Reflektor');?>
+                <?php echo _('Reflector');?>
               </label>
 			</div>
 			
@@ -347,7 +347,7 @@ while($row = $result->fetch_assoc()) {
     }
     elseif($row['Type'] ==2) 
     {
-        echo _("Reciver")." ".$row['Nodename'];
+        echo _("Receiver")." ".$row['Nodename'];
         if($row['Active'] == 1)
             echo " ". _(" is active, signal level")." ".$row['Siglev'];
         else
@@ -361,7 +361,7 @@ while($row = $result->fetch_assoc()) {
         if($row['Active'] == 1)
                 echo " ". _("has dropped  from reflector")." ";
             else
-                echo " ".  _("has connected to  reflector") ." ";
+                echo " ".  _("has connected to the  reflector") ." ";
     }
     echo '</td>';
      echo "</tr> ";

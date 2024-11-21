@@ -470,7 +470,7 @@ function generate_colour()
 	<div class="card" style="width: 50rem;">
  	 <div class="card-body">
     <h5 class="card-title">Sinal</h5>
-    <p class="card-text">Signal from Reciver.</p>
+    <p class="card-text">Signal from Receiver.</p>
 			<div class="progress">
                               <div class="progress-bar progress-bar-striped bg-success" id="progressbar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>

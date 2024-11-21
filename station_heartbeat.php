@@ -112,7 +112,7 @@ function send_mail($email,$node,$type)
     else
     {
         $subject = "Node $node up";
-        $message = "the node $node has connected to reflector !";
+        $message = "the node $node has connected to the reflector !";
     }
 
     
@@ -204,7 +204,7 @@ $json = json_decode($json_data);
             
             if(check_if_dead($key) == 1)
             {
-                echo $key ." is has joned  reflektor ";
+                echo $key ." has joined the  reflector ";
                 
                 // set station is restored
                 $sql = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`) VALUES (NULL, '".$key."', '3', '0', '0', '', '0', '0', '0', '','0');";
@@ -244,7 +244,7 @@ $json = json_decode($json_data);
         {
             
 
-                echo $value ." is has dropt from reflektor ";
+                echo $value ." is has dropped from the  reflector ";
                 
                 $sql = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`) VALUES (NULL, '".$value."', '3', '1', '0', '', '0', '0', '0', '','0');";
     

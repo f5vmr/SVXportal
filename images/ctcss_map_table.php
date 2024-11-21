@@ -271,7 +271,7 @@ if($noheader != 1){?>
             <input class="form-control" type="number" value="0" name="index" id="numberinpuet">
           </div>
           
-          <label for="countrypre" class="col-2 col-form-label"><?php echo _("Use thre last char in call")?></label>
+          <label for="countrypre" class="col-2 col-form-label"><?php echo _("Use three last char in call")?></label>
           <div class="col-10">
             <input class="form-control" type="checkbox" value="1" name="trimc" id="countrypre">
           </div>

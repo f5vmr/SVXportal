@@ -266,7 +266,7 @@ screen  -d -m bash -c  'cd <?php echo getcwd()?>; watch -n 1  php logdeamon.php;
      			<div class="form-group">
     				<label for="reflector_address">Reflector address</label> <input
     					type="text" class="form-control" name="reflector_address" id="reflector_address"
-    					value=http://reflektorserver:8080/status">
+    					value=http://reflectorserver:8080/status">
     			</div>		
     			
     			

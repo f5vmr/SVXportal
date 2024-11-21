@@ -54,8 +54,8 @@ msgid "Users"
 msgstr "Użytkownicy"
 
 #: admin.php:252
-msgid "Reflektor users"
-msgstr "Użytkownicy reflektora"
+msgid "Reflector users"
+msgstr "Użytkownicy reflectora"
 
 #: admin.php:258 admin/settings.php:76 edit_station.php:435
 msgid "Settings"
@@ -66,7 +66,7 @@ msgid "My stations"
 msgstr "Moje stacje"
 
 #: admin/reflector_users.php:25 admin/users.php:16
-msgid "User created sucsessfully!"
+msgid "User created successfully!"
 msgstr "Użytkownik stworzony!"
 
 #: admin/reflector_users.php:41 admin/talkgroup.php:25 admin/users.php:31
@@ -95,7 +95,7 @@ msgstr "Wiadomość wysłana"
 
 #: admin/reflector_users.php:236
 msgid "Reflector users"
-msgstr "Użytkownik reflektora"
+msgstr "Użytkownik reflectora"
 
 # if phisical print on printer... "Wydrukuj Użytkoników"
 #: admin/reflector_users.php:246 admin/users.php:135
@@ -296,11 +296,11 @@ msgid "Is talking on tg"
 msgstr "Rozmówca on tg"
 
 #: admin/log.php:239
-msgid "Stoped talk tg"
+msgid "stopped talking on tg"
 msgstr "Zakończył rozmawiać na  tg"
 
 #: admin/log.php:243 log.php:350
-msgid "Reciver"
+msgid "Receiver"
 msgstr "Odbiornik"
 
 #: admin/log.php:245
@@ -316,12 +316,12 @@ msgid "Node"
 msgstr "Node"
 
 #: admin/log.php:255
-msgid "has dropt from reflektor"
-msgstr "rozłączył się od reflektora"
+msgid "has dropped from the  reflector"
+msgstr "rozłączył się od reflectora"
 
 #: admin/log.php:257
-msgid "has connected to  reflektor"
-msgstr "połączył siędo reflektora"
+msgid "has connected to the  reflector"
+msgstr "połączył siędo reflectora"
 
 #: admin/log.php:275
 msgid "Previous"
@@ -456,11 +456,11 @@ msgid "Assign station permission for user"
 msgstr "Nadaj uprawnienia stacji dla użytkownika"
 
 #: admin/users.php:395
-msgid "Read only acsess"
+msgid "Read only access"
 msgstr "Dostęp do odczytu"
 
 #: admin/users.php:400
-msgid "Write acsess"
+msgid "Write access"
 msgstr "Uprawnienia Zapisu"
 
 #: ctcss_map_table.php:207
@@ -507,7 +507,7 @@ msgid "Use Custom header in sidebar"
 msgstr "Użyj niestandardowy HEADER w pasku"
 
 #: database_text.php:4
-msgid "External dokumentation page"
+msgid "External documentation page"
 msgstr "Zewnętrzna strona dokumentacji"
 
 # ? to be validated ? i'm preety not sure.
@@ -727,8 +727,8 @@ msgid "Echolink"
 msgstr "Echolink"
 
 #: function.php:270 log.php:206
-msgid "Reflektor"
-msgstr "Reflektor"
+msgid "Reflector"
+msgstr "Reflector"
 
 #: function.php:271
 msgid "Shortcut"
@@ -871,8 +871,8 @@ msgid "Sunday"
 msgstr "Niedziela"
 
 #: index.php:233
-msgid "No Resonse from reflektor server"
-msgstr "Brak odpowiedzi od serwera reflektor"
+msgid "No Response from reflector server"
+msgstr "Brak odpowiedzi od serwera reflector"
 
 #: index.php:233
 msgid "System failure"
@@ -967,7 +967,7 @@ msgstr "Zresetuj hasło"
 #: index.php:1826 index.php:1941 index1.php:1239 index1.php:1356
 #: index_old.php:665 index_old.php:770 indexa.php:666 indexa.php:771
 msgid "Reflector clients"
-msgstr "Klienci reflektora"
+msgstr "Klienci reflectora"
 
 #: index.php:1833 index1.php:1246 index_old.php:667 indexa.php:668
 msgid "Monitor"
@@ -1171,7 +1171,7 @@ msgid "SqlType"
 msgstr "Typ SQL"
 
 #: index.php:2643 index1.php:2032
-msgid "Show covreage"
+msgid "Show coverage"
 msgstr "Pokaż zasięg"
 
 #: index.php:2655
@@ -1188,8 +1188,8 @@ msgstr "Aktywność grupy rozmownej"
 
 #: index.php:3720 index.php:3744 index1.php:3046 index_old.php:2340
 #: indexa.php:2341
-msgid "Reflektor time in S"
-msgstr "Czas reflektora w sek."
+msgid "Reflector time in S"
+msgstr "Czas reflectora w sek."
 
 #: index.php:3822 index1.php:3148 index_old.php:2442 indexa.php:2443
 msgid "time"
@@ -1208,7 +1208,7 @@ msgid "Station activity"
 msgstr "Aktywność stacji"
 
 #: index.php:4700 index1.php:3777 station_info.php:57
-msgid "Station infromation"
+msgid "Station information"
 msgstr "Informacje o stacji"
 
 #: index.php:4737 index1.php:3814
@@ -1216,7 +1216,7 @@ msgid "Select station"
 msgstr "Wybór stacji"
 
 #: index.php:4780 index1.php:3857
-msgid "Passwords aren same"
+msgid "Passwords are not identical"
 msgstr "Hasła nie są takie same"
 
 #: index.php:4792 index1.php:3869
@@ -1224,7 +1224,7 @@ msgid "User already exist!"
 msgstr "Użytkownik już istnieje!"
 
 #: index.php:4796 index1.php:3873
-msgid "User is creadted!"
+msgid "User is created!"
 msgstr "Użytkownik stworzony!"
 
 #: index.php:4821 index1.php:3898 user_settings.php:292
@@ -1336,7 +1336,7 @@ msgid "TGs"
 msgstr "TGs"
 
 #: index1.php:1611 index_old.php:913 indexa.php:914
-msgid "Signal value  from Reciver"
+msgid "Signal value  from Receiver"
 msgstr "Siła sygnału  z Odbiornika"
 
 #: index1.php:3070 index_old.php:2364 indexa.php:2365
@@ -1352,12 +1352,12 @@ msgid "Active RX"
 msgstr "Aktywne RX"
 
 #: index_old.php:502 indexa.php:503
-msgid "Login sucsess"
+msgid "Login success"
 msgstr "Zalogowany"
 
 #: index_old.php:761 indexa.php:762
 msgid " Reflector clients"
-msgstr "Klienci Reflektora"
+msgstr "Klienci Reflectora"
 
 #: index_old.php:785 index_old.php:900 index_old.php:1026 index_old.php:1035
 #: index_old.php:1069 index_old.php:1258 index_old.php:3076 indexa.php:786
@@ -1421,11 +1421,11 @@ msgstr "aktywny, poziom sygnału"
 
 #: log.php:362
 msgid "has dropped  from reflector"
-msgstr "odłączony od reflektora"
+msgstr "odłączony od reflectora"
 
 #: log.php:364
-msgid "has connected to  reflector"
-msgstr "podłączony do reflektora"
+msgid "has connected to the  reflector"
+msgstr "podłączony do reflectora"
 
 #: other/cisco_active_station.php:42
 msgid "Active Sations"
@@ -1469,7 +1469,7 @@ msgstr ""
 "Dziękujemy za rejestrację administrator skontaktuje się z Tobą niebawem"
 
 #: request_reflector_login.php:388
-msgid "Network acsess"
+msgid "Network access"
 msgstr "Dostęp sieciowy"
 
 #: request_reflector_login.php:410
@@ -1505,7 +1505,7 @@ msgid "Send DTMF to node"
 msgstr "Wyślij DTMF do NODE"
 
 #: request_reflector_login.php:508
-msgid "Send Command to Nod"
+msgid "Send Command to Node"
 msgstr "Wyślij komendę do NODE"
 
 #: request_reflector_login.php:511
@@ -1545,7 +1545,7 @@ msgid "Register User"
 msgstr "Rejestruj Użytkownika"
 
 #: request_reflector_login.php:673
-msgid "Repater information"
+msgid "Repeater information"
 msgstr "Informacje o przemienniku"
 
 #: request_reflector_login.php:676
@@ -1657,7 +1657,7 @@ msgid "RX Frequency"
 msgstr "Częstotliwość odbiorcza"
 
 #: request_reflector_login.php:1077
-msgid "Parameters dor Svxlink.conf"
+msgid "Parameters for Svxlink.conf"
 msgstr "Parametry w pliku svxlink.conf"
 
 #: request_reflector_login.php:1081 request_reflector_login.php:1091
@@ -1665,7 +1665,7 @@ msgid "Parameter"
 msgstr "Parametr"
 
 #: request_reflector_login.php:1126
-msgid "Generate JSON / Paramters"
+msgid "Generate JSON / Parameters"
 msgstr "Generuj JSON / Parametrs"
 
 #: request_reflector_login.php:1165

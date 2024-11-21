@@ -36,7 +36,7 @@ INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, '
 
 ALTER TABLE `users` ADD `Is_admin` INT NOT NULL AFTER `level`; 
 
-INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'iframe_documentation_url', 'http://sk3w.se/dokuwiki/doku.php?id=svxreflector&do=export_xhtml', 'External dokumentation page', '2');
+INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'iframe_documentation_url', 'http://sk3w.se/dokuwiki/doku.php?id=svxreflector&do=export_xhtml', 'External documentation page', '2');
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'USE_LOGIN', '0', 'Use login for player', '1'); 
 

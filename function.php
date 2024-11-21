@@ -278,7 +278,7 @@ function DTMF_Catgory()
 {
     $Dmtf[0]=_('General');
     $Dmtf[1]=_('Echolink');
-    $Dmtf[2]=_('Reflektor');
+    $Dmtf[2]=_('Reflector');
     $Dmtf[3]=_('Shortcut');
     $Dmtf[4]=_('Macro');
     

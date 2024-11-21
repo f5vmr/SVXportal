@@ -53,8 +53,8 @@ msgid "Users"
 msgstr "Anv�ndare"
 
 #: admin.php:252
-msgid "Reflektor users"
-msgstr "Reflektor-anv�ndare"
+msgid "Reflector users"
+msgstr "Reflector-anv�ndare"
 
 #: admin.php:258 admin/settings.php:76 edit_station.php:464
 msgid "Settings"
@@ -65,7 +65,7 @@ msgid "My stations"
 msgstr "Mina stationer"
 
 #: admin/reflector_users.php:25 admin/users.php:16
-msgid "User created sucsessfully!"
+msgid "User created successfully!"
 msgstr "Anv�ndaren skapad!"
 
 #: admin/reflector_users.php:41 admin/talkgroup.php:25 admin/users.php:31
@@ -94,7 +94,7 @@ msgstr "Meddelande skickat1"
 
 #: admin/reflector_users.php:236
 msgid "Reflector users"
-msgstr "Reflektoranv�ndare"
+msgstr "Reflectoranv�ndare"
 
 #: admin/reflector_users.php:246 admin/users.php:135
 msgid "Print Users"
@@ -291,12 +291,12 @@ msgid "Is talking on tg"
 msgstr "�r aktiv p� TG"
 
 #: admin/log.php:239
-msgid "Stoped talk tg"
+msgid "stopped talking on tg"
 msgstr "Inaktiv p� TG"
 
 #: admin/log.php:243 driver/card/blv20.php:414 driver/card/blv30.php:436
 #: log.php:350
-msgid "Reciver"
+msgid "Receiver"
 msgstr "Mottagare"
 
 #: admin/log.php:245
@@ -312,12 +312,12 @@ msgid "Node"
 msgstr "Nod"
 
 #: admin/log.php:255
-msgid "has dropt from reflektor"
-msgstr "har tappat kontakten till fr�n reflektor"
+msgid "has dropped from the  reflector"
+msgstr "har tappat kontakten till fr�n reflector"
 
 #: admin/log.php:257
-msgid "has connected to  reflektor"
-msgstr "har anslutit sig till reflektor"
+msgid "has connected to the  reflector"
+msgstr "har anslutit sig till reflector"
 
 #: admin/log.php:275
 msgid "Previous"
@@ -429,11 +429,11 @@ msgid "Assign station permission for user"
 msgstr "Tilldela stationsbeh�righet f�r anv�ndaren"
 
 #: admin/users.php:395
-msgid "Read only acsess"
+msgid "Read only access"
 msgstr "Skrivskyddad �tkomst"
 
 #: admin/users.php:400
-msgid "Write acsess"
+msgid "Write access"
 msgstr "Skriv�tkomst"
 
 #: ctcss_map_table.php:200
@@ -479,7 +479,7 @@ msgid "Use Custom header in sidebar"
 msgstr "Anv�nd anpassad rubrik i sidof�ltet"
 
 #: database_text.php:4
-msgid "External dokumentation page"
+msgid "External documentation page"
 msgstr "Extern dokumentationssida"
 
 #: database_text.php:5
@@ -587,7 +587,7 @@ msgid "On AC-power"
 msgstr "N�tdrift"
 
 #: driver/card/blv20.php:393 driver/card/blv30.php:415
-msgid "Tempeture"
+msgid "Temperature"
 msgstr "Temperatur"
 
 #: driver/card/blv20.php:439 driver/card/blv30.php:461
@@ -615,7 +615,7 @@ msgid "S-Value"
 msgstr "S-V�rde"
 
 #: driver/card/blv30.php:147
-msgid "Tempeure"
+msgid "Temperature"
 msgstr "Temperatur"
 
 #: driver/card/blv30.php:152
@@ -766,8 +766,8 @@ msgid "Echolink"
 msgstr "Echolink"
 
 #: function.php:266 log.php:206
-msgid "Reflektor"
-msgstr "Reflektor"
+msgid "Reflector"
+msgstr "Reflector"
 
 #: function.php:267
 msgid "Shortcut"
@@ -910,8 +910,8 @@ msgid "Sunday"
 msgstr "S�ndag"
 
 #: index.php:228
-msgid "No Resonse from reflektor server"
-msgstr "Inget svar fr�n reflektorservern"
+msgid "No Response from reflector server"
+msgstr "Inget svar fr�n reflectorservern"
 
 #: index.php:228
 msgid "System failure"
@@ -1209,7 +1209,7 @@ msgid "SqlType"
 msgstr "SqlType"
 
 #: index.php:2614 index1.php:2032
-msgid "Show covreage"
+msgid "Show coverage"
 msgstr "Visa t�ckning"
 
 #: index.php:2626
@@ -1231,8 +1231,8 @@ msgstr "Talkgroups-aktivitet"
 
 #: index.php:3691 index.php:3715 index1.php:3046 index_old.php:2340
 #: indexa.php:2341
-msgid "Reflektor time in S"
-msgstr "Reflektortid i S"
+msgid "Reflector time in S"
+msgstr "Reflectortid i S"
 
 #: index.php:3793 index1.php:3148 index_old.php:2442 indexa.php:2443
 msgid "time"
@@ -1251,7 +1251,7 @@ msgid "Station activity"
 msgstr "Stations aktivitet"
 
 #: index.php:4671 index1.php:3777 station_info.php:57
-msgid "Station infromation"
+msgid "Station information"
 msgstr "Stationinformation"
 
 #: index.php:4708 index1.php:3814
@@ -1259,7 +1259,7 @@ msgid "Select station"
 msgstr "V�lj station"
 
 #: index.php:4751 index1.php:3857
-msgid "Passwords aren same"
+msgid "Passwords are not identical"
 msgstr "L�senorden �r desamma"
 
 #: index.php:4763 index1.php:3869
@@ -1267,7 +1267,7 @@ msgid "User already exist!"
 msgstr "Anv�ndaren finns redan!"
 
 #: index.php:4767 index1.php:3873
-msgid "User is creadted!"
+msgid "User is created!"
 msgstr "Anv�ndaren �r skapad!"
 
 #: index.php:4792 index1.php:3898 user_settings.php:292
@@ -1379,7 +1379,7 @@ msgid "TGs"
 msgstr "TGs"
 
 #: index1.php:1611 index_old.php:913 indexa.php:914
-msgid "Signal value  from Reciver"
+msgid "Signal value  from Receiver"
 msgstr "Signalv�rde fr�n mottagaren"
 
 #: index1.php:3070 index_old.php:2364 indexa.php:2365
@@ -1395,7 +1395,7 @@ msgid "Active RX"
 msgstr "Aktiv RX"
 
 #: index_old.php:502 indexa.php:503
-msgid "Login sucsess"
+msgid "Login success"
 msgstr "Inloggningen lyckades"
 
 #: index_old.php:761 indexa.php:762
@@ -1463,11 +1463,11 @@ msgstr "Noden �r aktiv p� talgrupp"
 
 #: log.php:362
 msgid "has dropped  from reflector"
-msgstr "har tappat kontakten till fr�n reflektor"
+msgstr "har tappat kontakten till fr�n reflector"
 
 #: log.php:364
-msgid "has connected to  reflector"
-msgstr "har anslutit sig till reflektor"
+msgid "has connected to the  reflector"
+msgstr "har anslutit sig till reflector"
 
 #: other/cisco_active_station.php:42
 msgid "Active Sations"
@@ -1510,7 +1510,7 @@ msgid "Thanks for your registration an admin will contact you soon"
 msgstr "Tack f�r din registrering kommer en administrat�r att kontakta dig snart"
 
 #: request_reflector_login.php:388
-msgid "Network acsess"
+msgid "Network access"
 msgstr "N�tverk�tkomst"
 
 #: request_reflector_login.php:410
@@ -1546,7 +1546,7 @@ msgid "Send DTMF to node"
 msgstr "Skicka DTMF till nod"
 
 #: request_reflector_login.php:508
-msgid "Send Command to Nod"
+msgid "Send Command to Node"
 msgstr "Skicka kommando till Nod"
 
 #: request_reflector_login.php:511
@@ -1567,7 +1567,7 @@ msgstr "Ny svxlink-version tillg�nglig"
 
 #: request_reflector_login.php:548
 msgid "Node disconnected"
-msgstr "Ej ansluten till reflektor"
+msgstr "Ej ansluten till reflector"
 
 #: request_reflector_login.php:608
 msgid "User Credentals"
@@ -1586,7 +1586,7 @@ msgid "Register User"
 msgstr "Registrera anv�ndare"
 
 #: request_reflector_login.php:673
-msgid "Repater information"
+msgid "Repeater information"
 msgstr "Information om repeater"
 
 #: request_reflector_login.php:676
@@ -1700,7 +1700,7 @@ msgid "RX Frequency"
 msgstr "RX-frekvens"
 
 #: request_reflector_login.php:1077
-msgid "Parameters dor Svxlink.conf"
+msgid "Parameters for Svxlink.conf"
 msgstr "Parametrar f�r Svxlink.conf"
 
 #: request_reflector_login.php:1081 request_reflector_login.php:1091
@@ -1708,7 +1708,7 @@ msgid "Parameter"
 msgstr "Parameter"
 
 #: request_reflector_login.php:1126
-msgid "Generate JSON / Paramters"
+msgid "Generate JSON / Parameters"
 msgstr "Generera JSON / Parametrar"
 
 #: request_reflector_login.php:1165

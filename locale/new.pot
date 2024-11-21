@@ -38,7 +38,7 @@ msgid "Users"
 msgstr ""
 
 #: admin.php:252
-msgid "Reflektor users"
+msgid "Reflector users"
 msgstr ""
 
 #: admin.php:258 admin/settings.php:76 edit_station.php:464
@@ -46,7 +46,7 @@ msgid "Settings"
 msgstr ""
 
 #: admin/reflector_users.php:25 admin/users.php:16
-msgid "User created sucsessfully!"
+msgid "User created successfully!"
 msgstr ""
 
 #: admin/reflector_users.php:41 admin/talkgroup.php:25 admin/users.php:31
@@ -271,11 +271,11 @@ msgid "Is talking on tg"
 msgstr ""
 
 #: admin/log.php:239
-msgid "Stoped talk tg"
+msgid "stopped talking on tg"
 msgstr ""
 
 #: admin/log.php:243 log.php:350
-msgid "Reciver"
+msgid "Receiver"
 msgstr ""
 
 #: admin/log.php:245
@@ -291,11 +291,11 @@ msgid "Node"
 msgstr ""
 
 #: admin/log.php:255
-msgid "has dropt from reflektor"
+msgid "has dropped from the  reflector"
 msgstr ""
 
 #: admin/log.php:257
-msgid "has connected to  reflektor"
+msgid "has connected to the  reflector"
 msgstr ""
 
 #: admin/log.php:275
@@ -401,11 +401,11 @@ msgid "Assign station permission for user"
 msgstr ""
 
 #: admin/users.php:356
-msgid "Read only acsess"
+msgid "Read only access"
 msgstr ""
 
 #: admin/users.php:361
-msgid "Write acsess"
+msgid "Write access"
 msgstr ""
 
 #: ctcss_map_table.php:196
@@ -451,7 +451,7 @@ msgid "Use Custom header in sidebar"
 msgstr ""
 
 #: database_text.php:4
-msgid "External dokumentation page"
+msgid "External documentation page"
 msgstr ""
 
 #: database_text.php:5
@@ -666,7 +666,7 @@ msgid "Echolink"
 msgstr ""
 
 #: function.php:266 log.php:206
-msgid "Reflektor"
+msgid "Reflector"
 msgstr ""
 
 #: function.php:267
@@ -1078,7 +1078,7 @@ msgid "SqlType"
 msgstr ""
 
 #: index.php:2420 index1.php:2032
-msgid "Show covreage"
+msgid "Show coverage"
 msgstr ""
 
 #: index.php:2432
@@ -1100,7 +1100,7 @@ msgstr ""
 
 #: index.php:3490 index.php:3514 index1.php:3046 index_old.php:2340
 #: indexa.php:2341
-msgid "Reflektor time in S"
+msgid "Reflector time in S"
 msgstr ""
 
 #: index.php:3592 index1.php:3148 index_old.php:2442 indexa.php:2443
@@ -1120,7 +1120,7 @@ msgid "Station activity"
 msgstr ""
 
 #: index.php:4478 index1.php:3777 station_info.php:57
-msgid "Station infromation"
+msgid "Station information"
 msgstr ""
 
 #: index.php:4515 index1.php:3814
@@ -1128,7 +1128,7 @@ msgid "Select station"
 msgstr ""
 
 #: index.php:4558 index1.php:3857
-msgid "Passwords aren same"
+msgid "Passwords are not identical"
 msgstr ""
 
 #: index.php:4570 index1.php:3869
@@ -1136,7 +1136,7 @@ msgid "User already exist!"
 msgstr ""
 
 #: index.php:4574 index1.php:3873
-msgid "User is creadted!"
+msgid "User is created!"
 msgstr ""
 
 #: index.php:4599 index1.php:3898
@@ -1248,7 +1248,7 @@ msgid "TGs"
 msgstr ""
 
 #: index1.php:1611 index_old.php:913 indexa.php:914
-msgid "Signal value  from Reciver"
+msgid "Signal value  from Receiver"
 msgstr ""
 
 #: index1.php:3070 index_old.php:2364 indexa.php:2365
@@ -1264,7 +1264,7 @@ msgid "Active RX"
 msgstr ""
 
 #: index_old.php:502 indexa.php:503
-msgid "Login sucsess"
+msgid "Login success"
 msgstr ""
 
 #: index_old.php:761 indexa.php:762
@@ -1335,7 +1335,7 @@ msgid "has dropped  from reflector"
 msgstr ""
 
 #: log.php:364
-msgid "has connected to  reflector"
+msgid "has connected to the  reflector"
 msgstr ""
 
 #: radiomobile.php:109
@@ -1376,7 +1376,7 @@ msgid "Thanks for your registration an admin will contact you soon"
 msgstr ""
 
 #: request_reflector_login.php:385
-msgid "Network acsess"
+msgid "Network access"
 msgstr ""
 
 #: request_reflector_login.php:407
@@ -1412,7 +1412,7 @@ msgid "Send DTMF to node"
 msgstr ""
 
 #: request_reflector_login.php:493
-msgid "Send Command to Nod"
+msgid "Send Command to Node"
 msgstr ""
 
 #: request_reflector_login.php:496
@@ -1452,7 +1452,7 @@ msgid "Register User"
 msgstr ""
 
 #: request_reflector_login.php:658
-msgid "Repater information"
+msgid "Repeater information"
 msgstr ""
 
 #: request_reflector_login.php:661
@@ -1540,7 +1540,7 @@ msgid "RX Frequency"
 msgstr ""
 
 #: request_reflector_login.php:1030
-msgid "Parameters dor Svxlink.conf"
+msgid "Parameters for Svxlink.conf"
 msgstr ""
 
 #: request_reflector_login.php:1034 request_reflector_login.php:1044
@@ -1548,7 +1548,7 @@ msgid "Parameter"
 msgstr ""
 
 #: request_reflector_login.php:1079
-msgid "Generate JSON / Paramters"
+msgid "Generate JSON / Parameters"
 msgstr ""
 
 #: request_reflector_login.php:1118

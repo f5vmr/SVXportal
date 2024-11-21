@@ -13,7 +13,7 @@ function create_user()
 	{
     	$.post( "admin/user_action.php", $( "#create_user_form" ).serialize() )
     	.done(function( data ) {
-    		alert("<?php echo _('User created sucsessfully!')?>")
+    		alert("<?php echo _('User created successfully!')?>")
     		$("#create_user_div").hide();
     		$('#create_user_form').trigger("reset");
     		reload_user_table();
@@ -392,12 +392,12 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_ASSOC))
 
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="readuser" name="readuser" value="1">
-        <label class="form-check-label" for="readuser"><?php echo _('Read only acsess')?></label>
+        <label class="form-check-label" for="readuser"><?php echo _('Read only access')?></label>
       </div>
   
        <div class="form-check">
         <input type="checkbox" class="form-check-input" id="writeuser" name="writeuser" value="1" >
-        <label class="form-check-label" for="writeuser"><?php echo _('Write acsess')?></label>
+        <label class="form-check-label" for="writeuser"><?php echo _('Write access')?></label>
       </div>    
      
         

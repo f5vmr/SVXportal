@@ -236,11 +236,11 @@ while($row = $result->fetch_assoc()) {
     if($row['Active'] == 1)
          echo _("Is talking on tg")." ".$row['Talkgroup'];
         else
-         echo _("Stoped talk tg")." ".$row['Talkgroup'];
+         echo _("stopped talking on tg")." ".$row['Talkgroup'];
     }
     elseif($row['Type'] ==2) 
     {
-        echo _("Reciver")." ".$row['Nodename'];
+        echo _("Receiver")." ".$row['Nodename'];
         if($row['Active'] == 1)
             echo " ". _(" is active signal level")." ".$row['Siglev'];
         else
@@ -252,9 +252,9 @@ while($row = $result->fetch_assoc()) {
     {
         echo _("Node")."  ".$row['Callsign'];
         if($row['Active'] == 1)
-                echo " ". _("has dropt from reflektor")." ";
+                echo " ". _("has dropped from the  reflector")." ";
             else
-                echo " ".  _("has connected to  reflektor") ." ";
+                echo " ".  _("has connected to the  reflector") ." ";
     }
     echo '</td>';
      echo "</tr> ";

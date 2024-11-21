@@ -54,7 +54,7 @@ if($no_header != true)
   
   <nav class="navbar navbar-expand-sm navbar-light  bg-light" style="background-color: #e3f2fd;">
 		
-		<a class="navbar-brand" href="#"><?php  echo _('Station infromation')?> <span style="color: red;">Beta</span></a>
+		<a class="navbar-brand" href="#"><?php  echo _('Station information')?> <span style="color: red;">Beta</span></a>
 		
 
       

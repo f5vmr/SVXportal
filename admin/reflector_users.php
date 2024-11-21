@@ -22,7 +22,7 @@ function create_reflector_user()
 	{
     	$.post( "admin/reflector_action.php", $( "#create_reflector_user_form" ).serialize() )
     	.done(function( data ) {
-    		alert("<?php echo _('User created sucsessfully!')?>")
+    		alert("<?php echo _('User created successfully!')?>")
     		$("#create_reflector_user_div").hide();
     		$('#create_reflector_user_form').trigger("reset");
     		reload_reflector_table();

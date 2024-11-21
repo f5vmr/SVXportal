@@ -19,7 +19,7 @@ set_language();
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 <meta charset="UTF-8">
-<meta name="description" content="Svxportal For SvxReflektor">
+<meta name="description" content="Svxportal For SvxReflector">
 <meta name="keywords" content="svxlink,svxreflector,sa2blv">
 <meta name="author" content="Peter SA2BLV">
 
@@ -232,7 +232,7 @@ $(document).ready(function(){
 
         if($("#menuNodeCount").html() == "")
         {
-        	create_message_toast("<?php echo _('No Resonse from reflektor server') ?>","<?php echo _("System failure")?>","red",true);
+        	create_message_toast("<?php echo _('No Response from reflector server') ?>","<?php echo _("System failure")?>","red",true);
         
         }
 
@@ -371,7 +371,7 @@ $.post( "signal.php", { time: (TotaltimeTime-currentTime), file: event.jPlayer.s
 
 
 
-    $('#Reciverbars_player').html("");
+    $('#Receiverbars_player').html("");
 	if(Json_data.Nodename == undefined)
 	{
 		Json_data.Nodename ="<?php echo _('No data');?>";
@@ -380,14 +380,14 @@ $.post( "signal.php", { time: (TotaltimeTime-currentTime), file: event.jPlayer.s
 	
 
     
-	$('#Reciverbars_player').append('<p>'+Json_data.Nodename+'</p><canvas id="canvpr"></canvas><br/>');
+	$('#Receiverbars_player').append('<p>'+Json_data.Nodename+'</p><canvas id="canvpr"></canvas><br/>');
 	create_bar_rx(Json_data.Siglev,'canvpr',true);
     
     $('#signalpressent').html(Json_data.Siglev);
 
 		for(var k in Json_data.Subreceiver){
 
-			$('#Reciverbars_player').append('<p>'+Json_data.Subreceiver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
+			$('#Receiverbars_player').append('<p>'+Json_data.Subreceiver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
 			create_bar_rx(Json_data.Subreceiver[k]['Siglev'],'canvp'+k,false);
 			
 		}
@@ -1508,11 +1508,11 @@ if($_SESSION['loginid'] && USE_NODE_ADMIN_NOTIFICATION == 1)
 
 			if(data[n].Active == "1")
 			{
-				create_alert_toast("Has Disconnect from reflektor ","Node "+data[n]["Callsign"],"","","true");
+				create_alert_toast("has disconnected from the reflector ","Node "+data[n]["Callsign"],"","","true");
 			}
 			else
 			{
-				create_message_toast("Has connected to reflektor","Node "+data[n]["Callsign"],"","","true");
+				create_message_toast("Has connected to reflector","Node "+data[n]["Callsign"],"","","true");
 			}
 
 			
@@ -2269,7 +2269,7 @@ ul.dropdown-lr {
            						     <p class="card-text"><span id="signalpressent">0</span>% <?php echo _("Signal value from receiver")?>.</p>
            						     <hr />
         							
-                   						<div id="Reciverbars_player"></div>
+                   						<div id="Receiverbars_player"></div>
         						
     							</div>
 				
@@ -2744,7 +2744,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 									<button type="button" class="btn btn-secondary"
 										data-dismiss="modal"><?php echo _('Close')?></button>
 									<button type="button" class="btn btn-secondary" id="Show_Coverage_button"
-										><?php echo _('Show covreage')?></button>
+										><?php echo _('Show coverage')?></button>
 
 								
 								
@@ -3907,7 +3907,7 @@ function get_statistics_hour()
 		        	labels: labels,
 		        	datasets: [
 		        		{
-		    			label: '<?php echo _("Reflektor time in S")?>',
+		    			label: '<?php echo _("Reflector time in S")?>',
 						backgroundColor: "#6495ED",
 						borderColor: "#6495ED",
 						fill: false,
@@ -3931,7 +3931,7 @@ function get_statistics_hour()
 					},
 					title: {
 						display: true,
-						text: '<?php echo _("Reflektor time in S")?> '+date_value
+						text: '<?php echo _("Reflector time in S")?> '+date_value
 					},
 					scales: {
 			            yAxes: [{
@@ -5610,7 +5610,7 @@ function fnExcelexport(table)
     			
     		<nav class="navbar navbar-expand-sm navbar-light  bg-light" style="background-color: #e3f2fd;">
 		
-				<a class="navbar-brand" href="#"><?php  echo _('Station infromation')?> 
+				<a class="navbar-brand" href="#"><?php  echo _('Station information')?> 
 				
 				
 				<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -5690,7 +5690,7 @@ function fnExcelexport(table)
 
             	if(pass != pass1)
             	{
-            		alert("<?php echo _('Passwords aren same')?>")
+            		alert("<?php echo _('Passwords are not identical')?>")
             		return false;
             		
             	}
@@ -5706,7 +5706,7 @@ function fnExcelexport(table)
 						}
 						else
 						{
-                			alert("<?php echo _('User is creadted!')?>")
+                			alert("<?php echo _('User is created!')?>")
 						}
                 		
                 

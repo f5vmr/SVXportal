@@ -247,9 +247,9 @@ function fnExcelexport(table)
   <li class="nav-item">
     <a class="nav-link" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="Users" aria-selected="false"><?php echo _('Users')?></a>
   </li>
-  <?php if($reflektor_db == 1){?>
+  <?php if($reflector_db == 1){?>
 <li class="nav-item">
-    <a class="nav-link" id="ReflektorUsers-tab" data-toggle="tab" href="#ReflektorUsers" role="tab" aria-controls="ReflektorUsers" aria-selected="false"><?php echo _('Reflektor users')?></a>
+    <a class="nav-link" id="ReflectorUsers-tab" data-toggle="tab" href="#ReflectorUsers" role="tab" aria-controls="ReflectorUsers" aria-selected="false"><?php echo _('Reflector users')?></a>
   </li>
   
   <?php }?>
@@ -282,9 +282,9 @@ function fnExcelexport(table)
   <?php include "admin/talkgroup.php";?>
   
   </div>  
-    <?php if($reflektor_db == 1 && isset($reflektor_db)){?>
+    <?php if($reflector_db == 1 && isset($reflector_db)){?>
     
-    <div class="tab-pane fade" id="ReflektorUsers" role="tabpanel" aria-labelledby="ReflektorUsers-tab">
+    <div class="tab-pane fade" id="ReflectorUsers" role="tabpanel" aria-labelledby="ReflectorUsers-tab">
   
   <?php include "admin/reflector_users.php";?>
   

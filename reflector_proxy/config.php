@@ -1,4 +1,4 @@
 <?php
-$Svx_reflector_address = "http://reflektorserver:8181/status ";
+$Svx_reflector_address = "http://reflectorserver:8181/status ";
 
 ?>

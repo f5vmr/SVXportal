@@ -35,8 +35,8 @@ $default_zoom =5;
 
 // default tg player
 $default_tg_player = 240;
-// Mysql_Reflektor
-$reflektor_db = 0;
+// Mysql_Reflector
+$reflector_db = 0;
 
 // Default date
 $start_date_defined ="2020-01-12";

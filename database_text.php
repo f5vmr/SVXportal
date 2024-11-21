@@ -1,7 +1,7 @@
 <?php
 _('Hide the language bar');
 _('Use Custom header in sidebar');
-_('External dokumentation page');
+_('External documentation page');
 _('Use login for player');
 _('Use external dokumentation page');
 _('The default talkgroup for Recording statistic');

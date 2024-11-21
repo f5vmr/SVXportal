@@ -120,10 +120,10 @@ foreach($data as $node => $year_data)
                 // echo $sql_other_col.$columns . "<BR />";
                 // echo  $standard_data. $values . "<BR />";
                 
-                $mysql_quvery ="INSERT INTO `traffic_month_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
-               // echo $mysql_quvery."\r\n";
+                $mysql_query ="INSERT INTO `traffic_month_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
+               // echo $mysql_query."\r\n";
                 
-                $link->query($mysql_quvery);
+                $link->query($mysql_query);
                 
                 //echo $sql."<br />";
                 

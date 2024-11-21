@@ -107,15 +107,15 @@ $.post( "signal.php", { time: (TotaltimeTime-currentTime), file: event.jPlayer.s
 
 
 
-    $('#Reciverbars_player').html("");
-	$('#Reciverbars_player').append('<p>'+Json_data.Nodename+'</p><canvas id="canvpr"></canvas><br/>');
+    $('#Receiverbars_player').html("");
+	$('#Receiverbars_player').append('<p>'+Json_data.Nodename+'</p><canvas id="canvpr"></canvas><br/>');
 	create_bar_rx(Json_data.Siglev,'canvpr',true);
     
     $('#signalpressent').html(Json_data.Siglev);
 
 		for(var k in Json_data.Subreceiver){
 
-			$('#Reciverbars_player').append('<p>'+Json_data.Subreceiver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
+			$('#Receiverbars_player').append('<p>'+Json_data.Subreceiver[k]['Nodename']+'</p><canvas id="canvp'+k+'"></canvas><br/>');
 			create_bar_rx(Json_data.Subreceiver[k]['Siglev'],'canvp'+k,false);
 			
 		}
@@ -486,7 +486,7 @@ function login_form()
 	$.post( "login.php", { login: login, password: password })
 	  .done(function( data ) {
 		  if(data == "true ")
-			  alert( "<?php echo _("Login sucsess")?>!");
+			  alert( "<?php echo _("Login success")?>!");
 		  else
 	    	alert( "<?php echo _("Wrong username or password")?>" );
 
@@ -724,9 +724,9 @@ function login_form()
 							</p>
 							<hr />
 							<h5 class="card-title" id="Stationid"><?php echo _('Signal')?></h5>
-   						     <p class="card-text"><span id="signalpressent">0</span>% <?php echo _("Signal value  from Reciver")?>.</p>
+   						     <p class="card-text"><span id="signalpressent">0</span>% <?php echo _("Signal value  from Receiver")?>.</p>
 							<div class="card" style="width: 100%">
-           						<div id="Reciverbars_player"></div>
+           						<div id="Receiverbars_player"></div>
 							</div>
 							<hr />
 							<table class="table table-striped">
@@ -1944,7 +1944,7 @@ function get_statistics_hour()
 		        	labels: labels,
 		        	datasets: [
 		        		{
-		    			label: '<?php echo _("Reflektor time in S")?>',
+		    			label: '<?php echo _("Reflector time in S")?>',
 						backgroundColor: "#6495ED",
 						borderColor: "#6495ED",
 						fill: false,

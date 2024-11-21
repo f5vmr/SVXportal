@@ -39,11 +39,11 @@ while($row = $result->fetch_assoc()) {
     if($row['Active'] == 1)
          echo _("Is talking on tg")." ".$row['Talkgroup'];
         else
-         echo _("Stoped talk tg")." ".$row['Talkgroup'];
+         echo _("stopped talking on tg")." ".$row['Talkgroup'];
     }
     else
     {
-        echo "Reciver ".$row['Nodename'];
+        echo "Receiver ".$row['Nodename'];
         if($row['Active'] == 1)
             echo " ". _(" is active signal level")." ".$row['Siglev'];
         else

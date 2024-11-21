@@ -49,7 +49,7 @@ msgid "CSV index"
 msgstr "Indice CSV"
 
 #: ctcss_map_table.php:281
-msgid "Use thre last char in call"
+msgid "Use three last char in call"
 msgstr "Usa l'ultimo carattere in chiamata"
 
 #: ctcss_map_table.php:286
@@ -105,7 +105,7 @@ msgid "YES"
 msgstr "YES"
 
 #: index.php:482
-msgid "Login sucsess"
+msgid "Login success"
 msgstr "Login effettuato"
 
 #: index.php:484
@@ -197,7 +197,7 @@ msgid "to use player you must login"
 msgstr "per usare il lettore devi effettuare il login"
 
 #: index.php:774
-msgid "Signal value  from Reciver"
+msgid "Signal value  from Receiver"
 msgstr "Livello segnale del ricevitore"
 
 #: index.php:782 index.php:902
@@ -297,7 +297,7 @@ msgid "Talkgroup activity"
 msgstr "Attività talkgroup"
 
 #: index.php:2022
-msgid "Reflektor time in S"
+msgid "Reflector time in S"
 msgstr "Reflector time in S"
 
 #: index.php:2046
@@ -381,7 +381,7 @@ msgid "Is talking on tg"
 msgstr "Trasmissione sul TG"
 
 #: log.php:115
-msgid "Stoped talk tg"
+msgid "stopped talking on tg"
 msgstr "Fine trasmissione tg"
 
 #: log.php:121

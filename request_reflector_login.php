@@ -386,7 +386,7 @@ function send_command_to_node()
 
    <a class="navbar-brand wite_font" href="#">
    
-     SVX Portal <?php echo _('Network acsess')?>
+     SVX Portal <?php echo _('Network access')?>
    </a>
    
    </div>
@@ -506,7 +506,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
    <a href="#" data-toggle="modal" data-target="#command_to_node" onclick="load_node('<?php echo $row['station_id'];?>')" data-placement="bottom" ><i data-toggle="tooltip" title="<?php echo  _('Send DTMF to node')?>"  class="fas fa-hashtag"></i></a>
    
 
-   <i class="fas fa-cogs" data-toggle="tooltip" title="<?php echo  _('Send Command to Nod')?>" ></i>
+   <i class="fas fa-cogs" data-toggle="tooltip" title="<?php echo  _('Send Command to Node')?>" ></i>
    <?php }?>
    
    <a href="edit_station.php?station_idnr=<?php echo  $row['ID']?>"><i class="fas fa-file"  data-toggle="tooltip" title="<?php echo  _('Edit Repeater')?>" ></i></a>
@@ -671,7 +671,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
       
     <form onsubmit="return validate_json_form()" id="valdate_form_json" method="post" action="generate_node_json.php" target="_blank">
     
-       <h2><?php echo  _('Repater information')?></h2>
+       <h2><?php echo  _('Repeater information')?></h2>
       
     <div class="form-group">
         <label for="nodeLocation"><?php echo _('Station location ( Area )')?></label>
@@ -1075,7 +1075,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
     </div>
     
-        <h3><?php echo  _('Parameters dor Svxlink.conf')?></h3>
+        <h3><?php echo  _('Parameters for Svxlink.conf')?></h3>
 <div class="card col-sm-8">
   <div class="card-body">
 
@@ -1124,7 +1124,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
     
        
     
-      <button type="submit" class="btn btn-primary"><?php echo _('Generate JSON / Paramters')?></button>
+      <button type="submit" class="btn btn-primary"><?php echo _('Generate JSON / Parameters')?></button>
 </form>
     
          

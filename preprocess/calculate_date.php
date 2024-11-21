@@ -78,12 +78,12 @@ function calculate_day ($day)
     // timesum sortation
     
     for ($timel = 0; $timel < 24; $timel ++) {
-        // calculkate timestamp border
+        // calculate timestamp border
         $filterdate = strtotime($day);
         $low_time = $filterdate + ($timel * 3600);
         $high_time = $filterdate + ($timel * 3600) + (59 * 60) + 59;
         
-        // loop throu remove row if match is found
+        // loop through remove row if match is found
         
         foreach ($data as $key => $station) {
             
@@ -115,7 +115,7 @@ function calculate_day ($day)
     // station look loop
     foreach ($tables as $key => $tg)
     {
-        $mysql_quvery ="";
+        $mysql_query ="";
         
         
         
@@ -123,7 +123,7 @@ function calculate_day ($day)
         
         
         // talkgroup look loop
-        foreach ($tg as $currenttg => $curent_time)
+        foreach ($tg as $currenttg => $current_time)
         {
             
             $columns = "";
@@ -134,7 +134,7 @@ function calculate_day ($day)
             
             
             // Tiime look_loop
-            foreach ($curent_time as $timel => $value)
+            foreach ($current_time as $timel => $value)
             {
                 
                 
@@ -167,8 +167,8 @@ function calculate_day ($day)
                 
                 //echo $key." ".$currenttg." ".$total_T.PHP_EOL;
                 
-                $mysql_quvery .="INSERT INTO `traffic_day_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
-                //echo $mysql_quvery;
+                $mysql_query .="INSERT INTO `traffic_day_statistics`(".$sql_other_col.$columns.$total_str.") VALUES (". $standard_data. $values.$total_val .");";
+                //echo $mysql_query;
                 
                 //echo $sql."<br />";
                 
@@ -184,7 +184,7 @@ function calculate_day ($day)
         
         
         
-         $link-> multi_query($mysql_quvery);
+         $link-> multi_query($mysql_query);
          
          do {
          
