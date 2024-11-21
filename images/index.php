@@ -537,7 +537,7 @@ function login_form()
 					<li class="nav-item"><a class="nav-link" href="#Dictionary"
 						data-toggle="tab"><i class="fas fa-book"></i> <?php echo _("Talkgroups")?></a></li>
 					<li class="nav-item"><a class="nav-link" href="list_receiver.php"><i
-							class="fas fa-broadcast-tower"></i> <?php echo _("List reciver")?></a></li>
+							class="fas fa-broadcast-tower"></i> <?php echo _("List receiver")?></a></li>
 
 					<li class="nav-item"><a class="nav-link" href="#Statistics" onclick="get_statistics()"
 						data-toggle="tab"><i class="fas fa-chart-bar"></i>  <?php echo _("Statistics")?></a></li>
@@ -2125,7 +2125,7 @@ function get_station_chat()
 			  var preccent= (((Stations_json.data[j].time)/86400) * 100).toFixed(3);
 			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity").append('<tr><td>'+Stations_json.data[j].call+'</td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td>"+preccent+"%</td><td>"+Stations_json.data[j].reciver+"</td><tr>");
+			  $("#nodes_activity").append('<tr><td>'+Stations_json.data[j].call+'</td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td>"+preccent+"%</td><td>"+Stations_json.data[j].receiver+"</td><tr>");
 			  j++;
 
 			 
@@ -2696,7 +2696,7 @@ function bind_key_statistics()
     				</div>
     			</div>
     			<div class="col-md-12" id="table">
-    			<table id="nodes_activity" class="table" ><thead class="thead-dark"><tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage 24 hour")?></th><th><?php echo _("Usage last 24 hour")?></th><th><?php echo _("Most used reciver")?></th></tr></thead></table>
+    			<table id="nodes_activity" class="table" ><thead class="thead-dark"><tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage 24 hour")?></th><th><?php echo _("Usage last 24 hour")?></th><th><?php echo _("Most used receiver")?></th></tr></thead></table>
     			</div>
     			</div>	
     			

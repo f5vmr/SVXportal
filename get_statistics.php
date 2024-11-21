@@ -26,14 +26,14 @@ function get_time($station,$day)
 {
     global $link;
 
-    $station_qvery =" AND Callsign ='".$station."' ";
+    $station_query =" AND Callsign ='".$station."' ";
     
     
-    $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
+    $time_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)),Callsign FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Callsign`";
+    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)),Callsign FROM ReflectorNodeLog WHERE `Type` = '1' $station_query AND  `Active` ='1' AND $time_string group by  `Callsign`";
     
-    $sql_nonactive ="SELECT sum(Talktime), Callsign FROM ReflectorNodeLog WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Callsign` ";
+    $sql_nonactive ="SELECT sum(Talktime), Callsign FROM ReflectorNodeLog WHERE `Type` = '1'$station_query AND `Active` ='0' AND $time_string group by  `Callsign` ";
     
 //     echo $sql_active;
 //      echo "<br>";
@@ -50,7 +50,7 @@ function get_time($station,$day)
     
 }
 $most_used_station = array();
-function get_most_use_reciver($day)
+function get_most_use_receiver($day)
 {
     global $link;
     global $most_used_station;
@@ -58,9 +58,9 @@ function get_most_use_reciver($day)
 
     
     
-    $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:00.000000'";
+    $time_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:00.000000'";
     $quvery ="
-    SELECT MAX(`Nodename`),`Callsign` FROM `ReflectorNodeLog`  WHERE  $tme_string  AND`Type` = 2 AND `Active` = 1  GROUP BY Callsign";
+    SELECT MAX(`Nodename`),`Callsign` FROM `ReflectorNodeLog`  WHERE  $time_string  AND`Type` = 2 AND `Active` = 1  GROUP BY Callsign";
     //echo $quvery;
 
 
@@ -86,11 +86,11 @@ function get_most_use_reciver($day)
         $most_used_station[$row2['Callsign']] =$count_array[$row2['Callsign']][0];
     }
     
-    $quvery_optimizer =  "SELECT Max_reciver , `station_id` , ReflectorStations.Callsign as callsing FROM `Station_day_statistic` LEFT JOIN ReflectorStations ON `station_id` = ReflectorStations.ID WHERE `Date` = '$day'"; 
-    $sqla = $link->query($quvery_optimizer);
+    $query_optimizer =  "SELECT Max_receiver , `station_id` , ReflectorStations.Callsign as callsign FROM `Station_day_statistic` LEFT JOIN ReflectorStations ON `station_id` = ReflectorStations.ID WHERE `Date` = '$day'"; 
+    $sqla = $link->query($query_optimizer);
     while($row2 = $sqla->fetch_assoc())
     {
-        $most_used_station[$row2['callsing']] = $row2['Max_reciver'];
+        $most_used_station[$row2['callsign']] = $row2['Max_receiver'];
         
     }
         
@@ -106,7 +106,7 @@ function get_most_use_reciver($day)
 $day= $_GET['date'];
 $station = $_GET['st'];
 $qrv = $_GET['qrv'];
-$mouth_s = $_GET['mouth'];
+$month_s = $_GET['month'];
 $link->set_charset("utf8");
 /*
  * Detect if station data
@@ -115,14 +115,14 @@ $link->set_charset("utf8");
 if($station != "")
 {
     $station = $link->real_escape_string($station);
-    $station_qvery =" AND Callsign ='".$station."' ";
+    $station_query =" AND Callsign ='".$station."' ";
     
 }
 else
 {
-    $station_qvery ="";
+    $station_query ="";
 }
-if($mouth_s != "")
+if($month_s != "")
 {
     $day = $link->real_escape_string($day);
     $current_year= date("Y",strtotime($day));
@@ -133,18 +133,18 @@ if($mouth_s != "")
         $station = $link->real_escape_string($_GET['filterpicker_repeater_year']);
         $station_query = "AND Callsign ='$station'";
     }
-    if($_GET['filterpicker_talgroup_year'] != "")
+    if($_GET['filterpicker_talkgroup_year'] != "")
     {
         
-        $talkgroupid = $link->real_escape_string($_GET['filterpicker_talgroup_year']);
-        $talkgroup_quvery = "AND Talkgroup ='$talkgroupid'";
+        $talkgroupid = $link->real_escape_string($_GET['filterpicker_talkgroup_year']);
+        $talkgroup_query = "AND Talkgroup ='$talkgroupid'";
     }
     
     
     
     
     $sql_stations ="SELECT SUM(`Talktime`),MONTH(`Time`)  FROM   ReflectorNodeLog
-    WHERE YEAR(`Time`) = $current_year  AND Type='1' and Active='0' $station_query $talkgroup_quvery  GROUP BY MONTH(`Time`)";
+    WHERE YEAR(`Time`) = $current_year  AND Type='1' and Active='0' $station_query $talkgroup_query  GROUP BY MONTH(`Time`)";
 
    
     $sqla = $link->query($sql_stations);; 
@@ -156,7 +156,7 @@ if($mouth_s != "")
         
     }
 
-    $sql_activity ="SELECT SUM(`Talktime`), MONTH(`Time`) ,DAY(`Time`) FROM ReflectorNodeLog WHERE YEAR(`Time`) = $current_year AND Type='1' and Active='0' $station_query $talkgroup_quvery GROUP BY MONTH(`Time`), DAY(`Time`) ORDER BY SUM(`Talktime`) DESC  limit 10";
+    $sql_activity ="SELECT SUM(`Talktime`), MONTH(`Time`) ,DAY(`Time`) FROM ReflectorNodeLog WHERE YEAR(`Time`) = $current_year AND Type='1' and Active='0' $station_query $talkgroup_query GROUP BY MONTH(`Time`), DAY(`Time`) ORDER BY SUM(`Talktime`) DESC  limit 10";
 
     $sqla = $link->query($sql_activity);;
     $id=0;
@@ -179,9 +179,9 @@ else if($qrv != "")
 {
     $qrv = $link->real_escape_string($qrv);
     $day = $link->real_escape_string($day);
-    $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
+    $time_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    $sql_stations ="SELECT Callsign , sum(Talktime)  FROM ReflectorNodeLog WHERE `Type` = '1' and Active='0'  AND $tme_string group by  `Callsign`";
+    $sql_stations ="SELECT Callsign , sum(Talktime)  FROM ReflectorNodeLog WHERE `Type` = '1' and Active='0'  AND $time_string group by  `Callsign`";
 
     
     $sqlstat = $link->query($sql_stations);
@@ -189,7 +189,7 @@ else if($qrv != "")
     $i =0;
     
     
-    get_most_use_reciver($day);
+    get_most_use_receiver($day);
     
     
     $time_total_usage=0;
@@ -201,7 +201,7 @@ else if($qrv != "")
         //$outarray['data'][$i]["Second"] = secondsToDHMS(get_time($row["Callsign"],$day));
         $outarray['data'][$i]["Second"] = secondsToDHMS($row['sum(Talktime)']);
         
-        $outarray['data'][$i]["reciver"] = $most_used_station[$row["Callsign"]];
+        $outarray['data'][$i]["receiver"] = $most_used_station[$row["Callsign"]];
         
         
         $i++;
@@ -220,10 +220,10 @@ else if( $_GET['time'] == "true")
     $day = $link->real_escape_string($day);
     
     
-    //$tme_string ="`Time` BETWEEN '$day $timel:00:00.000000' AND '$day $timel:59:59.000000'";
-    $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
+    //$time_string ="`Time` BETWEEN '$day $timel:00:00.000000' AND '$day $timel:59:59.000000'";
+    $time_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
+    //$sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_query AND  `Active` ='1' AND $time_string group by  `Talkgroup`";
     $station_string= "";
     
     if ($_GET['station'] !="")
@@ -232,7 +232,7 @@ else if( $_GET['time'] == "true")
         $station_string = "AND Callsign ='$station'";
     }
     
-    $sql_nonactive ="SELECT UNIX_TIMESTAMP(Time), Talktime, `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND `Active` ='0' AND $tme_string $station_string  ";
+    $sql_nonactive ="SELECT UNIX_TIMESTAMP(Time), Talktime, `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_query AND `Active` ='0' AND $time_string $station_string  ";
     $sqla = $link->query($sql_nonactive);
     $data = array();
     while($row = $sqla->fetch_assoc()) {
@@ -383,13 +383,13 @@ else if( $_GET['totalmount'] != "")
     
     
     
-    $tme_string ="`Time` BETWEEN '$day-01 00:00:00.000000' AND '$day-$last_day 23:59:59.000000'";
+    $time_string ="`Time` BETWEEN '$day-01 00:00:00.000000' AND '$day-$last_day 23:59:59.000000'";
     
 
     
 
     
-    $sql="SELECT count(id), YEAR(`Time`), MONTH(`Time`), DAYOFMONTH(`Time`), sum(`Talktime`) as total_talktime FROM `ReflectorNodeLog` WHERE $tme_string AND Type = 1 AND Active = 0  $station_string GROUP BY YEAR(`Time`), MONTH(`Time`) , DAYOFMONTH(`Time`)  ORDER BY YEAR(`Time`) ASC, MONTH(`Time`) ASC, DAYOFMONTH(`Time`) ASC";
+    $sql="SELECT count(id), YEAR(`Time`), MONTH(`Time`), DAYOFMONTH(`Time`), sum(`Talktime`) as total_talktime FROM `ReflectorNodeLog` WHERE $time_string AND Type = 1 AND Active = 0  $station_string GROUP BY YEAR(`Time`), MONTH(`Time`) , DAYOFMONTH(`Time`)  ORDER BY YEAR(`Time`) ASC, MONTH(`Time`) ASC, DAYOFMONTH(`Time`) ASC";
     
    // echo $sql;
     
@@ -435,11 +435,11 @@ else
     $day = $link->real_escape_string($day);
     //$day ="2021-05-17";
     
-    $tme_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
+    $time_string ="`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    //$sql_active ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND  `Active` ='1' AND $tme_string group by  `Talkgroup`";
+    //$sql_active ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_query AND  `Active` ='1' AND $time_string group by  `Talkgroup`";
     
-    $sql_nonactive ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1'$station_qvery AND `Active` ='0' AND $tme_string group by  `Talkgroup` ";
+    $sql_nonactive ="SELECT sum(Talktime), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1'$station_query AND `Active` ='0' AND $time_string group by  `Talkgroup` ";
     
     /*
     echo $sql_active;

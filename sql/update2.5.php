@@ -75,11 +75,11 @@ CREATE TABLE `Station_day_statistic` (
   `station_id` int NOT NULL,
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Active_secunds` int NOT NULL,
-  `Max_reciver` text NOT NULL,
+  `Max_receiver` text NOT NULL,
   `minsiglev` float NOT NULL,
   `avrige` float NOT NULL,
   `maxsiglev` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Statistcs for reciver day by day';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Statistcs for receiver day by day';
 
 --
 -- Index f�r dumpade tableer

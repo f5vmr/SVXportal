@@ -61,17 +61,17 @@ function Get_station_from_json() {
                     $offset =$station_first_TX[$int]-$station_first_RX[$int];
                 }
                 
-                $ofset_char ="";
+                $offset_char ="";
                 
                 if($offset != 0)
                 {
                     if (($station_first_RX[$int]-$station_first_TX[$int]) <0)
                     {
-                        $ofset_char="-";
+                        $offset_char="-";
                     }
                     else
                     {
-                        $ofset_char="+";
+                        $offset_char="+";
                     }
                     
                     
@@ -166,14 +166,14 @@ if($noheader != 1){?>
  {
 
 		var checked=false;
-		var elements = document.getElementsByName("Stationexpot[]");
+		var elements = document.getElementsByName("Stationexport[]");
 		for(var i=0; i < elements.length; i++){
 			if(elements[i].checked) {
 				checked = true;
 			}
 		}
 		if (!checked) {
-			alert('You nead to select a station for export');
+			alert('You need to select a station for export');
 			return false;
 		}
 		return true;
@@ -218,8 +218,8 @@ if($noheader != 1){?>
         <?php 
         foreach(  $station_array  as $station => $st_object)
         {
-            if(!$_GET['hiddeexport'])
-                $chechbox ="<input type='checkbox' name='Stationexpot[]' value='".$station."'>";
+            if(!$_GET['hideexport'])
+                $chechbox ="<input type='checkbox' name='Stationexport[]' value='".$station."'>";
             else
                 $chechbox ="";
             
@@ -250,7 +250,7 @@ if($noheader != 1){?>
 
     </tbody>
   </table>
-  <?php if(!$_GET['hiddeexport']){?>
+  <?php if(!$_GET['hideexport']){?>
   
     <div class="row">
         <div class="col-sm">
@@ -266,9 +266,9 @@ if($noheader != 1){?>
 		</div>
 		
 
-          <label for="numberinpuet" class="col-2 col-form-label"><?php echo _('CSV index')?></label>
+          <label for="numberinput" class="col-2 col-form-label"><?php echo _('CSV index')?></label>
           <div class="col-10">
-            <input class="form-control" type="number" value="0" name="index" id="numberinpuet">
+            <input class="form-control" type="number" value="0" name="index" id="numberinput">
           </div>
           
           <label for="countrypre" class="col-2 col-form-label"><?php echo _("Use three last char in call")?></label>

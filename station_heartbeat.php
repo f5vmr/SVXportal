@@ -176,11 +176,11 @@ $json = json_decode($json_data);
     $i=1;
     while($row = $result->fetch_assoc())
     {
-        $Station_callsings_fromdb[$i]= $row["Callsign"];
+        $Station_callsigns_fromdb[$i]= $row["Callsign"];
         $i++;
     }
     
-    $find_array =$Station_callsings_fromdb;
+    $find_array =$Station_callsigns_fromdb;
     
     
     

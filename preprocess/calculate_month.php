@@ -30,7 +30,7 @@ if(detect_empty() > 0)
 }
 else
 {
-    // the database is empty and no filter is neaded.
+    // the database is empty and no filter is needed.
     
 }
 

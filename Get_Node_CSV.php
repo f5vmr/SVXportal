@@ -49,7 +49,7 @@ if($_POST['index'])
 }
 
 
-foreach($_POST['Stationexpot'] as $box)
+foreach($_POST['Stationexport'] as $box)
 {
     if(is_numeric(substr($box, -1))  && strpos($box, "-") === false)
     {
@@ -73,7 +73,7 @@ foreach($_POST['Stationexpot'] as $box)
 foreach($json->nodes as $st => $station)
 {
    
-    if(in_array($st,$_POST['Stationexpot'])  )
+    if(in_array($st,$_POST['Stationexport'])  )
     {
        
     
@@ -119,16 +119,16 @@ foreach($json->nodes as $st => $station)
         {
             $offset =$station_first_TX-$station_first_RX;
         }
-        $ofset_char ="";
+        $offset_char ="";
         if($offset != 0)
         {
             if ($station_first_RX-$station_first_TX <0)
             {
-                $ofset_char="-";
+                $offset_char="-";
             }
             else
             {
-                 $ofset_char="+";
+                 $offset_char="+";
             }
                
                 
@@ -173,7 +173,7 @@ foreach($json->nodes as $st => $station)
                 default:
                     echo $id.",".
                         $st." ".$talkgroup.","
-                            .$station_first_TX.",".$ofset_char.",".$offset.",Tone,"
+                            .$station_first_TX.",".$offset_char.",".$offset.",Tone,"
                                 .$tonegroup.",".$tonegroup.",023,NN,FM,5.00,,,,,,\n";
                     break;
                     

@@ -3314,7 +3314,7 @@
     }
 
     // If divider is found, we divide the list of values and operands to divide
-    // them by ofset X and Y.
+    // them by offset X and Y.
     var splitRegex = /\s*,\s*|\s+/;
     var ops = divider !== -1 ? [fragments.slice(0, divider).concat([fragments[divider].split(splitRegex)[0]]), [fragments[divider].split(splitRegex)[1]].concat(fragments.slice(divider + 1))] : [fragments];
 

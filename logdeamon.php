@@ -98,7 +98,7 @@ if(read_cache() != $json_data)
     $i=1;
     while($row = $result->fetch_assoc()) 
     {
-        $Station_callsings_fromdb[$i]= $row["Callsign"];
+        $Station_callsigns_fromdb[$i]= $row["Callsign"];
         $i++;
     }
     
@@ -115,7 +115,7 @@ if(read_cache() != $json_data)
         //print_r($arr);
         
         // instert station to db if note exist
-        if(array_search($key,$Station_callsings_fromdb) == NULL)
+        if(array_search($key,$Station_callsigns_fromdb) == NULL)
         {
 
             $NodeLocation = @$value->NodeLocation;

@@ -65,7 +65,7 @@ var log_size = 500;
 function offset_log(offset) {
 	loop_livelog=0;
 	console.log(offset);
-	var serch_string = $("#logserch").val();
+	var serch_string = $("#logsearch").val();
 	current_offset= offset;
 	$.get( "admin/log.php", { offset: offset,search: serch_string,size: log_size }, function( data ) {
 		  $( "#logdiv1" ).html( data );
@@ -123,9 +123,9 @@ function live_log()
 {
 	if(loop_livelog ==1)
 	{
-		if (document.getElementById('logserch')) {
+		if (document.getElementById('logsearch')) {
 	
-    		var serch_string = $("#logserch").val();
+    		var serch_string = $("#logsearch").val();
     		$.get( "admin/log.php", { offset: current_offset,search: serch_string,only_table:1,size: log_size }, function( data ) {
     			  $( "#log_table" ).html( data );
     				setTimeout(function(){ live_log()}, 2000);

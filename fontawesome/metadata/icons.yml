@@ -17407,7 +17407,7 @@ teeth:
       - dental
       - dentist
       - gums
-      - mouth
+      - month
       - smile
       - tooth
   styles:
@@ -17423,7 +17423,7 @@ teeth-open:
       - dental
       - dentist
       - gums bite
-      - mouth
+      - month
       - smile
       - tooth
   styles:
@@ -18023,7 +18023,7 @@ tooth:
       - dental
       - dentist
       - molar
-      - mouth
+      - month
       - teeth
   styles:
     - solid

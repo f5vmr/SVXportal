@@ -1168,7 +1168,7 @@ function offset_log(offset)
 {
 	loop_livelog=0;
 	console.log(offset);
-	var serch_string = $("#logserch").val();
+	var serch_string = $("#logsearch").val();
 	current_offset= offset;
 	$.get( "log.php", { offset: offset,search: serch_string,size: log_size,filter: filter_log }, function( data ) {
 		  $( "#logdiv1" ).html( data );
@@ -1240,9 +1240,9 @@ function live_log()
 {
 	if(loop_livelog ==1)
 	{
-		if (document.getElementById('logserch')) {
+		if (document.getElementById('logsearch')) {
 	
-    		var serch_string = $("#logserch").val();
+    		var serch_string = $("#logsearch").val();
     		$.get( "log.php", { offset: current_offset,search: serch_string,only_table:1,size: log_size,filter: filter_log }, function( data ) {
     			  $( "#log_table" ).html( data );
     				setTimeout(function(){ live_log()}, 2000);
@@ -3584,12 +3584,12 @@ function get_year_static()
 {
 	var date_value = $('#Datepicker_graph').val();
 	var select1= $('#filterpicker_repeater_year').val();
-	var select2= $('#filterpicker_talgroup_year').val();
+	var select2= $('#filterpicker_talkgroup_year').val();
 
 
 
 	
-	$.get( "get_statistics.php", { date: date_value, mouth:"true", filterpicker_repeater_year: select1, filterpicker_talgroup_year: select2} )
+	$.get( "get_statistics.php", { date: date_value, month:"true", filterpicker_repeater_year: select1, filterpicker_talkgroup_year: select2} )
 	  .done(function( data ) {
 			console.log(data);
 
@@ -3597,9 +3597,9 @@ function get_year_static()
 		  var json_data_year = JSON.parse(data);
 
 		  var data_aray_year = new Array();
-		  for(var mouth in json_data_year)
+		  for(var month in json_data_year)
 		  {
-			  data_aray_year[mouth-1]= json_data_year[mouth]['unixtime'];
+			  data_aray_year[month-1]= json_data_year[month]['unixtime'];
 
 		  }
 		  $("#toplist_table tbody").html("");
@@ -4047,7 +4047,7 @@ var set_mounth_station ="";
 function set_repater_statics_mounth()
 {
 
-	set_mounth_station = $('#filterpicker_repeater_mouth :selected').val();
+	set_mounth_station = $('#filterpicker_repeater_month :selected').val();
 	get_statistics_month();
 
 
@@ -4122,7 +4122,7 @@ window.myBara = new Chart(ctx, {
 });
 
 	
-	$.get( "get_statistics.php", { date: date_value , cahce_mouth_tg : '1'} )
+	$.get( "get_statistics.php", { date: date_value , cahce_month_tg : '1'} )
 	  .done(function( data ) {
 		  var jsondata = JSON.parse(data); 
 
@@ -4538,7 +4538,7 @@ function get_station_chat_mo()
 	var j=0;
 	$("#nodes_activity > tbody").html("");
 	$("#nodes_activity > tfoot").html("");
-	$.get( "get_statistics.php", { date: date_value,cahce_mouth :1} )
+	$.get( "get_statistics.php", { date: date_value,cahce_month :1} )
 	  .done(function( data ) {
 		  //console.log("chart");
 		  console.log(data);
@@ -4575,7 +4575,7 @@ function get_station_chat_mo()
 		  }
 		  console.log(total_time_secunds);
 
-		  $("#nodes_activity > thead ").html('<tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage curent mouth")?></th><th  class="d-none  d-md-table-cell"><?php echo _("Usage last 30 days")?></th><th class="d-none  d-md-table-cell"></tr>');
+		  $("#nodes_activity > thead ").html('<tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage curent month")?></th><th  class="d-none  d-md-table-cell"><?php echo _("Usage last 30 days")?></th><th class="d-none  d-md-table-cell"></tr>');
 
 		  
 		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(total_time_secunds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
@@ -4828,7 +4828,7 @@ function get_station_chat()
 			  total_present=total_present+parseFloat(preccent);
 			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td><td  class=\"d-none  d-md-table-cell\">"+Stations_json.data[j].reciver+"</td></tr>");
+			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td><td  class=\"d-none  d-md-table-cell\">"+Stations_json.data[j].receiver+"</td></tr>");
 			  j++;
 
 			 
@@ -6002,7 +6002,7 @@ function fnExcelexport(table)
                   					</div>
                   					<div class="col-4">
                   					
-                  						<select class="selectpicker float-right col-11" id="filterpicker_repeater_mouth" onchange="set_repater_statics_mounth()" >
+                  						<select class="selectpicker float-right col-11" id="filterpicker_repeater_month" onchange="set_repater_statics_mounth()" >
                   					              
                                		  <option value=""><?php echo _('No Repeater filter')?></option>
                                  		 <optgroup label="<?php echo _('Repeater')?>">
@@ -6166,7 +6166,7 @@ function fnExcelexport(table)
                                 </select>
          </th>    
          <th scope="col">
-                         	<select class="selectpicker" id="filterpicker_talgroup_year" onchange="get_year_static()">
+                         	<select class="selectpicker" id="filterpicker_talkgroup_year" onchange="get_year_static()">
                                  <option value=""><?php echo _('No Talkgroup filter')?></option>
                                   <optgroup label="<?php echo _('Talkgroup')?>">
                                   

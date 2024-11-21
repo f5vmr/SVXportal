@@ -797,7 +797,7 @@ for(var k in data.nodes){
     	    	{
 
     			             	    	
-        		var new_html = '<td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="">'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>'
+        		var new_html = '<td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="">'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>'
   
     			 			
 	 	  		$('#row'+printk+'').html(new_html);
@@ -811,7 +811,7 @@ for(var k in data.nodes){
     		}
     		else
     		{
-	 	  		$('#row'+printk+'').html('<td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="" >'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
+	 	  		$('#row'+printk+'').html('<td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="" >'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
 	 	  		$('#row'+printk+'').addClass("font-weight-bold");	
 
 	 	  		
@@ -870,7 +870,7 @@ for(var k in data.nodes){
     	 {
     		 $("#minutes_"+data.nodes[k].tg).remove(); 
     		 $("#seconds_"+data.nodes[k].tg).remove(); 	 
-	  		$('#Reflectortable').append('<tbody class="table-striped" id="body-of-'+printk+'"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td id="rssi_canas_'+printk+'"> <canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
+	  		$('#Reflectortable').append('<tbody class="table-striped" id="body-of-'+printk+'"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td id="rssi_canas_'+printk+'"> <canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
 	  		create_bar('bar_'+printk);
 	  		//create_bar_rssi('bar_RSSI_'+printk)
 	    }
@@ -1082,11 +1082,11 @@ for(var k in data.nodes){
     		if(mqtt_station_array[k]  && mqtt_station_array[k]["RSSI"] != "-200")
     		{
     		
-    			$("#reciver_"+k).html(Math.round(mqtt_station_array[k]["RSSI"])+" dBm<br/>"+qth_name_location);
+    			$("#receiver_"+k).html(Math.round(mqtt_station_array[k]["RSSI"])+" dBm<br/>"+qth_name_location);
     		}
     		else
     		{
-    			$("#reciver_"+k).html(qth_name_location);
+    			$("#receiver_"+k).html(qth_name_location);
     		}
     		
  		

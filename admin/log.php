@@ -139,7 +139,7 @@ if(!$_GET['only_table'])
         
       
       
-        <input class="form-control mr-sm-2" id="logserch" type="search" placeholder="<?php echo _('Search')?>" value="<?php echo $_GET['search']?>" aria-label="Search">
+        <input class="form-control mr-sm-2" id="logsearch" type="search" placeholder="<?php echo _('Search')?>" value="<?php echo $_GET['search']?>" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><?php echo _('Search')?></button>
       </form>
       </div>

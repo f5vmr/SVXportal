@@ -53,15 +53,15 @@ function calculate_day ($day)
     
     $day = $link->real_escape_string($day);
     
-    // $tme_string ="`Time` BETWEEN '$day $timel:00:00.000000' AND '$day $timel:59:59.000000'";
-    $tme_string = "`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
+    // $time_string ="`Time` BETWEEN '$day $timel:00:00.000000' AND '$day $timel:59:59.000000'";
+    $time_string = "`Time` BETWEEN '$day 00:00:00.000000' AND '$day 23:59:59.000000'";
     
-    // $sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_qvery AND `Active` ='1' AND $tme_string group by `Talkgroup`";
+    // $sql_active ="SELECT sum(UNIX_TIMESTAMP(`Time`)), `Talkgroup` FROM ReflectorNodeLog WHERE `Type` = '1' $station_query AND `Active` ='1' AND $time_string group by `Talkgroup`";
     //$station_string = " `Callsign` = 'SIP1' AND";
     
     
     
-    $sql_nonactive = "SELECT UNIX_TIMESTAMP(Time), Callsign, Talktime, `Talkgroup` FROM ReflectorNodeLog WHERE  `Type` = 1  AND `Active` = 0 AND $tme_string   ";
+    $sql_nonactive = "SELECT UNIX_TIMESTAMP(Time), Callsign, Talktime, `Talkgroup` FROM ReflectorNodeLog WHERE  `Type` = 1  AND `Active` = 0 AND $time_string   ";
     
     // echo $sql_nonactive;
     

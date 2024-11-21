@@ -36,9 +36,9 @@ while($row = $result->fetch_assoc()) {
     $current_time = $row['time'];
     $idnr =$row['Id'];
     echo ($current_time- $old_time). " ";
-    $time_diffrense = ($current_time- $old_time);
+    $time_difference = ($current_time- $old_time);
     
-    $sql = "UPDATE ReflectorNodeLog SET Talktime='$time_diffrense' WHERE id=$idnr";
+    $sql = "UPDATE ReflectorNodeLog SET Talktime='$time_difference' WHERE id=$idnr";
 
     
     if ($conn->query($sql) === TRUE) {

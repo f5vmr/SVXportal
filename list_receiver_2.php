@@ -305,14 +305,14 @@ for(var k in data.nodes){
            	
     		if(data.nodes[k].isTalker == false)
     		{
-	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="">'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>');
+	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="">'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>');
 	 	  		$('#row'+printk+'').removeClass("font-weight-bold");
 	 	  		
     			
     		}
     		else
     		{
-	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="" >'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
+	 	  		$('#row'+printk+'').html('<td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="" >'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
 	 	  		$('#row'+printk+'').addClass("font-weight-bold");	
 
 	 	  		
@@ -357,7 +357,7 @@ for(var k in data.nodes){
     	 }
     	 else
     	 {
-	  		$('#Reflectortable').append('<tbody class="table-striped"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td ><canvas id="bar_RSSI_'+printk+'"></canvas><canvas id="bar_'+printk+'"></canvas></td><td id="reciver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
+	  		$('#Reflectortable').append('<tbody class="table-striped"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td ><canvas id="bar_RSSI_'+printk+'"></canvas><canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
 	  		create_bar('bar_'+printk);
 	  		//create_bar_rssi('bar_RSSI_'+printk)
 	    }
@@ -460,11 +460,11 @@ for(var k in data.nodes){
     		if(mqtt_station_array[k])
     		{
     		
-    			$("#reciver_"+k).html(Math.round(mqtt_station_array[k]["RSSI"])+" DBm<br/>"+qth_name);
+    			$("#receiver_"+k).html(Math.round(mqtt_station_array[k]["RSSI"])+" DBm<br/>"+qth_name);
     		}
     		else
     		{
-    			$("#reciver_"+k).html(qth_name);
+    			$("#receiver_"+k).html(qth_name);
     		}
     		
  		

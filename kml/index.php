@@ -411,7 +411,7 @@ function generate_colour()
 					<li class="nav-item"><a class="nav-link" href="#Dictionary"
 						data-toggle="tab"><i class="fas fa-book"></i> Dictionary</a></li>
 					<li class="nav-item"><a class="nav-link" href="list_receiver.php"><i
-							class="fas fa-broadcast-tower"></i> List reciver</a></li>
+							class="fas fa-broadcast-tower"></i> List receiver</a></li>
 					<li class="nav-item"><a class="nav-link" href="#Log"
 						data-toggle="tab"><i class="fas fa-terminal"></i> Log</a></li>
 
