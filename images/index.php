@@ -802,13 +802,14 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 				<div class="tab-pane" id="Echolink">
 <!-- 					<h1>Commands</h1> -->
   <div class="row">
-			<?php
+  <?php
 if ($usefile !== null) {
     // Open the file for reading
     $myfile = fopen("echolink.txt", "r") or die("Unable to open file!");
 
-    // Read and output the file content with UTF-8 encoding
-    echo utf8_encode(fread($myfile, filesize("echolink.txt")));
+    // Read the file content and convert it to UTF-8 encoding
+    $content = fread($myfile, filesize("echolink.txt"));
+    echo mb_convert_encoding($content, "UTF-8", "auto");
 
     // Close the file
     fclose($myfile);
