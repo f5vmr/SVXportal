@@ -305,7 +305,7 @@ TG_FOR_V1_CLIENTS=999
 
 
 
-Then filout the form to intall datadbase and create config.php
+Then fill out the form to intall database and create config.php
 
 
 
