@@ -259,7 +259,7 @@ screen  -d -m bash -c  'cd <?php echo getcwd()?>; watch -n 1  php logdeamon.php;
     				<div class="form-group">
     				<label for="formGroupExampleInput2">Svx recording folder</label> <input
     					type="text" class="form-control" name="recordingfolder" id="formGroupExampleInput2"
-    					value="<?php echo getcwd()?>svx/recording">
+    					value="<?php echo getcwd()?>/svxrecording">
     			</div>		
  
  
