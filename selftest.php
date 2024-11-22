@@ -119,7 +119,7 @@ $json_test = file_get_contents($serveraddress, false, $ctx);
 
 if($json_test == "")
 {
-    echo "<b class='text-danger'>Fail</b> no contact to proxy check serveraddress in config.php <b>HTTP_SRV_PORT</b> in svxreflector.conf and <b>reflector_proxy/config.php url fail</b> ";
+    echo "<b class='text-danger'>Fail</b> no contact with proxy check serveraddress in config.php <b>HTTP_SRV_PORT</b> in svxreflector.conf and <b>reflector_proxy/config.php url fail</b> ";
     
     $fault_counter++;
     
