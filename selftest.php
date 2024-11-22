@@ -94,7 +94,7 @@ if ($result = $link->query("SELECT Define FROM `Settings`")) {
     /* determine number of rows result set */
     $row_cnt = $result->num_rows;
     
-    printf("Test <b class='text-success'>Suscess</b> found %d rows in settings.\n", $row_cnt);
+    printf("Test <b class='text-success'>Success</b> found %d rows in settings.\n", $row_cnt);
     
     /* close result set */
     $result->close();
