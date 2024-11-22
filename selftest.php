@@ -138,7 +138,7 @@ else
    {
        
 
-       echo "<b class='text-success'>Sucsess</b> json decoded <br /><br />";
+       echo "<b class='text-success'>Success</b> json decoded <br /><br />";
 
        
 
@@ -149,7 +149,7 @@ else
        $json_data = iconv("utf-8", "utf-8//ignore", $json_data);
        $data = json_decode($json_data);
        
-       echo "<p>Found folowing stations</p>";
+       echo "<p>Found following stations</p>";
        echo "<ul>";
        
        foreach($data->nodes as $st => $station)

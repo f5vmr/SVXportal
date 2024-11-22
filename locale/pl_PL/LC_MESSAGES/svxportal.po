@@ -1111,7 +1111,7 @@ msgid "filter"
 msgstr "Filtr"
 
 #: index.php:2362
-msgid "Export Antyone"
+msgid "Export Anytone"
 msgstr "Eksportuj Antyone"
 
 #: index.php:2388 index1.php:1777 index_old.php:1097 indexa.php:1098

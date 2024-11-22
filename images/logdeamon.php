@@ -144,10 +144,10 @@ if(read_cache() != $json_data)
             {
                 $last_active_id =check_last_tg($key);
                 $last_active_timestamp =check_last_time($key);
-                $curcent_diftime= time() -$last_active_timestamp;
-                echo "difftime: " . $curcent_diftime ;
+                $current_difftime= time() -$last_active_timestamp;
+                echo "difftime: " . $current_difftime ;
                 $sql_insert = "INSERT INTO `ReflectorNodeLog` (`Id`, `Callsign`, `Type`, `Active`, `Talkgroup`, `NODE`, `Siglev`, `Duration`, `IsTalker`,`Nodename`,`Talktime`)
-                 VALUES (NULL, '".$key."', '1', '0', '".$last_active_id."', '', '0', '0', '0', '','$curcent_diftime');";
+                 VALUES (NULL, '".$key."', '1', '0', '".$last_active_id."', '', '0', '0', '0', '','$current_difftime');";
                 
                 //echo $sql_insert;
              

@@ -80,9 +80,9 @@ function show_notifications_nodes()
 function go_to_station(station)
 {
   $('#Reflector').removeClass("active");
-  $('#stationinfor').tab("show");
+  $('#stationinfo').tab("show");
   Load_station_intofmation(station);
-  fix_sidemeny_active('stationinfor');
+  fix_sidemeny_active('stationinfo');
 }
 
 function fix_sidemeny_active(current)
@@ -1890,7 +1890,7 @@ ul.dropdown-lr {
 						</a></li>
 						<?php }?>
 					
-					<li class="nav-item"><a class="nav-link " href="#stationinfor"  onclick="hide_menu_click()"
+					<li class="nav-item"><a class="nav-link " href="#stationinfo"  onclick="hide_menu_click()"
 						data-toggle="tab"><i class="fas fa-info-circle"></i> <?php echo _("Station information");?> </a></li>				
 					
 					<li class="nav-item"><a class="nav-link" href="#Echolink"	data-toggle="tab" onclick="hide_menu_click()">  
@@ -2420,7 +2420,7 @@ if ($usefile !== null) {
                     </a>
                     <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
                       <div class="dropdown-header"><?php echo _('Action menu')?></div>
-                          <a class="nav-link  " href="#" id="navbarDropdownMenuLink" onclick="fnExcelexport('dictornay_taklgroup_data')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <a class="nav-link  " href="#" id="navbarDropdownMenuLink" onclick="fnExcelexport('dictionary_talkgroup_data')" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             				 <i class="far fa-file-excel"></i>
               						Export xls      					 </a>
           					 
@@ -2430,7 +2430,7 @@ if ($usefile !== null) {
              						 
              			<a class="nav-link  " href="other/anytone/analog_addressbook.php" target="_blank aria-haspopup="true" aria-expanded="false">
                   				 <i class="fa fa-users"></i>
-             						 <?php echo _('Export Antyone') ?>          					 </a>
+             						 <?php echo _('Export Anytone') ?>          					 </a>
              						 
             
             
@@ -2452,7 +2452,7 @@ if ($usefile !== null) {
     
     
 				<div id="dictornay_taklgroup_print">
-					<table class="table table-striped table-sm" id="dictornay_taklgroup_data">
+					<table class="table table-striped table-sm" id="dictionary_talkgroup_data">
 						<thead class="dash_header">
 							<tr>
 								<th><?php echo _("TG#")?></th>
@@ -3613,8 +3613,8 @@ function get_year_static()
 		  		  
 
         		  
-        	$('#canvas_grap_holder3').html("");
-        	$('#canvas_grap_holder3').html('<canvas id="Graph3"  width="700px" height="500px" class="img-responsive" ></canvas>');
+        	$('#canvas_graph_holder3').html("");
+        	$('#canvas_graph_holder3').html('<canvas id="Graph3"  width="700px" height="500px" class="img-responsive" ></canvas>');
         	
         	var canvas = document.getElementById('Graph3')
         	canvas.width = canvas.width; 
@@ -3716,8 +3716,8 @@ function get_year_static()
 function get_statistics()
 {
 
-	$('#canvas_grap_holder').html("");
-	$('#canvas_grap_holder').html('<canvas id="Graph" width="400px" height="400px"></canvas>');
+	$('#canvas_graph_holder').html("");
+	$('#canvas_graph_holder').html('<canvas id="Graph" width="400px" height="400px"></canvas>');
 	var canvas = document.getElementById('Graph')
 	canvas.width = canvas.width; 
 	var ctx = document.getElementById('Graph').getContext('2d');
@@ -3846,7 +3846,7 @@ var show_all_tg =1;
 var use_hour=0;
 var station_filer_time ="";
 
-function set_repater_statics_time()
+function set_repeater_statics_time()
 {
 	station_filer_time = $('#filterpicker_repeater_time :selected').val();
 	console.log(station_filer_time);
@@ -3857,8 +3857,8 @@ function set_repater_statics_time()
 function get_statistics_hour()
 {
 
-	$('#canvas_grap_holder1').html("");
-	$('#canvas_grap_holder1').html('<canvas id="Graph1" width="400px" height="400px"></canvas>');
+	$('#canvas_graph_holder1').html("");
+	$('#canvas_graph_holder1').html('<canvas id="Graph1" width="400px" height="400px"></canvas>');
 	var canvas = document.getElementById('Graph1')
 	canvas.width = canvas.width; 
 	var ctx = document.getElementById('Graph1').getContext('2d');
@@ -3970,32 +3970,32 @@ function get_statistics_hour()
 
 			if(show_all_tg ==1 )
 			{
-				var talkgropoup_array = new Array();
+				var talkgroup_array = new Array();
 
 				  for (time = 0; time < 24;time++) 
 				  {
 					  
 					  for(var talkgroup in jsondata[time].TG)
 					  {
-						  if(talkgropoup_array[talkgroup] == 'undefined' || !(talkgropoup_array[talkgroup] instanceof Array) )
+						  if(talkgroup_array[talkgroup] == 'undefined' || !(talkgroup_array[talkgroup] instanceof Array) )
 						  {
-						 	 talkgropoup_array[talkgroup]= new Array();
+						 	 talkgroup_array[talkgroup]= new Array();
 						  }
 						  
 						  if(jsondata[time].TG[talkgroup] <= 0)
 						  {
-							  talkgropoup_array[talkgroup][time] ={x: time, y:0};
+							  talkgroup_array[talkgroup][time] ={x: time, y:0};
 						  }
 						  else
 						  {
-							  talkgropoup_array[talkgroup][time] = {x:time  ,y: jsondata[time].TG[talkgroup]};
+							  talkgroup_array[talkgroup][time] = {x:time  ,y: jsondata[time].TG[talkgroup]};
 						  }
 					  }
 						  
 
 				  }
 
-				  for(var talkgroup in talkgropoup_array)
+				  for(var talkgroup in talkgroup_array)
 				  {
 
 				    	if(tg_colours[talkgroup] == null)
@@ -4013,7 +4013,7 @@ function get_statistics_hour()
 		    					backgroundColor: tg_colours[talkgroup]['color'].trim(),
 		    					borderColor:  tg_colours[talkgroup]['color'].trim(),
 		    					fill: false,
-		    					data: talkgropoup_array[talkgroup]
+		    					data: talkgroup_array[talkgroup]
 		    				};
 		
 		    		
@@ -4031,7 +4031,7 @@ function get_statistics_hour()
 				  window.myLine.update();
 
 				  
-				  //console.log(talkgropoup_array[240]);
+				  //console.log(talkgroup_array[240]);
 
 				
 				
@@ -4042,12 +4042,12 @@ function get_statistics_hour()
 
 	  });
 }
-var set_mounth_station ="";
+var set_month_station ="";
 
 function set_repater_statics_mounth()
 {
 
-	set_mounth_station = $('#filterpicker_repeater_month :selected').val();
+	set_month_station = $('#filterpicker_repeater_month :selected').val();
 	get_statistics_month();
 
 
@@ -4058,8 +4058,8 @@ function set_repater_statics_mounth()
 function get_statistics_mounth()
 {
 
-	$('#Graph_mo_grap_holder').html("");
-	$('#Graph_mo_grap_holder').html('<canvas id="Graph_mo" width="400px" height="400px"></canvas>');
+	$('#Graph_mo_graph_holder').html("");
+	$('#Graph_mo_graph_holder').html('<canvas id="Graph_mo" width="400px" height="400px"></canvas>');
 	var canvas = document.getElementById('Graph_mo')
 	canvas.width = canvas.width; 
 	var ctx = document.getElementById('Graph_mo').getContext('2d');
@@ -4186,11 +4186,11 @@ window.myBara = new Chart(ctx, {
 function get_statistics_year_tg()
 {
 
-	$('#Graph_ytg_grap_holder').html("");
-	$('#Graph_ytg_grap_holder').html('<canvas id="Graph_tg_grap_ca" width="400px" height="400px"></canvas>');
-	var canvas = document.getElementById('Graph_tg_grap_ca')
+	$('#Graph_ytg_graph_holder').html("");
+	$('#Graph_ytg_graph_holder').html('<canvas id="Graph_tg_graph_ca" width="400px" height="400px"></canvas>');
+	var canvas = document.getElementById('Graph_tg_graph_ca')
 	canvas.width = canvas.width; 
-	var ctx = document.getElementById('Graph_tg_grap_ca').getContext('2d');
+	var ctx = document.getElementById('Graph_tg_graph_ca').getContext('2d');
 	var barDatafromJSON;
 	var date_value = $('#Datepicker_graph').val();
 
@@ -4318,8 +4318,8 @@ window.myBara = new Chart(ctx, {
 function get_statistics_month()
 {
 
-	$('#canvas_grap_holder2').html("");
-	$('#canvas_grap_holder2').html('<canvas id="Graph_month" width="400px" height="400px"></canvas>');
+	$('#canvas_graph_holder2').html("");
+	$('#canvas_graph_holder2').html('<canvas id="Graph_month" width="400px" height="400px"></canvas>');
 	var canvas = document.getElementById('Graph_month')
 	canvas.width = canvas.width; 
 	var ctx = document.getElementById('Graph_month').getContext('2d');
@@ -4336,7 +4336,7 @@ function get_statistics_month()
 
 
     date_value  = date_value.slice(0, -3);
-	$.get( "get_statistics.php", { date_m: date_value, totalmount:"true",station: set_mounth_station} )
+	$.get( "get_statistics.php", { date_m: date_value, totalmount:"true",station: set_month_station} )
 	  .done(function( data ) {
 		  var jsondata = JSON.parse(data); 
 		  console.log(jsondata);
@@ -4433,32 +4433,32 @@ function get_statistics_month()
 		  
 			if(show_all_tg ==1 )
 			{
-				var talkgropoup_array = new Array();
+				var talkgroup_array = new Array();
 
 				  for (time = 0; time < 24;time++) 
 				  {
 					  
 					  for(var talkgroup in jsondata[time].TG)
 					  {
-						  if(talkgropoup_array[talkgroup] == 'undefined' || !(talkgropoup_array[talkgroup] instanceof Array) )
+						  if(talkgroup_array[talkgroup] == 'undefined' || !(talkgroup_array[talkgroup] instanceof Array) )
 						  {
-						 	 talkgropoup_array[talkgroup]= new Array();
+						 	 talkgroup_array[talkgroup]= new Array();
 						  }
 						  
 						  if(jsondata[time].TG[talkgroup] <= 0)
 						  {
-							  talkgropoup_array[talkgroup][time] ={x: time, y:0};
+							  talkgroup_array[talkgroup][time] ={x: time, y:0};
 						  }
 						  else
 						  {
-							  talkgropoup_array[talkgroup][time] = {x:time  ,y: jsondata[time].TG[talkgroup]};
+							  talkgroup_array[talkgroup][time] = {x:time  ,y: jsondata[time].TG[talkgroup]};
 						  }
 					  }
 						  
 
 				  }
 
-				  for(var talkgroup in talkgropoup_array)
+				  for(var talkgroup in talkgroup_array)
 				  {
 
 				    	if(tg_colours[talkgroup] == null)
@@ -4476,7 +4476,7 @@ function get_statistics_month()
 		    					backgroundColor: tg_colours[talkgroup]['color'].trim(),
 		    					borderColor:  tg_colours[talkgroup]['color'].trim(),
 		    					fill: false,
-		    					data: talkgropoup_array[talkgroup]
+		    					data: talkgroup_array[talkgroup]
 		    				};
 		
 		    		
@@ -4494,7 +4494,7 @@ function get_statistics_month()
 				  window.myLine.update();
 
 				  
-				  //console.log(talkgropoup_array[240]);
+				  //console.log(talkgroup_array[240]);
 
 				
 				
@@ -4544,7 +4544,7 @@ function get_station_chat_mo()
 		  console.log(data);
 		 
 		  var Stations_json = JSON.parse(data); 
-		  var total_time_secunds =0;
+		  var total_time_seconds =0;
 		  var total_present =0;
 
 	
@@ -4553,7 +4553,7 @@ function get_station_chat_mo()
 			  console.log(Stations_json.data[j]);
 			  Stations_timesum[j]=0;
 			  Stations_timesum[j] = Stations_json.data[j].time;
-			  total_time_secunds = total_time_secunds+ parseInt(Stations_json.data[j].time);
+			  total_time_seconds = total_time_seconds+ parseInt(Stations_json.data[j].time);
 			  console.log(Stations_json.data[j].time);
 			  Stations[j] =  Stations_json.data[j].call;
 			  if(node_colours[Stations_json.data[j].call]["color"] != null)
@@ -4566,19 +4566,19 @@ function get_station_chat_mo()
 			  }
 			  var preccent= (((Stations_json.data[j].time)/(86400*30)) * 100).toFixed(3);
 			  total_present=total_present+parseFloat(preccent);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
+			  var percent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
+			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+percent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
 			  j++;
 
 			 
 		  }
-		  console.log(total_time_secunds);
+		  console.log(total_time_seconds);
 
 		  $("#nodes_activity > thead ").html('<tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage curent month")?></th><th  class="d-none  d-md-table-cell"><?php echo _("Usage last 30 days")?></th><th class="d-none  d-md-table-cell"></tr>');
 
 		  
-		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(total_time_secunds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
+		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(total_time_seconds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
 		
 	
 
@@ -4665,7 +4665,7 @@ function get_station_chat_year()
 	
 		 
 		  var Stations_json = JSON.parse(data); 
-		  var total_time_secunds =0;
+		  var total_time_seconds =0;
 		  var total_present =0;
 
 	
@@ -4674,7 +4674,7 @@ function get_station_chat_year()
 			  console.log(Stations_json.data[j]);
 			  Stations_timesum[j]=0;
 			  Stations_timesum[j] = Stations_json.data[j].time;
-			  total_time_secunds = total_time_secunds+ parseInt(Stations_json.data[j].time);
+			  total_time_seconds = total_time_seconds+ parseInt(Stations_json.data[j].time);
 			  console.log(Stations_json.data[j].time);
 			  Stations[j] =  Stations_json.data[j].call;
 			  if(node_colours[Stations_json.data[j].call]["color"] != null)
@@ -4687,14 +4687,14 @@ function get_station_chat_year()
 			  }
 			  var preccent= (((Stations_json.data[j].time)/(86400*365)) * 100).toFixed(3);
 			  total_present=total_present+parseFloat(preccent);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
+			  var percent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
+			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+percent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td></tr>");
 			  j++;
 
 			 
 		  }
-		  console.log(total_time_secunds);
+		  console.log(total_time_seconds);
 
 		  $("#nodes_activity > thead ").html('<tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage year")?></th><th  class="d-none  d-md-table-cell"><?php echo _("Usage based on year")?></th><th class="d-none  d-md-table-cell"></tr>');
 
@@ -4804,7 +4804,7 @@ function get_station_chat()
 		  console.log(data);
 		 
 		  var Stations_json = JSON.parse(data); 
-		  var total_time_secunds =0;
+		  var total_time_seconds =0;
 		  var total_present =0;
 
 	
@@ -4813,7 +4813,7 @@ function get_station_chat()
 			  console.log(Stations_json.data[j]);
 			  Stations_timesum[j]=0;
 			  Stations_timesum[j] = Stations_json.data[j].time;
-			  total_time_secunds = total_time_secunds+ parseInt(Stations_json.data[j].time);
+			  total_time_seconds = total_time_seconds+ parseInt(Stations_json.data[j].time);
 			  console.log(Stations_json.data[j].time);
 			  Stations[j] =  Stations_json.data[j].call;
 			  if(node_colours[Stations_json.data[j].call]["color"] != null)
@@ -4826,15 +4826,15 @@ function get_station_chat()
 			  }
 			  var preccent= (((Stations_json.data[j].time)/86400) * 100).toFixed(3);
 			  total_present=total_present+parseFloat(preccent);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
+			  var percent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td><td  class=\"d-none  d-md-table-cell\">"+Stations_json.data[j].receiver+"</td></tr>");
+			  $("#nodes_activity > tbody").append('<tr><td><span class="text-nowrap">'+Stations_json.data[j].call+'</span></td><td>'+Stations_json.data[j].Second+"</td><td>"+percent_network+"%</td><td class=\"d-none  d-md-table-cell\">"+preccent+"%</td><td  class=\"d-none  d-md-table-cell\">"+Stations_json.data[j].receiver+"</td></tr>");
 			  j++;
 
 			 
 		  }
-		  console.log(total_time_secunds);
-		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(total_time_secunds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
+		  console.log(total_time_seconds);
+		  $("#nodes_activity > tfoot").append('<tr><td><?php echo _('Total')?></td><td>'+secondsToDayHMS(total_time_seconds)+'</td><td></td><td class=\"d-none  d-md-table-cell\" >'+total_present.toFixed(2)+'%</td><td class=\"d-none  d-md-table-cell\"></td></tr>');
 
 
 		  $("#nodes_activity > thead ").html('<tr><th><?php echo _("Station")?></th><th><?php echo _("Uptime")?></th><th><?php echo _("Network Usage 24 hour")?></th><th  class="d-none  d-md-table-cell"><?php echo _("Usage last 24 hour")?></th><th class="d-none  d-md-table-cell"><?php echo _("Most used receiver")?></th></tr>');
@@ -5058,7 +5058,7 @@ function idn_loocup(site)
 
 	
 }
-function idn_loocup_select(site,array)
+function idn_lookup_select(site,array)
 {
 
 
@@ -5147,7 +5147,7 @@ function show_Coverage_stations(arrays)
 
 				// Associative array
 				while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-				    echo "if(idn_loocup_select('".$row["Name"]."',arrays)) {";
+				    echo "if(idn_lookup_select('".$row["Name"]."',arrays)) {";
 				    
 				    echo "" . $row["Radiomobilestring"] . "}";
 
@@ -5606,7 +5606,7 @@ function fnExcelexport(table)
 						</div>
 					</div>
 				</div>
-             <div id="stationinfor" class="tab-pane">
+             <div id="stationinfo" class="tab-pane">
     			
     		<nav class="navbar navbar-expand-sm navbar-light  bg-light" style="background-color: #e3f2fd;">
 		
@@ -5646,7 +5646,7 @@ function fnExcelexport(table)
 				
 				
 				
-				 <select class="selectpicker w-25" id="Pricker_station_monitor"  onchange="Load_station_intofmation(this.value)" >
+				 <select class="selectpicker w-25" id="Picker_station_monitor"  onchange="Load_station_intofmation(this.value)" >
 				 <option value=""><?php echo _('Select station')?></option>
 
   <?php 
@@ -5861,7 +5861,7 @@ function fnExcelexport(table)
                     <div class="card-body">
 						
 					
-        				<div style="width: 100%; height: 600px;" id="canvas_grap_holder">
+        				<div style="width: 100%; height: 600px;" id="canvas_graph_holder">
         					<canvas id="Graph" width="800px" height="600px"></canvas>
         				</div>
         				
@@ -5922,7 +5922,7 @@ function fnExcelexport(table)
                   					</div>
                   					<div class="col-4">
                   					
-                  						<select class="selectpicker float-right col-11" id="filterpicker_repeater_time" onchange="set_repater_statics_time()" >
+                  						<select class="selectpicker float-right col-11" id="filterpicker_repeater_time" onchange="set_repeater_statics_time()" >
                   					              
                                		  <option value=""><?php echo _('No Repeater filter')?></option>
                                  		 <optgroup label="<?php echo _('Repeater')?>">
@@ -5963,7 +5963,7 @@ function fnExcelexport(table)
            		 				</div>
            		 	
            		 	
-                				<div style="width: 97%; height: 500px;" id="canvas_grap_holder1">
+                				<div style="width: 97%; height: 500px;" id="canvas_graph_holder1">
                 					<canvas id="Graph1" width="400px" height="400px"></canvas>
                 					
                 				</div>	
@@ -6042,7 +6042,7 @@ function fnExcelexport(table)
            		 				</div>
            		 	
            		 	
-                				<div style="width: 97%; height: 500px;" id="canvas_grap_holder2"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="Graph_month" width="1217" height="500" style="display: block; width: 1217px; height: 500px;" class="chartjs-render-monitor"></canvas></div>	
+                				<div style="width: 97%; height: 500px;" id="canvas_graph_holder2"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="Graph_month" width="1217" height="500" style="display: block; width: 1217px; height: 500px;" class="chartjs-render-monitor"></canvas></div>	
                 				<br>
                 				</div>
                 			</div>
@@ -6075,7 +6075,7 @@ function fnExcelexport(table)
                     	<div class="card-body">
 						
 					
-        				<div style="width: 100%; height: 600px;" id="Graph_mo_grap_holder">
+        				<div style="width: 100%; height: 600px;" id="Graph_mo_graph_holder">
         					<canvas id="Graph_mo" width="800px" height="600px"></canvas>
         				</div>
         				
@@ -6205,7 +6205,7 @@ function fnExcelexport(table)
                                 </table>
                              
 
-                				<div style="position: relative; height:500px!important;" id="canvas_grap_holder3">
+                				<div style="position: relative; height:500px!important;" id="canvas_graph_holder3">
                 					<canvas class='img-responsive'  width="700px" height="500px" id="Graph3"></canvas>
            
 
@@ -6260,7 +6260,7 @@ function fnExcelexport(table)
                     	<div class="card-body">
 						
 					
-        				<div style="width: 100%; height: 600px;" id="Graph_ytg_grap_holder"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="Graph_tg_grap_mo" style="display: block; width: 1481px; height: 600px;" class="chartjs-render-monitor" width="400" height="600"></canvas></div>
+        				<div style="width: 100%; height: 600px;" id="Graph_ytg_graph_holder"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id="Graph_tg_graph_mo" style="display: block; width: 1481px; height: 600px;" class="chartjs-render-monitor" width="400" height="600"></canvas></div>
         				
                 				
                 				    			
@@ -6356,7 +6356,7 @@ function fnExcelexport(table)
     			<?php 
  
     			
-    			include 'las_call_box.php'?>
+    			include 'last_call_box.php'?>
     			</div>    			
     
     

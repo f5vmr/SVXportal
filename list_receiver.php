@@ -37,7 +37,7 @@ set_language();
 {
  cursor: pointer;
 }
-.normal_pounter
+.normal_pointer
 {
  cursor: default !important;
 }
@@ -294,7 +294,7 @@ function echolink_msg(msg)
 	
 	
 }
-function apeend_echolink(obj,stn)
+function append_echolink(obj,stn)
 {
 
 
@@ -668,11 +668,11 @@ $('tr[id^="row"]').each(function( index ) {
 	  res = elenent_id.replace("row", "");
 
 	  var nodes = data.nodes;
-	  var parent_paent;
-	  parent_paent =$( this).parent().attr('id');
+	  var parent_point;
+	  parent_point =$( this).parent().attr('id');
 	 
 
-	  if(typeof parent_paent === 'undefined' || parent_paent === null)
+	  if(typeof parent_point === 'undefined' || parent_point === null)
 	  {
 	   	  if(!nodes.hasOwnProperty(res))
     	  {
@@ -738,19 +738,19 @@ for(var k in data.nodes){
 	var printk =remove_notguiltychar(k)
 	
 	
-	data.nodes[k] =  apeend_echolink(data.nodes[k],k);
+	data.nodes[k] =  append_echolink(data.nodes[k],k);
 	
 	
 	//k=remove_notguiltychar(k);
 
-	  var cirkel_string = "<i id=\"icon_"+printk+"\"  class=\"far fa-circle\"></i>";
+	  var circle_string = "<i id=\"icon_"+printk+"\"  class=\"far fa-circle\"></i>";
 
 	  
 	  if(typeof  data.nodes[k].qth  != 'undefined' )
 	  {
 		  if(data.nodes[k].qth.length > 0)
 		  {
-		   cirkel_string = "<i id=\"icon_"+printk+"\" class=\"fas fa-plus-circle\"></i>";
+		   circle_string = "<i id=\"icon_"+printk+"\" class=\"fas fa-plus-circle\"></i>";
 		  }
 	  }
 
@@ -797,7 +797,7 @@ for(var k in data.nodes){
     	    	{
 
     			             	    	
-        		var new_html = '<td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="">'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>'
+        		var new_html = '<td>'+circle_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="">'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td></td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"> - </td>'
   
     			 			
 	 	  		$('#row'+printk+'').html(new_html);
@@ -811,7 +811,7 @@ for(var k in data.nodes){
     		}
     		else
     		{
-	 	  		$('#row'+printk+'').html('<td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="" >'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
+	 	  		$('#row'+printk+'').html('<td>'+circle_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td class="" >'+rssi_str+'<canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td><td id="freq_row'+printk+'"></td><td class="flex-nowrap" ><label id="minutes_'+data.nodes[k].tg+'">00</label>:<label id="seconds_'+data.nodes[k].tg+'">00</label></td>');
 	 	  		$('#row'+printk+'').addClass("font-weight-bold");	
 
 	 	  		
@@ -870,7 +870,7 @@ for(var k in data.nodes){
     	 {
     		 $("#minutes_"+data.nodes[k].tg).remove(); 
     		 $("#seconds_"+data.nodes[k].tg).remove(); 	 
-	  		$('#Reflectortable').append('<tbody class="table-striped" id="body-of-'+printk+'"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+cirkel_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td id="rssi_canas_'+printk+'"> <canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
+	  		$('#Reflectortable').append('<tbody class="table-striped" id="body-of-'+printk+'"><tr data-toggle="collapse" data-target="#group-of-'+printk+'" aria-expanded="false" aria-controls="group-of-'+printk+'" class="" id="row'+printk+'"><td>'+circle_string+'</td><td>'+k+'</td>'+'<td>'+data.nodes[k].NodeLocation+'</td>'+'<td>'+data.nodes[k].tg+'</td>'+'<td id="rssi_canas_'+printk+'"> <canvas id="bar_'+printk+'"></canvas></td><td id="receiver_'+printk+'">  </td><td id="value_k'+printk+'">0%</td></td><td id="freq_row'+printk+'"></td><td class="flex-nowrap"><label id="minutes_'+data.nodes[k].tg+'"></label><label id="seconds_'+data.nodes[k].tg+'"></label></td> </tr> </tbody>');
 	  		create_bar('bar_'+printk);
 	  		//create_bar_rssi('bar_RSSI_'+printk)
 	    }
@@ -1007,7 +1007,7 @@ for(var k in data.nodes){
               qth_html_add ='<td>'+sub_icon+'</td><td>'+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="1" id="td'+k+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas></p> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td>';
               $('#row'+remove_notguiltychar(name_id)).html(qth_html_add);
               $('#row'+remove_notguiltychar(name_id)).addClass("class_row");
-              $('#row'+remove_notguiltychar(name_id)).addClass("normal_pounter");
+              $('#row'+remove_notguiltychar(name_id)).addClass("normal_pointer");
               
   
               
@@ -1027,7 +1027,7 @@ for(var k in data.nodes){
 
          	
         
-              qth_html_add ='<tr class="table-striped  '+class_row+'  table-borderless normal_pounter" id="row'+name_id+'"  ><td>'+sub_icon+'</td><td>  '+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="" id="td'+printk+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td></tr>';
+              qth_html_add ='<tr class="table-striped  '+class_row+'  table-borderless normal_pointer" id="row'+name_id+'"  ><td>'+sub_icon+'</td><td>  '+qth_name+'</td><td>'+QTHlocation+'</td><td></td><td colspan="" id="td'+printk+'_'+qth_name+qth1+'"><canvas id="bar_'+printk+'_'+qth_name+qth1+'"></canvas> </td><td></td><td>'+parseInt(value)+'%</td><td>'+Frequency+'</td><td></td></tr>';
 
               $('#group-of-'+printk).append(qth_html_add);
    

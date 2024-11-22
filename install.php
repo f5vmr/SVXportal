@@ -100,7 +100,7 @@ if ($_POST) {
     <div class="container-fluid">
     
     <?php     
-        echo "<h2>Sucsess to add  database contents</h2> <br> <hr />";
+        echo "<h2>Success to add  database contents</h2> <br> <hr />";
         
         echo "<h3>Stage 1</h3>  Now add this to your <b>".getcwd()."/config.php</b>"
        ?>
@@ -259,7 +259,7 @@ screen  -d -m bash -c  'cd <?php echo getcwd()?>; watch -n 1  php logdeamon.php;
     				<div class="form-group">
     				<label for="formGroupExampleInput2">Svx recording folder</label> <input
     					type="text" class="form-control" name="recordingfolder" id="formGroupExampleInput2"
-    					value="<?php echo getcwd()?>svxrecording">
+    					value="<?php echo getcwd()?>svx/recording">
     			</div>		
  
  

@@ -32,18 +32,18 @@ if($_GET['filter'])
     }
     else
     {
-        $ceked_val = explode(",", $filter);
+        $checked_val = explode(",", $filter);
         $filter="";
         $i =0;
        
-        foreach($ceked_val as $val) 
+        foreach($checked_val as $val) 
         {
 
             
             switch($val)
             {
                 case "1":
-                    if($i > 0 && count($ceked_val) != $i )
+                    if($i > 0 && count($checked_val) != $i )
                     {
                         $filter .= " OR ";
                     }
@@ -53,7 +53,7 @@ if($_GET['filter'])
 
                     break;
                 case "2":
-                    if($i > 0 && count($ceked_val) != $i )
+                    if($i > 0 && count($checked_val) != $i )
                     {
                         $filter .= " OR ";
                     }
@@ -63,7 +63,7 @@ if($_GET['filter'])
                     break;
 
                 case "3":
-                    if($i > 0 && count($ceked_val) != $i )
+                    if($i > 0 && count($checked_val) != $i )
                     {
                         $filter .= " OR ";
                     }
@@ -177,7 +177,7 @@ if(!$_GET['only_table'])
 <?php  
 
 $filter = $conn->real_escape_string($_GET['filter']);
-$ceked_val_arr = explode(",", $filter);
+$checked_val_arr = explode(",", $filter);
 
 
        
@@ -186,14 +186,14 @@ $ceked_val_arr = explode(",", $filter);
 
           <div class="form-check">
        
-              <input class="form-check-input"  name="Log_filter_checkbox[]" type="checkbox" onclick="get_log_filter()" value="1" id="defaultCheck1" <?php  if (in_array("1", $ceked_val_arr)) echo "checked='checked'";?>:>
+              <input class="form-check-input"  name="Log_filter_checkbox[]" type="checkbox" onclick="get_log_filter()" value="1" id="defaultCheck1" <?php  if (in_array("1", $checked_val_arr)) echo "checked='checked'";?>:>
               <label class="form-check-label" for="defaultCheck1" >
             <?php echo _('Repeater actions');?>
               </label>
             </div>
             <div class="form-check">
       
-              <input class="form-check-input" name="Log_filter_checkbox[]" onclick="get_log_filter()" type="checkbox" value="2" onclick="get_log_filter()" <?php  if (in_array("2", $ceked_val_arr)) echo "checked='checked'";?> id="defaultCheck2" >
+              <input class="form-check-input" name="Log_filter_checkbox[]" onclick="get_log_filter()" type="checkbox" value="2" onclick="get_log_filter()" <?php  if (in_array("2", $checked_val_arr)) echo "checked='checked'";?> id="defaultCheck2" >
               <label class="form-check-label" for="defaultCheck2">
               <?php echo _('S-values');?>
               </label>
@@ -201,7 +201,7 @@ $ceked_val_arr = explode(",", $filter);
 
             <div class="form-check">
        
-              <input class="form-check-input" name="Log_filter_checkbox[]" onclick="get_log_filter()" type="checkbox" value="3" onclick="get_log_filter()" id="defaultCheck2" <?php  if (in_array("3", $ceked_val_arr)) echo "checked='checked'";?> >
+              <input class="form-check-input" name="Log_filter_checkbox[]" onclick="get_log_filter()" type="checkbox" value="3" onclick="get_log_filter()" id="defaultCheck2" <?php  if (in_array("3", $checked_val_arr)) echo "checked='checked'";?> >
               <label class="form-check-label" for="defaultCheck2">
                 <?php echo _('Reflector');?>
               </label>

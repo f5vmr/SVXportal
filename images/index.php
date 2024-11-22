@@ -1772,8 +1772,8 @@ function process_json_reflector()
 function get_statistics()
 {
 
-	$('#canvas_grap_holder').html("");
-	$('#canvas_grap_holder').html('<canvas id="Graph" width="400px" height="400px"></canvas>');
+	$('#canvas_graph_holder').html("");
+	$('#canvas_graph_holder').html('<canvas id="Graph" width="400px" height="400px"></canvas>');
 	var canvas = document.getElementById('Graph')
 	canvas.width = canvas.width; 
 	var ctx = document.getElementById('Graph').getContext('2d');
@@ -1898,8 +1898,8 @@ var use_hour=0;
 function get_statistics_hour()
 {
 
-	$('#canvas_grap_holder1').html("");
-	$('#canvas_grap_holder1').html('<canvas id="Graph1" width="400px" height="400px"></canvas>');
+	$('#canvas_graph_holder1').html("");
+	$('#canvas_graph_holder1').html('<canvas id="Graph1" width="400px" height="400px"></canvas>');
 	var canvas = document.getElementById('Graph1')
 	canvas.width = canvas.width; 
 	var ctx = document.getElementById('Graph1').getContext('2d');
@@ -2007,32 +2007,32 @@ function get_statistics_hour()
 
 			if(show_all_tg ==1 )
 			{
-				var talkgropoup_array = new Array();
+				var talkgroup_array = new Array();
 
 				  for (time = 0; time < 24;time++) 
 				  {
 					  
 					  for(var talkgroup in jsondata[time].TG)
 					  {
-						  if(talkgropoup_array[talkgroup] == 'undefined' || !(talkgropoup_array[talkgroup] instanceof Array) )
+						  if(talkgroup_array[talkgroup] == 'undefined' || !(talkgroup_array[talkgroup] instanceof Array) )
 						  {
-						 	 talkgropoup_array[talkgroup]= new Array();
+						 	 talkgroup_array[talkgroup]= new Array();
 						  }
 						  
 						  if(jsondata[time].TG[talkgroup] <= 0)
 						  {
-							  talkgropoup_array[talkgroup][time] ={x: time, y:0};
+							  talkgroup_array[talkgroup][time] ={x: time, y:0};
 						  }
 						  else
 						  {
-							  talkgropoup_array[talkgroup][time] = {x:time  ,y: jsondata[time].TG[talkgroup]};
+							  talkgroup_array[talkgroup][time] = {x:time  ,y: jsondata[time].TG[talkgroup]};
 						  }
 					  }
 						  
 
 				  }
 
-				  for(var talkgroup in talkgropoup_array)
+				  for(var talkgroup in talkgroup_array)
 				  {
 
 				    	if(tg_colours[talkgroup] == null)
@@ -2050,7 +2050,7 @@ function get_statistics_hour()
 		    					backgroundColor: tg_colours[talkgroup]['color'].trim(),
 		    					borderColor:  tg_colours[talkgroup]['color'].trim(),
 		    					fill: false,
-		    					data: talkgropoup_array[talkgroup]
+		    					data: talkgroup_array[talkgroup]
 		    				};
 		
 		    		
@@ -2068,7 +2068,7 @@ function get_statistics_hour()
 				  window.myLine.update();
 
 				  
-				  //console.log(talkgropoup_array[240]);
+				  //console.log(talkgroup_array[240]);
 
 				
 				
@@ -2123,9 +2123,9 @@ function get_station_chat()
 			  	Stations_colour[j] = Hex_random_css_colour();
 			  }
 			  var preccent= (((Stations_json.data[j].time)/86400) * 100).toFixed(3);
-			  var preccent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
+			  var percent_network= (((Stations_json.data[j].time)/Stations_json.total_seconds) * 100).toFixed(3);
 			  
-			  $("#nodes_activity").append('<tr><td>'+Stations_json.data[j].call+'</td><td>'+Stations_json.data[j].Second+"</td><td>"+preccent_network+"%</td><td>"+preccent+"%</td><td>"+Stations_json.data[j].receiver+"</td><tr>");
+			  $("#nodes_activity").append('<tr><td>'+Stations_json.data[j].call+'</td><td>'+Stations_json.data[j].Second+"</td><td>"+percent_network+"%</td><td>"+preccent+"%</td><td>"+Stations_json.data[j].receiver+"</td><tr>");
 			  j++;
 
 			 
@@ -2660,7 +2660,7 @@ function bind_key_statistics()
                     <div class="container-fluid">
                         <div class="row">
                         	<div class="col-md-6">
-                				<div style="width: 80%; height: 500px;" id="canvas_grap_holder">
+                				<div style="width: 80%; height: 500px;" id="canvas_graph_holder">
                 					<canvas id="Graph" width="400px" height="400px"></canvas>
                 				</div>
                 			</div>
@@ -2675,7 +2675,7 @@ function bind_key_statistics()
                     <div class="container-fluid">
                         <div class="row">
                         	<div class="col-md-12">
-                				<div style="width: 80%; height: 500px;" id="canvas_grap_holder1">
+                				<div style="width: 80%; height: 500px;" id="canvas_graph_holder1">
                 					<canvas id="Graph1" width="400px" height="400px"></canvas>
                 				</div>
                 			</div>
