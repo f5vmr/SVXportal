@@ -11,7 +11,7 @@ CREATE TABLE `ReflectorNodeLOG_History` (
   `IsTalker` int(20) NOT NULL,
   `Time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Talktime` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 
@@ -20,7 +20,7 @@ ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Talktime`);
 
 ALTER TABLE `Information_page` ADD `GrafanaUrl` TEXT NOT NULL AFTER `Image`; 
 
-ALTER TABLE `Information_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET latin1 COLLATE latin1_general_ci NULL DEFAULT NULL; 
+ALTER TABLE `Information_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL; 
 
 
 ALTER TABLE `users` ADD `image_url` VARCHAR(255) NULL DEFAULT NULL AFTER `email`; 
@@ -35,6 +35,6 @@ ALTER TABLE `users` ADD `Reset_token` VARCHAR(99) NOT NULL AFTER `image_url`;
 UPDATE `Settings` SET `value` = '2.5' WHERE `Settings`.`Define` = 'PORTAL_VERSION'; 
 
 
-ALTER TABLE `users` CHANGE `Reset_token` `Reset_token` VARCHAR(99) CHARACTER SET latin1 COLLATE latin1_general_ci NULL; 
+ALTER TABLE `users` CHANGE `Reset_token` `Reset_token` VARCHAR(99) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL; 
 
 ALTER TABLE `ReflectorStations` CHANGE `ID` `ID` INT NOT NULL AUTO_INCREMENT; 

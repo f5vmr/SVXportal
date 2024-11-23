@@ -26,7 +26,7 @@ CREATE TABLE `ReflectorNodeLOG_History` (
   `IsTalker` int(20) NOT NULL,
   `Time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Talktime` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Index f�r dumpade tableer
@@ -56,7 +56,7 @@ ALTER TABLE `ReflectorNodeLog` ADD INDEX(`Talktime`);
 
 ALTER TABLE `Information_page` ADD `GrafanaUrl` TEXT NOT NULL AFTER `Image`; 
 
-ALTER TABLE `Information_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET latin1 COLLATE latin1_general_ci NULL DEFAULT NULL; 
+ALTER TABLE `Information_page` CHANGE `GrafanaUrl` `GrafanaUrl` TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL; 
 
 
 ALTER TABLE `users` ADD `image_url` VARCHAR(255) NULL DEFAULT NULL AFTER `email`; 
@@ -79,7 +79,7 @@ CREATE TABLE `Station_day_statistic` (
   `minsiglev` float NOT NULL,
   `avrige` float NOT NULL,
   `maxsiglev` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Statistcs for receiver day by day';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Statistcs for receiver day by day';
 
 --
 -- Index f�r dumpade tableer

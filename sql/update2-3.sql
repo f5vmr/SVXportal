@@ -20,13 +20,13 @@ CREATE TABLE `Settings` (
   `Name` text NOT NULL,
   `type` int(11) NOT NULL,
    PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `users` ADD PRIMARY KEY(`id`); 
 ALTER TABLE `users` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT; 
 
 
-ALTER TABLE `Settings` CHANGE `Define` `Define` VARCHAR(80) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL; 
+ALTER TABLE `Settings` CHANGE `Define` `Define` VARCHAR(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL; 
 ALTER TABLE `Settings` ADD INDEX(`Define`); 
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES (NULL, 'PORTAL_VERSION', '2.3', 'portal version number ', '1'); 

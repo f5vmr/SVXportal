@@ -28,7 +28,7 @@ CREATE TABLE `Station_day_statistic` (
   `minsiglev` float NOT NULL,
   `avrige` float NOT NULL,
   `maxsiglev` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Statistcs for receiver day by day';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Statistcs for receiver day by day';
 
 -- --------------------------------------------------------
 

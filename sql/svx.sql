@@ -30,7 +30,7 @@ CREATE TABLE `Coverage` (
   `Id` int(11) NOT NULL,
   `Name` text NOT NULL,
   `Radiomobilestring` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -42,7 +42,7 @@ CREATE TABLE `Daylog` (
   `ID` int(11) NOT NULL,
   `Repeater` int(11) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,7 @@ CREATE TABLE `dtmf_command` (
   `Command` varchar(20) NOT NULL,
   `Description` text NOT NULL,
   `Category` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,7 @@ CREATE TABLE `filter` (
   `JSON` text NOT NULL,
   `filter` text NOT NULL,
   `Name` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE `Information_page` (
   `Html` text NOT NULL,
   `Hardware_page` text NOT NULL,
   `Image` varchar(90) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -99,7 +99,7 @@ CREATE TABLE `Operation_log` (
   `Type` int(11) NOT NULL,
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -120,7 +120,7 @@ CREATE TABLE `ReflectorNodeLog` (
   `IsTalker` int(20) NOT NULL,
   `Time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Talktime` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -130,14 +130,14 @@ CREATE TABLE `ReflectorNodeLog` (
 
 CREATE TABLE `ReflectorStations` (
   `ID` int(11) NOT NULL,
-  `Callsign` varchar(40) CHARACTER SET utf8 COLLATE utf8_swedish_ci NOT NULL,
+  `Callsign` varchar(40) CHARACTER SET utf8 COLLATE utf8mb4_general_ci NOT NULL,
   `Location` text NOT NULL,
   `Colour` text,
   `Last_Seen` datetime DEFAULT NULL,
   `Station_Down` int(11) NOT NULL,
   `Station_Down_timmer_count` int(11) NOT NULL,
   `Monitor` int(11) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,7 @@ CREATE TABLE `repeater` (
   `Openings` int(11) NOT NULL,
   `Nag` int(11) NOT NULL,
   `Name` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -164,7 +164,7 @@ CREATE TABLE `Settings` (
   `value` text NOT NULL,
   `Name` text NOT NULL,
   `type` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping all Data in table `Settings`
@@ -198,7 +198,7 @@ CREATE TABLE `Talkgroup` (
   `TG` int(11) NOT NULL,
   `TXT` text NOT NULL,
   `Colour` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -216,7 +216,7 @@ CREATE TABLE `users` (
   `lastname` varchar(100) NOT NULL,
   `image_url` varchar(100),
   `Reset_token` varchar(100)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping all Data in table `users`
@@ -236,7 +236,7 @@ CREATE TABLE `User_Permission` (
   `station_id` int(11) NOT NULL,
   `User_id` int(11) NOT NULL,
   `RW` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Index för dumpade tableer
@@ -433,7 +433,7 @@ CREATE TABLE `Station_day_statistic` (
   `minsiglev` float NOT NULL,
   `avrige` float NOT NULL,
   `maxsiglev` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Statistcs for receiver day by day';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Statistcs for receiver day by day';
 
 -- --------------------------------------------------------
 

@@ -13,7 +13,7 @@ CREATE TABLE `dtmf_command` (
   `station_name` varchar(90) NOT NULL,
   `Command` varchar(20) NOT NULL,
   `Description` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Index för table `dtmf_command`
@@ -44,7 +44,7 @@ CREATE TABLE `Information_page` (
   `id` int(11) NOT NULL,
   `station_name` varchar(20) NOT NULL,
   `Html` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Index för dumpade tableer
@@ -91,7 +91,7 @@ CREATE TABLE `Operation_log` (
   `station_id` int(11) NOT NULL,
   `Date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Index för dumpade tableer
@@ -129,7 +129,7 @@ CREATE TABLE `User_Permission` (
   `station_id` int(11) NOT NULL,
   `User_id` int(11) NOT NULL,
   `RW` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 

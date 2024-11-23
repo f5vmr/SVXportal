@@ -30,7 +30,7 @@ CREATE TABLE `Coverage` (
   `Id` int(11) NOT NULL,
   `Name` text NOT NULL,
   `Radiomobilestring` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping all Data in table `Coverage`
@@ -56,7 +56,7 @@ CREATE TABLE `Daylog` (
   `ID` int(11) NOT NULL,
   `Repeater` int(11) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping all Data in table `Daylog`
@@ -787,7 +787,7 @@ CREATE TABLE `filter` (
   `JSON` text NOT NULL,
   `filter` text NOT NULL,
   `Name` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping all Data in table `filter`
@@ -810,7 +810,7 @@ CREATE TABLE `repeater` (
   `Openings` int(11) NOT NULL,
   `Nag` int(11) NOT NULL,
   `Name` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping all Data in table `repeater`
@@ -832,7 +832,7 @@ CREATE TABLE `Talkgroup` (
   `TG` int(11) NOT NULL,
   `TXT` text NOT NULL,
   `Colour` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping all Data in table `Talkgroup`
