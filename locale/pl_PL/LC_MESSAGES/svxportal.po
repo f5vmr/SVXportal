@@ -1521,8 +1521,8 @@ msgid "Svxlink updated"
 msgstr "Svxlink zaktualizowany"
 
 #: request_reflector_login.php:545
-msgid "New svxlink version avabel"
-msgstr "Nowa wersja svxlink avabel"
+msgid "New svxlink version available"
+msgstr "Nowa wersja svxlink available"
 
 #: request_reflector_login.php:548
 msgid "Node disconnected"

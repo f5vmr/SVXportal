@@ -1440,7 +1440,7 @@ msgid "Svxlink updated"
 msgstr "Svxlink mise à jour"
 
 #: request_reflector_login.php:530
-msgid "New svxlink version avabel"
+msgid "New svxlink version available"
 msgstr "Nouvelle version svxlink disponible"
 
 #: request_reflector_login.php:533

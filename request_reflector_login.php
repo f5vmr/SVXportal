@@ -543,7 +543,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 <i class="fas fa-circle text-success"></i> <?php echo _('Svxlink updated');?>     
  </span>
 <span class="mr-2">
-<i class="fas fa-circle text-warning"></i> <?php echo _('New svxlink version avabel');?>                        
+<i class="fas fa-circle text-warning"></i> <?php echo _('New svxlink version available');?>                        
  </span>
  <span class="mr-2">
 <i class="fas fa-circle text-info"></i> <?php echo _('Node disconnected');?>                        

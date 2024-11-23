@@ -1444,7 +1444,7 @@ msgid "Svxlink updated"
 msgstr "Svxlink je ažuriran"
 
 #: request_reflector_login.php:530
-msgid "New svxlink version avabel"
+msgid "New svxlink version available"
 msgstr "Dostupna nova svxlink verzija"
 
 #: request_reflector_login.php:533
