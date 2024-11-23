@@ -1714,7 +1714,7 @@ ul.dropdown-lr {
        		 <a href="#" class="dropdown-item"><?php echo _('Select your language')?></a>
        		     <div class="dropdown-divider"></div>
         	<a onclick="load_language('bs_BA')" class="dropdown-item table-primary" href="#"><img   src="images/flags/boh.svg" width="30px" alt="bs_BA"> <?php echo _('Bosnian')?></a>
-            <a onclick="load_language('en_UK')" class="dropdown-item table-primary" href="#"><img   src="images/flags/gb.svg" width="30px" alt="GB"> <?php echo _('English')?></a>
+            <a onclick="load_language('en_GB')" class="dropdown-item table-primary" href="#"><img   src="images/flags/gb.svg" width="30px" alt="GB"> <?php echo _('English')?></a>
             <a onclick="load_language('fr_FR')" class="dropdown-item table-primary" href="#"><img  src="images/flags/fr.svg" width="30px" alt="it"> <?php echo _('French')?></a>
            	<a onclick="load_language('de_DE')" class="dropdown-item table-primary" href="#"><img  src="images/flags/de.svg" width="30px" alt="it"> <?php echo _('German')?></a>
             <a onclick="load_language('it_IT')" class="dropdown-item table-primary" href="#"><img  src="images/flags/it.svg" width="30px" alt="it"> <?php echo _('Italian')?></a>
@@ -1943,7 +1943,7 @@ ul.dropdown-lr {
 <li>
 <select class="browser-default custom-select custom-select-lg mb-3" onchange="load_language(this.value)">
   <option  selected value=""  data-content='<span class="flag-icon flag-icon-us" ></span> English'>- Select Language -</option>
-  <option  value="en_UK"  data-content='<span class="flag-icon flag-icon-us" ></span> English'>English</option>
+  <option  value="en_GB"  data-content='<span class="flag-icon flag-icon-us" ></span> English'>English</option>
   <option  value="sv_SE"   data-content='<span class="flag-icon flag-icon-se" ></span> Swedish'><i class="flag-icon flag-icon-se"></i>Svenska</option>
   <option  value="nb_NO"data-content='<span class="flag-icon flag-icon-mx"></span> Norwegian'>Norsk</option>
 </select>

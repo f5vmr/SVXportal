@@ -568,7 +568,7 @@ function login_form()
 <li>
 <select class="browser-default custom-select custom-select-lg mb-3" onchange="load_language(this.value)">
   <option  selected value=""  data-content='<span class="flag-icon flag-icon-us" ></span> English'>- Select Language -</option>
-  <option  value="en_UK"  data-content='<span class="flag-icon flag-icon-us" ></span> English'>English</option>
+  <option  value="en_GB"  data-content='<span class="flag-icon flag-icon-us" ></span> English'>English</option>
   <option  value="sv_SE"   data-content='<span class="flag-icon flag-icon-se" ></span> Swedish'><i class="flag-icon flag-icon-se"></i>Svenska</option>
   <option  value="nb_NO"data-content='<span class="flag-icon flag-icon-mx"></span> Norwegian'>Norsk</option>
 </select>
@@ -586,7 +586,7 @@ function login_form()
 
 <li style="margin-left: 10px">
 
-    <img  onclick="load_language('en_UK')" src="images/flags/gb.svg" width="30px" alt="GB">
+    <img  onclick="load_language('en_GB')" src="images/flags/gb.svg" width="30px" alt="GB">
 
     
     <img onclick="load_language('sv_SE')" src="images/flags/se.svg" width="30px" alt="Se">
