@@ -55,7 +55,7 @@ $start_date_defined ="2020-01-12";
 #$mqtt_TLS = "True";
 
 $Use_translate_on_info_page = true;
-$Use_translate_default_lang = "en_US";
+$Use_translate_default_lang = "en_GB";
 
 //define("USE_REDIS", true);
 //define("USE_REDIS_Multiuite_index", "HAMRadio");
