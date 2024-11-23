@@ -1,9 +1,9 @@
 <?php
 _('Hide the language bar');
-_('Use Custom header in sidebar');
+_('Use Custom Header in sidebar');
 _('External documentation page');
 _('Use login for player');
-_('Use external dokumentation page');
+_('Use external documentation page');
 _('The default talkgroup for Recording statistic');
 _('Send an email to sysop when the node goes down');
 _('Mail to system administrator');

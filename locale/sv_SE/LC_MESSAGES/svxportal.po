@@ -475,20 +475,20 @@ msgid "Hide the language bar"
 msgstr "D�lj spr�k f�ltet"
 
 #: database_text.php:3
-msgid "Use Custom header in sidebar"
+msgid "Use Custom Header in sidebar"
 msgstr "Anv�nd anpassad rubrik i sidof�ltet"
 
 #: database_text.php:4
 msgid "External documentation page"
-msgstr "Extern dokumentationssida"
+msgstr "Extern documentationssida"
 
 #: database_text.php:5
 msgid "Use login for player"
 msgstr "Anv�nd inloggning f�r spelare"
 
 #: database_text.php:6
-msgid "Use external dokumentation page"
-msgstr "Anv�nd extern dokumentationssida"
+msgid "Use external documentation page"
+msgstr "Anv�nd extern documentationssida"
 
 #: database_text.php:7
 msgid "The default talkgroup for Recording statistic"

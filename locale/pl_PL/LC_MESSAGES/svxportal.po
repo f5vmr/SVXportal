@@ -503,7 +503,7 @@ msgid "Hide the language bar"
 msgstr "Ukryj pasek z językiem"
 
 #: database_text.php:3
-msgid "Use Custom header in sidebar"
+msgid "Use Custom Header in sidebar"
 msgstr "Użyj niestandardowy HEADER w pasku"
 
 #: database_text.php:4
@@ -516,7 +516,7 @@ msgid "Use login for player"
 msgstr "Użyj loginu dla odtwarzacza"
 
 #: database_text.php:6
-msgid "Use external dokumentation page"
+msgid "Use external documentation page"
 msgstr "Użyj zewnętrznej strony dokumentacji"
 
 #: database_text.php:7

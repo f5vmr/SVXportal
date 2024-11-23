@@ -458,7 +458,7 @@ msgid "Hide the language bar"
 msgstr "Masquer bar de langue"
 
 #: database_text.php:3
-msgid "Use Custom header in sidebar"
+msgid "Use Custom Header in sidebar"
 msgstr "Utiliser un entête personnel"
 
 #: database_text.php:4
@@ -470,7 +470,7 @@ msgid "Use login for player"
 msgstr "Connexion pour le lecteur"
 
 #: database_text.php:6
-msgid "Use external dokumentation page"
+msgid "Use external documentation page"
 msgstr "Utiliser documentation externe"
 
 #: database_text.php:7

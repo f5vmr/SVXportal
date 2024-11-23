@@ -460,7 +460,7 @@ msgid "Hide the language bar"
 msgstr "Dil menüsünü gizle"
 
 #: database_text.php:3
-msgid "Use Custom header in sidebar"
+msgid "Use Custom Header in sidebar"
 msgstr "Kenar çubuğunda özel üstbilgi kullan"
 
 #: database_text.php:4
@@ -472,7 +472,7 @@ msgid "Use login for player"
 msgstr "player ı kullanmak için giriş yapmalısınız"
 
 #: database_text.php:6
-msgid "Use external dokumentation page"
+msgid "Use external documentation page"
 msgstr "Harici dokümantasyon sayfası kullan"
 
 #: database_text.php:7

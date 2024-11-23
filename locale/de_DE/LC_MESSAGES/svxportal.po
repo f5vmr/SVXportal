@@ -458,20 +458,20 @@ msgid "Hide the language bar"
 msgstr "Verstecke die Sprachleiste"
 
 #: database_text.php:3
-msgid "Use Custom header in sidebar"
+msgid "Use Custom Header in sidebar"
 msgstr "Verwenden Sie die benutzerdefinierte Kopfzeile in der Seitenleiste"
 
 #: database_text.php:4
 msgid "External documentation page"
-msgstr "Externe Dokumentationsseite"
+msgstr "Externe documentationsseite"
 
 #: database_text.php:5
 msgid "Use login for player"
 msgstr "Verwenden Sie den Login für den Player"
 
 #: database_text.php:6
-msgid "Use external dokumentation page"
-msgstr "Verwenden Sie eine externe Dokumentationsseite"
+msgid "Use external documentation page"
+msgstr "Verwenden Sie eine externe documentationsseite"
 
 #: database_text.php:7
 msgid "The default talkgroup for Recording statistic"

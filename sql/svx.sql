@@ -171,12 +171,12 @@ CREATE TABLE `Settings` (
 --
 
 INSERT INTO `Settings` (`id`, `Define`, `value`, `Name`, `type`) VALUES
-(1, 'PORTAL_VERSION', '2.4', 'protal version number ', 1),
+(1, 'PORTAL_VERSION', '2.4', 'portal version number ', 1),
 (2, 'HIDE_LANGUAGE_BAR', '0', 'Hide the language bar', 1),
-(3, 'USE_CUSTOM_SIDEBAR_HEADER', '0', 'Use Custom header in sidebar', 1),
+(3, 'USE_CUSTOM_SIDEBAR_HEADER', '0', 'Use Custom Header in sidebar', 1),
 (4, 'iframe_documentation_url', 'http://sk3w.se/dokuwiki/doku.php?id=svxreflector&do=export_xhtml', 'External documentation page', 2),
 (5, 'USE_LOGIN', '0', 'Use login for player', 1),
-(6, 'USE_EXTERNAL_URL', '1', 'Use external dokumentation page', 1),
+(6, 'USE_EXTERNAL_URL', '1', 'Use external documentation page', 1),
 (7, 'PLAYER_TALKGROUP_DEFAULT', '240', 'The default talkgroup for Recording statistic', 2),
 (8, 'SEND_MAIL_TO_SYSOP', '0', 'Send an email to sysop when the node goes down', 1),
 (9, 'SYSMASTER_MAIL', 'info@a.se', 'Mail to system administrator', 2),

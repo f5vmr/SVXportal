@@ -456,7 +456,7 @@ msgid "Hide the language bar"
 msgstr "Skjul language-baren"
 
 #: database_text.php:3
-msgid "Use Custom header in sidebar"
+msgid "Use Custom Header in sidebar"
 msgstr "Bruk egendefinert topptekst i sidefeltet"
 
 #: database_text.php:4
@@ -468,7 +468,7 @@ msgid "Use login for player"
 msgstr "Bruk innlogging for spiller"
 
 #: database_text.php:6
-msgid "Use external dokumentation page"
+msgid "Use external documentation page"
 msgstr "Bruk ekstern dokumentasjonsside"
 
 #: database_text.php:7
