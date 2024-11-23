@@ -1407,7 +1407,7 @@ msgstr "Klienter"
 #: indexa.php:901 indexa.php:1027 indexa.php:1036 indexa.php:1070
 #: indexa.php:1259 indexa.php:3077
 msgid "Toggle menu"
-msgstr "D�lj meny "
+msgstr "D�lj menu "
 
 #: index_old.php:820 indexa.php:821
 msgid "QSO Monitor"
@@ -1797,4 +1797,4 @@ msgstr "Avbryt"
 #~ msgstr "Svxportal log"
 
 #~ msgid "Toggle menu<"
-#~ msgstr "ta bort meny"
+#~ msgstr "ta bort menu"

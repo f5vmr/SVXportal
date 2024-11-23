@@ -82,10 +82,10 @@ function go_to_station(station)
   $('#Reflector').removeClass("active");
   $('#stationinfo').tab("show");
   Load_station_intofmation(station);
-  fix_sidemeny_active('stationinfo');
+  fix_sidemenu_active('stationinfo');
 }
 
-function fix_sidemeny_active(current)
+function fix_sidemenu_active(current)
 {
 	$('#sidebar-wrapper a').removeClass('active');
 
@@ -331,7 +331,7 @@ $(document).ready(function(){
 				      $( "#wrapper" ).removeClass( "toggled" );
 				}
 
-				fix_sidemeny_active(hash[1]);
+				fix_sidemenu_active(hash[1]);
 				
 
 

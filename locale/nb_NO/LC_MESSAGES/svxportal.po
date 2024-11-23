@@ -953,7 +953,7 @@ msgstr "Aktive noder"
 
 #: index.php:1605 index.php:2003 index1.php:1350
 msgid "Action menu"
-msgstr "Handlingsmeny"
+msgstr "Handlingsmenu"
 
 #: index.php:1629 index1.php:253 index_old.php:209 indexa.php:210
 msgid "Is talking"
@@ -1282,7 +1282,7 @@ msgstr "Reflectorklienter"
 #: indexa.php:901 indexa.php:1027 indexa.php:1036 indexa.php:1070
 #: indexa.php:1259 indexa.php:3077
 msgid "Toggle menu"
-msgstr "Skjul meny"
+msgstr "Skjul menu"
 
 #: index_old.php:820 indexa.php:821
 msgid "QSO Monitor"
