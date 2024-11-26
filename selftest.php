@@ -108,84 +108,38 @@ else
 }
 
 echo "<h2>Test 2 Reflector </h2><br />";
+$serveraddress = "http://192.168.1.213:8181/status";
 
-
-$ctx = stream_context_create(array(
-    'http' => array(
-        'timeout' => 1200,  //1200 Seconds is 20 Minutes
+$ctx = stream_context_create([
+    'http' => [
+        'timeout' => 10,
         'ignore_errors' => true
-    ),
-    'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false
-    )
-));
-echo "Testing connection to reflector at: http://192.168.1.213:8181<br/>";
-$json_test = file_get_contents($serveraddress, false, $ctx);
-echo "Data received from reflector:<br/>";
-var_dump($json_test);
+    ]
+]);
 
-$json_test = file_get_contents($serveraddress, false, $ctx);
-var_dump($json_test);
-echo "response length: " . strlen($json_test);
-echo "<br />";
-$response_headers = $http_response_header ?? [];
-if($json_test == "")
-{
-    echo "<b class='text-danger'>Fail</b> no contact with proxy check serveraddress in config.php <b>HTTP_SRV_PORT</b> in svxreflector.conf and <b>reflector_proxy/config.php url fail</b> ";
+try {
+    $json_test = file_get_contents($serveraddress, false, $ctx);
+    echo "Connection to reflector: ";
     
+    if($json_test) {
+        $data = json_decode($json_test);
+        if ($data !== null) {
+            echo "<b class='text-success'>Success</b><br>";
+            echo "<p>Found following stations:</p>";
+            echo "<ul>";
+            foreach($data->nodes as $st => $station) {
+                echo "<li>".$st."</li>";
+            }
+            echo "</ul>";
+        }
+    } else {
+        echo "<b class='text-danger'>Failed to connect to reflector</b><br>";
+        $fault_counter++;
+    }
+} catch (Exception $e) {
+    echo "<b class='text-danger'>Error: " . $e->getMessage() . "</b>";
     $fault_counter++;
-    
 }
-else
-if($json_test === false) {
-    $status_line = $response_headers[0] ?? 'No response';
-    echo "<b class='text-danger'>Connection details: " . $status_line . "</b>";
-}
-{
-    $data = @json_decode($json_test);
-    
-    if ($data === null
-        && json_last_error() !== JSON_ERROR_NONE) {
-            echo "<b class='text-danger'>Fail</b> Proxy not working check  s <b>HTTP_SRV_PORT</b> in svxreflector.conf and <b>reflector_proxy/config.php</b> ";
-            $fault_counter++;
-            
-   }
-   else
-   {
-       
-
-       echo "<b class='text-success'>Success</b> json decoded <br /><br />";
-
-       
-
-       $json_data = file_get_contents($serveraddress,false,$context);
-       
-       
-       //$json_data = file_get_contents($serveraddress);
-       $json_data = iconv("utf-8", "utf-8//ignore", $json_data);
-       $data = json_decode($json_data);
-       
-       echo "<p>Found following stations</p>";
-       echo "<ul>";
-       
-       foreach($data->nodes as $st => $station)
-       {
-       
-           echo "<li>".$st."</li>";
-
-       }
-       echo "</ul>";
-       
-       
-   }
-       
-        
-        
-    
- 
-}
-
 
 if($fault_counter == 0)
 {
