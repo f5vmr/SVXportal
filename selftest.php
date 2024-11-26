@@ -86,7 +86,8 @@ $fault_counter =0;
 
 
 <?php 
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 echo "<h2>Test 1 Database</h2><br />";
 
 if ($result = $link->query("SELECT Define FROM `Settings`")) {
@@ -124,7 +125,8 @@ echo "<br />";
 echo $ctx;
 echo "<br />";
 $json_test = file_get_contents($serveraddress, false, $ctx);
-echo $json_test;
+var_dump($json_test);
+echo "response length: " . strlen($json_test);
 echo "<br />";
 $response_headers = $http_response_header ?? [];
 if($json_test == "")
