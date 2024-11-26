@@ -134,7 +134,6 @@ if($json_test === false) {
     $status_line = $response_headers[0] ?? 'No response';
     echo "<b class='text-danger'>Connection details: " . $status_line . "</b>";
 }
-else
 {
     $data = @json_decode($json_test);
     
