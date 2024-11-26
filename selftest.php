@@ -109,16 +109,20 @@ else
 echo "<h2>Test 2 Reflector </h2><br />";
 
 
+$serveraddress = "http://192.168.1.213:8181/status";
 $ctx = stream_context_create(array(
     'http' => array(
-        'timeout' => 1200,  //1200 Seconds is 20 Minutes
-        'header' => 'Origin: http://portal.svxlink.uk:84'
-    ),
-    'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false
+        'timeout' => 1200,
+        'header' => [
+            'Origin: http://portal.svxlink.uk:84',
+            'Accept: application/json'
+        ],
+        'method' => 'GET'
     )
 ));
+
+$json_test = file_get_contents($serveraddress, false, $ctx);
+var_dump($json_test); // Let's see exactly what we're getting back
 
 $json_test = file_get_contents($serveraddress, false, $ctx);
 $response_headers = $http_response_header ?? [];
