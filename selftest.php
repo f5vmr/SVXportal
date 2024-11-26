@@ -124,6 +124,8 @@ echo "<br />";
 echo $ctx;
 echo "<br />";
 $json_test = file_get_contents($serveraddress, false, $ctx);
+echo $json_test;
+echo "<br />";
 $response_headers = $http_response_header ?? [];
 if($json_test == "")
 {
