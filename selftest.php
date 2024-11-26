@@ -120,7 +120,7 @@ $ctx = stream_context_create(array(
         'verify_peer_name' => false
     )
 ));
-echo "Testing connection to reflector at: http://192.168.1.213:8181<br/>";
+echo "Testing connection to reflector at: http://192.168.1.213:8181/status<br/>";
 $json_test = file_get_contents($serveraddress, false, $ctx);
 echo "Data received from reflector:<br/>";
 var_dump($json_test);
