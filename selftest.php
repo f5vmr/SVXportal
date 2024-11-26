@@ -119,7 +119,7 @@ $ctx = stream_context_create(array(
         'verify_peer_name' => false
     )
 ));
-
+echo $serveraddress;
 $json_test = file_get_contents($serveraddress, false, $ctx);
 $response_headers = $http_response_header ?? [];
 if($json_test == "")
