@@ -120,10 +120,22 @@ $ctx = stream_context_create(array(
         'verify_peer_name' => false
     )
 ));
-echo $serveraddress;
-echo "<br />";
-echo $ctx;
-echo "<br />";
+echo "Testing connection to reflector at: http://192.168.1.213:8181<br/>";
+$json_test = file_get_contents($serveraddress, false, $ctx);
+echo "Data received from reflector:<br/>";
+var_dump($json_test);
+if($json_test) {
+    $data = json_decode($json_test);
+    if($data) {
+        echo "<b class='text-success'>Success</b> Connected to reflector and received valid JSON data<br/>";
+        echo "<p>Connected stations:</p>";
+        echo "<ul>";
+        foreach($data->nodes as $st => $station) {
+            echo "<li>".$st."</li>";
+        }
+        echo "</ul>";
+    }
+}
 $json_test = file_get_contents($serveraddress, false, $ctx);
 var_dump($json_test);
 echo "response length: " . strlen($json_test);
