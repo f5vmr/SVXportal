@@ -559,7 +559,7 @@ function login_form()
 		   map.updateSize();connect_reflector();
 	   },300); "
 						data-toggle="tab"><i class="fas fa-map-marked"></i> <?php echo _("Map")?></a></li>
-<?php if($use_logein != null){?>
+<?php if($use_login != null){?>
 						<li class="nav-item"><a  class="nav-link" href="#LoginTab" data-toggle="tab"><i class="fas fa-lock"></i> <?php echo _("Login")?></a></li>
 <?php }?>
 
@@ -714,7 +714,7 @@ function login_form()
 								class="btn btn-outline-success my-2 my-sm-0" id="menu-toggle"><?php echo _('Toggle menu')?></a>
 							<hr />
 							<h3><?php echo _("Select date to listen")?></h3>
-							<?php if($use_logein != null){?>
+							<?php if($use_login != null){?>
 								<p><?php echo _("to use player you must login")?> </p>
 							<?php }?>
 							<p>

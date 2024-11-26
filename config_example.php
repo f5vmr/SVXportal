@@ -24,7 +24,7 @@ $dir="%recording_folder%";
 $serveraddress ="%proxy_serveraddress%";
 
 // login form recording
-//$use_logein= true;
+//$use_login= true;
 // Iframe under system description
 $iframe_documentation_url  ="";
 

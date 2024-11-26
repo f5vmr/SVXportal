@@ -32,7 +32,7 @@ function scan_dir($dir) {
 
 }
 
-if ($use_logein == null || check_login() > 0 ) {
+if ($use_login == null || check_login() > 0 ) {
 
 
     

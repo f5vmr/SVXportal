@@ -2249,7 +2249,7 @@ ul.dropdown-lr {
     							</div>
     							
         							<div class="card-body bg-white">
-        							<?php if($use_logein != null || USE_LOGIN == 1){?>
+        							<?php if($use_login != null || USE_LOGIN == 1){?>
         								<p><?php echo _("to use player you must login")?> </p>
         							<?php }?>
         							<p>
