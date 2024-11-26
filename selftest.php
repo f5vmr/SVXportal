@@ -120,6 +120,9 @@ $ctx = stream_context_create(array(
     )
 ));
 echo $serveraddress;
+echo "<br />";
+echo $ctx;
+echo "<br />";
 $json_test = file_get_contents($serveraddress, false, $ctx);
 $response_headers = $http_response_header ?? [];
 if($json_test == "")
