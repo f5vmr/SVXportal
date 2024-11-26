@@ -112,7 +112,7 @@ echo "<h2>Test 2 Reflector </h2><br />";
 $ctx = stream_context_create(array(
     'http' => array(
         'timeout' => 1200,  //1200 Seconds is 20 Minutes
-        'header' => 'Origin: http://portal.svxlink.uk:84'
+        'ignore_errors' => true
     ),
     'ssl' => array(
         'verify_peer' => false,
