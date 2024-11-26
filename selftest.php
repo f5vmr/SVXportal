@@ -109,20 +109,30 @@ else
 echo "<h2>Test 2 Reflector </h2><br />";
 
 
-$ctx = stream_context_create(array('http'=>
-    array(
+$ctx = stream_context_create(array(
+    'http' => array(
         'timeout' => 1200,  //1200 Seconds is 20 Minutes
+        'ignore_errors' => true
+    ),
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false
     )
 ));
 
 $json_test = file_get_contents($serveraddress, false, $ctx);
-
+$response_headers = $http_response_header ?? [];
 if($json_test == "")
 {
     echo "<b class='text-danger'>Fail</b> no contact with proxy check serveraddress in config.php <b>HTTP_SRV_PORT</b> in svxreflector.conf and <b>reflector_proxy/config.php url fail</b> ";
     
     $fault_counter++;
     
+}
+else
+if($json_test === false) {
+    $status_line = $response_headers[0] ?? 'No response';
+    echo "<b class='text-danger'>Connection details: " . $status_line . "</b>";
 }
 else
 {
