@@ -1,5 +1,6 @@
 <?php
 // Test the proxy connection
+$serveraddress = "http://192.168.1.213:8181/status";
 $json_test = file_get_contents($serveraddress, false, $ctx);
 echo "Proxy connection status: ";
 echo "<br>";
