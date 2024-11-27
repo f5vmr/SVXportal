@@ -1,9 +1,8 @@
 <?php
 header('Access-Control-Allow-Origin: <?php echo $serveraddress ?>');
 
-include 'config.php';
+include "config.php";
 include 'function.php';
-include 'reflector_proxy/index.php';
 $serveraddress =$Svx_reflector_address;
 $fault_counter =0;
 
@@ -123,7 +122,7 @@ $ctx = stream_context_create(array(
     )
 ));
 echo "Testing connection to reflector at: http://192.168.1.213:8181<br/>";
-$json_test = get_fcontent($serveraddress, false, $ctx);
+$json_test = file_get_contents($serveraddress, false, $ctx);
 echo "Data received from reflector:<br/>";
 var_dump($json_test);
 
