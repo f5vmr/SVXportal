@@ -5,7 +5,9 @@ header("Access-Control-Allow-Origin: *");
 include "config.php";
 
 function get_fcontent( $url,  $javascript_loop = 0, $timeout = 5 ) {
-    $url = str_replace( "&amp;", "&", urldecode(trim($url)) );
+    $url = str_replace( "&amp;", "&", urldecode(trim((string)$url)) );
+
+    //$url = str_replace( "&amp;", "&", urldecode(trim($url)) );
 
     $cookie = tempnam ("/tmp", "CURLCOOKIE");
     $ch = curl_init();

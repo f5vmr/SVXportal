@@ -4,7 +4,14 @@ header('Access-Control-Allow-Origin: <?php echo $serveraddress ?>');
 include 'config.php';
 include 'function.php';
 include 'reflector_proxy/index.php';
-$serveraddress =$Svx_reflector_address;
+$serveraddress = $Svx_reflector_address ?? 'http://192.168.1.213:8181/status';
+
+// Validate URL before using
+if (!filter_var($serveraddress, FILTER_VALIDATE_URL)) {
+    echo "<b class='text-danger'>Invalid reflector URL configuration</b>";
+    exit;
+}
+
 $fault_counter =0;
 
 ?>
