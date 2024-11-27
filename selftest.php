@@ -1,8 +1,9 @@
 <?php
 header('Access-Control-Allow-Origin: <?php echo $serveraddress ?>');
 
-include "config.php";
+include 'config.php';
 include 'function.php';
+include 'reflector_proxy/index.php';
 $serveraddress =$Svx_reflector_address;
 $fault_counter =0;
 
